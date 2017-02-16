@@ -1,0 +1,196 @@
+<style type="text/css" media="screen, print">
+
+.report {
+	font-family: sans-serif;
+	font-size: 12px;
+}
+
+.report h1 {
+	color: #337f3a;
+	padding-top: 20px;
+	font-size: 28px;
+}
+
+.report h2 {
+	color: #000;
+	padding-top: 20px;
+	font-size: 22px;
+}
+
+.report table {
+	width: 900px;
+	margin: 20px 0;
+	border: 1px solid #ddd;
+	border-collapse: collapse;
+	page-break-inside: avoid;
+}
+
+.report table th {
+	background-color: #eee;
+	color: #000;
+	border: 1px solid #ccc;
+	font-size: 13px;
+	padding: 9px 11px;
+}
+
+.report table td {
+	padding: 9px 11px;
+	border: 1px solid #ddd;
+}
+
+.report .meta {
+	padding: 5px 0;
+	font-size: 14px;
+}
+
+.report .metaLabel {
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 13px;
+	padding-right: 10px;
+}
+
+.report .score {
+	width: 110px;
+	text-align: left;
+}
+
+.report .flag {
+	width: 85px;
+	text-align: left;
+}
+
+.report .outcome {
+	width: 276px;
+}
+
+.report .overallHeader {
+	background-color: #bad9f2;
+	border: 1px solid #bbb;
+}
+
+.report .failed {
+	background-color: #F24646;
+}
+
+.chart .chartArea {
+	width: 900px;
+	height: 400px;
+	page-break-inside: avoid;
+}
+
+.chart h2 {
+	color: #000;
+	padding-top: 20px;
+	font-size: 22px;
+}
+
+</style>
+
+<style type="text/css" media="screen">
+
+</style>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+
+/* DOCUMENT READY */
+
+$( document ).ready( function() 
+{
+	function pageIsLoaded()
+	{
+		drawReport();
+	}
+	if ( typeof google !== undefined ) {
+		google.load( "visualization", "1", { packages: [ "corechart" ], callback: pageIsLoaded } );
+	}
+} );
+
+function drawReport()
+{
+	var orgUnit = dhis2.report.organisationUnit;
+	var orgUnitHierarchy = dhis2.report.organisationUnitHierarchy;
+	var orgUnitChildren = dhis2.report.organisationUnitChildren;
+	var period = dhis2.report.periods[0];
+	
+	if ( orgUnitHierarchy[3] !== undefined ) {
+		$( "#provinceSpan" ).html( orgUnitHierarchy[3].name );
+	}
+	
+	if ( orgUnitHierarchy[2] !== undefined ) {
+		$( "#districtSpan" ).html( orgUnitHierarchy[2].name );
+	}
+	
+	if ( orgUnitHierarchy[1] !== undefined ) {
+		$( "#subDistrictSpan" ).html( orgUnitHierarchy[1].name );
+	}
+	
+	$( "#facilitySpan" ).html( orgUnit.name );
+	$( "#periodSpan" ).html( period );
+	
+	
+	/* FAILED MEASURES */
+	
+	var failedMeasures = "../api/sqlViews/tcEbxNjLyZh/data.json?criteria=ou:" + orgUnit.id + "&criteria=pe:" + period;
+	
+	$failedMeasuresTable = $( "#failedMeasures" );
+	var uniqueNames = [];
+	
+	$.getJSON( failedMeasures,function( json ) {
+		
+		$.each( json.rows, function( index, row ) {
+			//Build a unique Array of the Sections 
+			if($.inArray(row[8], uniqueNames) === -1) uniqueNames.push(row[8]);
+			
+		}); //each
+	
+		for(i=0; i < uniqueNames.length; i++){
+			
+			$failedMeasuresTable.append("<tr><th>" + uniqueNames[i] + "</th></tr><tr><th>Problem Item</th><th>Activity</th><th>By Whom</th><th>By When(Date)</th><th>Status / Result</th></tr>");
+			
+			$.each( json.rows, function( index, row ) {
+			
+			if (row[8] == uniqueNames[i]){
+				$failedMeasuresTable.append("<tr>")
+				var flag = row[2].length ? row[2].substring( row[2].length - 1, row[2].length ) : "";
+				$failedMeasuresTable.append("<tr><td><b>Risk Rating:</b> " + flag + "<br><b>Standard:</b> " + row[9] + "<br><b>Measure:</b> " + row[0] + " " + row[1] + "<br><b>Notes:</b> " + row[5] + "</td><td></td><td></td><td></td><td></td></tr>" );					
+			}
+			else{
+			}
+		
+		}); //each
+		$failedMeasuresTable.append("<tr><td colspan=5></td></tr>");
+
+	} //for
+	
+	} );
+	
+	
+}
+
+</script>
+
+<div class="report">
+
+<h1>Quality Improvement Plan</h1>
+
+<div class="meta"><span class="metaLabel">Province:</span><span id="provinceSpan"></span></div>
+<div class="meta"><span class="metaLabel">District:</span><span id="districtSpan"></span></div>
+<div class="meta"><span class="metaLabel">Sub-District:</span><span id="subDistrictSpan"></span></div>
+<div class="meta"><span class="metaLabel">Facility:</span><span id="facilitySpan"></span></div>
+<div class="meta"><span class="metaLabel">Period:</span><span id="periodSpan"></span></div>
+
+<!-- Overall Performance -->
+
+<div class="report">
+
+<table id="failedMeasures">
+ <col width="25">
+ <col width="25">
+ <col width="20">
+ <col width="20">
+ <col width="10">
+  
+</table>
+
+</div>
