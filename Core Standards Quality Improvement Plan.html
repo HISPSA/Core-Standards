@@ -144,6 +144,8 @@ function drawReport()
 			
 		}); //each
 	
+		uniqueNames.sort();
+		
 		for(i=0; i < uniqueNames.length; i++){
 			
 			$failedMeasuresTable.append("<tr><th>" + uniqueNames[i] + "</th></tr><tr><th>Problem Item</th><th>Activity</th><th>By Whom</th><th>By When(Date)</th><th>Status / Result</th></tr>");
