@@ -23,17 +23,23 @@ var calcFld2 = ["WkQe5J9eN4l-myNhFcjhT6g-val", "WkQe5J9eN4l-hPpBaWTkygE-val", "W
 addRadioClick(calcFld1, "QHqbUQAIsYY-gSfwnIupmqe-val");
 addRadioClick(calcFld2, "ZI9fItbWMaz-gSfwnIupmqe-val");
 
-/*
-for (var i = 0; i < calcFld1.length; i++) {
+setNoValues("#QHqbUQAIsYY-gSfwnIupmqe-button", calcFld1, "QHqbUQAIsYY-gSfwnIupmqe-val");
+setNoValues("#ZI9fItbWMaz-gSfwnIupmqe-button", calcFld2, "ZI9fItbWMaz-gSfwnIupmqe-val");
 
-   var radios = document.getElementsByName(calcFld1[i]);
-    for ( var j = 0; j < radios.length; j++) {
-        radios[j].onclick = function() {
-            upCalc("QHqbUQAIsYY-gSfwnIupmqe-val");
-        } // onclick function
-    } // for
-} //for
-*/
+function setNoValues(buttonId,arr, fld){
+
+    $(buttonId).click(function(){ 
+    for (var i = 0; i < arr.length; i++) {
+        var id = arr[i]; 
+        var de = id.split( '-' )[0]; 
+        var coc = id.split( '-' )[1];  
+        $( "#" + id ).prop("checked", "No Value");
+         saveVal( de, coc, id );
+         upCalc(fld, id);
+    };
+ });
+}
+
 
 
 function addRadioClick(checkListArray, calcFld) {
@@ -42,19 +48,18 @@ function addRadioClick(checkListArray, calcFld) {
         var str = checkListArray[i];
         var commentlink = str.replace("val", "comment");
 
-        console.log("COMM " + commentlink);
-
         var radios = document.getElementsByName(checkListArray[i]);
         for ( var j = 0; j < radios.length; j++) {
             radios[j].onclick = function() {
                 
+                /*
                 if (this.checked) {
    
-                if ( this.value == 'false' ) {   
-                    document.getElementById(commentlink).click(); 
-                }// if value
-            } // if radios checked
-
+                    if ( this.value == 'false' ) {   
+                        document.getElementById(commentlink).click(); 
+                    }// if value
+                } // if radios checked
+                */
                 upCalc(calcFld, checkListArray);
             
 
@@ -99,7 +104,7 @@ for (var i = 0; i < arrayList.length; i++) {
         $( "#" + calculatedFld ).val( val );
         saveVal( de, coc, id ); 
     } else {
-        $( "#" + calculatedFld ).val( '' );
+        $( "#" + calculatedFld ).val( null );
         saveVal( de, coc, id );
     } // if count
 } //function
@@ -121,12 +126,17 @@ function triggerComments(radios, commentlink) {
 } //function
 
 </script>
-<style type="text/css">.domain {font-family:sans-serif;font-weight:bold;font-size:12px;padding: 20px 0;width:900px;} #contentDiv table {border-collapse:collapse;font-family:sans-serif;font-size:12px;page-break-inside:avoid;} #contentDiv table td {border: 1px solid #ccc;padding:8px;} .tdCrit {width:420px;height:35px;padding-right:20px;} .tdType {width:70px;} .tdScore {width:211px;} .tdScoreCheck {width:59px;} .tdNote {width:290px;} .formHeader {position:relative;padding: 25px 0 20px 0;} .formTitle {font-family:sans-serif;position:absolute;font-size:28px;margin-left:35px;top:75px;} .sectionHeader {margin-top:25px;} .sectionHeader table td {font-family:sans-serif;font-weight:bold;font-size:13px;background-color:#bedef4;} .facilityInput {font-family:sans-serif;font-weight:bold;position:relative;display:inline-block;height:28px;width:450px;border:1px solid #ccc;margin-right:20px;} .periodInput {position:relative;display:inline-block;height:28px;width:281px;border:1px solid #ccc;} .facilityLabel {font-family:sans-serif;position:relative;top:6px;display:inline-block;height:28px;font-size:16px;padding-right:15px;} .noteDiv {font-family:sans-serif;font-style:italic;font-size:11px;margin-top:20px;} .greyRow {background-color:#eee;} .commentCodes {margin:28px 0;border-collapse:collapse;}.commentlink
+<style type="text/css">.domain {font-family:sans-serif;font-weight:bold;font-size:12px;padding: 20px 0;width:900px;} #contentDiv table {border-collapse:collapse;font-family:sans-serif;font-size:12px;page-break-inside:avoid;} #contentDiv table td {border: 1px solid #ccc;padding:8px;} .tdCrit {width:420px;height:35px;padding-right:20px;} .tdType {width:70px;} .tdScore {width:211px;} .tdScoreCheck {width:59px;} .tdNote {width:290px;} .formHeader {position:relative;padding: 25px 0 20px 0;} .formTitle {font-family:sans-serif;position:absolute;font-size:28px;margin-left:35px;top:75px;} .sectionHeader {margin-top:25px;} .sectionHeader table td {font-family:sans-serif;font-weight:bold;font-size:13px;background-color:#bedef4;} .facilityInput {font-family:sans-serif;font-weight:bold;position:relative;display:inline-block;height:28px;width:450px;border:1px solid #ccc;margin-right:20px;} .periodInput {position:relative;display:inline-block;height:28px;width:281px;border:1px solid #ccc;} .facilityLabel {font-family:sans-serif;position:relative;top:6px;display:inline-block;height:28px;font-size:16px;padding-right:15px;} .noteDiv {font-family:sans-serif;font-style:italic;font-size:11px;margin-top:20px;} .greyRow {background-color:#eee;} .commentCodes {margin:28px 0;border-collapse:collapse;}
+.commentlink
 {
   padding-left: 15px;
   padding-bottom: 10px;
   width: 15px;
   height: 15px;
+}
+.chkButton
+{
+ padding-left: 15px;  
 }
 </style>
 <style media="screen" type="text/css">.inputDiv {display:none;}
@@ -351,7 +361,8 @@ function triggerComments(radios, commentlink) {
             <td class="tdType bold">OBS<br />
             <br />
             X</td>
-            <td class="tdScore" colspan="3"><input data-calculated="2.6.3.4.2" disabled="disabled" id="ZI9fItbWMaz-gSfwnIupmqe-val" style="text-align:center" title="ZI9fItbWMaz - CHECKLIST - Appropriate isolation accommodation exists for patients with communicable diseases - as a minimum for hazardous diarrheal diseases - gSfwnIupmqe - (default) - int" value="[ CHECKLIST - Appropriate isolation accommodation exists for patients with communicable diseases - as a minimum for hazardous diarrheal diseases (default) ]" /></td>
+            <td class="tdScore"><input data-calculated="2.6.3.4.2" disabled="disabled" id="ZI9fItbWMaz-gSfwnIupmqe-val" style="text-align:center" title="ZI9fItbWMaz - CHECKLIST - Appropriate isolation accommodation exists for patients with communicable diseases - as a minimum for hazardous diarrheal diseases - gSfwnIupmqe - (default) - int" value="[ CHECKLIST - Appropriate isolation accommodation exists for patients with communicable diseases - as a minimum for hazardous diarrheal diseases (default) ]" /></td>
+             <td class="tdScore" colspan="2"><button type="button" class="chkButton" id="ZI9fItbWMaz-gSfwnIupmqe-button">Set all to 'No Value'</button></td>
             <td class="tdNote">&nbsp;</td>
         </tr>
         <tr class="greyRow">
@@ -449,7 +460,8 @@ function triggerComments(radios, commentlink) {
             <td class="tdType bold">OBS<br />
             <br />
             X</td>
-            <td class="tdScore" colspan="3"><input data-calculated="2.6.3.4.3" disabled="disabled" id="QHqbUQAIsYY-gSfwnIupmqe-val" style="text-align:center" title="QHqbUQAIsYY - CHECKLIST - Appropriate isolation accommodation exists for patients with communicable diseases - as a minimum for viral haemorrhagic disease - gSfwnIupmqe - (default) - int" value="[ CHECKLIST - Appropriate isolation accommodation exists for patients with communicable diseases - as a minimum for viral haemorrhagic disease (default) ]" /></td>
+            <td class="tdScore"><input data-calculated="2.6.3.4.3" disabled="disabled" id="QHqbUQAIsYY-gSfwnIupmqe-val" style="text-align:center" title="QHqbUQAIsYY - CHECKLIST - Appropriate isolation accommodation exists for patients with communicable diseases - as a minimum for viral haemorrhagic disease - gSfwnIupmqe - (default) - int" value="[ CHECKLIST - Appropriate isolation accommodation exists for patients with communicable diseases - as a minimum for viral haemorrhagic disease (default) ]" /></td>
+            <td class="tdScore" colspan="2"><button type="button" class="chkButton" id="QHqbUQAIsYY-gSfwnIupmqe-button">Set all to 'No Value'</button></td>
             <td class="tdNote">&nbsp;</td>
         </tr>
         <tr class="greyRow">
