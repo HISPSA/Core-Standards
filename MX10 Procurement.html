@@ -1,1 +1,362 @@
-<script type='text/javascript'> function upCalc() { $( "[data-calculated]" ).each( function( index, element ) { var id = $( this ).attr( 'id' ); var de = id.split( '-' )[0]; var coc = id.split( '-' )[1]; var code = $( this ).attr( 'data-calculated' ); var yes = parseInt( 0 ); var count = parseInt( 0 ); $( "[data-checklist='" + code + "']" ).each( function( index, element ) { var value = $( this ).val(); if ( value ) { if ( value == 'true' || value == 'false' ) { count++; } if ( value == 'true'  ) { yes++; } } } ); if ( count > 0 ) { var average = parseInt( yes ) / parseInt( count ); var val = Math.round( average * 100 ) / 100; $( this ).val( val ); saveVal( de, coc, id ); } } ); } </script><style type="text/css">.domain {font-family:sans-serif;font-weight:bold;font-size:12px;padding: 20px 0;width:900px;} #contentDiv table {border-collapse:collapse;font-family:sans-serif;font-size:12px;page-break-inside:avoid;} #contentDiv table td {border: 1px solid #ccc;padding:8px;} .tdCrit {width:420px;height:35px;padding-right:20px;} .tdType {width:70px;} .tdScore {width:211px;} .tdScoreCheck {width:59px;} .tdNote {width:290px;} .formHeader {position:relative;padding: 25px 0 20px 0;} .formTitle {font-family:sans-serif;position:absolute;font-size:28px;margin-left:35px;top:75px;} .sectionHeader {margin-top:25px;} .sectionHeader table td {font-family:sans-serif;font-weight:bold;font-size:13px;background-color:#bedef4;} .facilityInput {font-family:sans-serif;font-weight:bold;position:relative;display:inline-block;height:28px;width:450px;border:1px solid #ccc;margin-right:20px;} .periodInput {position:relative;display:inline-block;height:28px;width:281px;border:1px solid #ccc;} .facilityLabel {font-family:sans-serif;position:relative;top:6px;display:inline-block;height:28px;font-size:16px;padding-right:15px;} .noteDiv {font-family:sans-serif;font-style:italic;font-size:11px;margin-top:20px;} .greyRow {background-color:#eee;} .commentCodes {margin:28px 0;border-collapse:collapse;}</style><style media="screen" type="text/css">.inputDiv {display:none;}</style> <style media="print" type="text/css">.inputDiv {display:block;position:relative;}</style> <div class="formHeader"><img src="../dhis-web-commons/flags/south_africa_department_of_health.png" /><span class="formTitle bold">Assessment Questionnaire </span></div><div class="inputDiv"><span class="facilityLabel">Facility: </span><span class="facilityInput">&nbsp;</span><span class="facilityLabel">Period: </span><span class="periodInput">&nbsp;</span></div><div class="sectionHeader bold"><table><tbody><tr><td class="tdCrit">MX10 Procurement</td><td class="tdType">Type</td><td class="tdScore">Score</td><td class="tdNote">Notes</td></tr></tbody></table></div><div class="domain bold">Domain 3 Clinical Support Services: 3.5.1.3 Clear lines of accountability exist for the decontamination cycle</div><div><table><tbody><tr><td class="tdCrit">3.5.1.3.2 There is a contract and Service Level Agreement in place with an approved and legally compliant sterilisation service provider</td><td class="tdType bold">DOC<br /><br />V</td><td class="tdScore" colspan="3"><input id="jxcB8nShzjZ-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="jxcB8nShzjZ-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.4.1.1 Asset and equipment needs are identified in the annual plans and budgets and incorporated into procurement plans</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">6.4.1.1.1 Minutes of the forum reviewing specifications and adjudication show that asset specifications are developed in line with policies and procedures on prioritisation/ selection and user involvement</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="D8Yah3Ve4aA-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="D8Yah3Ve4aA-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">6.4.1.1.2 The health establishment can show evidence that acquisition of assets within the last 3 months was in line with procurement plan</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="QaOhLNQOxE5-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="QaOhLNQOxE5-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.4.1.2 Policies and procedures to limit influences on purchasing decisions are enforced through transparency and segregation of duties</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">6.4.1.2.1 There is evidence that demonstrates that the health establishment follows procurement policies and procedures</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="j9jl0dfwIhi-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="j9jl0dfwIhi-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.4.1.3 All local tendering and contracting processes are in accordance with relevant legislation</div><div><table><tbody><tr><td class="tdCrit">6.4.1.3.1 There is a policy and procedure on local tendering and contract management which adheres to PFMA requirements</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="LpEh9ic5YE9-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="LpEh9ic5YE9-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.4.2.2 Maintenance and disposal of assets ensures that assets are managed effectively and efficiently</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">6.4.2.2.1 Records show that the manager in charge of assets monitors the service level agreements for maintenance of the assets on a regular basis and addresses any concerns directly with the supplier of services</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="tsC5j6KmHFH-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="tsC5j6KmHFH-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.4.2.3 Assets are monitored and variances are addressed</div><div><table><tbody><tr><td class="tdCrit">6.4.2.3.1 Inventory records shows that assets are monitored and variances are acted upon</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="egIFpTlE7vn-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="egIFpTlE7vn-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.4.2.4 Potential loss or theft risks are identified and managed</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">6.4.2.4.1 There is a loss and theft register that shows that losses and theft are investigated and actions put in place to prevent recurrences where appropriate</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="ET5zlg5AKg1-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="ET5zlg5AKg1-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.4.3.1 All contract management processes are in accordance with relevant legislation or policy</div><div><table><tbody><tr><td class="tdCrit">6.4.3.1.1 There is a policy and procedure on contract management which includes procedures for contract negotiation / staff involved in the process / management of service level agreements / contractual obligations</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="MsICwwCjH0r-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="MsICwwCjH0r-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.4.3.2 Contract management is monitored proactively by management to ensure compliance by all parties</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">6.4.3.2.1 Documentary evidence (from within the last quarter) show that the performance of a sample of two current outsourced contracts are monitored monthly according to the specifications in the contract and SLA</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="AzMKPKgqf83-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="AzMKPKgqf83-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.4.3.3 Prompt action is taken to address any failure to deliver by the contractor against their service level agreements</div><div><table><tbody><tr><td class="tdCrit">6.4.3.3.1 There are records showing that any areas of failure or non-performance are addressed and taken up with the contractor for correction A stipulated period is given in which the failures must be corrected</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="BsFSM3lPyFU-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="BsFSM3lPyFU-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.4.4.1 Designated supplier(s) for stock adhere to contractual obligations</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">6.4.4.1.1 A document outlining the terms of agreement for the supply of stock is available and there is evidence that compliance with the agreement is being monitored and appropriate action taken</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="wzOMGpHjBED-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="wzOMGpHjBED-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">6.4.4.1.2 There is evidence that turnaround times for critical stock are set and monitored regularly</td><td class="tdType bold">DOC<br /><br />V</td><td class="tdScore" colspan="3"><input id="SRJcV8UvogK-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="SRJcV8UvogK-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">6.4.4.1.3 Stock is stored in an appropriate bulk storage facility in an orderly and appropriate fashion</td><td class="tdType bold">OBS<br /><br />D</td><td class="tdScore" colspan="3"><input id="VxgRUG5TJI7-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="VxgRUG5TJI7-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.4.4.2 There is an up-dated computerised or manual (stock cards) inventory management system for supplies in place</div><div><table><tbody><tr><td class="tdCrit">6.4.4.2.1 The stock control system shows minimum / maximum / re-order levels</td><td class="tdType bold">OBS<br /><br />E</td><td class="tdScore" colspan="3"><input id="RrKY8kqEYbj-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="RrKY8kqEYbj-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">6.4.4.2.2 Physical stock corresponds to stock on the inventory management system</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="bD9P57fJECG-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="bD9P57fJECG-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">6.4.4.2.3 There is evidence that a stock take was done in the last 12 months for supplies</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="tURZWsK0NnA-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="tURZWsK0NnA-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div>
+<script type='text/javascript'>
+    function upCalc() {
+        $("[data-calculated]").each(function(index, element) {
+            var id = $(this).attr('id');
+            var de = id.split('-')[0];
+            var coc = id.split('-')[1];
+            var code = $(this).attr('data-calculated');
+            var yes = parseInt(0);
+            var count = parseInt(0);
+            $("[data-checklist='" + code + "']").each(function(index, element) {
+                var value = $(this).val();
+                if (value) {
+                    if (value == 'true' || value == 'false') {
+                        count++;
+                    }
+                    if (value == 'true') {
+                        yes++;
+                    }
+                }
+            });
+            if (count > 0) {
+                var average = parseInt(yes) / parseInt(count);
+                var val = Math.round(average * 100) / 100;
+                $(this).val(val);
+                saveVal(de, coc, id);
+            }
+        });
+    }
+
+</script>
+<style type="text/css">
+    .domain {
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 12px;
+        padding: 20px 0;
+        width: 900px;
+    }
+    
+    #contentDiv table {
+        border-collapse: collapse;
+        font-family: sans-serif;
+        font-size: 12px;
+        page-break-inside: avoid;
+    }
+    
+    #contentDiv table td {
+        border: 1px solid #ccc;
+        padding: 8px;
+    }
+    
+    .tdCrit {
+        width: 420px;
+        height: 35px;
+        padding-right: 20px;
+    }
+    
+    .tdType {
+        width: 70px;
+    }
+    
+    .tdScore {
+        width: 211px;
+    }
+    
+    .tdScoreCheck {
+        width: 59px;
+    }
+    
+    .tdNote {
+        width: 290px;
+    }
+    
+    .formHeader {
+        position: relative;
+        padding: 25px 0 20px 0;
+    }
+    
+    .formTitle {
+        font-family: sans-serif;
+        position: absolute;
+        font-size: 28px;
+        margin-left: 35px;
+        top: 75px;
+    }
+    
+    .sectionHeader {
+        margin-top: 25px;
+    }
+    
+    .sectionHeader table td {
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 13px;
+        background-color: #bedef4;
+    }
+    
+    .facilityInput {
+        font-family: sans-serif;
+        font-weight: bold;
+        position: relative;
+        display: inline-block;
+        height: 28px;
+        width: 450px;
+        border: 1px solid #ccc;
+        margin-right: 20px;
+    }
+    
+    .periodInput {
+        position: relative;
+        display: inline-block;
+        height: 28px;
+        width: 281px;
+        border: 1px solid #ccc;
+    }
+    
+    .facilityLabel {
+        font-family: sans-serif;
+        position: relative;
+        top: 6px;
+        display: inline-block;
+        height: 28px;
+        font-size: 16px;
+        padding-right: 15px;
+    }
+    
+    .noteDiv {
+        font-family: sans-serif;
+        font-style: italic;
+        font-size: 11px;
+        margin-top: 20px;
+    }
+    
+    .greyRow {
+        background-color: #eee;
+    }
+    
+    .commentCodes {
+        margin: 28px 0;
+        border-collapse: collapse;
+    }
+    .commentlink {
+        padding-left: 15px;
+        padding-bottom: 10px;
+        width: 15px;
+        height: 15px;
+    }
+
+</style>
+<style media="screen" type="text/css">
+    .inputDiv {
+        display: none;
+    }
+
+</style>
+<style media="print" type="text/css">
+    .inputDiv {
+        display: block;
+        position: relative;
+    }
+
+</style>
+<div class="formHeader"><img src="../dhis-web-commons/flags/south_africa_department_of_health.png" /><span class="formTitle bold">Assessment Questionnaire </span></div>
+<div class="inputDiv"><span class="facilityLabel">Facility: </span><span class="facilityInput">&nbsp;</span><span class="facilityLabel">Period: </span><span class="periodInput">&nbsp;</span></div>
+<div class="sectionHeader bold">
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">MX10 Procurement</td>
+                <td class="tdType">Type</td>
+                <td class="tdScore">Score</td>
+                <td class="tdNote">Notes</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 3 Clinical Support Services: 3.5.1.3 Clear lines of accountability exist for the decontamination cycle</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">3.5.1.3.2 There is a contract and Service Level Agreement in place with an approved and legally compliant sterilisation service provider</td>
+                <td class="tdType bold">DOC<br /><br />V</td>
+                <td class="tdScore" colspan="3"><input id="jxcB8nShzjZ-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="jxcB8nShzjZ-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.4.1.1 Asset and equipment needs are identified in the annual plans and budgets and incorporated into procurement plans</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">6.4.1.1.1 Minutes of the forum reviewing specifications and adjudication show that asset specifications are developed in line with policies and procedures on prioritisation/ selection and user involvement</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="D8Yah3Ve4aA-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="D8Yah3Ve4aA-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">6.4.1.1.2 The health establishment can show evidence that acquisition of assets within the last 3 months was in line with procurement plan</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="QaOhLNQOxE5-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="QaOhLNQOxE5-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.4.1.2 Policies and procedures to limit influences on purchasing decisions are enforced through transparency and segregation of duties</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">6.4.1.2.1 There is evidence that demonstrates that the health establishment follows procurement policies and procedures</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="j9jl0dfwIhi-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="j9jl0dfwIhi-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.4.1.3 All local tendering and contracting processes are in accordance with relevant legislation</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">6.4.1.3.1 There is a policy and procedure on local tendering and contract management which adheres to PFMA requirements</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="LpEh9ic5YE9-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="LpEh9ic5YE9-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.4.2.2 Maintenance and disposal of assets ensures that assets are managed effectively and efficiently</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">6.4.2.2.1 Records show that the manager in charge of assets monitors the service level agreements for maintenance of the assets on a regular basis and addresses any concerns directly with the supplier of services</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="tsC5j6KmHFH-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="tsC5j6KmHFH-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.4.2.3 Assets are monitored and variances are addressed</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">6.4.2.3.1 Inventory records shows that assets are monitored and variances are acted upon</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="egIFpTlE7vn-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="egIFpTlE7vn-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.4.2.4 Potential loss or theft risks are identified and managed</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">6.4.2.4.1 There is a loss and theft register that shows that losses and theft are investigated and actions put in place to prevent recurrences where appropriate</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="ET5zlg5AKg1-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="ET5zlg5AKg1-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.4.3.1 All contract management processes are in accordance with relevant legislation or policy</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">6.4.3.1.1 There is a policy and procedure on contract management which includes procedures for contract negotiation / staff involved in the process / management of service level agreements / contractual obligations</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="MsICwwCjH0r-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="MsICwwCjH0r-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.4.3.2 Contract management is monitored proactively by management to ensure compliance by all parties</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">6.4.3.2.1 Documentary evidence (from within the last quarter) show that the performance of a sample of two current outsourced contracts are monitored monthly according to the specifications in the contract and SLA</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="AzMKPKgqf83-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="AzMKPKgqf83-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.4.3.3 Prompt action is taken to address any failure to deliver by the contractor against their service level agreements</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">6.4.3.3.1 There are records showing that any areas of failure or non-performance are addressed and taken up with the contractor for correction A stipulated period is given in which the failures must be corrected</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="BsFSM3lPyFU-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="BsFSM3lPyFU-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.4.4.1 Designated supplier(s) for stock adhere to contractual obligations</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">6.4.4.1.1 A document outlining the terms of agreement for the supply of stock is available and there is evidence that compliance with the agreement is being monitored and appropriate action taken</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="wzOMGpHjBED-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="wzOMGpHjBED-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">6.4.4.1.2 There is evidence that turnaround times for critical stock are set and monitored regularly</td>
+                <td class="tdType bold">DOC<br /><br />V</td>
+                <td class="tdScore" colspan="3"><input id="SRJcV8UvogK-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="SRJcV8UvogK-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">6.4.4.1.3 Stock is stored in an appropriate bulk storage facility in an orderly and appropriate fashion</td>
+                <td class="tdType bold">OBS<br /><br />D</td>
+                <td class="tdScore" colspan="3"><input id="VxgRUG5TJI7-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="VxgRUG5TJI7-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.4.4.2 There is an up-dated computerised or manual (stock cards) inventory management system for supplies in place</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">6.4.4.2.1 The stock control system shows minimum / maximum / re-order levels</td>
+                <td class="tdType bold">OBS<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="RrKY8kqEYbj-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="RrKY8kqEYbj-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">6.4.4.2.2 Physical stock corresponds to stock on the inventory management system</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="bD9P57fJECG-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="bD9P57fJECG-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">6.4.4.2.3 There is evidence that a stock take was done in the last 12 months for supplies</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="tURZWsK0NnA-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="tURZWsK0NnA-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,1 +1,278 @@
-<script type='text/javascript'> function upCalc() { $( "[data-calculated]" ).each( function( index, element ) { var id = $( this ).attr( 'id' ); var de = id.split( '-' )[0]; var coc = id.split( '-' )[1]; var code = $( this ).attr( 'data-calculated' ); var yes = parseInt( 0 ); var count = parseInt( 0 ); $( "[data-checklist='" + code + "']" ).each( function( index, element ) { var value = $( this ).val(); if ( value ) { if ( value == 'true' || value == 'false' ) { count++; } if ( value == 'true'  ) { yes++; } } } ); if ( count > 0 ) { var average = parseInt( yes ) / parseInt( count ); var val = Math.round( average * 100 ) / 100; $( this ).val( val ); saveVal( de, coc, id ); } } ); } </script><style type="text/css">.domain {font-family:sans-serif;font-weight:bold;font-size:12px;padding: 20px 0;width:900px;} #contentDiv table {border-collapse:collapse;font-family:sans-serif;font-size:12px;page-break-inside:avoid;} #contentDiv table td {border: 1px solid #ccc;padding:8px;} .tdCrit {width:420px;height:35px;padding-right:20px;} .tdType {width:70px;} .tdScore {width:211px;} .tdScoreCheck {width:59px;} .tdNote {width:290px;} .formHeader {position:relative;padding: 25px 0 20px 0;} .formTitle {font-family:sans-serif;position:absolute;font-size:28px;margin-left:35px;top:75px;} .sectionHeader {margin-top:25px;} .sectionHeader table td {font-family:sans-serif;font-weight:bold;font-size:13px;background-color:#bedef4;} .facilityInput {font-family:sans-serif;font-weight:bold;position:relative;display:inline-block;height:28px;width:450px;border:1px solid #ccc;margin-right:20px;} .periodInput {position:relative;display:inline-block;height:28px;width:281px;border:1px solid #ccc;} .facilityLabel {font-family:sans-serif;position:relative;top:6px;display:inline-block;height:28px;font-size:16px;padding-right:15px;} .noteDiv {font-family:sans-serif;font-style:italic;font-size:11px;margin-top:20px;} .greyRow {background-color:#eee;} .commentCodes {margin:28px 0;border-collapse:collapse;}</style><style media="screen" type="text/css">.inputDiv {display:none;}</style> <style media="print" type="text/css">.inputDiv {display:block;position:relative;}</style> <div class="formHeader"><img src="../dhis-web-commons/flags/south_africa_department_of_health.png" /><span class="formTitle bold">Assessment Questionnaire </span></div><div class="inputDiv"><span class="facilityLabel">Facility: </span><span class="facilityInput">&nbsp;</span><span class="facilityLabel">Period: </span><span class="periodInput">&nbsp;</span></div><div class="sectionHeader bold"><table><tbody><tr><td class="tdCrit">S06 Record archive/department</td><td class="tdType">Type</td><td class="tdScore">Score</td><td class="tdNote">Notes</td></tr></tbody></table></div><div class="domain bold">Domain 1 Patients Rights: 1.5.1.1 Procedures are followed to ensure queues are kept short</div><div><table><tbody><tr><td class="tdCrit">1.5.1.1.2 Patients are informed of how long they will wait in the queue</td><td class="tdType bold">OBS<br /><br />E</td><td class="tdScore" colspan="3"><input id="O219bGgfYex-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="O219bGgfYex-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 1 Patients Rights: 1.5.1.4 Patients are sorted / classified and attended to according to the severity and nature of their health condition or problem</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">1.5.1.4.3 Observe whether special queues are designated for specific groups of patients</td><td class="tdType bold">OBS<br /><br />E</td><td class="tdScore" colspan="3"><input id="bKgXrvVBXcr-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="bKgXrvVBXcr-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 1 Patients Rights: 1.5.1.5 An efficient filing system is in place</div><div><table><tbody><tr><td class="tdCrit">1.5.1.5.1 There is a system in place to reduce waiting time for files</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="xloWtDQrNzW-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="xloWtDQrNzW-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.6.1.1 Health establishment staff have adequate IT skills and support to effectively use the systems provided</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">6.6.1.1.1 CHECKLIST - Hardware / software and network connectivity supports local needs and staff have the skills to use them</td><td class="tdType bold"> SI<br /><br />E</td><td class="tdScore" colspan="3"><input id="teRSifM1ZC4-gSfwnIupmqe-val" style="text-align:center" value="" title=""/></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.7.2.1 Dedicated / trained staff and appropriate systems are in place to manage the record archive</div><div><table><tbody><tr><td class="tdCrit">6.7.2.1.1 Records room staff have received appropriate training in the management of medical archives</td><td class="tdType bold">DOC<br /><br />D</td><td class="tdScore" colspan="3"><input id="BY1JPmfBCVK-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="BY1JPmfBCVK-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.7.2.2 Processes and infrastructure for filing and retrieval of patient files provide an effective and efficient service</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">6.7.2.2.1 Medical records room has space for all records</td><td class="tdType bold">OBS<br /><br />E</td><td class="tdScore" colspan="3"><input id="OiesLy2pts5-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="OiesLy2pts5-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">6.7.2.2.2 The medical records room is secure and only accessible to authorised staff</td><td class="tdType bold">OBS<br /><br />E</td><td class="tdScore" colspan="3"><input id="ZrUTGUfmEaA-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="ZrUTGUfmEaA-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">6.7.2.2.3 Written standard operating procedures exist for requests / retrieval / filing of patient files</td><td class="tdType bold">DOC<br /><br />V</td><td class="tdScore" colspan="3"><input id="LzmPxGbnyuR-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="LzmPxGbnyuR-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 7 Facilities and Infrastructure: 7.1.3.1 Waiting areas are appropriately located and adequate for the number of patients using them</div><div><table><tbody><tr><td class="tdCrit">7.1.3.1.2 Waiting areas are located in the areas where the service takes place</td><td class="tdType bold">OBS<br /><br />E</td><td class="tdScore" colspan="3"><input id="kUh5WmLrDeW-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="kUh5WmLrDeW-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div>
+<script type='text/javascript'>
+    function upCalc() {
+        $("[data-calculated]").each(function(index, element) {
+            var id = $(this).attr('id');
+            var de = id.split('-')[0];
+            var coc = id.split('-')[1];
+            var code = $(this).attr('data-calculated');
+            var yes = parseInt(0);
+            var count = parseInt(0);
+            $("[data-checklist='" + code + "']").each(function(index, element) {
+                var value = $(this).val();
+                if (value) {
+                    if (value == 'true' || value == 'false') {
+                        count++;
+                    }
+                    if (value == 'true') {
+                        yes++;
+                    }
+                }
+            });
+            if (count > 0) {
+                var average = parseInt(yes) / parseInt(count);
+                var val = Math.round(average * 100) / 100;
+                $(this).val(val);
+                saveVal(de, coc, id);
+            }
+        });
+    }
+
+</script>
+<style type="text/css">
+    .domain {
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 12px;
+        padding: 20px 0;
+        width: 900px;
+    }
+    
+    #contentDiv table {
+        border-collapse: collapse;
+        font-family: sans-serif;
+        font-size: 12px;
+        page-break-inside: avoid;
+    }
+    
+    #contentDiv table td {
+        border: 1px solid #ccc;
+        padding: 8px;
+    }
+    
+    .tdCrit {
+        width: 420px;
+        height: 35px;
+        padding-right: 20px;
+    }
+    
+    .tdType {
+        width: 70px;
+    }
+    
+    .tdScore {
+        width: 211px;
+    }
+    
+    .tdScoreCheck {
+        width: 59px;
+    }
+    
+    .tdNote {
+        width: 290px;
+    }
+    
+    .formHeader {
+        position: relative;
+        padding: 25px 0 20px 0;
+    }
+    
+    .formTitle {
+        font-family: sans-serif;
+        position: absolute;
+        font-size: 28px;
+        margin-left: 35px;
+        top: 75px;
+    }
+    
+    .sectionHeader {
+        margin-top: 25px;
+    }
+    
+    .sectionHeader table td {
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 13px;
+        background-color: #bedef4;
+    }
+    
+    .facilityInput {
+        font-family: sans-serif;
+        font-weight: bold;
+        position: relative;
+        display: inline-block;
+        height: 28px;
+        width: 450px;
+        border: 1px solid #ccc;
+        margin-right: 20px;
+    }
+    
+    .periodInput {
+        position: relative;
+        display: inline-block;
+        height: 28px;
+        width: 281px;
+        border: 1px solid #ccc;
+    }
+    
+    .facilityLabel {
+        font-family: sans-serif;
+        position: relative;
+        top: 6px;
+        display: inline-block;
+        height: 28px;
+        font-size: 16px;
+        padding-right: 15px;
+    }
+    
+    .noteDiv {
+        font-family: sans-serif;
+        font-style: italic;
+        font-size: 11px;
+        margin-top: 20px;
+    }
+    
+    .greyRow {
+        background-color: #eee;
+    }
+    
+    .commentCodes {
+        margin: 28px 0;
+        border-collapse: collapse;
+    }.commentlink {
+        padding-left: 15px;
+        padding-bottom: 10px;
+        width: 15px;
+        height: 15px;
+    }
+
+</style>
+<style media="screen" type="text/css">
+    .inputDiv {
+        display: none;
+    }
+
+</style>
+<style media="print" type="text/css">
+    .inputDiv {
+        display: block;
+        position: relative;
+    }
+
+</style>
+<div class="formHeader"><img src="../dhis-web-commons/flags/south_africa_department_of_health.png" /><span class="formTitle bold">Assessment Questionnaire </span></div>
+<div class="inputDiv"><span class="facilityLabel">Facility: </span><span class="facilityInput">&nbsp;</span><span class="facilityLabel">Period: </span><span class="periodInput">&nbsp;</span></div>
+<div class="sectionHeader bold">
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">S06 Record archive/department</td>
+                <td class="tdType">Type</td>
+                <td class="tdScore">Score</td>
+                <td class="tdNote">Notes</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 1 Patients Rights: 1.5.1.1 Procedures are followed to ensure queues are kept short</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">1.5.1.1.2 Patients are informed of how long they will wait in the queue</td>
+                <td class="tdType bold">OBS<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="O219bGgfYex-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="O219bGgfYex-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 1 Patients Rights: 1.5.1.4 Patients are sorted / classified and attended to according to the severity and nature of their health condition or problem</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">1.5.1.4.3 Observe whether special queues are designated for specific groups of patients</td>
+                <td class="tdType bold">OBS<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="bKgXrvVBXcr-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="bKgXrvVBXcr-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 1 Patients Rights: 1.5.1.5 An efficient filing system is in place</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">1.5.1.5.1 There is a system in place to reduce waiting time for files</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="xloWtDQrNzW-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="xloWtDQrNzW-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.6.1.1 Health establishment staff have adequate IT skills and support to effectively use the systems provided</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">6.6.1.1.1 CHECKLIST - Hardware / software and network connectivity supports local needs and staff have the skills to use them</td>
+                <td class="tdType bold"> SI<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="teRSifM1ZC4-gSfwnIupmqe-val" style="text-align:center" value="" title="" /></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.7.2.1 Dedicated / trained staff and appropriate systems are in place to manage the record archive</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">6.7.2.1.1 Records room staff have received appropriate training in the management of medical archives</td>
+                <td class="tdType bold">DOC<br /><br />D</td>
+                <td class="tdScore" colspan="3"><input id="BY1JPmfBCVK-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="BY1JPmfBCVK-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.7.2.2 Processes and infrastructure for filing and retrieval of patient files provide an effective and efficient service</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">6.7.2.2.1 Medical records room has space for all records</td>
+                <td class="tdType bold">OBS<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="OiesLy2pts5-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="OiesLy2pts5-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">6.7.2.2.2 The medical records room is secure and only accessible to authorised staff</td>
+                <td class="tdType bold">OBS<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="ZrUTGUfmEaA-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="ZrUTGUfmEaA-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">6.7.2.2.3 Written standard operating procedures exist for requests / retrieval / filing of patient files</td>
+                <td class="tdType bold">DOC<br /><br />V</td>
+                <td class="tdScore" colspan="3"><input id="LzmPxGbnyuR-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="LzmPxGbnyuR-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 7 Facilities and Infrastructure: 7.1.3.1 Waiting areas are appropriately located and adequate for the number of patients using them</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">7.1.3.1.2 Waiting areas are located in the areas where the service takes place</td>
+                <td class="tdType bold">OBS<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="kUh5WmLrDeW-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="kUh5WmLrDeW-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

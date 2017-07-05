@@ -1,1 +1,348 @@
-<script type='text/javascript'> function upCalc() { $( "[data-calculated]" ).each( function( index, element ) { var id = $( this ).attr( 'id' ); var de = id.split( '-' )[0]; var coc = id.split( '-' )[1]; var code = $( this ).attr( 'data-calculated' ); var yes = parseInt( 0 ); var count = parseInt( 0 ); $( "[data-checklist='" + code + "']" ).each( function( index, element ) { var value = $( this ).val(); if ( value ) { if ( value == 'true' || value == 'false' ) { count++; } if ( value == 'true'  ) { yes++; } } } ); if ( count > 0 ) { var average = parseInt( yes ) / parseInt( count ); var val = Math.round( average * 100 ) / 100; $( this ).val( val ); saveVal( de, coc, id ); } } ); } </script><style type="text/css">.domain {font-family:sans-serif;font-weight:bold;font-size:12px;padding: 20px 0;width:900px;} #contentDiv table {border-collapse:collapse;font-family:sans-serif;font-size:12px;page-break-inside:avoid;} #contentDiv table td {border: 1px solid #ccc;padding:8px;} .tdCrit {width:420px;height:35px;padding-right:20px;} .tdType {width:70px;} .tdScore {width:211px;} .tdScoreCheck {width:59px;} .tdNote {width:290px;} .formHeader {position:relative;padding: 25px 0 20px 0;} .formTitle {font-family:sans-serif;position:absolute;font-size:28px;margin-left:35px;top:75px;} .sectionHeader {margin-top:25px;} .sectionHeader table td {font-family:sans-serif;font-weight:bold;font-size:13px;background-color:#bedef4;} .facilityInput {font-family:sans-serif;font-weight:bold;position:relative;display:inline-block;height:28px;width:450px;border:1px solid #ccc;margin-right:20px;} .periodInput {position:relative;display:inline-block;height:28px;width:281px;border:1px solid #ccc;} .facilityLabel {font-family:sans-serif;position:relative;top:6px;display:inline-block;height:28px;font-size:16px;padding-right:15px;} .noteDiv {font-family:sans-serif;font-style:italic;font-size:11px;margin-top:20px;} .greyRow {background-color:#eee;} .commentCodes {margin:28px 0;border-collapse:collapse;}</style><style media="screen" type="text/css">.inputDiv {display:none;}</style> <style media="print" type="text/css">.inputDiv {display:block;position:relative;}</style> <div class="formHeader"><img src="../dhis-web-commons/flags/south_africa_department_of_health.png" /><span class="formTitle bold">Assessment Questionnaire </span></div><div class="inputDiv"><span class="facilityLabel">Facility: </span><span class="facilityInput">&nbsp;</span><span class="facilityLabel">Period: </span><span class="periodInput">&nbsp;</span></div><div class="sectionHeader bold"><table><tbody><tr><td class="tdCrit">SX10 Entrance/Reception and help desk</td><td class="tdType">Type</td><td class="tdScore">Score</td><td class="tdNote">Notes</td></tr></tbody></table></div><div class="domain bold">Domain 1 Patients Rights: 1.2.2.1 The information / Help desk of the health care health establishment provides for the easy access to information on services provided</div><div><table><tbody><tr><td class="tdCrit">1.2.2.1.1 A help desk is situated in a prominent position in the public area at the entrance to the health establishment</td><td class="tdType bold">OBS<br /><br />E</td><td class="tdScore" colspan="3"><input id="L07mmkYxfz7-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="L07mmkYxfz7-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">1.2.2.1.2 Help desk staff demonstrate that they are able to communicate in the common local languages of the area</td><td class="tdType bold">OBS<br /><br />D</td><td class="tdScore" colspan="3"><input id="OFrL2lMpZkn-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="OFrL2lMpZkn-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">1.2.2.1.3 A spot check at a random time during the visit shows that the helpdesk is manned</td><td class="tdType bold">OBS<br /><br />D</td><td class="tdScore" colspan="3"><input id="WXGFhVvP78C-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="WXGFhVvP78C-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 1 Patients Rights: 1.2.2.2 The signage in the health establishment directs patients and visitors to key areas of the health care health establishment</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">1.2.2.2.1 CHECKLIST - There is clear signage to the different service areas in the health establishment</td><td class="tdType bold">OBS<br /><br />D</td><td class="tdScore" colspan="3"><input id="Lif20HTKWVT-gSfwnIupmqe-val" style="text-align:center" value="" title=""/></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 1 Patients Rights: 1.2.2.3 A notice indicating the operating times of the health establishment`s services and visiting hours is prominently displayed at the entrance of the health establishment</div><div><table><tbody><tr><td class="tdCrit">1.2.2.3.1 A signage board at the entrance of the health establishment indicates the times when various services are offered</td><td class="tdType bold">OBS<br /><br />D</td><td class="tdScore" colspan="3"><input id="g7YH2wjiLaZ-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="g7YH2wjiLaZ-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 1 Patients Rights: 1.3.1.1 The entrance to the health establishment offers easy and safe entry to the public</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">1.3.1.1.1 The entrance to the health establishment is clearly signposted</td><td class="tdType bold">OBS<br /><br />D</td><td class="tdScore" colspan="3"><input id="XsfbYGIwXWc-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="XsfbYGIwXWc-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">1.3.1.1.2 Systems are in place to ensure safe entry eg security guards/CCTV</td><td class="tdType bold">OBS<br /><br />V</td><td class="tdScore" colspan="3"><input id="PZI84zUUck9-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="PZI84zUUck9-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">1.3.1.1.3 The entrance is free from any blockages or hazards eg hawkers</td><td class="tdType bold">OBS<br /><br />D</td><td class="tdScore" colspan="3"><input id="TGrF7hmSxFe-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="TGrF7hmSxFe-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 1 Patients Rights: 1.3.1.2 Easy access for persons with disabilities and the aged is facilitated</div><div><table><tbody><tr><td class="tdCrit">1.3.1.2.1 Ramps with handrails of an acceptable gradient are available at the entrances to the health establishment/unit and/or where needed</td><td class="tdType bold">OBS<br /><br />V</td><td class="tdScore" colspan="3"><input id="XPczr0sAIsG-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="XPczr0sAIsG-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 1 Patients Rights: 1.8.1.2 Patients are made aware of the process by which they can lay a complaint</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">1.8.1.2.1 Information on the procedure for complaints is clearly displayed in all service areas</td><td class="tdType bold">OBS<br /><br />E</td><td class="tdScore" colspan="3"><input id="HJChsIVFCHw-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="HJChsIVFCHw-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">1.8.1.2.2 The poster or pamphlet on complaints is simple to read and available in the local languages</td><td class="tdType bold">OBS<br /><br />E</td><td class="tdScore" colspan="3"><input id="bdSDVnqhGJy-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="bdSDVnqhGJy-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 4 Public Health: 4.1.1.5 Collaboration with relevant authorities and stakeholders is pursued to ensure the health establishment is readily accessible and clearly signposted</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">4.1.1.5.1 The health establishment is readily accessible by road or rail</td><td class="tdType bold">OBS<br /><br />E</td><td class="tdScore" colspan="3"><input id="Y7W0WlvNqxG-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="Y7W0WlvNqxG-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 7 Facilities and Infrastructure: 7.2.3.1 The telephone system is functional and reliable</div><div><table><tbody><tr><td class="tdCrit">7.2.3.1.2 Clearly legible and up to date emergency numbers are displayed at the switchboard/reception area/consulting room</td><td class="tdType bold">OBS<br /><br />E</td><td class="tdScore" colspan="3"><input id="lhzi0mksgrS-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="lhzi0mksgrS-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.2.3.1.3 Access to the switchboard is controlled</td><td class="tdType bold">OBS<br /><br />D</td><td class="tdScore" colspan="3"><input id="lvDytUS3TAA-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="lvDytUS3TAA-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 7 Facilities and Infrastructure: 7.2.3.2 A functional back-up system ensures communication in the event of telephone system failure The back-up system is always functional</div><div><table><tbody><tr><td class="tdCrit">7.2.3.2.1 An efficient alternative to communicate if telephone line is off is always available</td><td class="tdType bold">OBS<br /><br />E</td><td class="tdScore" colspan="3"><input id="Dzv9JuhMQpA-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="Dzv9JuhMQpA-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.2.3.2.2 Cell phone numbers of strategic staff are available at the switchboard and/or in the Management offices</td><td class="tdType bold">OBS<br /><br />E</td><td class="tdScore" colspan="3"><input id="OzHn85ilVAD-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="OzHn85ilVAD-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 7 Facilities and Infrastructure: 7.4.1.4 Their is a policy on non smoking which is implemented in the establishment</div><div><table><tbody><tr><td class="tdCrit">7.4.1.4.2 Notices are prominently displayed prohibiting smoking inside the buildings</td><td class="tdType bold">OBS<br /><br />D</td><td class="tdScore" colspan="3"><input id="IvslDrU6Tfv-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="IvslDrU6Tfv-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div>
+<script type='text/javascript'>
+    function upCalc() {
+        $("[data-calculated]").each(function(index, element) {
+            var id = $(this).attr('id');
+            var de = id.split('-')[0];
+            var coc = id.split('-')[1];
+            var code = $(this).attr('data-calculated');
+            var yes = parseInt(0);
+            var count = parseInt(0);
+            $("[data-checklist='" + code + "']").each(function(index, element) {
+                var value = $(this).val();
+                if (value) {
+                    if (value == 'true' || value == 'false') {
+                        count++;
+                    }
+                    if (value == 'true') {
+                        yes++;
+                    }
+                }
+            });
+            if (count > 0) {
+                var average = parseInt(yes) / parseInt(count);
+                var val = Math.round(average * 100) / 100;
+                $(this).val(val);
+                saveVal(de, coc, id);
+            }
+        });
+    }
+
+</script>
+<style type="text/css">
+    .domain {
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 12px;
+        padding: 20px 0;
+        width: 900px;
+    }
+    
+    #contentDiv table {
+        border-collapse: collapse;
+        font-family: sans-serif;
+        font-size: 12px;
+        page-break-inside: avoid;
+    }
+    
+    #contentDiv table td {
+        border: 1px solid #ccc;
+        padding: 8px;
+    }
+    
+    .tdCrit {
+        width: 420px;
+        height: 35px;
+        padding-right: 20px;
+    }
+    
+    .tdType {
+        width: 70px;
+    }
+    
+    .tdScore {
+        width: 211px;
+    }
+    
+    .tdScoreCheck {
+        width: 59px;
+    }
+    
+    .tdNote {
+        width: 290px;
+    }
+    
+    .formHeader {
+        position: relative;
+        padding: 25px 0 20px 0;
+    }
+    
+    .formTitle {
+        font-family: sans-serif;
+        position: absolute;
+        font-size: 28px;
+        margin-left: 35px;
+        top: 75px;
+    }
+    
+    .sectionHeader {
+        margin-top: 25px;
+    }
+    
+    .sectionHeader table td {
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 13px;
+        background-color: #bedef4;
+    }
+    
+    .facilityInput {
+        font-family: sans-serif;
+        font-weight: bold;
+        position: relative;
+        display: inline-block;
+        height: 28px;
+        width: 450px;
+        border: 1px solid #ccc;
+        margin-right: 20px;
+    }
+    
+    .periodInput {
+        position: relative;
+        display: inline-block;
+        height: 28px;
+        width: 281px;
+        border: 1px solid #ccc;
+    }
+    
+    .facilityLabel {
+        font-family: sans-serif;
+        position: relative;
+        top: 6px;
+        display: inline-block;
+        height: 28px;
+        font-size: 16px;
+        padding-right: 15px;
+    }
+    
+    .noteDiv {
+        font-family: sans-serif;
+        font-style: italic;
+        font-size: 11px;
+        margin-top: 20px;
+    }
+    
+    .greyRow {
+        background-color: #eee;
+    }
+    
+    .commentCodes {
+        margin: 28px 0;
+        border-collapse: collapse;
+    }
+    .commentlink {
+        padding-left: 15px;
+        padding-bottom: 10px;
+        width: 15px;
+        height: 15px;
+    }
+
+</style>
+<style media="screen" type="text/css">
+    .inputDiv {
+        display: none;
+    }
+
+</style>
+<style media="print" type="text/css">
+    .inputDiv {
+        display: block;
+        position: relative;
+    }
+
+</style>
+<div class="formHeader"><img src="../dhis-web-commons/flags/south_africa_department_of_health.png" /><span class="formTitle bold">Assessment Questionnaire </span></div>
+<div class="inputDiv"><span class="facilityLabel">Facility: </span><span class="facilityInput">&nbsp;</span><span class="facilityLabel">Period: </span><span class="periodInput">&nbsp;</span></div>
+<div class="sectionHeader bold">
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">SX10 Entrance/Reception and help desk</td>
+                <td class="tdType">Type</td>
+                <td class="tdScore">Score</td>
+                <td class="tdNote">Notes</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 1 Patients Rights: 1.2.2.1 The information / Help desk of the health care health establishment provides for the easy access to information on services provided</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">1.2.2.1.1 A help desk is situated in a prominent position in the public area at the entrance to the health establishment</td>
+                <td class="tdType bold">OBS<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="L07mmkYxfz7-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="L07mmkYxfz7-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">1.2.2.1.2 Help desk staff demonstrate that they are able to communicate in the common local languages of the area</td>
+                <td class="tdType bold">OBS<br /><br />D</td>
+                <td class="tdScore" colspan="3"><input id="OFrL2lMpZkn-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="OFrL2lMpZkn-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">1.2.2.1.3 A spot check at a random time during the visit shows that the helpdesk is manned</td>
+                <td class="tdType bold">OBS<br /><br />D</td>
+                <td class="tdScore" colspan="3"><input id="WXGFhVvP78C-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="WXGFhVvP78C-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 1 Patients Rights: 1.2.2.2 The signage in the health establishment directs patients and visitors to key areas of the health care health establishment</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">1.2.2.2.1 CHECKLIST - There is clear signage to the different service areas in the health establishment</td>
+                <td class="tdType bold">OBS<br /><br />D</td>
+                <td class="tdScore" colspan="3"><input id="Lif20HTKWVT-gSfwnIupmqe-val" style="text-align:center" value="" title="" /></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 1 Patients Rights: 1.2.2.3 A notice indicating the operating times of the health establishment`s services and visiting hours is prominently displayed at the entrance of the health establishment</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">1.2.2.3.1 A signage board at the entrance of the health establishment indicates the times when various services are offered</td>
+                <td class="tdType bold">OBS<br /><br />D</td>
+                <td class="tdScore" colspan="3"><input id="g7YH2wjiLaZ-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="g7YH2wjiLaZ-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 1 Patients Rights: 1.3.1.1 The entrance to the health establishment offers easy and safe entry to the public</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">1.3.1.1.1 The entrance to the health establishment is clearly signposted</td>
+                <td class="tdType bold">OBS<br /><br />D</td>
+                <td class="tdScore" colspan="3"><input id="XsfbYGIwXWc-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="XsfbYGIwXWc-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">1.3.1.1.2 Systems are in place to ensure safe entry eg security guards/CCTV</td>
+                <td class="tdType bold">OBS<br /><br />V</td>
+                <td class="tdScore" colspan="3"><input id="PZI84zUUck9-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="PZI84zUUck9-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">1.3.1.1.3 The entrance is free from any blockages or hazards eg hawkers</td>
+                <td class="tdType bold">OBS<br /><br />D</td>
+                <td class="tdScore" colspan="3"><input id="TGrF7hmSxFe-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="TGrF7hmSxFe-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 1 Patients Rights: 1.3.1.2 Easy access for persons with disabilities and the aged is facilitated</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">1.3.1.2.1 Ramps with handrails of an acceptable gradient are available at the entrances to the health establishment/unit and/or where needed</td>
+                <td class="tdType bold">OBS<br /><br />V</td>
+                <td class="tdScore" colspan="3"><input id="XPczr0sAIsG-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="XPczr0sAIsG-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 1 Patients Rights: 1.8.1.2 Patients are made aware of the process by which they can lay a complaint</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">1.8.1.2.1 Information on the procedure for complaints is clearly displayed in all service areas</td>
+                <td class="tdType bold">OBS<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="HJChsIVFCHw-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="HJChsIVFCHw-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">1.8.1.2.2 The poster or pamphlet on complaints is simple to read and available in the local languages</td>
+                <td class="tdType bold">OBS<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="bdSDVnqhGJy-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="bdSDVnqhGJy-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 4 Public Health: 4.1.1.5 Collaboration with relevant authorities and stakeholders is pursued to ensure the health establishment is readily accessible and clearly signposted</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">4.1.1.5.1 The health establishment is readily accessible by road or rail</td>
+                <td class="tdType bold">OBS<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="Y7W0WlvNqxG-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="Y7W0WlvNqxG-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 7 Facilities and Infrastructure: 7.2.3.1 The telephone system is functional and reliable</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">7.2.3.1.2 Clearly legible and up to date emergency numbers are displayed at the switchboard/reception area/consulting room</td>
+                <td class="tdType bold">OBS<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="lhzi0mksgrS-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="lhzi0mksgrS-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.2.3.1.3 Access to the switchboard is controlled</td>
+                <td class="tdType bold">OBS<br /><br />D</td>
+                <td class="tdScore" colspan="3"><input id="lvDytUS3TAA-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="lvDytUS3TAA-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 7 Facilities and Infrastructure: 7.2.3.2 A functional back-up system ensures communication in the event of telephone system failure The back-up system is always functional</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">7.2.3.2.1 An efficient alternative to communicate if telephone line is off is always available</td>
+                <td class="tdType bold">OBS<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="Dzv9JuhMQpA-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="Dzv9JuhMQpA-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.2.3.2.2 Cell phone numbers of strategic staff are available at the switchboard and/or in the Management offices</td>
+                <td class="tdType bold">OBS<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="OzHn85ilVAD-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="OzHn85ilVAD-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 7 Facilities and Infrastructure: 7.4.1.4 Their is a policy on non smoking which is implemented in the establishment</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">7.4.1.4.2 Notices are prominently displayed prohibiting smoking inside the buildings</td>
+                <td class="tdType bold">OBS<br /><br />D</td>
+                <td class="tdScore" colspan="3"><input id="IvslDrU6Tfv-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="IvslDrU6Tfv-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,1 +1,253 @@
-<script type='text/javascript'> function upCalc() { $( "[data-calculated]" ).each( function( index, element ) { var id = $( this ).attr( 'id' ); var de = id.split( '-' )[0]; var coc = id.split( '-' )[1]; var code = $( this ).attr( 'data-calculated' ); var yes = parseInt( 0 ); var count = parseInt( 0 ); $( "[data-checklist='" + code + "']" ).each( function( index, element ) { var value = $( this ).val(); if ( value ) { if ( value == 'true' || value == 'false' ) { count++; } if ( value == 'true'  ) { yes++; } } } ); if ( count > 0 ) { var average = parseInt( yes ) / parseInt( count ); var val = Math.round( average * 100 ) / 100; $( this ).val( val ); saveVal( de, coc, id ); } } ); } </script><style type="text/css">.domain {font-family:sans-serif;font-weight:bold;font-size:12px;padding: 20px 0;width:900px;} #contentDiv table {border-collapse:collapse;font-family:sans-serif;font-size:12px;page-break-inside:avoid;} #contentDiv table td {border: 1px solid #ccc;padding:8px;} .tdCrit {width:420px;height:35px;padding-right:20px;} .tdType {width:70px;} .tdScore {width:211px;} .tdScoreCheck {width:59px;} .tdNote {width:290px;} .formHeader {position:relative;padding: 25px 0 20px 0;} .formTitle {font-family:sans-serif;position:absolute;font-size:28px;margin-left:35px;top:75px;} .sectionHeader {margin-top:25px;} .sectionHeader table td {font-family:sans-serif;font-weight:bold;font-size:13px;background-color:#bedef4;} .facilityInput {font-family:sans-serif;font-weight:bold;position:relative;display:inline-block;height:28px;width:450px;border:1px solid #ccc;margin-right:20px;} .periodInput {position:relative;display:inline-block;height:28px;width:281px;border:1px solid #ccc;} .facilityLabel {font-family:sans-serif;position:relative;top:6px;display:inline-block;height:28px;font-size:16px;padding-right:15px;} .noteDiv {font-family:sans-serif;font-style:italic;font-size:11px;margin-top:20px;} .greyRow {background-color:#eee;} .commentCodes {margin:28px 0;border-collapse:collapse;}</style><style media="screen" type="text/css">.inputDiv {display:none;}</style> <style media="print" type="text/css">.inputDiv {display:block;position:relative;}</style> <div class="formHeader"><img src="../dhis-web-commons/flags/south_africa_department_of_health.png" /><span class="formTitle bold">Assessment Questionnaire </span></div><div class="inputDiv"><span class="facilityLabel">Facility: </span><span class="facilityInput">&nbsp;</span><span class="facilityLabel">Period: </span><span class="periodInput">&nbsp;</span></div><div class="sectionHeader bold"><table><tbody><tr><td class="tdCrit">SX07 Waste Management</td><td class="tdType">Type</td><td class="tdScore">Score</td><td class="tdNote">Notes</td></tr></tbody></table></div><div class="domain bold">Domain 7 Facilities and Infrastructure: 7.5.1.2 A designated and knowledgeable staff member responsible for waste management oversees compliance with relevant legislation and standards</div><div><table><tbody><tr><td class="tdCrit">7.5.1.2.1 There is a designated or appointed waste manager</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="OFCzLPPcor7-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="OFCzLPPcor7-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 7 Facilities and Infrastructure: 7.5.2.3 There is a contract and Service Level Agreement in place with an approved and legally compliant waste removal service provider</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">7.5.2.3.1 There is a valid contract and Service Level Agreement for waste removal which is regularly monitored</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="J407NXQUxb8-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="J407NXQUxb8-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.5.2.3.2 Records show that the waste manager monitors and manages the service level agreements for waste removal and disposal</td><td class="tdType bold">DOC<br /><br />V</td><td class="tdScore" colspan="3"><input id="BwamnpjlXmY-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="BwamnpjlXmY-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 7 Facilities and Infrastructure: 7.5.2.4 The containers for disposal of waste are accessible / appropriate to type of waste and adequate in number and volume to handle all the HCRW generated</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">7.5.2.4.1 There are adequate containers for disposal of HCRW stored in an easily accessible / well maintained central disposal area</td><td class="tdType bold">OBS<br /><br />V</td><td class="tdScore" colspan="3"><input id="YC2E29Hq7Ap-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="YC2E29Hq7Ap-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.5.2.4.2 There is a procedure in place for obtaining additional HCRW containers should there be a need</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="y1TlMfH0ReE-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="y1TlMfH0ReE-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 7 Facilities and Infrastructure: 7.5.4.1 General waste is stored and transported appropriately and securely and removed timeously</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">7.5.4.1.1 The outside bin/waste storage area is well maintained and poses no health risk</td><td class="tdType bold">OBS<br /><br />V</td><td class="tdScore" colspan="3"><input id="nks0rgN0h0q-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="nks0rgN0h0q-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 7 Facilities and Infrastructure: 7.5.4.2 Suitable containers are conveniently placed and adequate in numbers to facilitate disposal</div><div><table><tbody><tr><td class="tdCrit">7.5.4.2.2 General waste is stored in appropriate containers which are neatly packed or stacked</td><td class="tdType bold">OBS<br /><br />D</td><td class="tdScore" colspan="3"><input id="XWmyDfEJOil-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="XWmyDfEJOil-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div>
+<script type='text/javascript'>
+    function upCalc() {
+        $("[data-calculated]").each(function(index, element) {
+            var id = $(this).attr('id');
+            var de = id.split('-')[0];
+            var coc = id.split('-')[1];
+            var code = $(this).attr('data-calculated');
+            var yes = parseInt(0);
+            var count = parseInt(0);
+            $("[data-checklist='" + code + "']").each(function(index, element) {
+                var value = $(this).val();
+                if (value) {
+                    if (value == 'true' || value == 'false') {
+                        count++;
+                    }
+                    if (value == 'true') {
+                        yes++;
+                    }
+                }
+            });
+            if (count > 0) {
+                var average = parseInt(yes) / parseInt(count);
+                var val = Math.round(average * 100) / 100;
+                $(this).val(val);
+                saveVal(de, coc, id);
+            }
+        });
+    }
+
+</script>
+<style type="text/css">
+    .domain {
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 12px;
+        padding: 20px 0;
+        width: 900px;
+    }
+    
+    #contentDiv table {
+        border-collapse: collapse;
+        font-family: sans-serif;
+        font-size: 12px;
+        page-break-inside: avoid;
+    }
+    
+    #contentDiv table td {
+        border: 1px solid #ccc;
+        padding: 8px;
+    }
+    
+    .tdCrit {
+        width: 420px;
+        height: 35px;
+        padding-right: 20px;
+    }
+    
+    .tdType {
+        width: 70px;
+    }
+    
+    .tdScore {
+        width: 211px;
+    }
+    
+    .tdScoreCheck {
+        width: 59px;
+    }
+    
+    .tdNote {
+        width: 290px;
+    }
+    
+    .formHeader {
+        position: relative;
+        padding: 25px 0 20px 0;
+    }
+    
+    .formTitle {
+        font-family: sans-serif;
+        position: absolute;
+        font-size: 28px;
+        margin-left: 35px;
+        top: 75px;
+    }
+    
+    .sectionHeader {
+        margin-top: 25px;
+    }
+    
+    .sectionHeader table td {
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 13px;
+        background-color: #bedef4;
+    }
+    
+    .facilityInput {
+        font-family: sans-serif;
+        font-weight: bold;
+        position: relative;
+        display: inline-block;
+        height: 28px;
+        width: 450px;
+        border: 1px solid #ccc;
+        margin-right: 20px;
+    }
+    
+    .periodInput {
+        position: relative;
+        display: inline-block;
+        height: 28px;
+        width: 281px;
+        border: 1px solid #ccc;
+    }
+    
+    .facilityLabel {
+        font-family: sans-serif;
+        position: relative;
+        top: 6px;
+        display: inline-block;
+        height: 28px;
+        font-size: 16px;
+        padding-right: 15px;
+    }
+    
+    .noteDiv {
+        font-family: sans-serif;
+        font-style: italic;
+        font-size: 11px;
+        margin-top: 20px;
+    }
+    
+    .greyRow {
+        background-color: #eee;
+    }
+    
+    .commentCodes {
+        margin: 28px 0;
+        border-collapse: collapse;
+    }
+    .commentlink {
+        padding-left: 15px;
+        padding-bottom: 10px;
+        width: 15px;
+        height: 15px;
+    }
+
+</style>
+<style media="screen" type="text/css">
+    .inputDiv {
+        display: none;
+    }
+
+</style>
+<style media="print" type="text/css">
+    .inputDiv {
+        display: block;
+        position: relative;
+    }
+
+</style>
+<div class="formHeader"><img src="../dhis-web-commons/flags/south_africa_department_of_health.png" /><span class="formTitle bold">Assessment Questionnaire </span></div>
+<div class="inputDiv"><span class="facilityLabel">Facility: </span><span class="facilityInput">&nbsp;</span><span class="facilityLabel">Period: </span><span class="periodInput">&nbsp;</span></div>
+<div class="sectionHeader bold">
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">SX07 Waste Management</td>
+                <td class="tdType">Type</td>
+                <td class="tdScore">Score</td>
+                <td class="tdNote">Notes</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 7 Facilities and Infrastructure: 7.5.1.2 A designated and knowledgeable staff member responsible for waste management oversees compliance with relevant legislation and standards</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">7.5.1.2.1 There is a designated or appointed waste manager</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="OFCzLPPcor7-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="OFCzLPPcor7-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 7 Facilities and Infrastructure: 7.5.2.3 There is a contract and Service Level Agreement in place with an approved and legally compliant waste removal service provider</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">7.5.2.3.1 There is a valid contract and Service Level Agreement for waste removal which is regularly monitored</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="J407NXQUxb8-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="J407NXQUxb8-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.5.2.3.2 Records show that the waste manager monitors and manages the service level agreements for waste removal and disposal</td>
+                <td class="tdType bold">DOC<br /><br />V</td>
+                <td class="tdScore" colspan="3"><input id="BwamnpjlXmY-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="BwamnpjlXmY-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 7 Facilities and Infrastructure: 7.5.2.4 The containers for disposal of waste are accessible / appropriate to type of waste and adequate in number and volume to handle all the HCRW generated</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">7.5.2.4.1 There are adequate containers for disposal of HCRW stored in an easily accessible / well maintained central disposal area</td>
+                <td class="tdType bold">OBS<br /><br />V</td>
+                <td class="tdScore" colspan="3"><input id="YC2E29Hq7Ap-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="YC2E29Hq7Ap-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.5.2.4.2 There is a procedure in place for obtaining additional HCRW containers should there be a need</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="y1TlMfH0ReE-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="y1TlMfH0ReE-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 7 Facilities and Infrastructure: 7.5.4.1 General waste is stored and transported appropriately and securely and removed timeously</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">7.5.4.1.1 The outside bin/waste storage area is well maintained and poses no health risk</td>
+                <td class="tdType bold">OBS<br /><br />V</td>
+                <td class="tdScore" colspan="3"><input id="nks0rgN0h0q-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="nks0rgN0h0q-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 7 Facilities and Infrastructure: 7.5.4.2 Suitable containers are conveniently placed and adequate in numbers to facilitate disposal</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">7.5.4.2.2 General waste is stored in appropriate containers which are neatly packed or stacked</td>
+                <td class="tdType bold">OBS<br /><br />D</td>
+                <td class="tdScore" colspan="3"><input id="XWmyDfEJOil-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="XWmyDfEJOil-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

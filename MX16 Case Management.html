@@ -1,1 +1,294 @@
-<script type='text/javascript'> function upCalc() { $( "[data-calculated]" ).each( function( index, element ) { var id = $( this ).attr( 'id' ); var de = id.split( '-' )[0]; var coc = id.split( '-' )[1]; var code = $( this ).attr( 'data-calculated' ); var yes = parseInt( 0 ); var count = parseInt( 0 ); $( "[data-checklist='" + code + "']" ).each( function( index, element ) { var value = $( this ).val(); if ( value ) { if ( value == 'true' || value == 'false' ) { count++; } if ( value == 'true'  ) { yes++; } } } ); if ( count > 0 ) { var average = parseInt( yes ) / parseInt( count ); var val = Math.round( average * 100 ) / 100; $( this ).val( val ); saveVal( de, coc, id ); } } ); } </script><style type="text/css">.domain {font-family:sans-serif;font-weight:bold;font-size:12px;padding: 20px 0;width:900px;} #contentDiv table {border-collapse:collapse;font-family:sans-serif;font-size:12px;page-break-inside:avoid;} #contentDiv table td {border: 1px solid #ccc;padding:8px;} .tdCrit {width:420px;height:35px;padding-right:20px;} .tdType {width:70px;} .tdScore {width:211px;} .tdScoreCheck {width:59px;} .tdNote {width:290px;} .formHeader {position:relative;padding: 25px 0 20px 0;} .formTitle {font-family:sans-serif;position:absolute;font-size:28px;margin-left:35px;top:75px;} .sectionHeader {margin-top:25px;} .sectionHeader table td {font-family:sans-serif;font-weight:bold;font-size:13px;background-color:#bedef4;} .facilityInput {font-family:sans-serif;font-weight:bold;position:relative;display:inline-block;height:28px;width:450px;border:1px solid #ccc;margin-right:20px;} .periodInput {position:relative;display:inline-block;height:28px;width:281px;border:1px solid #ccc;} .facilityLabel {font-family:sans-serif;position:relative;top:6px;display:inline-block;height:28px;font-size:16px;padding-right:15px;} .noteDiv {font-family:sans-serif;font-style:italic;font-size:11px;margin-top:20px;} .greyRow {background-color:#eee;} .commentCodes {margin:28px 0;border-collapse:collapse;}</style><style media="screen" type="text/css">.inputDiv {display:none;}</style> <style media="print" type="text/css">.inputDiv {display:block;position:relative;}</style> <div class="formHeader"><img src="../dhis-web-commons/flags/south_africa_department_of_health.png" /><span class="formTitle bold">Assessment Questionnaire </span></div><div class="inputDiv"><span class="facilityLabel">Facility: </span><span class="facilityInput">&nbsp;</span><span class="facilityLabel">Period: </span><span class="periodInput">&nbsp;</span></div><div class="sectionHeader bold"><table><tbody><tr><td class="tdCrit">MX16 Case Management</td><td class="tdType">Type</td><td class="tdScore">Score</td><td class="tdNote">Notes</td></tr></tbody></table></div><div class="domain bold">Domain 1 Patients Rights: 1.2.1.1 Patients are informed of their rights and responsibilities</div><div><table><tbody><tr><td class="tdCrit">1.2.1.1.3 There is a process by which patients who have 3rd party funders of their care are informed if they are self liable for portions of the cost of their admission</td><td class="tdType bold"> SI<br /><br />E</td><td class="tdScore" colspan="3"><input id="xni4tbI3SEO-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="xni4tbI3SEO-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">1.2.1.1.4 CHECKLIST - On admission and confirmation check if patients who are funded by medical aid for their hospital stay have valid memberships</td><td class="tdType bold">PRA<br /><br />E</td><td class="tdScore" colspan="3"><input id="zqosJ5IrGH0-gSfwnIupmqe-val" style="text-align:center" value="" title=""/></td><td class="tdNote"></td></tr><tr><td class="tdCrit">1.2.1.1.5 There is evidence to show that patients who are paying cash for their healthcare are provided with information to enable them to understand the full extent of their financial obligations</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="oEJKaBGYRcM-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="oEJKaBGYRcM-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 3 Clinical Support Services: 3.7.1.1 There are effective case management systems within the health establishment</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">3.7.1.1.1 The case management department is staffed adequately based on workload as shown by patient admissions/ consultations and procedures</td><td class="tdType bold">DOC<br /><br />D</td><td class="tdScore" colspan="3"><input id="DiTb11EVf0W-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="DiTb11EVf0W-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">3.7.1.1.2 Case managers receive appropriate formal training and in-service updates in efficiency management topics</td><td class="tdType bold">DOC<br /><br />D</td><td class="tdScore" colspan="3"><input id="yMoOsrTkY3T-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="yMoOsrTkY3T-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">3.7.1.1.3 Case management systems allow for the pre-authorisation of procedures and for regular updates and final verification information to be sent to funders</td><td class="tdType bold">OBS<br /><br />D</td><td class="tdScore" colspan="3"><input id="LXAUUQfDypF-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="LXAUUQfDypF-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">3.7.1.1.4 There is evidence to show that the establishment monitors the average Length of Stay and Level of Care for the top 10 Diagnoses against standard norms and targets</td><td class="tdType bold">DOC<br /><br />D</td><td class="tdScore" colspan="3"><input id="vuP3mVuDsEH-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="vuP3mVuDsEH-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">3.7.1.1.5 There is evidence to show that quality improvement plans have been implemented to address shortcomings in length of stay and level of care</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="v8UJ9wj5uW7-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="v8UJ9wj5uW7-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">3.7.1.1.6 There is a system in place to measure average cost per patient day / monitor outliers and develop improvement plans to address shortcomings</td><td class="tdType bold">DOC<br /><br />D</td><td class="tdScore" colspan="3"><input id="fCdLU091JBy-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="fCdLU091JBy-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 3 Clinical Support Services: 3.7.1.2 There is a processes to ensure financial risks for payment of care are managed so as to ensure patients are protected from unnecessary additional healthcare costs</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">3.7.1.2.1 There is evidence that types of funder rejections on claims are monitored to ensure appropriate care is being delivered to patients - rejections on Compliance to funder rules for authorisations / benefits / limits / predictables</td><td class="tdType bold">DOC<br /><br />D</td><td class="tdScore" colspan="3"><input id="stRjCah4P1N-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="stRjCah4P1N-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">3.7.1.2.2 There are procedures to mitigate against cost of healthcare being passed onto the patient unnecessarily such as motivations for clinically appropriate services / LOC management/utilisation and case management/co-payment monitoring</td><td class="tdType bold">DOC<br /><br />D</td><td class="tdScore" colspan="3"><input id="sP1PGWXiISj-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="sP1PGWXiISj-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">3.7.1.2.3 There is a procedure in place to monitor and mitigate against patients medical aid funds being exhausted and them not having access to care</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="xJ2ttFWYing-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="xJ2ttFWYing-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 3 Clinical Support Services: 3.7.1.3 Billings and case management systems are effective in ensuring patients are not over charged and have access to their benefits</div><div><table><tbody><tr><td class="tdCrit">3.7.1.3.1 There is evidence that audits are conducted to ensure efficient and accurate billing for healthcare services</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="PYunQOsusBn-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="PYunQOsusBn-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">3.7.1.3.2 There is evidence to show that case managers code Prescribed Minimum Benefits accurately to allow patients to access those benefits from their medical aid appropriately</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="F6B7qgBsaIg-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="F6B7qgBsaIg-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">3.7.1.3.3 There is evidence to show that quality improvement programmes are in place to improve the accuracy of coding</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="t4z00hQRuWY-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="t4z00hQRuWY-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div>
+<script type='text/javascript'>
+    function upCalc() {
+        $("[data-calculated]").each(function(index, element) {
+            var id = $(this).attr('id');
+            var de = id.split('-')[0];
+            var coc = id.split('-')[1];
+            var code = $(this).attr('data-calculated');
+            var yes = parseInt(0);
+            var count = parseInt(0);
+            $("[data-checklist='" + code + "']").each(function(index, element) {
+                var value = $(this).val();
+                if (value) {
+                    if (value == 'true' || value == 'false') {
+                        count++;
+                    }
+                    if (value == 'true') {
+                        yes++;
+                    }
+                }
+            });
+            if (count > 0) {
+                var average = parseInt(yes) / parseInt(count);
+                var val = Math.round(average * 100) / 100;
+                $(this).val(val);
+                saveVal(de, coc, id);
+            }
+        });
+    }
+
+</script>
+<style type="text/css">
+    .domain {
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 12px;
+        padding: 20px 0;
+        width: 900px;
+    }
+    
+    #contentDiv table {
+        border-collapse: collapse;
+        font-family: sans-serif;
+        font-size: 12px;
+        page-break-inside: avoid;
+    }
+    
+    #contentDiv table td {
+        border: 1px solid #ccc;
+        padding: 8px;
+    }
+    
+    .tdCrit {
+        width: 420px;
+        height: 35px;
+        padding-right: 20px;
+    }
+    
+    .tdType {
+        width: 70px;
+    }
+    
+    .tdScore {
+        width: 211px;
+    }
+    
+    .tdScoreCheck {
+        width: 59px;
+    }
+    
+    .tdNote {
+        width: 290px;
+    }
+    
+    .formHeader {
+        position: relative;
+        padding: 25px 0 20px 0;
+    }
+    
+    .formTitle {
+        font-family: sans-serif;
+        position: absolute;
+        font-size: 28px;
+        margin-left: 35px;
+        top: 75px;
+    }
+    
+    .sectionHeader {
+        margin-top: 25px;
+    }
+    
+    .sectionHeader table td {
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 13px;
+        background-color: #bedef4;
+    }
+    
+    .facilityInput {
+        font-family: sans-serif;
+        font-weight: bold;
+        position: relative;
+        display: inline-block;
+        height: 28px;
+        width: 450px;
+        border: 1px solid #ccc;
+        margin-right: 20px;
+    }
+    
+    .periodInput {
+        position: relative;
+        display: inline-block;
+        height: 28px;
+        width: 281px;
+        border: 1px solid #ccc;
+    }
+    
+    .facilityLabel {
+        font-family: sans-serif;
+        position: relative;
+        top: 6px;
+        display: inline-block;
+        height: 28px;
+        font-size: 16px;
+        padding-right: 15px;
+    }
+    
+    .noteDiv {
+        font-family: sans-serif;
+        font-style: italic;
+        font-size: 11px;
+        margin-top: 20px;
+    }
+    
+    .greyRow {
+        background-color: #eee;
+    }
+    
+    .commentCodes {
+        margin: 28px 0;
+        border-collapse: collapse;
+    }
+    .commentlink {
+        padding-left: 15px;
+        padding-bottom: 10px;
+        width: 15px;
+        height: 15px;
+    }
+
+</style>
+<style media="screen" type="text/css">
+    .inputDiv {
+        display: none;
+    }
+
+</style>
+<style media="print" type="text/css">
+    .inputDiv {
+        display: block;
+        position: relative;
+    }
+
+</style>
+<div class="formHeader"><img src="../dhis-web-commons/flags/south_africa_department_of_health.png" /><span class="formTitle bold">Assessment Questionnaire </span></div>
+<div class="inputDiv"><span class="facilityLabel">Facility: </span><span class="facilityInput">&nbsp;</span><span class="facilityLabel">Period: </span><span class="periodInput">&nbsp;</span></div>
+<div class="sectionHeader bold">
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">MX16 Case Management</td>
+                <td class="tdType">Type</td>
+                <td class="tdScore">Score</td>
+                <td class="tdNote">Notes</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 1 Patients Rights: 1.2.1.1 Patients are informed of their rights and responsibilities</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">1.2.1.1.3 There is a process by which patients who have 3rd party funders of their care are informed if they are self liable for portions of the cost of their admission</td>
+                <td class="tdType bold"> SI<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="xni4tbI3SEO-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="xni4tbI3SEO-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">1.2.1.1.4 CHECKLIST - On admission and confirmation check if patients who are funded by medical aid for their hospital stay have valid memberships</td>
+                <td class="tdType bold">PRA<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="zqosJ5IrGH0-gSfwnIupmqe-val" style="text-align:center" value="" title="" /></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">1.2.1.1.5 There is evidence to show that patients who are paying cash for their healthcare are provided with information to enable them to understand the full extent of their financial obligations</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="oEJKaBGYRcM-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="oEJKaBGYRcM-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 3 Clinical Support Services: 3.7.1.1 There are effective case management systems within the health establishment</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">3.7.1.1.1 The case management department is staffed adequately based on workload as shown by patient admissions/ consultations and procedures</td>
+                <td class="tdType bold">DOC<br /><br />D</td>
+                <td class="tdScore" colspan="3"><input id="DiTb11EVf0W-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="DiTb11EVf0W-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">3.7.1.1.2 Case managers receive appropriate formal training and in-service updates in efficiency management topics</td>
+                <td class="tdType bold">DOC<br /><br />D</td>
+                <td class="tdScore" colspan="3"><input id="yMoOsrTkY3T-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="yMoOsrTkY3T-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">3.7.1.1.3 Case management systems allow for the pre-authorisation of procedures and for regular updates and final verification information to be sent to funders</td>
+                <td class="tdType bold">OBS<br /><br />D</td>
+                <td class="tdScore" colspan="3"><input id="LXAUUQfDypF-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="LXAUUQfDypF-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">3.7.1.1.4 There is evidence to show that the establishment monitors the average Length of Stay and Level of Care for the top 10 Diagnoses against standard norms and targets</td>
+                <td class="tdType bold">DOC<br /><br />D</td>
+                <td class="tdScore" colspan="3"><input id="vuP3mVuDsEH-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="vuP3mVuDsEH-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">3.7.1.1.5 There is evidence to show that quality improvement plans have been implemented to address shortcomings in length of stay and level of care</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="v8UJ9wj5uW7-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="v8UJ9wj5uW7-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">3.7.1.1.6 There is a system in place to measure average cost per patient day / monitor outliers and develop improvement plans to address shortcomings</td>
+                <td class="tdType bold">DOC<br /><br />D</td>
+                <td class="tdScore" colspan="3"><input id="fCdLU091JBy-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="fCdLU091JBy-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 3 Clinical Support Services: 3.7.1.2 There is a processes to ensure financial risks for payment of care are managed so as to ensure patients are protected from unnecessary additional healthcare costs</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">3.7.1.2.1 There is evidence that types of funder rejections on claims are monitored to ensure appropriate care is being delivered to patients - rejections on Compliance to funder rules for authorisations / benefits / limits / predictables</td>
+                <td class="tdType bold">DOC<br /><br />D</td>
+                <td class="tdScore" colspan="3"><input id="stRjCah4P1N-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="stRjCah4P1N-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">3.7.1.2.2 There are procedures to mitigate against cost of healthcare being passed onto the patient unnecessarily such as motivations for clinically appropriate services / LOC management/utilisation and case management/co-payment monitoring</td>
+                <td class="tdType bold">DOC<br /><br />D</td>
+                <td class="tdScore" colspan="3"><input id="sP1PGWXiISj-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="sP1PGWXiISj-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">3.7.1.2.3 There is a procedure in place to monitor and mitigate against patients medical aid funds being exhausted and them not having access to care</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="xJ2ttFWYing-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="xJ2ttFWYing-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 3 Clinical Support Services: 3.7.1.3 Billings and case management systems are effective in ensuring patients are not over charged and have access to their benefits</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">3.7.1.3.1 There is evidence that audits are conducted to ensure efficient and accurate billing for healthcare services</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="PYunQOsusBn-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="PYunQOsusBn-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">3.7.1.3.2 There is evidence to show that case managers code Prescribed Minimum Benefits accurately to allow patients to access those benefits from their medical aid appropriately</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="F6B7qgBsaIg-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="F6B7qgBsaIg-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">3.7.1.3.3 There is evidence to show that quality improvement programmes are in place to improve the accuracy of coding</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="t4z00hQRuWY-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="t4z00hQRuWY-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

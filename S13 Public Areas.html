@@ -1,1 +1,214 @@
-<script type='text/javascript'> function upCalc() { $( "[data-calculated]" ).each( function( index, element ) { var id = $( this ).attr( 'id' ); var de = id.split( '-' )[0]; var coc = id.split( '-' )[1]; var code = $( this ).attr( 'data-calculated' ); var yes = parseInt( 0 ); var count = parseInt( 0 ); $( "[data-checklist='" + code + "']" ).each( function( index, element ) { var value = $( this ).val(); if ( value ) { if ( value == 'true' || value == 'false' ) { count++; } if ( value == 'true'  ) { yes++; } } } ); if ( count > 0 ) { var average = parseInt( yes ) / parseInt( count ); var val = Math.round( average * 100 ) / 100; $( this ).val( val ); saveVal( de, coc, id ); } } ); } </script><style type="text/css">.domain {font-family:sans-serif;font-weight:bold;font-size:12px;padding: 20px 0;width:900px;} #contentDiv table {border-collapse:collapse;font-family:sans-serif;font-size:12px;page-break-inside:avoid;} #contentDiv table td {border: 1px solid #ccc;padding:8px;} .tdCrit {width:420px;height:35px;padding-right:20px;} .tdType {width:70px;} .tdScore {width:211px;} .tdScoreCheck {width:59px;} .tdNote {width:290px;} .formHeader {position:relative;padding: 25px 0 20px 0;} .formTitle {font-family:sans-serif;position:absolute;font-size:28px;margin-left:35px;top:75px;} .sectionHeader {margin-top:25px;} .sectionHeader table td {font-family:sans-serif;font-weight:bold;font-size:13px;background-color:#bedef4;} .facilityInput {font-family:sans-serif;font-weight:bold;position:relative;display:inline-block;height:28px;width:450px;border:1px solid #ccc;margin-right:20px;} .periodInput {position:relative;display:inline-block;height:28px;width:281px;border:1px solid #ccc;} .facilityLabel {font-family:sans-serif;position:relative;top:6px;display:inline-block;height:28px;font-size:16px;padding-right:15px;} .noteDiv {font-family:sans-serif;font-style:italic;font-size:11px;margin-top:20px;} .greyRow {background-color:#eee;} .commentCodes {margin:28px 0;border-collapse:collapse;}</style><style media="screen" type="text/css">.inputDiv {display:none;}</style> <style media="print" type="text/css">.inputDiv {display:block;position:relative;}</style> <div class="formHeader"><img src="../dhis-web-commons/flags/south_africa_department_of_health.png" /><span class="formTitle bold">Assessment Questionnaire </span></div><div class="inputDiv"><span class="facilityLabel">Facility: </span><span class="facilityInput">&nbsp;</span><span class="facilityLabel">Period: </span><span class="periodInput">&nbsp;</span></div><div class="sectionHeader bold"><table><tbody><tr><td class="tdCrit">S13 Public Areas</td><td class="tdType">Type</td><td class="tdScore">Score</td><td class="tdNote">Notes</td></tr></tbody></table></div><div class="domain bold">Domain 1 Patients Rights: 1.1.3.4 Patients have access to clean water in waiting areas in disposable cup</div><div><table><tbody><tr><td class="tdCrit">1.1.3.4.1 There is clean water and disposable cups for patients in waiting areas/court yards</td><td class="tdType bold">OBS<br /><br />E</td><td class="tdScore" colspan="3"><input id="XJKCvq9RvYP-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="XJKCvq9RvYP-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 7 Facilities and Infrastructure: 7.1.6.1 A regular maintenance programme ensures that the health establishment grounds are safe for all users and provide an attractive environment</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">7.1.6.1.1 Grounds are maintained and are safe and clean</td><td class="tdType bold">OBS<br /><br />E</td><td class="tdScore" colspan="3"><input id="ONvU3bqnUCp-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="ONvU3bqnUCp-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.1.6.1.2 Pathways are well maintained</td><td class="tdType bold">OBS<br /><br />D</td><td class="tdScore" colspan="3"><input id="fTphvJKflMy-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="fTphvJKflMy-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.1.6.1.3 The records shows that nightly inspections are done to ensure adequate lighting on grounds for a safe environment for vehicles / staff and visitors at night</td><td class="tdType bold">DOC<br /><br />D</td><td class="tdScore" colspan="3"><input id="HpoFamL1Nfe-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="HpoFamL1Nfe-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div>
+<script type='text/javascript'>
+    function upCalc() {
+        $("[data-calculated]").each(function(index, element) {
+            var id = $(this).attr('id');
+            var de = id.split('-')[0];
+            var coc = id.split('-')[1];
+            var code = $(this).attr('data-calculated');
+            var yes = parseInt(0);
+            var count = parseInt(0);
+            $("[data-checklist='" + code + "']").each(function(index, element) {
+                var value = $(this).val();
+                if (value) {
+                    if (value == 'true' || value == 'false') {
+                        count++;
+                    }
+                    if (value == 'true') {
+                        yes++;
+                    }
+                }
+            });
+            if (count > 0) {
+                var average = parseInt(yes) / parseInt(count);
+                var val = Math.round(average * 100) / 100;
+                $(this).val(val);
+                saveVal(de, coc, id);
+            }
+        });
+    }
+
+</script>
+<style type="text/css">
+    .domain {
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 12px;
+        padding: 20px 0;
+        width: 900px;
+    }
+    
+    #contentDiv table {
+        border-collapse: collapse;
+        font-family: sans-serif;
+        font-size: 12px;
+        page-break-inside: avoid;
+    }
+    
+    #contentDiv table td {
+        border: 1px solid #ccc;
+        padding: 8px;
+    }
+    
+    .tdCrit {
+        width: 420px;
+        height: 35px;
+        padding-right: 20px;
+    }
+    
+    .tdType {
+        width: 70px;
+    }
+    
+    .tdScore {
+        width: 211px;
+    }
+    
+    .tdScoreCheck {
+        width: 59px;
+    }
+    
+    .tdNote {
+        width: 290px;
+    }
+    
+    .formHeader {
+        position: relative;
+        padding: 25px 0 20px 0;
+    }
+    
+    .formTitle {
+        font-family: sans-serif;
+        position: absolute;
+        font-size: 28px;
+        margin-left: 35px;
+        top: 75px;
+    }
+    
+    .sectionHeader {
+        margin-top: 25px;
+    }
+    
+    .sectionHeader table td {
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 13px;
+        background-color: #bedef4;
+    }
+    
+    .facilityInput {
+        font-family: sans-serif;
+        font-weight: bold;
+        position: relative;
+        display: inline-block;
+        height: 28px;
+        width: 450px;
+        border: 1px solid #ccc;
+        margin-right: 20px;
+    }
+    
+    .periodInput {
+        position: relative;
+        display: inline-block;
+        height: 28px;
+        width: 281px;
+        border: 1px solid #ccc;
+    }
+    
+    .facilityLabel {
+        font-family: sans-serif;
+        position: relative;
+        top: 6px;
+        display: inline-block;
+        height: 28px;
+        font-size: 16px;
+        padding-right: 15px;
+    }
+    
+    .noteDiv {
+        font-family: sans-serif;
+        font-style: italic;
+        font-size: 11px;
+        margin-top: 20px;
+    }
+    
+    .greyRow {
+        background-color: #eee;
+    }
+    
+    .commentCodes {
+        margin: 28px 0;
+        border-collapse: collapse;
+    }
+    .commentlink {
+        padding-left: 15px;
+        padding-bottom: 10px;
+        width: 15px;
+        height: 15px;
+    }
+
+</style>
+<style media="screen" type="text/css">
+    .inputDiv {
+        display: none;
+    }
+
+</style>
+<style media="print" type="text/css">
+    .inputDiv {
+        display: block;
+        position: relative;
+    }
+
+</style>
+<div class="formHeader"><img src="../dhis-web-commons/flags/south_africa_department_of_health.png" /><span class="formTitle bold">Assessment Questionnaire </span></div>
+<div class="inputDiv"><span class="facilityLabel">Facility: </span><span class="facilityInput">&nbsp;</span><span class="facilityLabel">Period: </span><span class="periodInput">&nbsp;</span></div>
+<div class="sectionHeader bold">
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">S13 Public Areas</td>
+                <td class="tdType">Type</td>
+                <td class="tdScore">Score</td>
+                <td class="tdNote">Notes</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 1 Patients Rights: 1.1.3.4 Patients have access to clean water in waiting areas in disposable cup</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">1.1.3.4.1 There is clean water and disposable cups for patients in waiting areas/court yards</td>
+                <td class="tdType bold">OBS<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="XJKCvq9RvYP-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="XJKCvq9RvYP-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 7 Facilities and Infrastructure: 7.1.6.1 A regular maintenance programme ensures that the health establishment grounds are safe for all users and provide an attractive environment</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">7.1.6.1.1 Grounds are maintained and are safe and clean</td>
+                <td class="tdType bold">OBS<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="ONvU3bqnUCp-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="ONvU3bqnUCp-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.1.6.1.2 Pathways are well maintained</td>
+                <td class="tdType bold">OBS<br /><br />D</td>
+                <td class="tdScore" colspan="3"><input id="fTphvJKflMy-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="fTphvJKflMy-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.1.6.1.3 The records shows that nightly inspections are done to ensure adequate lighting on grounds for a safe environment for vehicles / staff and visitors at night</td>
+                <td class="tdType bold">DOC<br /><br />D</td>
+                <td class="tdScore" colspan="3"><input id="HpoFamL1Nfe-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="HpoFamL1Nfe-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

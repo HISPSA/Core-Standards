@@ -1,1 +1,649 @@
-<script type='text/javascript'> function upCalc() { $( "[data-calculated]" ).each( function( index, element ) { var id = $( this ).attr( 'id' ); var de = id.split( '-' )[0]; var coc = id.split( '-' )[1]; var code = $( this ).attr( 'data-calculated' ); var yes = parseInt( 0 ); var count = parseInt( 0 ); $( "[data-checklist='" + code + "']" ).each( function( index, element ) { var value = $( this ).val(); if ( value ) { if ( value == 'true' || value == 'false' ) { count++; } if ( value == 'true'  ) { yes++; } } } ); if ( count > 0 ) { var average = parseInt( yes ) / parseInt( count ); var val = Math.round( average * 100 ) / 100; $( this ).val( val ); saveVal( de, coc, id ); } } ); } </script><style type="text/css">.domain {font-family:sans-serif;font-weight:bold;font-size:12px;padding: 20px 0;width:900px;} #contentDiv table {border-collapse:collapse;font-family:sans-serif;font-size:12px;page-break-inside:avoid;} #contentDiv table td {border: 1px solid #ccc;padding:8px;} .tdCrit {width:420px;height:35px;padding-right:20px;} .tdType {width:70px;} .tdScore {width:211px;} .tdScoreCheck {width:59px;} .tdNote {width:290px;} .formHeader {position:relative;padding: 25px 0 20px 0;} .formTitle {font-family:sans-serif;position:absolute;font-size:28px;margin-left:35px;top:75px;} .sectionHeader {margin-top:25px;} .sectionHeader table td {font-family:sans-serif;font-weight:bold;font-size:13px;background-color:#bedef4;} .facilityInput {font-family:sans-serif;font-weight:bold;position:relative;display:inline-block;height:28px;width:450px;border:1px solid #ccc;margin-right:20px;} .periodInput {position:relative;display:inline-block;height:28px;width:281px;border:1px solid #ccc;} .facilityLabel {font-family:sans-serif;position:relative;top:6px;display:inline-block;height:28px;font-size:16px;padding-right:15px;} .noteDiv {font-family:sans-serif;font-style:italic;font-size:11px;margin-top:20px;} .greyRow {background-color:#eee;} .commentCodes {margin:28px 0;border-collapse:collapse;}</style><style media="screen" type="text/css">.inputDiv {display:none;}</style> <style media="print" type="text/css">.inputDiv {display:block;position:relative;}</style> <div class="formHeader"><img src="../dhis-web-commons/flags/south_africa_department_of_health.png" /><span class="formTitle bold">Assessment Questionnaire </span></div><div class="inputDiv"><span class="facilityLabel">Facility: </span><span class="facilityInput">&nbsp;</span><span class="facilityLabel">Period: </span><span class="periodInput">&nbsp;</span></div><div class="sectionHeader bold"><table><tbody><tr><td class="tdCrit">MX06 HR Management</td><td class="tdType">Type</td><td class="tdScore">Score</td><td class="tdNote">Notes</td></tr></tbody></table></div><div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.3.1.1 Healthcare providers are designated as heads of department / sections with clear job descriptions and lines of accountability</div><div><table><tbody><tr><td class="tdCrit">2.3.1.1.1 There are updated job descriptions for departmental/section heads which clearly indicate that posts are filled by qualified healthcare professionals and describe the responsibilities/lines of accountability</td><td class="tdType bold">DOC<br /><br />D</td><td class="tdScore" colspan="3"><input id="cGrZyOmolaW-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="cGrZyOmolaW-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.5.2.3 Staff members are constantly aware of risks in the environment</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">2.5.2.3.1 The annual in-service training plan includes training on how to carry out safety checks and prevent accidents in the environment</td><td class="tdType bold">DOC<br /><br />D</td><td class="tdScore" colspan="3"><input id="DAmbW79R28A-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="DAmbW79R28A-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.6.1.6 The organization provides education on healthcare associated infection control practices to the staff / patients and as appropriate family and other caregivers</div><div><table><tbody><tr><td class="tdCrit">2.6.1.6.1 Evidence that at least 50% of health professionals have been trained in standard precautions in the previous financial year</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="glU4TCCQ7jw-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="glU4TCCQ7jw-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">2.6.1.6.2 The annual in-service education and training plan includes infection control education / prevention of respiratory infections especially TB and universal precautions</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="Rbijr6inEmm-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="Rbijr6inEmm-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 3 Clinical Support Services: 3.4.2.1 Staff are competent in the use of the medical equipment in the unit</div><div><table><tbody><tr><td class="tdCrit">3.4.2.1.1 The orientation programme of the establishment indicates that time has been allocated for the training of staff in the use of medical equipment</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="sgFCFWcbYuv-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="sgFCFWcbYuv-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">3.4.2.1.2 The staff development and in-service training programme makes provision to assess and up date staff on the correct use of medical equipment</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="UgDjepvQMQM-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="UgDjepvQMQM-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 3 Clinical Support Services: 3.5.1.2 Suitably qualified staff manage the functions of the sterilisation department</div><div><table><tbody><tr><td class="tdCrit">3.5.1.2.2 Training records show that staff working with sterilisation equipment receive training within the last financial year in the technical aspects of sterilisation and on use of the equipment</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="STOVwZQQLsN-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="STOVwZQQLsN-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 4 Public Health: 4.3.1.2 The health establishment can demonstrate its capacity to respond promptly and effectively to disease outbreaks</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">4.3.1.2.2 There is evidence that in-service training was done on disease outbreaks as they present</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="zFsVMtibBhj-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="zFsVMtibBhj-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 5 Leadership and Corporate Governance: 5.2.5.3 Human Resource allocation plan ensures sufficient staff to meet the service delivery objectives of the establishment</div><div><table><tbody><tr><td class="tdCrit">5.2.5.3.1 The staff establishment and related priorities such as MTP/APP ensures sufficient staff in the required specialties are available to deliver services as defined in the strategic plan</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="plvAYlyYHxq-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="plvAYlyYHxq-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 5 Leadership and Corporate Governance: 5.3.1.1 Risks are actively monitored and managed to minimise or eliminate identified risks</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">5.3.1.1.1 The health establishment risk management strategy document includes evidence of monitoring and mitigation actions plans</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="eVkmmMTKssb-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="eVkmmMTKssb-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 5 Leadership and Corporate Governance: 5.4.1.1 Action is taken and documented to address all identified quality improvement opportunities</div><div><table><tbody><tr><td class="tdCrit">5.4.1.1.1 Terms of reference of a forum established to review quality for purposes of quality improvement is available</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="CxRXwiybGSc-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="CxRXwiybGSc-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">5.4.1.1.2 There is a designated/competent person who coordinates the quality assurance system/programme</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="wuWboeO4WTN-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="wuWboeO4WTN-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">5.4.1.1.3 Minutes of the relevant forum reviewing quality (from within the last quarter) indicate that all quality aspects are regularly discussed / analysed and actions have been taken to improve quality</td><td class="tdType bold">DOC<br /><br />V</td><td class="tdScore" colspan="3"><input id="W6695XWQrdZ-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="W6695XWQrdZ-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 5 Leadership and Corporate Governance: 5.5.1.1 Key senior positions are filled by persons with appropriate competencies / qualifications / experience / knowledge</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">5.5.1.1.2 There is evidence that exit interviews are conducted with all managers who have resigned and action plans are put in place that address issues raised</td><td class="tdType bold">DOC<br /><br />V</td><td class="tdScore" colspan="3"><input id="psEt2zb92Lq-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="psEt2zb92Lq-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 5 Leadership and Corporate Governance: 5.5.1.2 Each senior manager`s responsibilities are defined in a current job description</div><div><table><tbody><tr><td class="tdCrit">5.5.1.2.1 CHECKLIST - All managers have up to date job descriptions (use previous checklist)</td><td class="tdType bold">DOC<br /><br />D</td><td class="tdScore" colspan="3"><input id="BGSCOtvJrlK-gSfwnIupmqe-val" style="text-align:center" value="" title=""/></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 5 Leadership and Corporate Governance: 5.5.1.3 Performance management agreements of the senior managers are aligned with the strategic and operational plans</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">5.5.1.3.2 Performance management agreements of the managers are aligned with the strategic and operational plans and contain targets and due dates</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="aQnmaf6Gs2v-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="aQnmaf6Gs2v-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">5.5.1.3.3 All senior managers have comprehensive performance reviews of their performance against targets on a quarterly basis with plans for remedial action being taken if necessary</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="TrO2PQUgidQ-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="TrO2PQUgidQ-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 5 Leadership and Corporate Governance: 5.5.2.2 Leadership development is actively supported at all levels</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">5.5.2.2.1 Managers have had a leadership and management competency assessment performed within the last 2 years</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="pOivt0gnXfn-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="pOivt0gnXfn-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">5.5.2.2.2 Managers have undergone leadership and management development courses within the last 2 years</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="sWkWmzlJH0O-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="sWkWmzlJH0O-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.1.1.1 The health establishment has the most up to date human resource policies and relevant legislation</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">6.1.1.1.1 A set of up to date provincial and health establishment human resource policies are available</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="iteaTbzfG6p-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="iteaTbzfG6p-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.1.1.2 An approved staffing plan is in place in accordance with occupancy rates / utilisation rates / patient profiles</div><div><table><tbody><tr><td class="tdCrit">6.1.1.2.1 Staff patient ratios in key areas are in accordance with the approved staffing plan for emergency unit / outpatients / medical/ surgical / paediatrics</td><td class="tdType bold">DOC<br /><br />V</td><td class="tdScore" colspan="3"><input id="Rx6BE7fDzW8-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="Rx6BE7fDzW8-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.1.1.3 Staff recruitment and selection procedures are adhered to by the health establishment</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">6.1.1.3.1 The health establishment can demonstrate that it adheres to its selection and recruitment procedures with respect to the last appointment filled</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="P7MtEuYEYTC-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="P7MtEuYEYTC-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.1.1.4 Current registration of health care professionals is used as authorisation to provide clinical services consistent with their qualifications</div><div><table><tbody><tr><td class="tdCrit">6.1.1.4.1 A register / documentation is available with up to date annual professional body registration numbers for each category of staff</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="T1rOQtxmpdE-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="T1rOQtxmpdE-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.1.1.5 Staffing availability levels in terms of absenteeism / turnover / vacancy rates are monitored and trends are identified and addressed</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">6.1.1.5.1 There is evidence that action is taken to deal with absenteeism and staff vacancies</td><td class="tdType bold">DOC<br /><br />V</td><td class="tdScore" colspan="3"><input id="DG1JKLmyK4g-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="DG1JKLmyK4g-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">6.1.1.5.2 Trends in vacancy / absenteeism and turnover rates show improvement over time</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="aC9RGbaJPGM-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="aC9RGbaJPGM-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">6.1.1.5.5 Staff working hours are monitored to ensure that they comply with the Basic Conditions of Employment Act in terms of hours per week</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="wPvFC9nN4SG-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="wPvFC9nN4SG-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">6.1.1.5.6 The establishment has an agreement in place with the preferred agency for contract labour that ensures that the agency is responsible for monitoring the hours worked by contract staff</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="GxO5Pehvw9J-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="GxO5Pehvw9J-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.1.1.6 An human resource retention strategy is designed to ensure adequate and motivated staff</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">6.1.1.6.1 The health establishment has an up to date retention strategy or a plan with specific focus on retention plans / staff rewards / incentives</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="pRGyHJ0Xelh-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="pRGyHJ0Xelh-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.1.2.1 The responsibilities of each staff member is defined in a current job description</div><div><table><tbody><tr><td class="tdCrit">6.1.2.1.1 CHECKLIST - Job descriptions outline expected responsibilities/ activities and duties of the staff member and have been signed / accepted and dated</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="y9cg8lwvAoN-gSfwnIupmqe-val" style="text-align:center" value="" title=""/></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.1.2.2 Staff are involved in periodic performance reviews to appraise their performance and set objectives and targets</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">6.1.2.2.1 CHECKLIST - The files of members of staff reflect that comprehensive performance reviews are done based on their performance plans and in accordance with the human resource management policy</td><td class="tdType bold">DOC<br /><br />V</td><td class="tdScore" colspan="3"><input id="dcs4bBJUS0s-gSfwnIupmqe-val" style="text-align:center" value="" title=""/></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.1.3.1 Labour Relations policies recognise employees? rights and are applied fairly and consistently</div><div><table><tbody><tr><td class="tdCrit">6.1.3.1.1 There is a joint agreement/discussion forum between management and unions for example on conducting of disciplinary proceedings and codes of conduct in the health establishment</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="yjeobXED9nr-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="yjeobXED9nr-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.1.4.1 Staff members are orientated to the health establishment and to their specific responsibilities</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">6.1.4.1.1 The health establishment provides induction/orientation for all new members of staff which focuses on policies / procedures / health and safety / clinical quality care</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="Orl40Z7e3li-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="Orl40Z7e3li-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">6.1.4.1.2 A training record for the Induction/Orientation Programme (from within the last 12 months) is available and shows that all new staff have undergone training</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="EpAZBLU1Zrm-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="EpAZBLU1Zrm-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.1.4.2 Staff members receive ongoing in-service education according to their roles and responsibilities</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">6.1.4.2.1 Staff satisfaction survey results show that majority of staff are satisfied with the education they have received in their clinical technical areas</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="SvMgAXBSHNS-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="SvMgAXBSHNS-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">6.1.4.2.2 There is evidence available that staff have undergone training in line with the most recent Workplace Skills Plan</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="dm2JKGNdOR4-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="dm2JKGNdOR4-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">6.1.4.2.3 Records are kept for each health care professional in terms of their current status of continuing professional development / and their further education needs</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="WoZ8TBTVD3a-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="WoZ8TBTVD3a-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.2.1.1 The health establishment has a zero-tolerance policy on violence and abuse towards staff and takes action to support this</div><div><table><tbody><tr><td class="tdCrit">6.2.1.1.2 Recent reports/stats within the last 12 months show what remedial actions have been taken in the event of an incident of harm to a staff member</td><td class="tdType bold">DOC<br /><br />X</td><td class="tdScore" colspan="3"><input id="Faochkc2nFn-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="Faochkc2nFn-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">6.2.1.1.3 Measures are in place to prevent any incident of harm to staff</td><td class="tdType bold">DOC<br /><br />X</td><td class="tdScore" colspan="3"><input id="rstxL30y9i9-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="rstxL30y9i9-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.2.1.2 Health and healthy lifestyles initiatives for staff are promoted and supported</div><div><table><tbody><tr><td class="tdCrit">6.2.1.2.1 A report (from within the last quarter) demonstrates that staff utilise the Employee Assistance Programme</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="sK3bSMljujO-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="sK3bSMljujO-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">6.2.1.2.2 Staff satisfaction survey results show that majority of staff are satisfied with their working conditions</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="UvHfkcsRvIF-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="UvHfkcsRvIF-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">6.2.1.2.3 A report (from within the last 12 months) is available and demonstrates that actions have been taken to improve on areas identified in staff satisfaction survey</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="MS3vSywKtlB-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="MS3vSywKtlB-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">6.2.1.2.4 There is evidence to demonstrate that staff participate in formal initiatives planned within the Employee Wellness programme such as wellness days and talks</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="X1v2Jy6q4QV-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="X1v2Jy6q4QV-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.6.1.1 Health establishment staff have adequate IT skills and support to effectively use the systems provided</div><div><table><tbody><tr><td class="tdCrit">6.6.1.1.1 CHECKLIST - Hardware / software and network connectivity supports local needs and staff have the skills to use them</td><td class="tdType bold"> SI<br /><br />E</td><td class="tdScore" colspan="3"><input id="teRSifM1ZC4-gSfwnIupmqe-val" style="text-align:center" value="" title=""/></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.6.1.3 Contingency plans for system failure or other challenges are available and known to staff and managers</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">6.6.1.3.1 Management staff indicate that they are aware of a contingency plan in the event of mechanical failure of IT systems which will allow operations to continue in the health establishment</td><td class="tdType bold"> SI<br /><br />E</td><td class="tdScore" colspan="3"><input id="iBYRtWrCVZp-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="iBYRtWrCVZp-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.6.3.1 Confidential patient and personnel records are archived securely and only accessed by authorised personnel</div><div><table><tbody><tr><td class="tdCrit">6.6.3.1.1 All confidential records are archived in a secure / access controlled environment that is fire proof</td><td class="tdType bold">OBS<br /><br />E</td><td class="tdScore" colspan="3"><input id="gt7mALvSgGl-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="gt7mALvSgGl-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div>
+<script type='text/javascript'>
+    function upCalc() {
+        $("[data-calculated]").each(function(index, element) {
+            var id = $(this).attr('id');
+            var de = id.split('-')[0];
+            var coc = id.split('-')[1];
+            var code = $(this).attr('data-calculated');
+            var yes = parseInt(0);
+            var count = parseInt(0);
+            $("[data-checklist='" + code + "']").each(function(index, element) {
+                var value = $(this).val();
+                if (value) {
+                    if (value == 'true' || value == 'false') {
+                        count++;
+                    }
+                    if (value == 'true') {
+                        yes++;
+                    }
+                }
+            });
+            if (count > 0) {
+                var average = parseInt(yes) / parseInt(count);
+                var val = Math.round(average * 100) / 100;
+                $(this).val(val);
+                saveVal(de, coc, id);
+            }
+        });
+    }
+
+</script>
+<style type="text/css">
+    .domain {
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 12px;
+        padding: 20px 0;
+        width: 900px;
+    }
+    
+    #contentDiv table {
+        border-collapse: collapse;
+        font-family: sans-serif;
+        font-size: 12px;
+        page-break-inside: avoid;
+    }
+    
+    #contentDiv table td {
+        border: 1px solid #ccc;
+        padding: 8px;
+    }
+    
+    .tdCrit {
+        width: 420px;
+        height: 35px;
+        padding-right: 20px;
+    }
+    
+    .tdType {
+        width: 70px;
+    }
+    
+    .tdScore {
+        width: 211px;
+    }
+    
+    .tdScoreCheck {
+        width: 59px;
+    }
+    
+    .tdNote {
+        width: 290px;
+    }
+    
+    .formHeader {
+        position: relative;
+        padding: 25px 0 20px 0;
+    }
+    
+    .formTitle {
+        font-family: sans-serif;
+        position: absolute;
+        font-size: 28px;
+        margin-left: 35px;
+        top: 75px;
+    }
+    
+    .sectionHeader {
+        margin-top: 25px;
+    }
+    
+    .sectionHeader table td {
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 13px;
+        background-color: #bedef4;
+    }
+    
+    .facilityInput {
+        font-family: sans-serif;
+        font-weight: bold;
+        position: relative;
+        display: inline-block;
+        height: 28px;
+        width: 450px;
+        border: 1px solid #ccc;
+        margin-right: 20px;
+    }
+    
+    .periodInput {
+        position: relative;
+        display: inline-block;
+        height: 28px;
+        width: 281px;
+        border: 1px solid #ccc;
+    }
+    
+    .facilityLabel {
+        font-family: sans-serif;
+        position: relative;
+        top: 6px;
+        display: inline-block;
+        height: 28px;
+        font-size: 16px;
+        padding-right: 15px;
+    }
+    
+    .noteDiv {
+        font-family: sans-serif;
+        font-style: italic;
+        font-size: 11px;
+        margin-top: 20px;
+    }
+    
+    .greyRow {
+        background-color: #eee;
+    }
+    
+    .commentCodes {
+        margin: 28px 0;
+        border-collapse: collapse;
+    }
+    .commentlink {
+        padding-left: 15px;
+        padding-bottom: 10px;
+        width: 15px;
+        height: 15px;
+    }
+
+</style>
+<style media="screen" type="text/css">
+    .inputDiv {
+        display: none;
+    }
+
+</style>
+<style media="print" type="text/css">
+    .inputDiv {
+        display: block;
+        position: relative;
+    }
+
+</style>
+<div class="formHeader"><img src="../dhis-web-commons/flags/south_africa_department_of_health.png" /><span class="formTitle bold">Assessment Questionnaire </span></div>
+<div class="inputDiv"><span class="facilityLabel">Facility: </span><span class="facilityInput">&nbsp;</span><span class="facilityLabel">Period: </span><span class="periodInput">&nbsp;</span></div>
+<div class="sectionHeader bold">
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">MX06 HR Management</td>
+                <td class="tdType">Type</td>
+                <td class="tdScore">Score</td>
+                <td class="tdNote">Notes</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.3.1.1 Healthcare providers are designated as heads of department / sections with clear job descriptions and lines of accountability</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">2.3.1.1.1 There are updated job descriptions for departmental/section heads which clearly indicate that posts are filled by qualified healthcare professionals and describe the responsibilities/lines of accountability</td>
+                <td class="tdType bold">DOC<br /><br />D</td>
+                <td class="tdScore" colspan="3"><input id="cGrZyOmolaW-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="cGrZyOmolaW-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.5.2.3 Staff members are constantly aware of risks in the environment</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">2.5.2.3.1 The annual in-service training plan includes training on how to carry out safety checks and prevent accidents in the environment</td>
+                <td class="tdType bold">DOC<br /><br />D</td>
+                <td class="tdScore" colspan="3"><input id="DAmbW79R28A-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="DAmbW79R28A-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.6.1.6 The organization provides education on healthcare associated infection control practices to the staff / patients and as appropriate family and other caregivers</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">2.6.1.6.1 Evidence that at least 50% of health professionals have been trained in standard precautions in the previous financial year</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="glU4TCCQ7jw-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="glU4TCCQ7jw-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">2.6.1.6.2 The annual in-service education and training plan includes infection control education / prevention of respiratory infections especially TB and universal precautions</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="Rbijr6inEmm-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="Rbijr6inEmm-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 3 Clinical Support Services: 3.4.2.1 Staff are competent in the use of the medical equipment in the unit</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">3.4.2.1.1 The orientation programme of the establishment indicates that time has been allocated for the training of staff in the use of medical equipment</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="sgFCFWcbYuv-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="sgFCFWcbYuv-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">3.4.2.1.2 The staff development and in-service training programme makes provision to assess and up date staff on the correct use of medical equipment</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="UgDjepvQMQM-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="UgDjepvQMQM-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 3 Clinical Support Services: 3.5.1.2 Suitably qualified staff manage the functions of the sterilisation department</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">3.5.1.2.2 Training records show that staff working with sterilisation equipment receive training within the last financial year in the technical aspects of sterilisation and on use of the equipment</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="STOVwZQQLsN-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="STOVwZQQLsN-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 4 Public Health: 4.3.1.2 The health establishment can demonstrate its capacity to respond promptly and effectively to disease outbreaks</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">4.3.1.2.2 There is evidence that in-service training was done on disease outbreaks as they present</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="zFsVMtibBhj-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="zFsVMtibBhj-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 5 Leadership and Corporate Governance: 5.2.5.3 Human Resource allocation plan ensures sufficient staff to meet the service delivery objectives of the establishment</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">5.2.5.3.1 The staff establishment and related priorities such as MTP/APP ensures sufficient staff in the required specialties are available to deliver services as defined in the strategic plan</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="plvAYlyYHxq-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="plvAYlyYHxq-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 5 Leadership and Corporate Governance: 5.3.1.1 Risks are actively monitored and managed to minimise or eliminate identified risks</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">5.3.1.1.1 The health establishment risk management strategy document includes evidence of monitoring and mitigation actions plans</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="eVkmmMTKssb-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="eVkmmMTKssb-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 5 Leadership and Corporate Governance: 5.4.1.1 Action is taken and documented to address all identified quality improvement opportunities</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">5.4.1.1.1 Terms of reference of a forum established to review quality for purposes of quality improvement is available</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="CxRXwiybGSc-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="CxRXwiybGSc-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">5.4.1.1.2 There is a designated/competent person who coordinates the quality assurance system/programme</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="wuWboeO4WTN-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="wuWboeO4WTN-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">5.4.1.1.3 Minutes of the relevant forum reviewing quality (from within the last quarter) indicate that all quality aspects are regularly discussed / analysed and actions have been taken to improve quality</td>
+                <td class="tdType bold">DOC<br /><br />V</td>
+                <td class="tdScore" colspan="3"><input id="W6695XWQrdZ-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="W6695XWQrdZ-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 5 Leadership and Corporate Governance: 5.5.1.1 Key senior positions are filled by persons with appropriate competencies / qualifications / experience / knowledge</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">5.5.1.1.2 There is evidence that exit interviews are conducted with all managers who have resigned and action plans are put in place that address issues raised</td>
+                <td class="tdType bold">DOC<br /><br />V</td>
+                <td class="tdScore" colspan="3"><input id="psEt2zb92Lq-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="psEt2zb92Lq-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 5 Leadership and Corporate Governance: 5.5.1.2 Each senior manager`s responsibilities are defined in a current job description</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">5.5.1.2.1 CHECKLIST - All managers have up to date job descriptions (use previous checklist)</td>
+                <td class="tdType bold">DOC<br /><br />D</td>
+                <td class="tdScore" colspan="3"><input id="BGSCOtvJrlK-gSfwnIupmqe-val" style="text-align:center" value="" title="" /></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 5 Leadership and Corporate Governance: 5.5.1.3 Performance management agreements of the senior managers are aligned with the strategic and operational plans</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">5.5.1.3.2 Performance management agreements of the managers are aligned with the strategic and operational plans and contain targets and due dates</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="aQnmaf6Gs2v-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="aQnmaf6Gs2v-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">5.5.1.3.3 All senior managers have comprehensive performance reviews of their performance against targets on a quarterly basis with plans for remedial action being taken if necessary</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="TrO2PQUgidQ-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="TrO2PQUgidQ-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 5 Leadership and Corporate Governance: 5.5.2.2 Leadership development is actively supported at all levels</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">5.5.2.2.1 Managers have had a leadership and management competency assessment performed within the last 2 years</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="pOivt0gnXfn-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="pOivt0gnXfn-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">5.5.2.2.2 Managers have undergone leadership and management development courses within the last 2 years</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="sWkWmzlJH0O-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="sWkWmzlJH0O-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.1.1.1 The health establishment has the most up to date human resource policies and relevant legislation</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">6.1.1.1.1 A set of up to date provincial and health establishment human resource policies are available</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="iteaTbzfG6p-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="iteaTbzfG6p-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.1.1.2 An approved staffing plan is in place in accordance with occupancy rates / utilisation rates / patient profiles</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">6.1.1.2.1 Staff patient ratios in key areas are in accordance with the approved staffing plan for emergency unit / outpatients / medical/ surgical / paediatrics</td>
+                <td class="tdType bold">DOC<br /><br />V</td>
+                <td class="tdScore" colspan="3"><input id="Rx6BE7fDzW8-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="Rx6BE7fDzW8-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.1.1.3 Staff recruitment and selection procedures are adhered to by the health establishment</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">6.1.1.3.1 The health establishment can demonstrate that it adheres to its selection and recruitment procedures with respect to the last appointment filled</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="P7MtEuYEYTC-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="P7MtEuYEYTC-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.1.1.4 Current registration of health care professionals is used as authorisation to provide clinical services consistent with their qualifications</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">6.1.1.4.1 A register / documentation is available with up to date annual professional body registration numbers for each category of staff</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="T1rOQtxmpdE-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="T1rOQtxmpdE-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.1.1.5 Staffing availability levels in terms of absenteeism / turnover / vacancy rates are monitored and trends are identified and addressed</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">6.1.1.5.1 There is evidence that action is taken to deal with absenteeism and staff vacancies</td>
+                <td class="tdType bold">DOC<br /><br />V</td>
+                <td class="tdScore" colspan="3"><input id="DG1JKLmyK4g-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="DG1JKLmyK4g-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">6.1.1.5.2 Trends in vacancy / absenteeism and turnover rates show improvement over time</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="aC9RGbaJPGM-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="aC9RGbaJPGM-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">6.1.1.5.5 Staff working hours are monitored to ensure that they comply with the Basic Conditions of Employment Act in terms of hours per week</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="wPvFC9nN4SG-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="wPvFC9nN4SG-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">6.1.1.5.6 The establishment has an agreement in place with the preferred agency for contract labour that ensures that the agency is responsible for monitoring the hours worked by contract staff</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="GxO5Pehvw9J-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="GxO5Pehvw9J-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.1.1.6 An human resource retention strategy is designed to ensure adequate and motivated staff</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">6.1.1.6.1 The health establishment has an up to date retention strategy or a plan with specific focus on retention plans / staff rewards / incentives</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="pRGyHJ0Xelh-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="pRGyHJ0Xelh-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.1.2.1 The responsibilities of each staff member is defined in a current job description</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">6.1.2.1.1 CHECKLIST - Job descriptions outline expected responsibilities/ activities and duties of the staff member and have been signed / accepted and dated</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="y9cg8lwvAoN-gSfwnIupmqe-val" style="text-align:center" value="" title="" /></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.1.2.2 Staff are involved in periodic performance reviews to appraise their performance and set objectives and targets</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">6.1.2.2.1 CHECKLIST - The files of members of staff reflect that comprehensive performance reviews are done based on their performance plans and in accordance with the human resource management policy</td>
+                <td class="tdType bold">DOC<br /><br />V</td>
+                <td class="tdScore" colspan="3"><input id="dcs4bBJUS0s-gSfwnIupmqe-val" style="text-align:center" value="" title="" /></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.1.3.1 Labour Relations policies recognise employees? rights and are applied fairly and consistently</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">6.1.3.1.1 There is a joint agreement/discussion forum between management and unions for example on conducting of disciplinary proceedings and codes of conduct in the health establishment</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="yjeobXED9nr-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="yjeobXED9nr-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.1.4.1 Staff members are orientated to the health establishment and to their specific responsibilities</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">6.1.4.1.1 The health establishment provides induction/orientation for all new members of staff which focuses on policies / procedures / health and safety / clinical quality care</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="Orl40Z7e3li-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="Orl40Z7e3li-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">6.1.4.1.2 A training record for the Induction/Orientation Programme (from within the last 12 months) is available and shows that all new staff have undergone training</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="EpAZBLU1Zrm-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="EpAZBLU1Zrm-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.1.4.2 Staff members receive ongoing in-service education according to their roles and responsibilities</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">6.1.4.2.1 Staff satisfaction survey results show that majority of staff are satisfied with the education they have received in their clinical technical areas</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="SvMgAXBSHNS-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="SvMgAXBSHNS-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">6.1.4.2.2 There is evidence available that staff have undergone training in line with the most recent Workplace Skills Plan</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="dm2JKGNdOR4-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="dm2JKGNdOR4-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">6.1.4.2.3 Records are kept for each health care professional in terms of their current status of continuing professional development / and their further education needs</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="WoZ8TBTVD3a-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="WoZ8TBTVD3a-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.2.1.1 The health establishment has a zero-tolerance policy on violence and abuse towards staff and takes action to support this</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">6.2.1.1.2 Recent reports/stats within the last 12 months show what remedial actions have been taken in the event of an incident of harm to a staff member</td>
+                <td class="tdType bold">DOC<br /><br />X</td>
+                <td class="tdScore" colspan="3"><input id="Faochkc2nFn-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="Faochkc2nFn-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">6.2.1.1.3 Measures are in place to prevent any incident of harm to staff</td>
+                <td class="tdType bold">DOC<br /><br />X</td>
+                <td class="tdScore" colspan="3"><input id="rstxL30y9i9-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="rstxL30y9i9-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.2.1.2 Health and healthy lifestyles initiatives for staff are promoted and supported</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">6.2.1.2.1 A report (from within the last quarter) demonstrates that staff utilise the Employee Assistance Programme</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="sK3bSMljujO-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="sK3bSMljujO-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">6.2.1.2.2 Staff satisfaction survey results show that majority of staff are satisfied with their working conditions</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="UvHfkcsRvIF-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="UvHfkcsRvIF-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">6.2.1.2.3 A report (from within the last 12 months) is available and demonstrates that actions have been taken to improve on areas identified in staff satisfaction survey</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="MS3vSywKtlB-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="MS3vSywKtlB-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">6.2.1.2.4 There is evidence to demonstrate that staff participate in formal initiatives planned within the Employee Wellness programme such as wellness days and talks</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="X1v2Jy6q4QV-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="X1v2Jy6q4QV-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.6.1.1 Health establishment staff have adequate IT skills and support to effectively use the systems provided</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">6.6.1.1.1 CHECKLIST - Hardware / software and network connectivity supports local needs and staff have the skills to use them</td>
+                <td class="tdType bold"> SI<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="teRSifM1ZC4-gSfwnIupmqe-val" style="text-align:center" value="" title="" /></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.6.1.3 Contingency plans for system failure or other challenges are available and known to staff and managers</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">6.6.1.3.1 Management staff indicate that they are aware of a contingency plan in the event of mechanical failure of IT systems which will allow operations to continue in the health establishment</td>
+                <td class="tdType bold"> SI<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="iBYRtWrCVZp-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="iBYRtWrCVZp-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.6.3.1 Confidential patient and personnel records are archived securely and only accessed by authorised personnel</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">6.6.3.1.1 All confidential records are archived in a secure / access controlled environment that is fire proof</td>
+                <td class="tdType bold">OBS<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="gt7mALvSgGl-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="gt7mALvSgGl-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

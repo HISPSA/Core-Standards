@@ -1,1 +1,298 @@
-<script type='text/javascript'> function upCalc() { $( "[data-calculated]" ).each( function( index, element ) { var id = $( this ).attr( 'id' ); var de = id.split( '-' )[0]; var coc = id.split( '-' )[1]; var code = $( this ).attr( 'data-calculated' ); var yes = parseInt( 0 ); var count = parseInt( 0 ); $( "[data-checklist='" + code + "']" ).each( function( index, element ) { var value = $( this ).val(); if ( value ) { if ( value == 'true' || value == 'false' ) { count++; } if ( value == 'true'  ) { yes++; } } } ); if ( count > 0 ) { var average = parseInt( yes ) / parseInt( count ); var val = Math.round( average * 100 ) / 100; $( this ).val( val ); saveVal( de, coc, id ); } } ); } </script><style type="text/css">.domain {font-family:sans-serif;font-weight:bold;font-size:12px;padding: 20px 0;width:900px;} #contentDiv table {border-collapse:collapse;font-family:sans-serif;font-size:12px;page-break-inside:avoid;} #contentDiv table td {border: 1px solid #ccc;padding:8px;} .tdCrit {width:420px;height:35px;padding-right:20px;} .tdType {width:70px;} .tdScore {width:211px;} .tdScoreCheck {width:59px;} .tdNote {width:290px;} .formHeader {position:relative;padding: 25px 0 20px 0;} .formTitle {font-family:sans-serif;position:absolute;font-size:28px;margin-left:35px;top:75px;} .sectionHeader {margin-top:25px;} .sectionHeader table td {font-family:sans-serif;font-weight:bold;font-size:13px;background-color:#bedef4;} .facilityInput {font-family:sans-serif;font-weight:bold;position:relative;display:inline-block;height:28px;width:450px;border:1px solid #ccc;margin-right:20px;} .periodInput {position:relative;display:inline-block;height:28px;width:281px;border:1px solid #ccc;} .facilityLabel {font-family:sans-serif;position:relative;top:6px;display:inline-block;height:28px;font-size:16px;padding-right:15px;} .noteDiv {font-family:sans-serif;font-style:italic;font-size:11px;margin-top:20px;} .greyRow {background-color:#eee;} .commentCodes {margin:28px 0;border-collapse:collapse;}</style><style media="screen" type="text/css">.inputDiv {display:none;}</style> <style media="print" type="text/css">.inputDiv {display:block;position:relative;}</style> <div class="formHeader"><img src="../dhis-web-commons/flags/south_africa_department_of_health.png" /><span class="formTitle bold">Assessment Questionnaire </span></div><div class="inputDiv"><span class="facilityLabel">Facility: </span><span class="facilityInput">&nbsp;</span><span class="facilityLabel">Period: </span><span class="periodInput">&nbsp;</span></div><div class="sectionHeader bold"><table><tbody><tr><td class="tdCrit">MX05 Financial Management</td><td class="tdType">Type</td><td class="tdScore">Score</td><td class="tdNote">Notes</td></tr></tbody></table></div><div class="domain bold">Domain 5 Leadership and Corporate Governance: 5.2.5.1 The annual budget is developed as part of the strategic and operational plan to meet agreed priorities within available resources and capacity</div><div><table><tbody><tr><td class="tdCrit">5.2.5.1.1 There is a budget allocation plan that includes key priority areas to be funded which has been approved by the governing structure</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="pPUqgHC5NIA-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="pPUqgHC5NIA-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">5.2.5.1.2 There is documented evidence that all relevant managers/unit heads have provided input into the budget in order to ensure they reflect the strategic plans of the health establishment</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="cCOzyH4HNVI-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="cCOzyH4HNVI-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 5 Leadership and Corporate Governance: 5.2.5.2 Efficiencies and savings are identified and incorporated into the budget</div><div><table><tbody><tr><td class="tdCrit">5.2.5.2.1 Evidence of revenue collection targets and savings allocations is included in the annual budget</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="cCiI4XBCLPO-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="cCiI4XBCLPO-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.3.1.1 Policies and procedures are followed for all financial processes in line with the Public Finance Management Act (PFMA) or Generally Accepted Accounting Principles (GAAP)</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">6.3.1.1.1 CHECKLIST - Financial management systems show adherence to policy and procedures as well as conform to the legal requirements</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="wctlWU1vD4a-gSfwnIupmqe-val" style="text-align:center" value="" title=""/></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.3.1.2 Procedures ensure that expenditure meets defined service needs for staff and other inputs</div><div><table><tbody><tr><td class="tdCrit">6.3.1.2.1 Monthly reports are presented to the management team which monitor budget expenditure against planned budgeted costs with variance analysis</td><td class="tdType bold">DOC<br /><br />V</td><td class="tdScore" colspan="3"><input id="rz7hBYsRK8B-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="rz7hBYsRK8B-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">6.3.1.2.2 Financial projections show evidence that the health establishment will deliver defined service needs within the annual allocated budget</td><td class="tdType bold">DOC<br /><br />V</td><td class="tdScore" colspan="3"><input id="oTrpR07evY6-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="oTrpR07evY6-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.3.1.3 Variance Analysis of actual expenditure to budget ensures continuity of service provision</div><div><table><tbody><tr><td class="tdCrit">6.3.1.3.1 There is evidence that expenditure variance reports are compiled at least quarterly and tabled at management meetings where variances are addressed</td><td class="tdType bold">DOC<br /><br />V</td><td class="tdScore" colspan="3"><input id="ZF6u2ImwxML-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="ZF6u2ImwxML-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">6.3.1.3.2 There is evidence that exception reports are compiled where expenditure on high risk / priority areas deviates from budget by more than 5 percent</td><td class="tdType bold">DOC<br /><br />V</td><td class="tdScore" colspan="3"><input id="OrskuN2r2HQ-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="OrskuN2r2HQ-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.4.1.1 Asset and equipment needs are identified in the annual plans and budgets and incorporated into procurement plans</div><div><table><tbody><tr><td class="tdCrit">6.4.1.1.1 Minutes of the forum reviewing specifications and adjudication show that asset specifications are developed in line with policies and procedures on prioritisation/ selection and user involvement</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="D8Yah3Ve4aA-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="D8Yah3Ve4aA-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.6.1.3 Contingency plans for system failure or other challenges are available and known to staff and managers</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">6.6.1.3.1 Management staff indicate that they are aware of a contingency plan in the event of mechanical failure of IT systems which will allow operations to continue in the health establishment</td><td class="tdType bold"> SI<br /><br />E</td><td class="tdScore" colspan="3"><input id="iBYRtWrCVZp-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="iBYRtWrCVZp-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 7 Facilities and Infrastructure: 7.1.5.1 All areas are adequately furnished and provide an acceptable environment for patient care</div><div><table><tbody><tr><td class="tdCrit">7.1.5.1.2 There is provision made in the establishment budget to ensure purchasing and maintenance of non-medical equipment eg Air conditioners / Gas Bank / Pat</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="E9QEqDaShOF-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="E9QEqDaShOF-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div>
+<script type='text/javascript'>
+    function upCalc() {
+        $("[data-calculated]").each(function(index, element) {
+            var id = $(this).attr('id');
+            var de = id.split('-')[0];
+            var coc = id.split('-')[1];
+            var code = $(this).attr('data-calculated');
+            var yes = parseInt(0);
+            var count = parseInt(0);
+            $("[data-checklist='" + code + "']").each(function(index, element) {
+                var value = $(this).val();
+                if (value) {
+                    if (value == 'true' || value == 'false') {
+                        count++;
+                    }
+                    if (value == 'true') {
+                        yes++;
+                    }
+                }
+            });
+            if (count > 0) {
+                var average = parseInt(yes) / parseInt(count);
+                var val = Math.round(average * 100) / 100;
+                $(this).val(val);
+                saveVal(de, coc, id);
+            }
+        });
+    }
+
+</script>
+<style type="text/css">
+    .domain {
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 12px;
+        padding: 20px 0;
+        width: 900px;
+    }
+    
+    #contentDiv table {
+        border-collapse: collapse;
+        font-family: sans-serif;
+        font-size: 12px;
+        page-break-inside: avoid;
+    }
+    
+    #contentDiv table td {
+        border: 1px solid #ccc;
+        padding: 8px;
+    }
+    
+    .tdCrit {
+        width: 420px;
+        height: 35px;
+        padding-right: 20px;
+    }
+    
+    .tdType {
+        width: 70px;
+    }
+    
+    .tdScore {
+        width: 211px;
+    }
+    
+    .tdScoreCheck {
+        width: 59px;
+    }
+    
+    .tdNote {
+        width: 290px;
+    }
+    
+    .formHeader {
+        position: relative;
+        padding: 25px 0 20px 0;
+    }
+    
+    .formTitle {
+        font-family: sans-serif;
+        position: absolute;
+        font-size: 28px;
+        margin-left: 35px;
+        top: 75px;
+    }
+    
+    .sectionHeader {
+        margin-top: 25px;
+    }
+    
+    .sectionHeader table td {
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 13px;
+        background-color: #bedef4;
+    }
+    
+    .facilityInput {
+        font-family: sans-serif;
+        font-weight: bold;
+        position: relative;
+        display: inline-block;
+        height: 28px;
+        width: 450px;
+        border: 1px solid #ccc;
+        margin-right: 20px;
+    }
+    
+    .periodInput {
+        position: relative;
+        display: inline-block;
+        height: 28px;
+        width: 281px;
+        border: 1px solid #ccc;
+    }
+    
+    .facilityLabel {
+        font-family: sans-serif;
+        position: relative;
+        top: 6px;
+        display: inline-block;
+        height: 28px;
+        font-size: 16px;
+        padding-right: 15px;
+    }
+    
+    .noteDiv {
+        font-family: sans-serif;
+        font-style: italic;
+        font-size: 11px;
+        margin-top: 20px;
+    }
+    
+    .greyRow {
+        background-color: #eee;
+    }
+    
+    .commentCodes {
+        margin: 28px 0;
+        border-collapse: collapse;
+    }
+    .commentlink {
+        padding-left: 15px;
+        padding-bottom: 10px;
+        width: 15px;
+        height: 15px;
+    }
+
+</style>
+<style media="screen" type="text/css">
+    .inputDiv {
+        display: none;
+    }
+
+</style>
+<style media="print" type="text/css">
+    .inputDiv {
+        display: block;
+        position: relative;
+    }
+
+</style>
+<div class="formHeader"><img src="../dhis-web-commons/flags/south_africa_department_of_health.png" /><span class="formTitle bold">Assessment Questionnaire </span></div>
+<div class="inputDiv"><span class="facilityLabel">Facility: </span><span class="facilityInput">&nbsp;</span><span class="facilityLabel">Period: </span><span class="periodInput">&nbsp;</span></div>
+<div class="sectionHeader bold">
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">MX05 Financial Management</td>
+                <td class="tdType">Type</td>
+                <td class="tdScore">Score</td>
+                <td class="tdNote">Notes</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 5 Leadership and Corporate Governance: 5.2.5.1 The annual budget is developed as part of the strategic and operational plan to meet agreed priorities within available resources and capacity</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">5.2.5.1.1 There is a budget allocation plan that includes key priority areas to be funded which has been approved by the governing structure</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="pPUqgHC5NIA-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="pPUqgHC5NIA-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">5.2.5.1.2 There is documented evidence that all relevant managers/unit heads have provided input into the budget in order to ensure they reflect the strategic plans of the health establishment</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="cCOzyH4HNVI-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="cCOzyH4HNVI-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 5 Leadership and Corporate Governance: 5.2.5.2 Efficiencies and savings are identified and incorporated into the budget</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">5.2.5.2.1 Evidence of revenue collection targets and savings allocations is included in the annual budget</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="cCiI4XBCLPO-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="cCiI4XBCLPO-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.3.1.1 Policies and procedures are followed for all financial processes in line with the Public Finance Management Act (PFMA) or Generally Accepted Accounting Principles (GAAP)</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">6.3.1.1.1 CHECKLIST - Financial management systems show adherence to policy and procedures as well as conform to the legal requirements</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="wctlWU1vD4a-gSfwnIupmqe-val" style="text-align:center" value="" title="" /></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.3.1.2 Procedures ensure that expenditure meets defined service needs for staff and other inputs</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">6.3.1.2.1 Monthly reports are presented to the management team which monitor budget expenditure against planned budgeted costs with variance analysis</td>
+                <td class="tdType bold">DOC<br /><br />V</td>
+                <td class="tdScore" colspan="3"><input id="rz7hBYsRK8B-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="rz7hBYsRK8B-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">6.3.1.2.2 Financial projections show evidence that the health establishment will deliver defined service needs within the annual allocated budget</td>
+                <td class="tdType bold">DOC<br /><br />V</td>
+                <td class="tdScore" colspan="3"><input id="oTrpR07evY6-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="oTrpR07evY6-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.3.1.3 Variance Analysis of actual expenditure to budget ensures continuity of service provision</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">6.3.1.3.1 There is evidence that expenditure variance reports are compiled at least quarterly and tabled at management meetings where variances are addressed</td>
+                <td class="tdType bold">DOC<br /><br />V</td>
+                <td class="tdScore" colspan="3"><input id="ZF6u2ImwxML-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="ZF6u2ImwxML-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">6.3.1.3.2 There is evidence that exception reports are compiled where expenditure on high risk / priority areas deviates from budget by more than 5 percent</td>
+                <td class="tdType bold">DOC<br /><br />V</td>
+                <td class="tdScore" colspan="3"><input id="OrskuN2r2HQ-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="OrskuN2r2HQ-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.4.1.1 Asset and equipment needs are identified in the annual plans and budgets and incorporated into procurement plans</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">6.4.1.1.1 Minutes of the forum reviewing specifications and adjudication show that asset specifications are developed in line with policies and procedures on prioritisation/ selection and user involvement</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="D8Yah3Ve4aA-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="D8Yah3Ve4aA-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.6.1.3 Contingency plans for system failure or other challenges are available and known to staff and managers</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">6.6.1.3.1 Management staff indicate that they are aware of a contingency plan in the event of mechanical failure of IT systems which will allow operations to continue in the health establishment</td>
+                <td class="tdType bold"> SI<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="iBYRtWrCVZp-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="iBYRtWrCVZp-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 7 Facilities and Infrastructure: 7.1.5.1 All areas are adequately furnished and provide an acceptable environment for patient care</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">7.1.5.1.2 There is provision made in the establishment budget to ensure purchasing and maintenance of non-medical equipment eg Air conditioners / Gas Bank / Pat</td>
+                <td class="tdType bold">DOC<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="E9QEqDaShOF-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="E9QEqDaShOF-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

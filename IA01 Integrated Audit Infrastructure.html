@@ -1,1 +1,1109 @@
-<script type='text/javascript'> function upCalc() { $( "[data-calculated]" ).each( function( index, element ) { var id = $( this ).attr( 'id' ); var de = id.split( '-' )[0]; var coc = id.split( '-' )[1]; var code = $( this ).attr( 'data-calculated' ); var yes = parseInt( 0 ); var count = parseInt( 0 ); $( "[data-checklist='" + code + "']" ).each( function( index, element ) { var value = $( this ).val(); if ( value ) { if ( value == 'true' || value == 'false' ) { count++; } if ( value == 'true'  ) { yes++; } } } ); if ( count > 0 ) { var average = parseInt( yes ) / parseInt( count ); var val = Math.round( average * 100 ) / 100; $( this ).val( val ); saveVal( de, coc, id ); } } ); } </script><style type="text/css">.domain {font-family:sans-serif;font-weight:bold;font-size:12px;padding: 20px 0;width:900px;} #contentDiv table {border-collapse:collapse;font-family:sans-serif;font-size:12px;page-break-inside:avoid;} #contentDiv table td {border: 1px solid #ccc;padding:8px;} .tdCrit {width:420px;height:35px;padding-right:20px;} .tdType {width:70px;} .tdScore {width:211px;} .tdScoreCheck {width:59px;} .tdNote {width:290px;} .formHeader {position:relative;padding: 25px 0 20px 0;} .formTitle {font-family:sans-serif;position:absolute;font-size:28px;margin-left:35px;top:75px;} .sectionHeader {margin-top:25px;} .sectionHeader table td {font-family:sans-serif;font-weight:bold;font-size:13px;background-color:#bedef4;} .facilityInput {font-family:sans-serif;font-weight:bold;position:relative;display:inline-block;height:28px;width:450px;border:1px solid #ccc;margin-right:20px;} .periodInput {position:relative;display:inline-block;height:28px;width:281px;border:1px solid #ccc;} .facilityLabel {font-family:sans-serif;position:relative;top:6px;display:inline-block;height:28px;font-size:16px;padding-right:15px;} .noteDiv {font-family:sans-serif;font-style:italic;font-size:11px;margin-top:20px;} .greyRow {background-color:#eee;} .commentCodes {margin:28px 0;border-collapse:collapse;}</style><style media="screen" type="text/css">.inputDiv {display:none;}</style> <style media="print" type="text/css">.inputDiv {display:block;position:relative;}</style> <div class="formHeader"><img src="../dhis-web-commons/flags/south_africa_department_of_health.png" /><span class="formTitle bold">Assessment Questionnaire </span></div><div class="inputDiv"><span class="facilityLabel">Facility: </span><span class="facilityInput">&nbsp;</span><span class="facilityLabel">Period: </span><span class="periodInput">&nbsp;</span></div><div class="sectionHeader bold"><table><tbody><tr><td class="tdCrit">IA01 Integrated Audit Infrastructure</td><td class="tdType">Type</td><td class="tdScore">Score</td><td class="tdNote">Notes</td></tr></tbody></table></div><div class="domain bold">Domain 7 Facilities and Infrastructure: 7.1.2.1 Regular evaluation of the functional suitability of available facilities is undertaken</div><div><table><tbody><tr><td class="tdCrit">7.1.2.1.2 The establishment has a full set of architectural plans of the facilities</td><td class="tdType bold">DOC<br /><br /> </td><td class="tdScore" colspan="3"><input id="hcqwarJghGU-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="hcqwarJghGU-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 7 Facilities and Infrastructure: 7.1.2.2 The layout of the health establishment is planned or adapted to ensure that there is space to meet service and patient needs</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">7.1.2.2.4 The nurses station is centrally located in the ward to allow for viewing of the patients</td><td class="tdType bold">OBS<br /><br />E</td><td class="tdScore" colspan="3"><input id="EdDv8aufiaS-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="EdDv8aufiaS-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.1.2.2.5 There is sufficient space to move around each bed in the ICU</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="m4EMCNj0bY9-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="m4EMCNj0bY9-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.1.2.2.6 The radiology department is in close proximity to the theatres and A and E unit</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="Oh1UCSJCga9-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="Oh1UCSJCga9-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.1.2.2.7 There is easy access for equipment to be carried out of the facility to be serviced or replaced</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="o7Cg0lMaceo-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="o7Cg0lMaceo-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.1.2.2.8 CHECKLIST - There are adequate bed head service for each ICU bed</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="U78VzmBsjfh-gSfwnIupmqe-val" style="text-align:center" value="" title=""/></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 7 Facilities and Infrastructure: 7.1.5.1 All areas are adequately furnished and provide an acceptable environment for patient care</div><div><table><tbody><tr><td class="tdCrit">7.1.5.1.3 There are NO rain water leaks observed</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="ZIMcnFL1sXY-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="ZIMcnFL1sXY-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.1.5.1.4 There are No water supply leaks in the walls</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="hymuaJQ6btB-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="hymuaJQ6btB-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.1.5.1.5 The windows and their mechanisms are in an acceptable condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="el6P2xgJiU2-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="el6P2xgJiU2-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.1.5.1.6 The doors and door mechanisms are in an acceptable condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="avgBy1Wli3i-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="avgBy1Wli3i-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.1.5.1.7 Are there any major problem areas / Assess extent of problem</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="ijUJakNvUMi-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="ijUJakNvUMi-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.1.5.1.8 Is there recent renovations work that has been completed</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="yRgMHbrVVuI-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="yRgMHbrVVuI-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.1.5.1.9 Are there currently alterations/ renovations in progress</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="slHr5u5Eyah-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="slHr5u5Eyah-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 7 Facilities and Infrastructure: 7.1.6.1 A regular maintenance programme ensures that the health establishment grounds are safe for all users and provide an attractive environment</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">7.1.6.1.4 The percentage of perimeter fence/wall that is in a very poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="NOU3ym9fzky-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="NOU3ym9fzky-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.1.6.1.5 The percentage of perimeter fence/wall that is in a poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="xIkdkXFbnV6-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="xIkdkXFbnV6-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.1.6.1.6 The percentage of perimeter fence/wall that is in a fair condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="EZrndRG5eMo-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="EZrndRG5eMo-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.1.6.1.7 The percentage of perimeter fence/wall that is in a good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="oCDHDZwSuAR-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="oCDHDZwSuAR-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.1.6.1.8 The percentage of perimeter fence/wall that is in a very good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="qcgxpUgHn8y-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="qcgxpUgHn8y-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.1.6.1.9 The percentage of external walls that are in a very poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="MdCXAEn7Xju-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="MdCXAEn7Xju-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.1.6.1.10 The percentage of external walls that are in a poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="Mqfd7TRQAum-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="Mqfd7TRQAum-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.1.6.1.11 The percentage of external walls that are in a fair condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="ZLgdGSTDtOk-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="ZLgdGSTDtOk-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.1.6.1.12 The percentage of external walls that are in a good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="J05n8DGjWlX-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="J05n8DGjWlX-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.1.6.1.13 The percentage of external walls that are in a very good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="wbN92ZiR1pL-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="wbN92ZiR1pL-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.1.6.1.14 The percentage of internal walls that are in a very poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="pM8Naqoq3MA-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="pM8Naqoq3MA-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.1.6.1.15 The percentage of internal walls that are in a poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="Nz3cOgP4hnm-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="Nz3cOgP4hnm-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.1.6.1.16 The percentage of internal walls that are in a fair condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="iZSzhtaSSFh-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="iZSzhtaSSFh-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.1.6.1.17 The percentage of internal walls that are in a good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="NiJx9KsehCT-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="NiJx9KsehCT-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.1.6.1.18 The percentage of internal walls that are in a very good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="XVFEcLIsipY-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="XVFEcLIsipY-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.1.6.1.19 The percentage of roofs that are in a very poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="ABHMlZTo8oh-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="ABHMlZTo8oh-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.1.6.1.20 The percentage of roofs that are in a poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="fQYiPKB5sfJ-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="fQYiPKB5sfJ-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.1.6.1.21 The percentage of roofs that are in a fair condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="ud0BTGXyiOo-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="ud0BTGXyiOo-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.1.6.1.22 The percentage of roofs that are in a good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="AmhHJoxYMxG-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="AmhHJoxYMxG-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.1.6.1.23 The percentage of roofs that are in a very good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="WggxXzqe5Sy-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="WggxXzqe5Sy-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.1.6.1.24 The percentage of ceilings that are in a very poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="NU36LXELYLd-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="NU36LXELYLd-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.1.6.1.25 The percentage of ceilings that are in a poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="RFCeeAkksiF-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="RFCeeAkksiF-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.1.6.1.26 The percentage of ceilings that are in a fair condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="HogLfyFOuTl-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="HogLfyFOuTl-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.1.6.1.27 The percentage of ceilings that are in a good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="aK3pxT68x8f-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="aK3pxT68x8f-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.1.6.1.28 The percentage of ceilings that are in a very good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="aIiyVpXhLI6-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="aIiyVpXhLI6-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.1.6.1.29 The percentage of floors that are in a very poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="BckeJA6bl08-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="BckeJA6bl08-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.1.6.1.30 The percentage of floors that are in a poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="DHuOiYe4Bws-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="DHuOiYe4Bws-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.1.6.1.31 The percentage of floors that are in a fair condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="Srees5pFMHx-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="Srees5pFMHx-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.1.6.1.32 The percentage of floors that are in a good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="PUr9xZkUygx-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="PUr9xZkUygx-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.1.6.1.33 The percentage of floors that are in a very good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="KFoA6xXEqr4-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="KFoA6xXEqr4-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 7 Facilities and Infrastructure: 7.1.6.2 All pedestrian and vehicular access routes are maintained to ensure the smooth running of the health establishment</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">7.1.6.2.2 The percentage of internal roads and paving that is in a very poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="c4xyhTjg8YP-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="c4xyhTjg8YP-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.1.6.2.3 The percentage of internal roads and paving that is in a poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="dmi5bsreCPo-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="dmi5bsreCPo-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.1.6.2.4 The percentage of internal roads and paving that is in a fair condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="s8ZIws52joU-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="s8ZIws52joU-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.1.6.2.5 The percentage of internal roads and paving that is in a good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="krGxjBKES5M-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="krGxjBKES5M-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.1.6.2.6 The percentage of internal roads and paving that is in a very good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="gUQlXzqFhXP-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="gUQlXzqFhXP-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 7 Facilities and Infrastructure: 7.2.1.2 Routine and emergency electrical power services are functional and meet the needs of the health establishment</div><div><table><tbody><tr><td class="tdCrit">7.2.1.2.3 The percentage of external electrical supply supplying the facility that is in a very poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="JMM4QgZyqA0-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="JMM4QgZyqA0-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.2.1.2.4 The percentage of the external electrical supply supplying the facility that is in a poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="eBQOOHYyHSq-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="eBQOOHYyHSq-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.2.1.2.5 The percentage of the external electrical supply supplying the facility that is in a fair condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="ZYCGu75ulDN-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="ZYCGu75ulDN-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.2.1.2.6 The percentage of the external electrical supply supplying the facility that is in a good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="SZFUwTlDeEO-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="SZFUwTlDeEO-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.2.1.2.7 The percentage of the external electrical supply supplying the facility that is in a very good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="zVdQBrbwVQQ-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="zVdQBrbwVQQ-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.2.1.2.8 The percentage of internal electrical distribution to the facility that is in a very poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="qZ5I17x8Kpg-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="qZ5I17x8Kpg-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.2.1.2.9 The percentage of the internal electrical distribution to the facility that is in a poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="XzW2wuOVUV4-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="XzW2wuOVUV4-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.2.1.2.10 The percentage of the internal electrical distribution to the facility that is in a fair condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="KpCI1iANdrK-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="KpCI1iANdrK-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.2.1.2.11 The percentage of the internal electrical distribution to the facility that is in a good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="vYCAPcW6WSX-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="vYCAPcW6WSX-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.2.1.2.12 The percentage of the internal electrical distribution to the facility that is in a very good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="oGaQSRzDfcv-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="oGaQSRzDfcv-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 7 Facilities and Infrastructure: 7.2.1.4 Routine and emergency water supplies are functional and meet the needs of the establishment</div><div><table><tbody><tr><td class="tdCrit">7.2.1.4.3 The percentage of external water pipe system supplying the facility that is in a very poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="JlN9esfByOn-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="JlN9esfByOn-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.2.1.4.4 The percentage of external water pipe system supplying the facility that is in a poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="QdU7ZhbzgXz-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="QdU7ZhbzgXz-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.2.1.4.5 The percentage of external water pipe system supplying the facility that is in a fair condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="mmj7DSp7m9S-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="mmj7DSp7m9S-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.2.1.4.6 The percentage of external water pipe system supplying the facility that is in a good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="r9MmRmrT3oC-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="r9MmRmrT3oC-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.2.1.4.7 The percentage of external water pipe system supplying the facility that is in a very good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="DI4dMZaSKjv-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="DI4dMZaSKjv-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.2.1.4.8 The percentage of internal water reticulation system that is in a very poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="hHyyfqiNu8V-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="hHyyfqiNu8V-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.2.1.4.9 The percentage of internal water reticulation system that is in a poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="N5Ip0QkegYg-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="N5Ip0QkegYg-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.2.1.4.10 The percentage of internal water reticulation system that is in a fair condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="nyC59a224CQ-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="nyC59a224CQ-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.2.1.4.11 The percentage of internal water reticulation system that is in a good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="P5LzqXxswnQ-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="P5LzqXxswnQ-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.2.1.4.12 The percentage of internal water reticulation system that is in a very good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="jCI3pBRHK4V-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="jCI3pBRHK4V-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 7 Facilities and Infrastructure: 7.2.1.5 The sewerage disposal system is functional and properly maintained</div><div><table><tbody><tr><td class="tdCrit">7.2.1.5.2 The percentage of sewerage system that is in a very poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="ax0im2gUXDv-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="ax0im2gUXDv-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.2.1.5.3 The percentage of sewerage system that is in a poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="A85zt0IAbR5-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="A85zt0IAbR5-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.2.1.5.4 The percentage of sewerage system that is in a fair condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="tG4C0hMZW8D-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="tG4C0hMZW8D-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.2.1.5.5 The percentage of sewerage system that is in a good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="EUrVf2Y1d5t-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="EUrVf2Y1d5t-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.2.1.5.6 The percentage of sewerage system that is in a very good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="hPBpH18V0rn-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="hPBpH18V0rn-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.2.1.5.7 The percentage of wastewater disposal system that is in a very poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="sVpoAeSRQTo-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="sVpoAeSRQTo-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.2.1.5.8 The percentage of wastewater disposal system that is in a poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="RYVcjL46yAM-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="RYVcjL46yAM-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.2.1.5.9 The percentage of wastewater disposal system that is in a fair condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="mKDheHnVjNN-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="mKDheHnVjNN-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.2.1.5.10 The percentage of wastewater disposal system that is in a good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="WHD5jFjtOgo-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="WHD5jFjtOgo-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.2.1.5.11 The percentage of wastewater disposal system that is in a very good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="d4HxjqHcFDT-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="d4HxjqHcFDT-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 7 Facilities and Infrastructure: 7.2.1.6 Appropriate ventilation is provided in theatres / patient accommodation and waiting areas</div><div><table><tbody><tr><td class="tdCrit">7.2.1.6.1 The percentage of the air conditioning system that is in a very poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="K7sFIEWS1mU-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="K7sFIEWS1mU-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.2.1.6.2 The percentage of the air conditioning system that is in a poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="Gcr1CahLXNK-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="Gcr1CahLXNK-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.2.1.6.3 The percentage of the air conditioning system that is in a fair condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="ntWEuk7cQPk-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="ntWEuk7cQPk-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.2.1.6.4 The percentage of the air conditioning system that is in a good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="hDydh8l3A04-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="hDydh8l3A04-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.2.1.6.5 The percentage of the air conditioning system that is in a very good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="NWbVCpkHtlL-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="NWbVCpkHtlL-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 7 Facilities and Infrastructure: 7.2.1.7 Routine and emergency medical gas and vacuum systems meet the needs of the health establishment</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">7.2.1.7.1 The percentage of the oxygen distribution system that is in a very poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="OvXJHR1urd4-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="OvXJHR1urd4-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.2.1.7.2 The percentage of the oxygen distribution system that is in a poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="Txn5uCTnwe5-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="Txn5uCTnwe5-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.2.1.7.3 The percentage of the oxygen distribution system that is in a fair condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="NDQoRa4twaa-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="NDQoRa4twaa-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.2.1.7.4 The percentage of the oxygen distribution system that is in a good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="pJLntezUIKQ-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="pJLntezUIKQ-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.2.1.7.5 The percentage of the oxygen distribution system that is in a very good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="GZtkjOogPbb-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="GZtkjOogPbb-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.2.1.7.6 The percentage of the vacuum system that is in a very poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="Jod5GPlIsGs-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="Jod5GPlIsGs-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.2.1.7.7 The percentage of the vacuum system that is in a poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="PsvS0jphlUP-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="PsvS0jphlUP-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.2.1.7.8 The percentage of the vacuum system that is in a fair condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="Z15TSG2y5lU-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="Z15TSG2y5lU-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.2.1.7.9 The percentage of the vacuum system that is in a good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="U4z48uRZRbB-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="U4z48uRZRbB-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.2.1.7.10 The percentage of the vacuum system that is in a very good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="R67T2jIyGaW-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="R67T2jIyGaW-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 7 Facilities and Infrastructure: 7.2.2.3 The operational plant is upgraded / replaced / decommissioned / disposed of according to a documented system</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">7.2.2.3.2 The percentage of the workshop that is in a very poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="vyxBQz5iZj3-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="vyxBQz5iZj3-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.2.2.3.3 The percentage of the workshop that is in a poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="S7T31TicwrF-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="S7T31TicwrF-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.2.2.3.4 The percentage of the workshop that is in a fair condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="ffD6jJhxOIp-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="ffD6jJhxOIp-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.2.2.3.5 The percentage of the workshop that is in a good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="CGfIPUy04aY-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="CGfIPUy04aY-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.2.2.3.6 The percentage of the workshop that is in a very good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="jmQdIaQjtQ7-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="jmQdIaQjtQ7-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 7 Facilities and Infrastructure: 7.3.1.1 Security systems safeguard the building / patients / visitors / staff</div><div><table><tbody><tr><td class="tdCrit">7.3.1.1.2 The percentage of the Closed circuit television security system that is in a very poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="DKcs02RpGjq-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="DKcs02RpGjq-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.3.1.1.3 The percentage of the Closed circuit television security system that is in a poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="nrqixd3r04P-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="nrqixd3r04P-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.3.1.1.4 The percentage of the Closed circuit television security system that is in a fair condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="kqreppnFE8u-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="kqreppnFE8u-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.3.1.1.5 The percentage of the Closed circuit television security system that is in a good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="N7j50jZsWE8-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="N7j50jZsWE8-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.3.1.1.6 The percentage of the Closed circuit television security system that is in a very good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="EvNeHlDuaTW-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="EvNeHlDuaTW-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 7 Facilities and Infrastructure: 7.4.1.1 All areas of the health establishment are kept clean including critical areas of public use (especially toilets) and areas for patient care</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">7.4.1.1.3 The percentage of toilets that are in a very poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="cw1Y5uavdwj-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="cw1Y5uavdwj-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.4.1.1.4 The percentage of toilets that are in a poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="K4xscoCUXfU-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="K4xscoCUXfU-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.4.1.1.5 The percentage of toilets that are in a fair condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="By2893vtFDR-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="By2893vtFDR-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.4.1.1.6 The percentage of toilets that are in a good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="WMvV7qAJPG6-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="WMvV7qAJPG6-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.4.1.1.7 The percentage of toilets that are in a very good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="WPZBNxpAxQb-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="WPZBNxpAxQb-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.4.1.1.8 The percentage of baths that are in a very poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="X96Bai3RkZX-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="X96Bai3RkZX-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.4.1.1.9 The percentage of baths that are in a poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="hRvrgTI8x8T-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="hRvrgTI8x8T-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.4.1.1.10 The percentage of baths that are in a fair condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="KRCPpxfjsxk-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="KRCPpxfjsxk-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.4.1.1.11 The percentage of baths that are in a good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="iOAl7QOw4ca-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="iOAl7QOw4ca-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.4.1.1.12 The percentage of baths that are in a very good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="sc2AcKkL5rE-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="sc2AcKkL5rE-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.4.1.1.13 The percentage of showers that are in a very poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="gTb2l9Jdi3X-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="gTb2l9Jdi3X-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.4.1.1.14 The percentage of showers that are in a poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="yjA27X3Tu71-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="yjA27X3Tu71-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.4.1.1.15 The percentage of showers that are in a fair condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="G8Ueekh6u7i-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="G8Ueekh6u7i-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.4.1.1.16 The percentage of showers that are in a good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="FjdRMgogwfE-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="FjdRMgogwfE-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.4.1.1.17 The percentage of showers that are in a very good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="gsTGrNkpmWn-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="gsTGrNkpmWn-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.4.1.1.18 The percentage of basins that are in a very poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="jueU3hOhWXf-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="jueU3hOhWXf-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.4.1.1.19 The percentage of basins that are in a poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="D43pRWKm2Cr-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="D43pRWKm2Cr-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.4.1.1.20 The percentage of basins that are in a fair condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="EIUNGSr20d9-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="EIUNGSr20d9-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.4.1.1.21 The percentage of basins that are in a good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="TJXLXX6lqVQ-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="TJXLXX6lqVQ-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.4.1.1.22 The percentage of basins that are in a very good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="MzPKFcDlJJF-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="MzPKFcDlJJF-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 7 Facilities and Infrastructure: 7.6.1.3 The laundry has appropriate equipment suitable to meet the needs of the establishment</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">7.6.1.3.3 The percentage of laundry facilities that are in a very poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="rbR7qMBGfhm-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="rbR7qMBGfhm-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.6.1.3.4 The percentage of laundry facilities that are in a poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="rUqjZiWVxYl-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="rUqjZiWVxYl-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.6.1.3.5 The percentage of laundry facilities that are in a fair condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="hUgbxCIYbvy-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="hUgbxCIYbvy-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.6.1.3.6 The percentage of laundry facilities that are in a good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="lXeLqxaBuaD-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="lXeLqxaBuaD-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.6.1.3.7 The percentage of laundry facilities that are in a very good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="YEm94UjsYuh-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="YEm94UjsYuh-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 7 Facilities and Infrastructure: 7.7.1.8 The kitchens meet hygiene and environmental health requirements</div><div><table><tbody><tr><td class="tdCrit">7.7.1.8.6 The percentage of cooking facilities that are in a very poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="fIUuIq0awf4-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="fIUuIq0awf4-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.7.1.8.7 The percentage of cooking facilities that are in a poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="qRQImqFF0IW-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="qRQImqFF0IW-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.7.1.8.8 The percentage of cooking facilities that are in a fair condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="arCmeHdab1b-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="arCmeHdab1b-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.7.1.8.9 The percentage of cooking facilities that are in a good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="F19I90vn21O-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="F19I90vn21O-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.7.1.8.10 The percentage of cooking facilities that are in a very good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="T9m75HS6MjA-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="T9m75HS6MjA-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.7.1.8.11 The percentage of scullery facilities that are in a very poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="P8qmo4ZHdFg-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="P8qmo4ZHdFg-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.7.1.8.12 The percentage of scullery facilities that are in a poor condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="NTAc8TPd9Ur-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="NTAc8TPd9Ur-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.7.1.8.13 The percentage of scullery facilities that are in a fair condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="oM4fuZSePYQ-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="oM4fuZSePYQ-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">7.7.1.8.14 The percentage of scullery facilities that are in a good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="ZNm6CC2vm9i-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="ZNm6CC2vm9i-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">7.7.1.8.15 The percentage of scullery facilities that are in a very good condition</td><td class="tdType bold">OBS<br /><br /> </td><td class="tdScore" colspan="3"><input id="iYv3nbmypUy-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="iYv3nbmypUy-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div>
+<script type='text/javascript'>
+    function upCalc() {
+        $("[data-calculated]").each(function(index, element) {
+            var id = $(this).attr('id');
+            var de = id.split('-')[0];
+            var coc = id.split('-')[1];
+            var code = $(this).attr('data-calculated');
+            var yes = parseInt(0);
+            var count = parseInt(0);
+            $("[data-checklist='" + code + "']").each(function(index, element) {
+                var value = $(this).val();
+                if (value) {
+                    if (value == 'true' || value == 'false') {
+                        count++;
+                    }
+                    if (value == 'true') {
+                        yes++;
+                    }
+                }
+            });
+            if (count > 0) {
+                var average = parseInt(yes) / parseInt(count);
+                var val = Math.round(average * 100) / 100;
+                $(this).val(val);
+                saveVal(de, coc, id);
+            }
+        });
+    }
+
+</script>
+<style type="text/css">
+    .domain {
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 12px;
+        padding: 20px 0;
+        width: 900px;
+    }
+    
+    #contentDiv table {
+        border-collapse: collapse;
+        font-family: sans-serif;
+        font-size: 12px;
+        page-break-inside: avoid;
+    }
+    
+    #contentDiv table td {
+        border: 1px solid #ccc;
+        padding: 8px;
+    }
+    
+    .tdCrit {
+        width: 420px;
+        height: 35px;
+        padding-right: 20px;
+    }
+    
+    .tdType {
+        width: 70px;
+    }
+    
+    .tdScore {
+        width: 211px;
+    }
+    
+    .tdScoreCheck {
+        width: 59px;
+    }
+    
+    .tdNote {
+        width: 290px;
+    }
+    
+    .formHeader {
+        position: relative;
+        padding: 25px 0 20px 0;
+    }
+    
+    .formTitle {
+        font-family: sans-serif;
+        position: absolute;
+        font-size: 28px;
+        margin-left: 35px;
+        top: 75px;
+    }
+    
+    .sectionHeader {
+        margin-top: 25px;
+    }
+    
+    .sectionHeader table td {
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 13px;
+        background-color: #bedef4;
+    }
+    
+    .facilityInput {
+        font-family: sans-serif;
+        font-weight: bold;
+        position: relative;
+        display: inline-block;
+        height: 28px;
+        width: 450px;
+        border: 1px solid #ccc;
+        margin-right: 20px;
+    }
+    
+    .periodInput {
+        position: relative;
+        display: inline-block;
+        height: 28px;
+        width: 281px;
+        border: 1px solid #ccc;
+    }
+    
+    .facilityLabel {
+        font-family: sans-serif;
+        position: relative;
+        top: 6px;
+        display: inline-block;
+        height: 28px;
+        font-size: 16px;
+        padding-right: 15px;
+    }
+    
+    .noteDiv {
+        font-family: sans-serif;
+        font-style: italic;
+        font-size: 11px;
+        margin-top: 20px;
+    }
+    
+    .greyRow {
+        background-color: #eee;
+    }
+    
+    .commentCodes {
+        margin: 28px 0;
+        border-collapse: collapse;
+    }
+    .commentlink {
+        padding-left: 15px;
+        padding-bottom: 10px;
+        width: 15px;
+        height: 15px;
+    }
+
+</style>
+<style media="screen" type="text/css">
+    .inputDiv {
+        display: none;
+    }
+
+</style>
+<style media="print" type="text/css">
+    .inputDiv {
+        display: block;
+        position: relative;
+    }
+
+</style>
+<div class="formHeader"><img src="../dhis-web-commons/flags/south_africa_department_of_health.png" /><span class="formTitle bold">Assessment Questionnaire </span></div>
+<div class="inputDiv"><span class="facilityLabel">Facility: </span><span class="facilityInput">&nbsp;</span><span class="facilityLabel">Period: </span><span class="periodInput">&nbsp;</span></div>
+<div class="sectionHeader bold">
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">IA01 Integrated Audit Infrastructure</td>
+                <td class="tdType">Type</td>
+                <td class="tdScore">Score</td>
+                <td class="tdNote">Notes</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 7 Facilities and Infrastructure: 7.1.2.1 Regular evaluation of the functional suitability of available facilities is undertaken</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">7.1.2.1.2 The establishment has a full set of architectural plans of the facilities</td>
+                <td class="tdType bold">DOC<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="hcqwarJghGU-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="hcqwarJghGU-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 7 Facilities and Infrastructure: 7.1.2.2 The layout of the health establishment is planned or adapted to ensure that there is space to meet service and patient needs</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">7.1.2.2.4 The nurses station is centrally located in the ward to allow for viewing of the patients</td>
+                <td class="tdType bold">OBS<br /><br />E</td>
+                <td class="tdScore" colspan="3"><input id="EdDv8aufiaS-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="EdDv8aufiaS-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.1.2.2.5 There is sufficient space to move around each bed in the ICU</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="m4EMCNj0bY9-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="m4EMCNj0bY9-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.1.2.2.6 The radiology department is in close proximity to the theatres and A and E unit</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="Oh1UCSJCga9-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="Oh1UCSJCga9-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.1.2.2.7 There is easy access for equipment to be carried out of the facility to be serviced or replaced</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="o7Cg0lMaceo-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="o7Cg0lMaceo-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.1.2.2.8 CHECKLIST - There are adequate bed head service for each ICU bed</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="U78VzmBsjfh-gSfwnIupmqe-val" style="text-align:center" value="" title="" /></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 7 Facilities and Infrastructure: 7.1.5.1 All areas are adequately furnished and provide an acceptable environment for patient care</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">7.1.5.1.3 There are NO rain water leaks observed</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="ZIMcnFL1sXY-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="ZIMcnFL1sXY-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.1.5.1.4 There are No water supply leaks in the walls</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="hymuaJQ6btB-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="hymuaJQ6btB-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.1.5.1.5 The windows and their mechanisms are in an acceptable condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="el6P2xgJiU2-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="el6P2xgJiU2-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.1.5.1.6 The doors and door mechanisms are in an acceptable condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="avgBy1Wli3i-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="avgBy1Wli3i-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.1.5.1.7 Are there any major problem areas / Assess extent of problem</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="ijUJakNvUMi-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="ijUJakNvUMi-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.1.5.1.8 Is there recent renovations work that has been completed</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="yRgMHbrVVuI-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="yRgMHbrVVuI-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.1.5.1.9 Are there currently alterations/ renovations in progress</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="slHr5u5Eyah-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="slHr5u5Eyah-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 7 Facilities and Infrastructure: 7.1.6.1 A regular maintenance programme ensures that the health establishment grounds are safe for all users and provide an attractive environment</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">7.1.6.1.4 The percentage of perimeter fence/wall that is in a very poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="NOU3ym9fzky-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="NOU3ym9fzky-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.1.6.1.5 The percentage of perimeter fence/wall that is in a poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="xIkdkXFbnV6-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="xIkdkXFbnV6-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.1.6.1.6 The percentage of perimeter fence/wall that is in a fair condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="EZrndRG5eMo-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="EZrndRG5eMo-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.1.6.1.7 The percentage of perimeter fence/wall that is in a good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="oCDHDZwSuAR-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="oCDHDZwSuAR-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.1.6.1.8 The percentage of perimeter fence/wall that is in a very good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="qcgxpUgHn8y-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="qcgxpUgHn8y-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.1.6.1.9 The percentage of external walls that are in a very poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="MdCXAEn7Xju-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="MdCXAEn7Xju-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.1.6.1.10 The percentage of external walls that are in a poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="Mqfd7TRQAum-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="Mqfd7TRQAum-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.1.6.1.11 The percentage of external walls that are in a fair condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="ZLgdGSTDtOk-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="ZLgdGSTDtOk-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.1.6.1.12 The percentage of external walls that are in a good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="J05n8DGjWlX-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="J05n8DGjWlX-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.1.6.1.13 The percentage of external walls that are in a very good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="wbN92ZiR1pL-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="wbN92ZiR1pL-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.1.6.1.14 The percentage of internal walls that are in a very poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="pM8Naqoq3MA-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="pM8Naqoq3MA-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.1.6.1.15 The percentage of internal walls that are in a poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="Nz3cOgP4hnm-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="Nz3cOgP4hnm-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.1.6.1.16 The percentage of internal walls that are in a fair condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="iZSzhtaSSFh-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="iZSzhtaSSFh-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.1.6.1.17 The percentage of internal walls that are in a good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="NiJx9KsehCT-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="NiJx9KsehCT-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.1.6.1.18 The percentage of internal walls that are in a very good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="XVFEcLIsipY-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="XVFEcLIsipY-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.1.6.1.19 The percentage of roofs that are in a very poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="ABHMlZTo8oh-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="ABHMlZTo8oh-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.1.6.1.20 The percentage of roofs that are in a poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="fQYiPKB5sfJ-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="fQYiPKB5sfJ-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.1.6.1.21 The percentage of roofs that are in a fair condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="ud0BTGXyiOo-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="ud0BTGXyiOo-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.1.6.1.22 The percentage of roofs that are in a good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="AmhHJoxYMxG-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="AmhHJoxYMxG-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.1.6.1.23 The percentage of roofs that are in a very good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="WggxXzqe5Sy-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="WggxXzqe5Sy-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.1.6.1.24 The percentage of ceilings that are in a very poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="NU36LXELYLd-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="NU36LXELYLd-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.1.6.1.25 The percentage of ceilings that are in a poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="RFCeeAkksiF-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="RFCeeAkksiF-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.1.6.1.26 The percentage of ceilings that are in a fair condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="HogLfyFOuTl-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="HogLfyFOuTl-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.1.6.1.27 The percentage of ceilings that are in a good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="aK3pxT68x8f-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="aK3pxT68x8f-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.1.6.1.28 The percentage of ceilings that are in a very good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="aIiyVpXhLI6-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="aIiyVpXhLI6-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.1.6.1.29 The percentage of floors that are in a very poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="BckeJA6bl08-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="BckeJA6bl08-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.1.6.1.30 The percentage of floors that are in a poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="DHuOiYe4Bws-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="DHuOiYe4Bws-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.1.6.1.31 The percentage of floors that are in a fair condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="Srees5pFMHx-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="Srees5pFMHx-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.1.6.1.32 The percentage of floors that are in a good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="PUr9xZkUygx-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="PUr9xZkUygx-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.1.6.1.33 The percentage of floors that are in a very good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="KFoA6xXEqr4-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="KFoA6xXEqr4-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 7 Facilities and Infrastructure: 7.1.6.2 All pedestrian and vehicular access routes are maintained to ensure the smooth running of the health establishment</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">7.1.6.2.2 The percentage of internal roads and paving that is in a very poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="c4xyhTjg8YP-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="c4xyhTjg8YP-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.1.6.2.3 The percentage of internal roads and paving that is in a poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="dmi5bsreCPo-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="dmi5bsreCPo-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.1.6.2.4 The percentage of internal roads and paving that is in a fair condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="s8ZIws52joU-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="s8ZIws52joU-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.1.6.2.5 The percentage of internal roads and paving that is in a good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="krGxjBKES5M-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="krGxjBKES5M-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.1.6.2.6 The percentage of internal roads and paving that is in a very good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="gUQlXzqFhXP-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="gUQlXzqFhXP-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 7 Facilities and Infrastructure: 7.2.1.2 Routine and emergency electrical power services are functional and meet the needs of the health establishment</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">7.2.1.2.3 The percentage of external electrical supply supplying the facility that is in a very poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="JMM4QgZyqA0-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="JMM4QgZyqA0-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.2.1.2.4 The percentage of the external electrical supply supplying the facility that is in a poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="eBQOOHYyHSq-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="eBQOOHYyHSq-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.2.1.2.5 The percentage of the external electrical supply supplying the facility that is in a fair condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="ZYCGu75ulDN-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="ZYCGu75ulDN-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.2.1.2.6 The percentage of the external electrical supply supplying the facility that is in a good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="SZFUwTlDeEO-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="SZFUwTlDeEO-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.2.1.2.7 The percentage of the external electrical supply supplying the facility that is in a very good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="zVdQBrbwVQQ-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="zVdQBrbwVQQ-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.2.1.2.8 The percentage of internal electrical distribution to the facility that is in a very poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="qZ5I17x8Kpg-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="qZ5I17x8Kpg-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.2.1.2.9 The percentage of the internal electrical distribution to the facility that is in a poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="XzW2wuOVUV4-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="XzW2wuOVUV4-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.2.1.2.10 The percentage of the internal electrical distribution to the facility that is in a fair condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="KpCI1iANdrK-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="KpCI1iANdrK-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.2.1.2.11 The percentage of the internal electrical distribution to the facility that is in a good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="vYCAPcW6WSX-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="vYCAPcW6WSX-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.2.1.2.12 The percentage of the internal electrical distribution to the facility that is in a very good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="oGaQSRzDfcv-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="oGaQSRzDfcv-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 7 Facilities and Infrastructure: 7.2.1.4 Routine and emergency water supplies are functional and meet the needs of the establishment</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">7.2.1.4.3 The percentage of external water pipe system supplying the facility that is in a very poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="JlN9esfByOn-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="JlN9esfByOn-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.2.1.4.4 The percentage of external water pipe system supplying the facility that is in a poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="QdU7ZhbzgXz-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="QdU7ZhbzgXz-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.2.1.4.5 The percentage of external water pipe system supplying the facility that is in a fair condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="mmj7DSp7m9S-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="mmj7DSp7m9S-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.2.1.4.6 The percentage of external water pipe system supplying the facility that is in a good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="r9MmRmrT3oC-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="r9MmRmrT3oC-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.2.1.4.7 The percentage of external water pipe system supplying the facility that is in a very good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="DI4dMZaSKjv-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="DI4dMZaSKjv-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.2.1.4.8 The percentage of internal water reticulation system that is in a very poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="hHyyfqiNu8V-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="hHyyfqiNu8V-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.2.1.4.9 The percentage of internal water reticulation system that is in a poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="N5Ip0QkegYg-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="N5Ip0QkegYg-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.2.1.4.10 The percentage of internal water reticulation system that is in a fair condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="nyC59a224CQ-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="nyC59a224CQ-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.2.1.4.11 The percentage of internal water reticulation system that is in a good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="P5LzqXxswnQ-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="P5LzqXxswnQ-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.2.1.4.12 The percentage of internal water reticulation system that is in a very good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="jCI3pBRHK4V-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="jCI3pBRHK4V-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 7 Facilities and Infrastructure: 7.2.1.5 The sewerage disposal system is functional and properly maintained</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">7.2.1.5.2 The percentage of sewerage system that is in a very poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="ax0im2gUXDv-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="ax0im2gUXDv-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.2.1.5.3 The percentage of sewerage system that is in a poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="A85zt0IAbR5-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="A85zt0IAbR5-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.2.1.5.4 The percentage of sewerage system that is in a fair condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="tG4C0hMZW8D-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="tG4C0hMZW8D-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.2.1.5.5 The percentage of sewerage system that is in a good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="EUrVf2Y1d5t-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="EUrVf2Y1d5t-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.2.1.5.6 The percentage of sewerage system that is in a very good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="hPBpH18V0rn-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="hPBpH18V0rn-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.2.1.5.7 The percentage of wastewater disposal system that is in a very poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="sVpoAeSRQTo-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="sVpoAeSRQTo-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.2.1.5.8 The percentage of wastewater disposal system that is in a poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="RYVcjL46yAM-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="RYVcjL46yAM-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.2.1.5.9 The percentage of wastewater disposal system that is in a fair condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="mKDheHnVjNN-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="mKDheHnVjNN-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.2.1.5.10 The percentage of wastewater disposal system that is in a good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="WHD5jFjtOgo-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="WHD5jFjtOgo-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.2.1.5.11 The percentage of wastewater disposal system that is in a very good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="d4HxjqHcFDT-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="d4HxjqHcFDT-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 7 Facilities and Infrastructure: 7.2.1.6 Appropriate ventilation is provided in theatres / patient accommodation and waiting areas</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">7.2.1.6.1 The percentage of the air conditioning system that is in a very poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="K7sFIEWS1mU-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="K7sFIEWS1mU-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.2.1.6.2 The percentage of the air conditioning system that is in a poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="Gcr1CahLXNK-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="Gcr1CahLXNK-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.2.1.6.3 The percentage of the air conditioning system that is in a fair condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="ntWEuk7cQPk-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="ntWEuk7cQPk-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.2.1.6.4 The percentage of the air conditioning system that is in a good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="hDydh8l3A04-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="hDydh8l3A04-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.2.1.6.5 The percentage of the air conditioning system that is in a very good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="NWbVCpkHtlL-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="NWbVCpkHtlL-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 7 Facilities and Infrastructure: 7.2.1.7 Routine and emergency medical gas and vacuum systems meet the needs of the health establishment</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">7.2.1.7.1 The percentage of the oxygen distribution system that is in a very poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="OvXJHR1urd4-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="OvXJHR1urd4-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.2.1.7.2 The percentage of the oxygen distribution system that is in a poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="Txn5uCTnwe5-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="Txn5uCTnwe5-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.2.1.7.3 The percentage of the oxygen distribution system that is in a fair condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="NDQoRa4twaa-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="NDQoRa4twaa-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.2.1.7.4 The percentage of the oxygen distribution system that is in a good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="pJLntezUIKQ-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="pJLntezUIKQ-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.2.1.7.5 The percentage of the oxygen distribution system that is in a very good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="GZtkjOogPbb-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="GZtkjOogPbb-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.2.1.7.6 The percentage of the vacuum system that is in a very poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="Jod5GPlIsGs-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="Jod5GPlIsGs-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.2.1.7.7 The percentage of the vacuum system that is in a poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="PsvS0jphlUP-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="PsvS0jphlUP-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.2.1.7.8 The percentage of the vacuum system that is in a fair condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="Z15TSG2y5lU-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="Z15TSG2y5lU-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.2.1.7.9 The percentage of the vacuum system that is in a good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="U4z48uRZRbB-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="U4z48uRZRbB-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.2.1.7.10 The percentage of the vacuum system that is in a very good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="R67T2jIyGaW-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="R67T2jIyGaW-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 7 Facilities and Infrastructure: 7.2.2.3 The operational plant is upgraded / replaced / decommissioned / disposed of according to a documented system</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">7.2.2.3.2 The percentage of the workshop that is in a very poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="vyxBQz5iZj3-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="vyxBQz5iZj3-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.2.2.3.3 The percentage of the workshop that is in a poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="S7T31TicwrF-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="S7T31TicwrF-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.2.2.3.4 The percentage of the workshop that is in a fair condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="ffD6jJhxOIp-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="ffD6jJhxOIp-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.2.2.3.5 The percentage of the workshop that is in a good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="CGfIPUy04aY-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="CGfIPUy04aY-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.2.2.3.6 The percentage of the workshop that is in a very good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="jmQdIaQjtQ7-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="jmQdIaQjtQ7-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 7 Facilities and Infrastructure: 7.3.1.1 Security systems safeguard the building / patients / visitors / staff</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">7.3.1.1.2 The percentage of the Closed circuit television security system that is in a very poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="DKcs02RpGjq-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="DKcs02RpGjq-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.3.1.1.3 The percentage of the Closed circuit television security system that is in a poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="nrqixd3r04P-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="nrqixd3r04P-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.3.1.1.4 The percentage of the Closed circuit television security system that is in a fair condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="kqreppnFE8u-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="kqreppnFE8u-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.3.1.1.5 The percentage of the Closed circuit television security system that is in a good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="N7j50jZsWE8-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="N7j50jZsWE8-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.3.1.1.6 The percentage of the Closed circuit television security system that is in a very good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="EvNeHlDuaTW-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="EvNeHlDuaTW-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 7 Facilities and Infrastructure: 7.4.1.1 All areas of the health establishment are kept clean including critical areas of public use (especially toilets) and areas for patient care</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">7.4.1.1.3 The percentage of toilets that are in a very poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="cw1Y5uavdwj-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="cw1Y5uavdwj-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.4.1.1.4 The percentage of toilets that are in a poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="K4xscoCUXfU-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="K4xscoCUXfU-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.4.1.1.5 The percentage of toilets that are in a fair condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="By2893vtFDR-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="By2893vtFDR-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.4.1.1.6 The percentage of toilets that are in a good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="WMvV7qAJPG6-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="WMvV7qAJPG6-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.4.1.1.7 The percentage of toilets that are in a very good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="WPZBNxpAxQb-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="WPZBNxpAxQb-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.4.1.1.8 The percentage of baths that are in a very poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="X96Bai3RkZX-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="X96Bai3RkZX-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.4.1.1.9 The percentage of baths that are in a poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="hRvrgTI8x8T-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="hRvrgTI8x8T-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.4.1.1.10 The percentage of baths that are in a fair condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="KRCPpxfjsxk-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="KRCPpxfjsxk-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.4.1.1.11 The percentage of baths that are in a good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="iOAl7QOw4ca-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="iOAl7QOw4ca-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.4.1.1.12 The percentage of baths that are in a very good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="sc2AcKkL5rE-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="sc2AcKkL5rE-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.4.1.1.13 The percentage of showers that are in a very poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="gTb2l9Jdi3X-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="gTb2l9Jdi3X-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.4.1.1.14 The percentage of showers that are in a poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="yjA27X3Tu71-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="yjA27X3Tu71-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.4.1.1.15 The percentage of showers that are in a fair condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="G8Ueekh6u7i-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="G8Ueekh6u7i-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.4.1.1.16 The percentage of showers that are in a good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="FjdRMgogwfE-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="FjdRMgogwfE-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.4.1.1.17 The percentage of showers that are in a very good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="gsTGrNkpmWn-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="gsTGrNkpmWn-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.4.1.1.18 The percentage of basins that are in a very poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="jueU3hOhWXf-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="jueU3hOhWXf-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.4.1.1.19 The percentage of basins that are in a poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="D43pRWKm2Cr-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="D43pRWKm2Cr-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.4.1.1.20 The percentage of basins that are in a fair condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="EIUNGSr20d9-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="EIUNGSr20d9-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.4.1.1.21 The percentage of basins that are in a good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="TJXLXX6lqVQ-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="TJXLXX6lqVQ-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.4.1.1.22 The percentage of basins that are in a very good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="MzPKFcDlJJF-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="MzPKFcDlJJF-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 7 Facilities and Infrastructure: 7.6.1.3 The laundry has appropriate equipment suitable to meet the needs of the establishment</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">7.6.1.3.3 The percentage of laundry facilities that are in a very poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="rbR7qMBGfhm-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="rbR7qMBGfhm-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.6.1.3.4 The percentage of laundry facilities that are in a poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="rUqjZiWVxYl-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="rUqjZiWVxYl-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.6.1.3.5 The percentage of laundry facilities that are in a fair condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="hUgbxCIYbvy-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="hUgbxCIYbvy-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.6.1.3.6 The percentage of laundry facilities that are in a good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="lXeLqxaBuaD-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="lXeLqxaBuaD-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.6.1.3.7 The percentage of laundry facilities that are in a very good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="YEm94UjsYuh-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="YEm94UjsYuh-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 7 Facilities and Infrastructure: 7.7.1.8 The kitchens meet hygiene and environmental health requirements</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">7.7.1.8.6 The percentage of cooking facilities that are in a very poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="fIUuIq0awf4-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="fIUuIq0awf4-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.7.1.8.7 The percentage of cooking facilities that are in a poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="qRQImqFF0IW-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="qRQImqFF0IW-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.7.1.8.8 The percentage of cooking facilities that are in a fair condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="arCmeHdab1b-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="arCmeHdab1b-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.7.1.8.9 The percentage of cooking facilities that are in a good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="F19I90vn21O-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="F19I90vn21O-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.7.1.8.10 The percentage of cooking facilities that are in a very good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="T9m75HS6MjA-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="T9m75HS6MjA-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.7.1.8.11 The percentage of scullery facilities that are in a very poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="P8qmo4ZHdFg-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="P8qmo4ZHdFg-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.7.1.8.12 The percentage of scullery facilities that are in a poor condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="NTAc8TPd9Ur-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="NTAc8TPd9Ur-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.7.1.8.13 The percentage of scullery facilities that are in a fair condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="oM4fuZSePYQ-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="oM4fuZSePYQ-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">7.7.1.8.14 The percentage of scullery facilities that are in a good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="ZNm6CC2vm9i-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="ZNm6CC2vm9i-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">7.7.1.8.15 The percentage of scullery facilities that are in a very good condition</td>
+                <td class="tdType bold">OBS<br /><br /> </td>
+                <td class="tdScore" colspan="3"><input id="iYv3nbmypUy-gSfwnIupmqe-val" style="text-align:center" value="" title="" /><img class="commentlink" id="iYv3nbmypUy-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
