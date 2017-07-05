@@ -1,0 +1,479 @@
+<p>
+	<script type='text/javascript'> function upCalc() { $( "[data-calculated]" ).each( function( index, element ) { var id = $( this ).attr( 'id' ); var de = id.split( '-' )[0]; var coc = id.split( '-' )[1]; var code = $( this ).attr( 'data-calculated' ); var yes = parseInt( 0 ); var count = parseInt( 0 ); $( "[data-checklist='" + code + "']" ).each( function( index, element ) { var value = $( this ).val(); if ( value ) { if ( value == 'true' || value == 'false' ) { count++; } if ( value == 'true'  ) { yes++; } } } ); if ( count > 0 ) { var average = parseInt( yes ) / parseInt( count ); var val = Math.round( average * 100 ) / 100; $( this ).val( val ); saveVal( de, coc, id ); } } ); } </script>
+	<style type="text/css">
+.domain {font-family:sans-serif;font-weight:bold;font-size:12px;padding: 20px 0;width:900px;} #contentDiv table {border-collapse:collapse;font-family:sans-serif;font-size:12px;page-break-inside:avoid;} #contentDiv table td {border: 1px solid #ccc;padding:8px;} .tdCrit {width:420px;height:35px;padding-right:20px;} .tdType {width:70px;} .tdScore {width:211px;} .tdScoreCheck {width:59px;} .tdNote {width:290px;} .formHeader {position:relative;padding: 25px 0 20px 0;} .formTitle {font-family:sans-serif;position:absolute;font-size:28px;margin-left:35px;top:75px;} .sectionHeader {margin-top:25px;} .sectionHeader table td {font-family:sans-serif;font-weight:bold;font-size:13px;background-color:#bedef4;} .facilityInput {font-family:sans-serif;font-weight:bold;position:relative;display:inline-block;height:28px;width:450px;border:1px solid #ccc;margin-right:20px;} .periodInput {position:relative;display:inline-block;height:28px;width:281px;border:1px solid #ccc;} .facilityLabel {font-family:sans-serif;position:relative;top:6px;display:inline-block;height:28px;font-size:16px;padding-right:15px;} .noteDiv {font-family:sans-serif;font-style:italic;font-size:11px;margin-top:20px;} .greyRow {background-color:#eee;} .commentCodes {margin:28px 0;border-collapse:collapse;}	</style>
+	<style media="screen" type="text/css">
+.inputDiv {display:none;}	</style>
+	<style media="print" type="text/css">
+.inputDiv {display:block;position:relative;}	</style>
+</p>
+<div class="formHeader">
+	<img src="../dhis-web-commons/flags/south_africa_department_of_health.png" /><span class="formTitle bold">Assessment Questionnaire </span></div>
+<div class="inputDiv">
+	<span class="facilityLabel">Facility: </span><span class="facilityInput">&nbsp;</span><span class="facilityLabel">Period: </span><span class="periodInput">&nbsp;</span></div>
+<div class="sectionHeader bold">
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					Operations Engineering</td>
+				<td class="tdType">
+					Type</td>
+				<td class="tdScore">
+					Score</td>
+				<td class="tdNote">
+					Notes</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 1 Patients Rights: 1.1.3.4 Patients have access to clean water in waiting areas in disposable cup</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					1.1.3.4.1 There is clean water and disposable cups for patients in waiting areas/court yards</td>
+				<td class="tdType bold">
+					OBS<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="XJKCvq9RvYP-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="XJKCvq9RvYP-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 1 Patients Rights: 1.3.1.1 The entrance to the health establishment offers easy and safe entry to the public</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					1.3.1.1.2 Systems are in place to ensure safe entry eg security guards/CCTV</td>
+				<td class="tdType bold">
+					OBS<br />
+					<br />
+					V</td>
+				<td class="tdScore" colspan="3">
+					<input id="PZI84zUUck9-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="PZI84zUUck9-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 3 Clinical Support Services: 3.6.1.2 Equipment for storage and transportation of bodies meet environmental hygiene standards</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					3.6.1.2.1 The mortuary equipment is in working order and serviced regularly</td>
+				<td class="tdType bold">
+					OBS<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="WNsFl2eeVnx-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="WNsFl2eeVnx-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 6 Operational Management: 6.7.2.2 Processes and infrastructure for filing and retrieval of patient files provide an effective and efficient service</div>
+<div>
+	<table>
+		<tbody>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					6.7.2.2.2 The medical records room is secure and only accessible to authorised staff</td>
+				<td class="tdType bold">
+					OBS<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="ZrUTGUfmEaA-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="ZrUTGUfmEaA-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 7 Facilities and Infrastructure: 7.1.4.2 Maintenance work is carried out promptly and efficiently by appropriately skilled personnel</div>
+<div>
+	<table>
+		<tbody>
+				<td class="tdCrit">
+					7.1.4.2.1 There is an updated planned maintenance programme available in the health establishment which is monitored and reflects that maintenance is carried out according to schedule</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="DTjqFRjw6b0-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="DTjqFRjw6b0-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+			<tr>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					7.1.4.2.2 Repair requisitions are reviewed monthly and outstanding items raised with the responsible person/service provider</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="azCjW6yt0hO-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="azCjW6yt0hO-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 7 Facilities and Infrastructure: 7.1.6.1 A regular maintenance programme ensures that the health establishment grounds are safe for all users and provide an attractive environment</div>
+<div>
+	<table>
+		<tbody>
+				<td class="tdCrit">
+					7.1.6.1.1 Grounds are maintained and are safe and clean</td>
+				<td class="tdType bold">
+					OBS<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="ONvU3bqnUCp-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="ONvU3bqnUCp-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+			<tr>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					7.1.6.1.2 Pathways are well maintained</td>
+				<td class="tdType bold">
+					OBS<br />
+					<br />
+					D</td>
+				<td class="tdScore" colspan="3">
+					<input id="fTphvJKflMy-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="fTphvJKflMy-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+				<td class="tdCrit">
+					7.1.6.1.3 The records shows that nightly inspections are done to ensure adequate lighting on grounds for a safe environment for vehicles / staff and visitors at night</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					D</td>
+				<td class="tdScore" colspan="3">
+					<input id="HpoFamL1Nfe-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="HpoFamL1Nfe-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 7 Facilities and Infrastructure: 7.2.1.2 Routine and emergency electrical power services are functional and meet the needs of the health establishment</div>
+<div>
+	<table>
+		<tbody>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					7.2.1.2.1 A up-to-date logbook or inspection sheets for electrical power is available</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="wvAxZWpPLvT-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="wvAxZWpPLvT-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 7 Facilities and Infrastructure: 7.2.1.4 Routine and emergency water supplies are functional and meet the needs of the establishment</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					7.2.1.4.1 Maintenance records show that water supplies are checked daily for adequacy and availability from the main reticulation system</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					V</td>
+				<td class="tdScore" colspan="3">
+					<input id="dn9mnXMu6ft-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="dn9mnXMu6ft-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					7.2.1.4.2 Maintenance records show the results of monthly water supply quality checks bacteriological / chemical and residual chlorine are within acceptable limits</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="oBJX5yoj5Ah-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="oBJX5yoj5Ah-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 7 Facilities and Infrastructure: 7.2.1.5 The sewerage disposal system is functional and properly maintained</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					7.2.1.5.1 Maintenance records reflects that the policy for managing the sewerage system is implemented</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="Hcylf4b3NbZ-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="Hcylf4b3NbZ-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 7 Facilities and Infrastructure: 7.2.2.1 Operational plant / equipment / installations are tested and properly maintained</div>
+<div>
+	<table>
+		<tbody>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					7.2.2.1.1 There is a policy and procedures for the maintenance of plant / equipment / installations for the health establishment</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					D</td>
+				<td class="tdScore" colspan="3">
+					<input id="tvPSYCa2tL9-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="tvPSYCa2tL9-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 7 Facilities and Infrastructure: 7.2.2.2 All systems and installations are maintained / tested and inspected according to regulations</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					7.2.2.2.1 Maintenance records show that maintenance and testing of systems and installations is documented and in accordance with regulations</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="MyK20nINIJ6-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="MyK20nINIJ6-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 7 Facilities and Infrastructure: 7.2.2.3 The operational plant is upgraded / replaced / decommissioned / disposed of according to a documented system</div>
+<div>
+	<table>
+		<tbody>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					7.2.2.3.1 Records show that where upgrading / replacing / decommissioning / disposal of operational plant is required it is done in line with policy and procedures</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="hD2jr3qlx0x-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="hD2jr3qlx0x-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 7 Facilities and Infrastructure: 7.2.3.1 The telephone system is functional and reliable</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					7.2.3.1.3 Access to the switchboard is controlled</td>
+				<td class="tdType bold">
+					OBS<br />
+					<br />
+					D</td>
+				<td class="tdScore" colspan="3">
+					<input id="lvDytUS3TAA-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="lvDytUS3TAA-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 7 Facilities and Infrastructure: 7.3.1.1 Security systems safeguard the building / patients / visitors / staff</div>
+<div>
+	<table>
+		<tbody>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					7.3.1.1.7 CHECKLIST - Security measures are in place to ensure the safety of patients/ staff/ goods and assets in the health establishment</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					V</td>
+				<td class="tdScore" colspan="3">
+					<input id="TRwT9d5Hp5S-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 7 Facilities and Infrastructure: 7.3.1.2 Building layout and security systems protect vulnerable patients</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					7.3.1.2.1 Security systems are positioned at vulnerable patient areas such as maternity / paediatric / psychiatric and emergency units and access and egress points</td>
+				<td class="tdType bold">
+					OBS<br />
+					<br />
+					V</td>
+				<td class="tdScore" colspan="3">
+					<input id="lMmeGOu6I1C-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="lMmeGOu6I1C-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 7 Facilities and Infrastructure: 7.3.1.3 Internal and external lighting is adequate to protect patients / visitors / staff</div>
+<div>
+	<table>
+		<tbody>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					7.3.1.3.1 Records show nightly inspections are done of the premises to ensure lighting is functional and all areas are lit up</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="kJHxLWgewyj-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="kJHxLWgewyj-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 7 Facilities and Infrastructure: 7.3.1.4 All security incidents are reported and addressed accordingly</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					7.3.1.4.1 Records or minutes of meetings show what actions have been taken to address security incidents reported</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="F5Xqm4nYBqR-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="F5Xqm4nYBqR-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 7 Facilities and Infrastructure: 7.3.1.5 Awareness of safety and security issues is promoted to the staff</div>
+<div>
+	<table>
+		<tbody>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					7.3.1.5.1 Safety and security notices are displayed in all areas</td>
+				<td class="tdType bold">
+					OBS<br />
+					<br />
+					D</td>
+				<td class="tdScore" colspan="3">
+					<input id="La6h56jZMSA-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="La6h56jZMSA-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 7 Facilities and Infrastructure: 7.4.1.2 Appropriate cleaning materials and equipment are available and properly used and stored</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					7.4.1.2.2 The maintenance plan record show that cleaning machines are regularly serviced and in good repair</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="H1FaHUxQpAg-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="H1FaHUxQpAg-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 7 Facilities and Infrastructure: 7.6.1.3 The laundry has appropriate equipment suitable to meet the needs of the establishment</div>
+<div>
+	<table>
+		<tbody>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					7.6.1.3.2 Maintenance records show that on-site laundry machines are serviced regularly</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="BInpBucY2yn-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="BInpBucY2yn-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<p>
+	&nbsp;</p>

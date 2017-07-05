@@ -1,0 +1,705 @@
+<p>
+	<script type='text/javascript'> function upCalc() { $( "[data-calculated]" ).each( function( index, element ) { var id = $( this ).attr( 'id' ); var de = id.split( '-' )[0]; var coc = id.split( '-' )[1]; var code = $( this ).attr( 'data-calculated' ); var yes = parseInt( 0 ); var count = parseInt( 0 ); $( "[data-checklist='" + code + "']" ).each( function( index, element ) { var value = $( this ).val(); if ( value ) { if ( value == 'true' || value == 'false' ) { count++; } if ( value == 'true'  ) { yes++; } } } ); if ( count > 0 ) { var average = parseInt( yes ) / parseInt( count ); var val = Math.round( average * 100 ) / 100; $( this ).val( val ); saveVal( de, coc, id ); } } ); } </script>
+	<style type="text/css">
+.domain {font-family:sans-serif;font-weight:bold;font-size:12px;padding: 20px 0;width:900px;} #contentDiv table {border-collapse:collapse;font-family:sans-serif;font-size:12px;page-break-inside:avoid;} #contentDiv table td {border: 1px solid #ccc;padding:8px;} .tdCrit {width:420px;height:35px;padding-right:20px;} .tdType {width:70px;} .tdScore {width:211px;} .tdScoreCheck {width:59px;} .tdNote {width:290px;} .formHeader {position:relative;padding: 25px 0 20px 0;} .formTitle {font-family:sans-serif;position:absolute;font-size:28px;margin-left:35px;top:75px;} .sectionHeader {margin-top:25px;} .sectionHeader table td {font-family:sans-serif;font-weight:bold;font-size:13px;background-color:#bedef4;} .facilityInput {font-family:sans-serif;font-weight:bold;position:relative;display:inline-block;height:28px;width:450px;border:1px solid #ccc;margin-right:20px;} .periodInput {position:relative;display:inline-block;height:28px;width:281px;border:1px solid #ccc;} .facilityLabel {font-family:sans-serif;position:relative;top:6px;display:inline-block;height:28px;font-size:16px;padding-right:15px;} .noteDiv {font-family:sans-serif;font-style:italic;font-size:11px;margin-top:20px;} .greyRow {background-color:#eee;} .commentCodes {margin:28px 0;border-collapse:collapse;}	</style>
+	<style media="screen" type="text/css">
+.inputDiv {display:none;}	</style>
+	<style media="print" type="text/css">
+.inputDiv {display:block;position:relative;}	</style>
+</p>
+<div class="formHeader">
+	<img src="../dhis-web-commons/flags/south_africa_department_of_health.png" /><span class="formTitle bold">Assessment Questionnaire </span></div>
+<div class="inputDiv">
+	<span class="facilityLabel">Facility: </span><span class="facilityInput">&nbsp;</span><span class="facilityLabel">Period: </span><span class="periodInput">&nbsp;</span></div>
+<div class="sectionHeader bold">
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					Hospital Management CEO</td>
+				<td class="tdType">
+					Type</td>
+				<td class="tdScore">
+					Score</td>
+				<td class="tdNote">
+					Notes</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 1 Patients Rights: 1.1.2.2 The facility implements quality improvement initiatives based on the findings of the various patient satisfaction surveys</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					1.1.2.2.2 The patient satisfaction survey results show that there has been improvement over time in the results</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="JQlxMD2F3n0-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="JQlxMD2F3n0-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 1 Patients Rights: 1.1.3.1 The cleanliness and hygiene of the facility contributes to patient satisfaction</div>
+<div>
+	<table>
+		<tbody>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					1.1.3.1.1 Patient satisfaction survey results show that patients are satisfied with cleanliness of health establishment</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="rpNFNFBRNr8-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="rpNFNFBRNr8-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 1 Patients Rights: 1.1.3.2 Patients are satisfied with the linen where provided</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					1.1.3.2.1 Patient satisfaction survey results show that patients are satisfied with linen services of the health establishment</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="i18gLZJd0ML-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="i18gLZJd0ML-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 1 Patients Rights: 1.1.3.3 Patients are satisfied with the food where provided</div>
+<div>
+	<table>
+		<tbody>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					1.1.3.3.1 Patient satisfaction survey results show that patients are satisfied with food services of the health establishment</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="KztgNVBdEit-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="KztgNVBdEit-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 1 Patients Rights: 1.5.1.2 Waiting times are monitored and improvement plans are implemented</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					1.5.1.2.1 A document reflecting agreed-upon local targets or benchmarks for waiting times is available</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					D</td>
+				<td class="tdScore" colspan="3">
+					<input id="HGkoEKvcowX-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="HGkoEKvcowX-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 1 Patients Rights: 1.8.2.3 Complaints are managed according to the guidelines regarding acknowledgement / investigation and response</div>
+<div>
+	<table>
+		<tbody>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					1.8.2.3.1 CHECKLIST - Letters to the last five complainants whose cases have been completed are in their files and include the findings and actions</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="ARZLQWFKIdm-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 1 Patients Rights: 1.8.2.4 Investigation and analysis of complaints lead to appropriate action to improve the quality of service delivery</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					1.8.2.4.1 Terms of reference of a forum reviewing complaints (or RELEVANT complaints for district office) is available which details the interdisciplinary membership / roles and responsibilities and strategy to manage complaints</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="A8xoCi9OtXR-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="A8xoCi9OtXR-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.1.1.2 There is evidence that the provision of care contributes to positive health outcomes</div>
+<div>
+	<table>
+		<tbody>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					2.1.1.2.2 There is evidence that the establishment monitors its morbidity and mortality statistics and implements improvement programmes to address concerns</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="DM3J9Tn9tGS-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="DM3J9Tn9tGS-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.6.3.1 Policy and procedures related to Universal precautions to prevent healthcare associated infections are actively implemented and applied in all clinical areas of the health establishment</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					2.6.3.1.2 The establishment has a reporting system for needle stick injuries or other incidents related to failure of standard precautions</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					V</td>
+				<td class="tdScore" colspan="3">
+					<input id="WQuUD12PUoO-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="WQuUD12PUoO-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 3 Clinical Support Services: 3.2.2.1 Radiology and related services like ultrasonography are available and provided within agreed-upon time frames</div>
+<div>
+	<table>
+		<tbody>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					3.2.2.1.2 Where services are outsourced there is a valid signed service level agreement addressing service levels and turnaround times required</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="WyuhULOJwbM-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="WyuhULOJwbM-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 4 Public Health: 4.4.1.3 Disposal procedures ensure that toxic chemicals / radioactive waste / expired drugs are safely disposed of</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					4.4.1.3.1 The establishment has a service level agreement for the safe disposal of toxic chemicals / radioactive waste and expired medicines with an accredited service provider and the service levels are monitored for compliance</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="Yx9xcGh7TvT-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="Yx9xcGh7TvT-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 5 Leadership and Corporate Governance: 5.1.2.1 A governance structure is in place and functional at the health establishment (hospital facility board / community health forums / private sector equivalent)</div>
+<div>
+	<table>
+		<tbody>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					5.1.2.1.1 The governance structure has clear terms of reference which details the membership / stakeholder representation/ responsibilities and lines of accountability for the structure</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="ovcgAUieCLa-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="ovcgAUieCLa-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 5 Leadership and Corporate Governance: 5.1.3.1 The governance structure actively participates in setting strategic direction in accordance with stakeholder needs</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					5.1.3.1.1 Minutes of the governance structure (from within the last quarter) indicate that the strategic plan and direction of the establishment are regularly discussed and monitored and remedial actions are implemented to ensure delivery</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="eynyPMIhJnC-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="eynyPMIhJnC-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 5 Leadership and Corporate Governance: 5.1.3.2 The governance structure ensures proper monitoring of quality of care including patient safety</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+			</tr>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					5.1.3.2.1 Minutes of the governance structure (from within the last quarter) indicate that quality of care in the health establishment is regularly discussed and monitored and remedial actions are implemented</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="sIwB9ArjOEi-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="sIwB9ArjOEi-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 5 Leadership and Corporate Governance: 5.1.3.3 The governance structure ensures that organisational risks are identified and ameliorated</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					5.1.3.3.1 Minutes of the governance structure (from within the last quarter) indicate that organisational risks in the health establishment are regularly discussed and monitored and remedial actions are implemented</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="hi0PYGAOgmw-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="hi0PYGAOgmw-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 5 Leadership and Corporate Governance: 5.1.3.5 The governance structure ensures that there is effective human resources management and development in the establishment</div>
+<div>
+	<table>
+		<tbody>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					5.1.3.5.1 Minutes of the governance structure (from within the last quarter) indicate that human resource management and development reports of the establishment are regularly discussed and monitored and remedial actions are implemented</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="qHqnUl5ffag-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="qHqnUl5ffag-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 5 Leadership and Corporate Governance: 5.1.3.6 The governance structure monitors senior management performance and compliance with ethical business practice</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					5.1.3.6.1 Minutes of the governance structure (from within the last quarter) demonstrate that management performance is regularly discussed and monitored and failures in performance are addressed</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="ClzFVpHXrjr-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="ClzFVpHXrjr-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+			<tr>
+			</tr>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					5.1.3.6.5 There is documented evidence that the health establishment adheres to the appropriate delegations of authority for financial / HR / other management control processes</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="NbRjbLv000I-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="NbRjbLv000I-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 5 Leadership and Corporate Governance: 5.3.1.1 Risks are actively monitored and managed to minimise or eliminate identified risks</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					5.3.1.1.1 The health establishment risk management strategy document includes evidence of monitoring and mitigation actions plans</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="eVkmmMTKssb-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="eVkmmMTKssb-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 5 Leadership and Corporate Governance: 5.4.1.1 Action is taken and documented to address all identified quality improvement opportunities</div>
+<div>
+	<table>
+		<tbody>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					5.4.1.1.1 Terms of reference of a forum established to review quality for purposes of quality improvement is available</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="CxRXwiybGSc-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="CxRXwiybGSc-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="tdCrit">
+					5.4.1.1.2 There is a designated/competent person who coordinates the quality assurance system/programme</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="wuWboeO4WTN-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="wuWboeO4WTN-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					5.4.1.1.3 Minutes of the relevant forum reviewing quality (from within the last quarter) indicate that all quality aspects are regularly discussed / analysed and actions have been taken to improve quality</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					V</td>
+				<td class="tdScore" colspan="3">
+					<input id="W6695XWQrdZ-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="W6695XWQrdZ-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 5 Leadership and Corporate Governance: 5.5.1.3 Performance management agreements of the senior managers are aligned with the strategic and operational plans</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					5.5.1.3.1 A up-to-date signed copy of the performance management agreement or SLA between the manager and the supervisor is available and reflects performance targets</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="wOaK3sKCm9Q-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="wOaK3sKCm9Q-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					5.5.1.3.2 Performance management agreements of the managers are aligned with the strategic and operational plans and contain targets and due dates</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="aQnmaf6Gs2v-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="aQnmaf6Gs2v-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="tdCrit">
+					5.5.1.3.3 All senior managers have comprehensive performance reviews of their performance against targets on a quarterly basis with plans for remedial action being taken if necessary</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="TrO2PQUgidQ-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="TrO2PQUgidQ-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 5 Leadership and Corporate Governance: 5.6.1.1 A communication strategy ensures that the staff are informed about all relevant issues within and affecting the establishment</div>
+<div>
+	<table>
+		<tbody>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					5.6.1.1.1 Communication strategy within the health establishment is structured to ensure that all staff are kept informed of that which impacts on them and the health establishment</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					D</td>
+				<td class="tdScore" colspan="3">
+					<input id="RKtaxfz3N6W-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="RKtaxfz3N6W-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 5 Leadership and Corporate Governance: 5.6.1.2 Staff are able to actively participate in decision making on quality related issues in the health establishment</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					5.6.1.2.1 The health establishment can demonstrate that it has used various communication channels to provide information to the their staff on quality related issues such as imbizos / newsletters / emails / staff forums</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="sQU8z0bVH1g-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="sQU8z0bVH1g-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					5.6.1.2.2 Staff satisfaction survey results indicate that staff feel are able to actively participate in decision making and that their views are taken into consideration on issues related to quality</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="Gjy5aUqm43p-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="Gjy5aUqm43p-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 5 Leadership and Corporate Governance: 5.6.2.1 A communication strategy ensures that the public are informed about all relevant issues within and affecting the health establishment</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					5.6.2.1.1 An up to date communication strategy is available in the health establishment which includes formal and informal mechanisms for communicating with the public and the correct authorisation procedure to follow in line with policy</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					D</td>
+				<td class="tdScore" colspan="3">
+					<input id="UJCKU4fXB8Z-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="UJCKU4fXB8Z-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 6 Operational Management: 6.2.2.1 Responsibilities in terms of the Occupational Health and Safety Act are assigned in writing</div>
+<div>
+	<table>
+		<tbody>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					6.2.2.1.1 CHECKLIST - Responsible persons are designated as specified in the OHS Act with signed letters which outline their responsibilities</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="Q75C4P1ddBj-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 6 Operational Management: 6.2.2.2 An active Health and Safety Committee ensures that a safe working environment exists</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					6.2.2.2.1 The terms of reference of the occupational health and safety committee / forum is available and details the interdisciplinary membership / roles / responsibilities and strategy to manage occupational risks</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="tIfsAPP2UCp-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="tIfsAPP2UCp-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					6.2.2.2.2 Minutes of the occupational health and safety committee / forum (from within the last 6 months) indicate that occupational risks are regularly discussed / analysed and actions implemented to reduce significant risks</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					V</td>
+				<td class="tdScore" colspan="3">
+					<input id="BT0F8dAoJpU-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="BT0F8dAoJpU-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 6 Operational Management: 6.2.2.3 A medical surveillance plan for at risk staff is implemented based on the health risk assessment</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					6.2.2.3.1 A pre-placement examination is performed before commencement of duty or within 14 days of employment if relevant</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="HVGJrLuSMCs-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="HVGJrLuSMCs-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					6.2.2.3.2 Health risks assessments are conducted on all areas in the health establishment and monitored regularly</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="SKuXwRvsZcg-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="SKuXwRvsZcg-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 6 Operational Management: 6.2.2.4 Measures are in place to minimise the transmission of critical occupationally acquired injuries and diseases</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					6.2.2.4.1 Records show that healthcare workers have been given prophylactic immunisations for high risk infections such as hepatitis B</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="fYrZ3Z9lTDW-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="fYrZ3Z9lTDW-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+			<tr>
+			</tr>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					6.2.2.4.2 Records of needle stick injuries show that those staff have received post exposure prophylaxis and have been re-tested</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					V</td>
+				<td class="tdScore" colspan="3">
+					<input id="pKdB4ZJ1Fft-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="pKdB4ZJ1Fft-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 6 Operational Management: 6.6.2.2 Managerial / clinical / administrative information is used to support decision-making and planning</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					6.6.2.2.2 There is evidence that reports generated from the Information systems are used to assist management in decision making and planning</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="PuAU0x3oGDE-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="PuAU0x3oGDE-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<p>
+	&nbsp;</p>

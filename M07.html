@@ -28,19 +28,30 @@ setNoValues("#ZI9fItbWMaz-gSfwnIupmqe-button", calcFld2, "ZI9fItbWMaz-gSfwnIupmq
 
 function setNoValues(buttonId,arr, fld){
 
-    $(buttonId).click(function(){ 
+    $(buttonId).click(function(){       
+
+    this.innerHTML = "Clear N/A marking";
+
     for (var i = 0; i < arr.length; i++) {
-        var id = arr[i]; 
+        var id = arr[i];
+        //var commentVal = id.replace("val", "comment");
+
         var de = id.split( '-' )[0]; 
         var coc = id.split( '-' )[1];  
+        
+        
+        //$( "#" + commentVal ).val('#{10} Not applicable');
+        var comSave = new CommentSaver(de, coc, '#{10} Not applicable');
+        comSave.save();
+        
         $( "#" + id ).prop("checked", "No Value");
-         saveVal( de, coc, id );
+        saveVal( de, coc, id );
+
          upCalc(fld, id);
     };
+
  });
 }
-
-
 
 function addRadioClick(checkListArray, calcFld) {
     for (var i = 0; i < checkListArray.length; i++) {
@@ -70,7 +81,8 @@ function addRadioClick(checkListArray, calcFld) {
 
 function upCalc(calculatedFld, arrayList) {
 
-    var id = calculatedFld; 
+    var id = calculatedFld;
+    var buttonId = calculatedFld.replace("val", "button"); 
     var de = id.split( '-' )[0]; 
     var coc = id.split( '-' )[1];  
     
@@ -85,9 +97,10 @@ for (var i = 0; i < arrayList.length; i++) {
         if (radios[j].checked) {
 
         value = radios[j].value;
+        console.log(value);
         if ( value ) { 
             if ( value == 'true' || value == 'false' ) { 
-                count++; 
+                count++;
             } 
             if ( value == 'true'  ) { 
                 yes++; 
@@ -102,7 +115,8 @@ for (var i = 0; i < arrayList.length; i++) {
         var val = Math.round( average * 100 ) / 100; 
         
         $( "#" + calculatedFld ).val( val );
-        saveVal( de, coc, id ); 
+        saveVal( de, coc, id );
+        document.getElementById(buttonId).innerHTML='Mark as N/A';  
     } else {
         $( "#" + calculatedFld ).val( null );
         saveVal( de, coc, id );
@@ -461,7 +475,7 @@ function triggerComments(radios, commentlink) {
             <br />
             X</td>
             <td class="tdScore"><input data-calculated="2.6.3.4.3" disabled="disabled" id="QHqbUQAIsYY-gSfwnIupmqe-val" style="text-align:center" title="QHqbUQAIsYY - CHECKLIST - Appropriate isolation accommodation exists for patients with communicable diseases - as a minimum for viral haemorrhagic disease - gSfwnIupmqe - (default) - int" value="[ CHECKLIST - Appropriate isolation accommodation exists for patients with communicable diseases - as a minimum for viral haemorrhagic disease (default) ]" /></td>
-            <td class="tdScore" colspan="2"><button type="button" class="chkButton" id="QHqbUQAIsYY-gSfwnIupmqe-button">Set all to 'No Value'</button></td>
+            <td class="tdScore" colspan="2"><button type="button" class="chkButton" id="QHqbUQAIsYY-gSfwnIupmqe-button">Mark as N/A</button></td>
             <td class="tdNote">&nbsp;</td>
         </tr>
         <tr class="greyRow">

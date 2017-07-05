@@ -1,0 +1,319 @@
+<p>
+	<script type='text/javascript'> function upCalc() { $( "[data-calculated]" ).each( function( index, element ) { var id = $( this ).attr( 'id' ); var de = id.split( '-' )[0]; var coc = id.split( '-' )[1]; var code = $( this ).attr( 'data-calculated' ); var yes = parseInt( 0 ); var count = parseInt( 0 ); $( "[data-checklist='" + code + "']" ).each( function( index, element ) { var value = $( this ).val(); if ( value ) { if ( value == 'true' || value == 'false' ) { count++; } if ( value == 'true'  ) { yes++; } } } ); if ( count > 0 ) { var average = parseInt( yes ) / parseInt( count ); var val = Math.round( average * 100 ) / 100; $( this ).val( val ); saveVal( de, coc, id ); } } ); } </script>
+	<style type="text/css">
+.domain {font-family:sans-serif;font-weight:bold;font-size:12px;padding: 20px 0;width:900px;} #contentDiv table {border-collapse:collapse;font-family:sans-serif;font-size:12px;page-break-inside:avoid;} #contentDiv table td {border: 1px solid #ccc;padding:8px;} .tdCrit {width:420px;height:35px;padding-right:20px;} .tdType {width:70px;} .tdScore {width:211px;} .tdScoreCheck {width:59px;} .tdNote {width:290px;} .formHeader {position:relative;padding: 25px 0 20px 0;} .formTitle {font-family:sans-serif;position:absolute;font-size:28px;margin-left:35px;top:75px;} .sectionHeader {margin-top:25px;} .sectionHeader table td {font-family:sans-serif;font-weight:bold;font-size:13px;background-color:#bedef4;} .facilityInput {font-family:sans-serif;font-weight:bold;position:relative;display:inline-block;height:28px;width:450px;border:1px solid #ccc;margin-right:20px;} .periodInput {position:relative;display:inline-block;height:28px;width:281px;border:1px solid #ccc;} .facilityLabel {font-family:sans-serif;position:relative;top:6px;display:inline-block;height:28px;font-size:16px;padding-right:15px;} .noteDiv {font-family:sans-serif;font-style:italic;font-size:11px;margin-top:20px;} .greyRow {background-color:#eee;} .commentCodes {margin:28px 0;border-collapse:collapse;}	</style>
+	<style media="screen" type="text/css">
+.inputDiv {display:none;}	</style>
+	<style media="print" type="text/css">
+.inputDiv {display:block;position:relative;}	</style>
+</p>
+<div class="formHeader">
+	<img src="../dhis-web-commons/flags/south_africa_department_of_health.png" /><span class="formTitle bold">Assessment Questionnaire </span></div>
+<div class="inputDiv">
+	<span class="facilityLabel">Facility: </span><span class="facilityInput">&nbsp;</span><span class="facilityLabel">Period: </span><span class="periodInput">&nbsp;</span></div>
+<div class="sectionHeader bold">
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					Clinical Engineering</td>
+				<td class="tdType">
+					Type</td>
+				<td class="tdScore">
+					Score</td>
+				<td class="tdNote">
+					Notes</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 1 Patients Rights: 1.3.1.2 Easy access for persons with disabilities and the aged is facilitated</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					1.3.1.2.2 The patient lift dimensions allow for a wheelchair or bed user as well as support persons</td>
+				<td class="tdType bold">
+					OBS<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="b2RLzR89pMG-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="b2RLzR89pMG-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 3 Clinical Support Services: 3.4.3.1 Critical devices are maintained to manufacturer requirements</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+			</tr>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					3.4.3.1.1 CHECKLIST - Up to date records within the last 12 months show that the equipment listed has been maintained according to a planned schedule or manufacturers instruction</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					V</td>
+				<td class="tdScore" colspan="3">
+					<input id="yrVjAH7CcsJ-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="tdCrit">
+					3.4.3.1.2 There is a system in place to monitor that items requiring replacement or ordering are received within 3 months and action is taken if this is not done</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					V</td>
+				<td class="tdScore" colspan="3">
+					<input id="utZJavmURMe-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="utZJavmURMe-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+			<tr>
+			</tr>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					3.4.3.1.3 A report (from within the last 12 months) shows that adverse events involving medical equipment are reported and that actions taken to prevent recurrence have been implemented</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					V</td>
+				<td class="tdScore" colspan="3">
+					<input id="SlXo2HmpX98-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="SlXo2HmpX98-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 4 Public Health: 4.4.1.3 Disposal procedures ensure that toxic chemicals / radioactive waste / expired drugs are safely disposed of</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					4.4.1.3.1 The establishment has a service level agreement for the safe disposal of toxic chemicals / radioactive waste and expired medicines with an accredited service provider and the service levels are monitored for compliance</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="Yx9xcGh7TvT-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="Yx9xcGh7TvT-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 7 Facilities and Infrastructure: 7.1.2.1 Regular evaluation of the functional suitability of available facilities is undertaken</div>
+<div>
+	<table>
+		<tbody>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					7.1.2.1.1 Inspection records (from the last 24 months) show that an evaluation has been carried out to determine whether available facilities are used as intended in the building plans</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="OanctDoCogn-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="OanctDoCogn-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 7 Facilities and Infrastructure: 7.1.2.2 The layout of the health establishment is planned or adapted to ensure that there is space to meet service and patient needs</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					7.1.2.2.1 The layout of the health establishment allows for efficient and logical flow of patients</td>
+				<td class="tdType bold">
+					OBS<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="sLte3mOArhs-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="sLte3mOArhs-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					7.1.2.2.3 Lighting and ventilation is observed to be adequate</td>
+				<td class="tdType bold">
+					OBS<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="s38Iw3f0nSc-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="s38Iw3f0nSc-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 7 Facilities and Infrastructure: 7.1.4.1 The establishment holds regular / documented / comprehensive inspections of its physical facilities</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					7.1.4.1.1 Maintenance records show that recommendations of annual management inspection reports on safety hazards and maintenance needs are implemented</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					V</td>
+				<td class="tdScore" colspan="3">
+					<input id="KqkWEue2k6z-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="KqkWEue2k6z-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					7.1.4.1.2 No obvious safety hazards are observed during the visit such as loose electrical wiring / collapsing ceilings / unstable walls</td>
+				<td class="tdType bold">
+					OBS<br />
+					<br />
+					V</td>
+				<td class="tdScore" colspan="3">
+					<input id="TNP3ESOHIUC-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="TNP3ESOHIUC-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 7 Facilities and Infrastructure: 7.1.6.2 All pedestrian and vehicular access routes are maintained to ensure the smooth running of the health establishment</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					7.1.6.2.1 All access routes are clearly marked and safe</td>
+				<td class="tdType bold">
+					OBS<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="Fl5l42g6Ufp-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="Fl5l42g6Ufp-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 7 Facilities and Infrastructure: 7.2.1.1 Site and floor plans depict the location and layout of the main utility services (water / sanitation / electricity)</div>
+<div>
+	<table>
+		<tbody>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					7.2.1.1.1 An up-to-date lay out plan of all the electrical / mechanical / water / sewerage for any manholes is available</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					D</td>
+				<td class="tdScore" colspan="3">
+					<input id="God1ZDqblJ0-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="God1ZDqblJ0-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 7 Facilities and Infrastructure: 7.3.1.1 Security systems safeguard the building / patients / visitors / staff</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					7.3.1.1.1 There is a security system documented in the security policy and in place in the establishment that covers the buildings and premises/grounds</td>
+				<td class="tdType bold">
+					OBS<br />
+					<br />
+					V</td>
+				<td class="tdScore" colspan="3">
+					<input id="qlQ0cZgh2Ys-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="qlQ0cZgh2Ys-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 7 Facilities and Infrastructure: 7.3.1.6 There is up to date documented certification from the Local Fire Authority that the establishment complies with relevant fire safety regulations</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+			</tr>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					7.3.1.6.1 The Fire Certificate for the health establishment is available</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="hasdvM3bdTg-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="hasdvM3bdTg-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="domain bold">
+	Domain 7 Facilities and Infrastructure: 7.4.1.4 Their is a policy on non smoking which is implemented in the establishment</div>
+<div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="tdCrit">
+					7.4.1.4.1 There is an anti-smoking policy applicable to patients / visitors and the staff</td>
+				<td class="tdType bold">
+					DOC<br />
+					<br />
+					D</td>
+				<td class="tdScore" colspan="3">
+					<input id="JSi0uHJYdJi-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="JSi0uHJYdJi-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+			<tr>
+			</tr>
+			<tr class="greyRow">
+				<td class="tdCrit">
+					7.4.1.4.3 Smoking areas are provided and identified for staff / visitors and patients</td>
+				<td class="tdType bold">
+					OBS<br />
+					<br />
+					E</td>
+				<td class="tdScore" colspan="3">
+					<input id="LyipxDqmz7V-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="LyipxDqmz7V-gSfwnIupmqe-comment" /></td>
+				<td class="tdNote">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<p>
+	&nbsp;</p>
