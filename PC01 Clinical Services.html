@@ -1,1655 +1,1803 @@
-<script type='text/javascript'> function upCalc() { $( "[data-calculated]" ).each( function( index, element ) { var id = $( this ).attr( 'id' ); var de = id.split( '-' )[0]; var coc = id.split( '-' )[1]; var code = $( this ).attr( 'data-calculated' ); var yes = parseInt( 0 ); var count = parseInt( 0 ); $( "[data-checklist='" + code + "']" ).each( function( index, element ) { var value = $( this ).val(); if ( value ) { if ( value == 'true' || value == 'false' ) { count++; } if ( value == 'true'  ) { yes++; } } } ); if ( count > 0 ) { var average = parseInt( yes ) / parseInt( count ); var val = Math.round( average * 100 ) / 100; $( this ).val( val ); saveVal( de, coc, id ); } } ); } </script>
-<style type="text/css">
-.domain {font-family:sans-serif;font-weight:bold;font-size:12px;padding: 20px 0;width:900px;} #contentDiv table {border-collapse:collapse;font-family:sans-serif;font-size:12px;page-break-inside:avoid;} #contentDiv table td {border: 1px solid #ccc;padding:8px;} .tdCrit {width:420px;height:35px;padding-right:20px;} .tdType {width:70px;} .tdScore {width:211px;} .tdScoreCheck {width:59px;} .tdNote {width:290px;} .formHeader {position:relative;padding: 25px 0 20px 0;} .formTitle {font-family:sans-serif;position:absolute;font-size:28px;margin-left:35px;top:75px;} .sectionHeader {margin-top:25px;} .sectionHeader table td {font-family:sans-serif;font-weight:bold;font-size:13px;background-color:#bedef4;} .facilityInput {font-family:sans-serif;font-weight:bold;position:relative;display:inline-block;height:28px;width:450px;border:1px solid #ccc;margin-right:20px;} .periodInput {position:relative;display:inline-block;height:28px;width:281px;border:1px solid #ccc;} .facilityLabel {font-family:sans-serif;position:relative;top:6px;display:inline-block;height:28px;font-size:16px;padding-right:15px;} .noteDiv {font-family:sans-serif;font-style:italic;font-size:11px;margin-top:20px;} .greyRow {background-color:#eee;} .commentCodes {margin:28px 0;border-collapse:collapse;}</style>
-<style media="screen" type="text/css">
-.inputDiv {display:none;}</style>
-<style media="print" type="text/css">
-.inputDiv {display:block;position:relative;}</style>
-<div class="formHeader">
-	<img src="../dhis-web-commons/flags/south_africa_department_of_health.png" /><span class="formTitle bold">Assessment Questionnaire </span></div>
-<div class="inputDiv">
-	<span class="facilityLabel">Facility: </span><span class="facilityInput">&nbsp;</span><span class="facilityLabel">Period: </span><span class="periodInput">&nbsp;</span></div>
-<div class="sectionHeader bold">
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					PC01 Clinical Services</td>
-				<td class="tdType">
-					Type</td>
-				<td class="tdScore">
-					Score</td>
-				<td class="tdNote">
-					Notes</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 1 Patients Rights: 1.1.1.1 Patients are treated courteously with empathy by health establishment personnel in the context of zero tolerance for abuse</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					1.1.1.1.1 CHECKLIST - Patients /guardians (where condititon requires) are interviewed to assess whether they feel that they have been treated in a respectful an</td>
-				<td class="tdType bold">
-					PI<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="KmnsLAmq8VF-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					1.1.1.1.2 CHECKLIST - 3 Staff members observed by the assessor demonstrate courtesy / patience / empathy / tolerance</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="V8yMJ6arQj9-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 1 Patients Rights: 1.1.1.2 Care is provided in a way that maximizes patient privacy</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					1.1.1.2.1 Patients can be consulted in a room/cubicle or receive treatment in a ward in a manner which allows for privacy either through closed doors / screens or curtains</td>
-				<td class="tdType bold">
-					DOC<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="W4uzi9cGEe6-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="W4uzi9cGEe6-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					1.1.1.2.2 Counselling takes place in an appropriate area which ensures users privacy and confidentiality</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="mYdciUF3gkh-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="mYdciUF3gkh-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 1 Patients Rights: 1.1.3.1 The cleanliness and hygiene of the facility contributes to patient satisfaction</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					1.1.3.1.2 CHECKLIST - 6 Areas are checked for the state of cleanliness</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					V</td>
-				<td class="tdScore" colspan="3">
-					<input id="MtGXElbrXN0-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 1 Patients Rights: 1.1.3.4 Patients have access to clean water in waiting areas in disposable cup</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					1.1.3.4.1 There is clean water and disposable cups for patients in waiting areas/court yards</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="XJKCvq9RvYP-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="XJKCvq9RvYP-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 1 Patients Rights: 1.2.1.1 Patients are informed of their rights and responsibilities</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					1.2.1.1.1 Detainees for forensic ward/Patient rights posters or leaflets are available in the common local languages of the geographic area</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					D</td>
-				<td class="tdScore" colspan="3">
-					<input id="biLcT7cuoPt-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="biLcT7cuoPt-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					1.2.1.1.2 CHECKLIST - Patients interviewed know of their rights and responsibilities</td>
-				<td class="tdType bold">
-					PI<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="ltIzsA8n7f0-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 1 Patients Rights: 1.2.1.2 The correct procedure is followed to obtain informed consent</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					1.2.1.2.2 CHECKLIST - Forms used for informed consent are completed correctly by the health professionals</td>
-				<td class="tdType bold">
-					PRA<br />
-					<br />
-					X</td>
-				<td class="tdScore" colspan="3">
-					<input data-calculated="1.2.1.2.2" disabled="disabled" id="a6ubAiJSs1S-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					1.2.1.2.2.1 Patient was legally entitled to give informed consent</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="1.2.1.2.2" id="LOmUu4tKfn3-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="LOmUu4tKfn3-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="1.2.1.2.2" id="LOmUu4tKfn3-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="LOmUu4tKfn3-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="1.2.1.2.2" id="LOmUu4tKfn3-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="LOmUu4tKfn3-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					1.2.1.2.2.2 The doctor/nurse doing the procedure has appropriately completed the informed consent form</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="1.2.1.2.2" id="Tp8jXbFlTDu-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="Tp8jXbFlTDu-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="1.2.1.2.2" id="Tp8jXbFlTDu-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="Tp8jXbFlTDu-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="1.2.1.2.2" id="Tp8jXbFlTDu-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="Tp8jXbFlTDu-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					1.2.1.2.2.3 The exact nature of the operation/procedure/treatment is written on the consent form</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="1.2.1.2.2" id="WIzp2E5yQUQ-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="WIzp2E5yQUQ-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="1.2.1.2.2" id="WIzp2E5yQUQ-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="WIzp2E5yQUQ-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="1.2.1.2.2" id="WIzp2E5yQUQ-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="WIzp2E5yQUQ-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					1.2.1.2.2.4 The patient&#39;&#39;s full names are written on the consent form</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="1.2.1.2.2" id="nPsTVABkxEn-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="nPsTVABkxEn-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="1.2.1.2.2" id="nPsTVABkxEn-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="nPsTVABkxEn-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="1.2.1.2.2" id="nPsTVABkxEn-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="nPsTVABkxEn-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					1.2.1.2.2.5 The consent form is signed by the patient or parent/guardian as appropriate for children</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="1.2.1.2.2" id="h67fRavs92J-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="h67fRavs92J-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="1.2.1.2.2" id="h67fRavs92J-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="h67fRavs92J-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="1.2.1.2.2" id="h67fRavs92J-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="h67fRavs92J-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					1.2.1.2.2.6 The consent form is signed by the health care provider performing the procedure</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="1.2.1.2.2" id="Nq2yQbYYICP-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="Nq2yQbYYICP-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="1.2.1.2.2" id="Nq2yQbYYICP-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="Nq2yQbYYICP-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="1.2.1.2.2" id="Nq2yQbYYICP-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="Nq2yQbYYICP-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					1.2.1.2.2.7 The consent form is signed by two witnesses</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="1.2.1.2.2" id="MC94VDrCQ9T-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="MC94VDrCQ9T-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="1.2.1.2.2" id="MC94VDrCQ9T-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="MC94VDrCQ9T-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="1.2.1.2.2" id="MC94VDrCQ9T-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="MC94VDrCQ9T-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					1.2.1.2.2.8 The consent form is dated</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="1.2.1.2.2" id="B1dcfOPXE0B-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="B1dcfOPXE0B-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="1.2.1.2.2" id="B1dcfOPXE0B-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="B1dcfOPXE0B-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="1.2.1.2.2" id="B1dcfOPXE0B-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="B1dcfOPXE0B-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					1.2.1.2.2.9 The information on the consent form is legible</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="1.2.1.2.2" id="nY8E4wp9By1-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="nY8E4wp9By1-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="1.2.1.2.2" id="nY8E4wp9By1-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="nY8E4wp9By1-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="1.2.1.2.2" id="nY8E4wp9By1-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="nY8E4wp9By1-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 1 Patients Rights: 1.2.2.1 The information / Help desk of the health care health establishment provides for the easy access to information on services provided</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					1.2.2.1.1 A help desk is situated in a prominent position in the public area at the entrance to the health establishment</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="L07mmkYxfz7-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="L07mmkYxfz7-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					1.2.2.1.2 Help desk staff demonstrate that they are able to communicate in the common local languages of the area</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					D</td>
-				<td class="tdScore" colspan="3">
-					<input id="OFrL2lMpZkn-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="OFrL2lMpZkn-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					1.2.2.1.3 A spot check at a random time during the visit shows that the helpdesk is manned</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					D</td>
-				<td class="tdScore" colspan="3">
-					<input id="WXGFhVvP78C-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="WXGFhVvP78C-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 1 Patients Rights: 1.2.2.2 The signage in the health establishment directs patients and visitors to key areas of the health care health establishment</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					1.2.2.2.1 CHECKLIST - There is clear signage to the different service areas in the health establishment</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					D</td>
-				<td class="tdScore" colspan="3">
-					<input id="Lif20HTKWVT-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 1 Patients Rights: 1.2.2.3 A notice indicating the operating times of the health establishment`s services and visiting hours is prominently displayed at the entrance of the health establishment</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					1.2.2.3.1 A signage board at the entrance of the health establishment indicates the times when various services are offered</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					D</td>
-				<td class="tdScore" colspan="3">
-					<input id="g7YH2wjiLaZ-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="g7YH2wjiLaZ-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 1 Patients Rights: 1.2.2.4 Patients are attended to by clearly identified health care professionals</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					1.2.2.4.1 5 randomly chosen health professionals/providers are wearing name tags</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					D</td>
-				<td class="tdScore" colspan="3">
-					<input id="hu217k9pjmV-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="hu217k9pjmV-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 1 Patients Rights: 1.3.1.1 The entrance to the health establishment offers easy and safe entry to the public</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					1.3.1.1.1 The entrance to the health establishment is clearly signposted</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					D</td>
-				<td class="tdScore" colspan="3">
-					<input id="XsfbYGIwXWc-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="XsfbYGIwXWc-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					1.3.1.1.2 Systems are in place to ensure safe entry eg security guards/CCTV</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					V</td>
-				<td class="tdScore" colspan="3">
-					<input id="PZI84zUUck9-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="PZI84zUUck9-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					1.3.1.1.3 The entrance is free from any blockages or hazards eg hawkers</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					D</td>
-				<td class="tdScore" colspan="3">
-					<input id="TGrF7hmSxFe-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="TGrF7hmSxFe-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 1 Patients Rights: 1.3.1.2 Easy access for persons with disabilities and the aged is facilitated</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					1.3.1.2.1 Ramps with handrails of an acceptable gradient are available at the entrances to the health establishment/unit and/or where needed</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					V</td>
-				<td class="tdScore" colspan="3">
-					<input id="XPczr0sAIsG-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="XPczr0sAIsG-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 1 Patients Rights: 1.3.1.3 There are ablution facilities for persons with disabilities</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					1.3.1.3.2 There is at least one toilet for disabled persons in the health establishment/unit</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="aVLi9Ivj39x-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="aVLi9Ivj39x-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 1 Patients Rights: 1.4.1.1 An effective health care referral policy and system exists for the district which takes into consideration the continuity of care / emergency care management / infrastructure / resources required</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					1.4.1.1.4 CHECKLIST - The files of the last patients transferred into the health establishment contain copies of a referral letter from the referral health establishment</td>
-				<td class="tdType bold">
-					PRA<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="lzDeJk1CpyS-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					1.4.1.1.5 CHECKLIST - The files of the last patients transferred out of the health establishment contain copies of a referral letter sent to the receiving health establishment</td>
-				<td class="tdType bold">
-					PRA<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="SZ5dYRa5Sdz-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 1 Patients Rights: 1.4.1.4 Patients are given information about referrals and specialist bookings informed of the process surrounding referrals and specialist bookings and are given feedback</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					1.4.1.4.2 The staff member on duty at the help desk is able to explain the booking system</td>
-				<td class="tdType bold">
-					SI<br />
-					<br />
-					D</td>
-				<td class="tdScore" colspan="3">
-					<input id="S5rDPZ4StT2-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="S5rDPZ4StT2-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 1 Patients Rights: 1.5.1.1 Procedures are followed to ensure queues are kept short</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					1.5.1.1.1 There is a person/s responsible for the management of queues and patient flow</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="D9CGaqSZCLm-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="D9CGaqSZCLm-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					1.5.1.1.2 Patients are informed of how long they will wait in the queue</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="O219bGgfYex-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="O219bGgfYex-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 1 Patients Rights: 1.5.1.4 Patients are sorted / classified and attended to according to the severity and nature of their health condition or problem</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					1.5.1.4.1 The health care professional responsible for patient reviewing / triaging or assessing and channelling (sorting) can explain procedure how she/he reviews / triages or assesses and channels patients</td>
-				<td class="tdType bold">
-					SI<br />
-					<br />
-					V</td>
-				<td class="tdScore" colspan="3">
-					<input id="q4D50AFHB7L-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="q4D50AFHB7L-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					1.5.1.4.2 The health care professional responsible for patient sorting can clearly explain the procedure for assessing and sorting patients</td>
-				<td class="tdType bold">
-					SI<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="tUSld1Ze8BM-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="tUSld1Ze8BM-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					1.5.1.4.3 Observe whether special queues are designated for specific groups of patients</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="bKgXrvVBXcr-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="bKgXrvVBXcr-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 1 Patients Rights: 1.8.1.2 Patients are made aware of the process by which they can lay a complaint</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					1.8.1.2.1 Information on the procedure for complaints is clearly displayed in all service areas</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="HJChsIVFCHw-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="HJChsIVFCHw-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					1.8.1.2.2 The poster or pamphlet on complaints is simple to read and available in the local languages</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="bdSDVnqhGJy-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="bdSDVnqhGJy-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.1.1.1 Procedures are in place to ensure delivery of basic care that contribute to positive health outcomes</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					2.1.1.1.2 CHECKLIST - Ask patients if they have been given information or advice about looking after themselves in relation to improving their health</td>
-				<td class="tdType bold">
-					PI<br />
-					<br />
-					D</td>
-				<td class="tdScore" colspan="3">
-					<input id="gX8yjjzpyfh-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.3.1.2 There is a formal supervision programme for healthcare professionals</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					2.3.1.2.1 Healthcare professionals indicate that they have access to adequate supervision (excluding doctors for private sector)</td>
-				<td class="tdType bold">
-					SI<br />
-					<br />
-					V</td>
-				<td class="tdScore" colspan="3">
-					<input id="ypepJmlWUWd-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="ypepJmlWUWd-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.4.3.3 The safety of patients who require resuscitation is assured</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					2.4.3.3.5 CHECKLIST - Emergency trolleys are standardised/ appropriately stocked and regularly checked (Part 2)</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					X</td>
-				<td class="tdScore" colspan="3">
-					<input id="aV4ybmmvKCk-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.4.3.4 The safety of patients receiving medication is assured</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					2.4.3.4.2 CHECKLIST - Observation of patient receiving medication confirms that patients` safety is assured</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					V</td>
-				<td class="tdScore" colspan="3">
-					<input id="LqAxueGG3Re-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.5.1.2 The health establishment actively encourages a culture of effective reporting of adverse events</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					2.5.1.2.1 CHECKLIST - Staff members interviewed confirm the establishment encourages the reporting of adverse events</td>
-				<td class="tdType bold">
-					SI<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="HOAXEZemjWg-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.6.2.1 A programme for the prevention and control of respiratory infections is in place</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					2.6.2.1.2 The health establishment provides appropriate types of masks and FDA approved respirators which are fit tested for all staff who are at risk of contracting TB or for all staff exposed to serious contagious respiratory infections</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					X</td>
-				<td class="tdScore" colspan="3">
-					<input id="rQJfIG6YqHS-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="rQJfIG6YqHS-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.6.3.2 Sharps are safely managed and disposed of</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					2.6.3.2.1 CHECKLIST - A random selection of clinical areas show that sharps are safely managed and disposed of</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					V</td>
-				<td class="tdScore" colspan="3">
-					<input id="pYOxcGtrV7c-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 3 Clinical Support Services: 3.1.4.3 Patients are counselled appropriately to ensure adherence to therapy</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					3.1.4.3.1 CHECKLIST - A random selection of 3 patients receiving medicine indicate that they have a clear understanding of how and when to take their medication and any other relevant information - Generic outpatient checklist</td>
-				<td class="tdType bold">
-					PI<br />
-					<br />
-					V</td>
-				<td class="tdScore" colspan="3">
-					<input id="kl1o66jVGTc-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 3 Clinical Support Services: 3.2.1.1 Laboratory services are available and results are provided within agreed-upon turnaround times</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					3.2.1.1.3 CHECKLIST - Laboratory results requested are available in the patients file</td>
-				<td class="tdType bold">
-					DOC<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="FNSSevtYfbU-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 3 Clinical Support Services: 3.2.2.1 Radiology and related services like ultrasonography are available and provided within agreed-upon time frames</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					3.2.2.1.4 Staff are able to explain the protocol for how ultra-sonography services are to be obtained including emergency services</td>
-				<td class="tdType bold">
-					SI<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="VVr0aTrbC1A-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="VVr0aTrbC1A-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					3.2.2.1.6 CHECKLIST - Radiology results requested are available in the patient`s file or nursing unit or electronically</td>
-				<td class="tdType bold">
-					DOC<br />
-					<br />
-					V</td>
-				<td class="tdScore" colspan="3">
-					<input id="xyRhyNiFPX3-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 3 Clinical Support Services: 3.3.2.3 Patients with existing or potential disabilities are referred as necessary according to local clinical protocols and receive required assistive devices</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					3.3.2.3.2 CHECKLIST - Patients with disabilities or potential disabilities and ask if they have received their required assistive devices</td>
-				<td class="tdType bold">
-					PI<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="EUctjBm2Nof-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 3 Clinical Support Services: 3.3.2.4 Patients requiring social support are assessed / treated / referred as necessary according to local clinical protocols</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					3.3.2.4.1 Patients have access to a social worker or psychologist at the establishment on a regular basis</td>
-				<td class="tdType bold">
-					DOC<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="aKVLwdh8olE-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="aKVLwdh8olE-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					3.3.2.4.2 An up to date list revised within the last 24 months of non-governmental organisations and disabled peoples organisations in the local area of the establishment is available in the patient care units</td>
-				<td class="tdType bold">
-					DOC<br />
-					<br />
-					D</td>
-				<td class="tdScore" colspan="3">
-					<input id="AVGYKA9SXPE-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="AVGYKA9SXPE-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 3 Clinical Support Services: 3.4.1.1 Medical equipment available meets minimum requirements for appropriate level of care</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					3.4.1.1.3 CHECKLIST - Functional essential equipment (as listed in the checklist) is available in the general wards/clinics</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					X</td>
-				<td class="tdScore" colspan="3">
-					<input data-calculated="3.4.1.1.3" disabled="disabled" id="JJvQfPiZfIe-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					3.4.1.1.3.1 Diagnostic set</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="KI5sYxKZBxX-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="KI5sYxKZBxX-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="KI5sYxKZBxX-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="KI5sYxKZBxX-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="KI5sYxKZBxX-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="KI5sYxKZBxX-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					3.4.1.1.3.2 Blood pressure monitor, electronic or manual</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="mOrjhzSQ7AR-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="mOrjhzSQ7AR-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="mOrjhzSQ7AR-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="mOrjhzSQ7AR-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="mOrjhzSQ7AR-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="mOrjhzSQ7AR-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					3.4.1.1.3.3 Pulse oximeter (B)</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="jrokUt85qdi-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="jrokUt85qdi-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="jrokUt85qdi-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="jrokUt85qdi-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="jrokUt85qdi-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="jrokUt85qdi-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					3.4.1.1.3.4 Glucometer (B)</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="Db2TKGFH41s-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="Db2TKGFH41s-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="Db2TKGFH41s-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="Db2TKGFH41s-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="Db2TKGFH41s-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="Db2TKGFH41s-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					3.4.1.1.3.5 HB meter</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="OUTNWslEpSG-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="OUTNWslEpSG-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="OUTNWslEpSG-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="OUTNWslEpSG-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="OUTNWslEpSG-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="OUTNWslEpSG-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					3.4.1.1.3.6 Hospital bed (Adult)</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="VUHoxWH9NMW-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="VUHoxWH9NMW-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="VUHoxWH9NMW-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="VUHoxWH9NMW-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="VUHoxWH9NMW-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="VUHoxWH9NMW-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					3.4.1.1.3.7 Intravenous pole with double hook (standard ward)</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="Jt4S0JGXHPZ-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="Jt4S0JGXHPZ-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="Jt4S0JGXHPZ-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="Jt4S0JGXHPZ-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="Jt4S0JGXHPZ-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="Jt4S0JGXHPZ-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					3.4.1.1.3.8 Mattress for hospital bed (Adult)</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="JOzTXmiQ8Yf-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="JOzTXmiQ8Yf-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="JOzTXmiQ8Yf-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="JOzTXmiQ8Yf-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="JOzTXmiQ8Yf-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="JOzTXmiQ8Yf-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					3.4.1.1.3.9 Electrocardiograph, 12 channel</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="CNtZsJ2yTJo-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="CNtZsJ2yTJo-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="CNtZsJ2yTJo-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="CNtZsJ2yTJo-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="CNtZsJ2yTJo-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="CNtZsJ2yTJo-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					3.4.1.1.3.10 Light, surgical, mobile, with battery backup or ceiling lights</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="vzifolwvwb6-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="vzifolwvwb6-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="vzifolwvwb6-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="vzifolwvwb6-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="vzifolwvwb6-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="vzifolwvwb6-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					3.4.1.1.3.11 Oxygen set with humidifier</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="q6cXG4XOWN9-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="q6cXG4XOWN9-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="q6cXG4XOWN9-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="q6cXG4XOWN9-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="q6cXG4XOWN9-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="q6cXG4XOWN9-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					3.4.1.1.3.12 Tracheostomy set</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="n30mhezIqie-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="n30mhezIqie-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="n30mhezIqie-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="n30mhezIqie-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="n30mhezIqie-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="n30mhezIqie-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					3.4.1.1.3.13 Instrument set, dressing</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="Drr0VyQ87dO-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="Drr0VyQ87dO-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="Drr0VyQ87dO-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="Drr0VyQ87dO-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="Drr0VyQ87dO-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="Drr0VyQ87dO-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					3.4.1.1.3.14 Instrument set, IV cut-down/central line</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="IITQrHTR0ij-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="IITQrHTR0ij-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="IITQrHTR0ij-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="IITQrHTR0ij-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="IITQrHTR0ij-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="IITQrHTR0ij-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					3.4.1.1.3.15 Intravenous pole with double hook (treatment room)</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="NOYEO7rZ45b-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="NOYEO7rZ45b-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="NOYEO7rZ45b-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="NOYEO7rZ45b-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="NOYEO7rZ45b-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="NOYEO7rZ45b-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					3.4.1.1.3.16 Examination table with pad</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="r8umpDlgg7u-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="r8umpDlgg7u-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="r8umpDlgg7u-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="r8umpDlgg7u-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="3.4.1.1.3" id="r8umpDlgg7u-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="r8umpDlgg7u-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 4 Public Health: 4.1.1.5 Collaboration with relevant authorities and stakeholders is pursued to ensure the health establishment is readily accessible and clearly signposted</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					4.1.1.5.2 The health establishment is clearly signposted on the access road</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="lKQvrxaLP2Q-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="lKQvrxaLP2Q-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 4 Public Health: 4.2.1.1 The health establishment delivers and monitors primary prevention programmes for at-risk patients to impact on the determinants of health</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					4.2.1.1.1 CHECKLIST - 3 randomly selected patient files for babies / HIV pregnant mothers / Family Planning indicates that primary prevention programmes were delivered</td>
-				<td class="tdType bold">
-					PRA<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="SEPe2ZvIBRG-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 4 Public Health: 4.3.1.3 The health establishment has an annually updated disaster management plan ( including health emergencies)</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					4.3.1.3.1 An annually updated disaster management plan is available and displayed at strategic points</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="DSIHjOT4PUE-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="DSIHjOT4PUE-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 6 Operational Management: 6.7.1.1 Patient records are complete and contain all legal and statutory requirements</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					6.7.1.1.1 CHECKLIST - Patient files comply with legal and statutory requirements for record keeping</td>
-				<td class="tdType bold">
-					PRA<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="J0VTsf5eBzy-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 6 Operational Management: 6.7.1.2 Patient records are managed in such a way to ensure confidentiality</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					6.7.1.2.1 Patient records in the service areas wards / consultation rooms / record rooms are kept in a suitable place that maintains the patient`s confidentiality</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="M2hn9KO6KcD-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="M2hn9KO6KcD-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 6 Operational Management: 6.7.2.1 Dedicated / trained staff and appropriate systems are in place to manage the record archive</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					6.7.2.1.1 Records room staff have received appropriate training in the management of medical archives</td>
-				<td class="tdType bold">
-					DOC<br />
-					<br />
-					D</td>
-				<td class="tdScore" colspan="3">
-					<input id="BY1JPmfBCVK-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="BY1JPmfBCVK-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 6 Operational Management: 6.7.2.2 Processes and infrastructure for filing and retrieval of patient files provide an effective and efficient service</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					6.7.2.2.1 Medical records room has space for all records</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="OiesLy2pts5-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="OiesLy2pts5-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					6.7.2.2.2 The medical records room is secure and only accessible to authorised staff</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="ZrUTGUfmEaA-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="ZrUTGUfmEaA-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					6.7.2.2.3 Written standard operating procedures exist for requests / retrieval / filing of patient files</td>
-				<td class="tdType bold">
-					DOC<br />
-					<br />
-					V</td>
-				<td class="tdScore" colspan="3">
-					<input id="LzmPxGbnyuR-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="LzmPxGbnyuR-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 7 Facilities and Infrastructure: 7.1.2.2 The layout of the health establishment is planned or adapted to ensure that there is space to meet service and patient needs</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					7.1.2.2.1 The layout of the health establishment allows for efficient and logical flow of patients</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="sLte3mOArhs-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="sLte3mOArhs-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					7.1.2.2.3 Lighting and ventilation is observed to be adequate</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="s38Iw3f0nSc-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="s38Iw3f0nSc-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 7 Facilities and Infrastructure: 7.1.3.1 Waiting areas are appropriately located and adequate for the number of patients using them</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					7.1.3.1.1 The waiting area has adequate space / heating / number of chairs to accommodate all patients in the area</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="f0QIXXapWL2-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="f0QIXXapWL2-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					7.1.3.1.2 Waiting areas are located in the areas where the service takes place</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="kUh5WmLrDeW-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="kUh5WmLrDeW-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 7 Facilities and Infrastructure: 7.1.4.1 The establishment holds regular / documented / comprehensive inspections of its physical facilities</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					7.1.4.1.2 No obvious safety hazards are observed during the visit such as loose electrical wiring / collapsing ceilings / unstable walls</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					V</td>
-				<td class="tdScore" colspan="3">
-					<input id="TNP3ESOHIUC-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="TNP3ESOHIUC-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 7 Facilities and Infrastructure: 7.1.5.1 All areas are adequately furnished and provide an acceptable environment for patient care</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					7.1.5.1.1 There is evidence that the procedure for requisition of repairs indicates and measures the timeframes between requisition and finalisation of repairs</td>
-				<td class="tdType bold">
-					DOC<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="RYmu9XTfwkh-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="RYmu9XTfwkh-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 7 Facilities and Infrastructure: 7.1.6.1 A regular maintenance programme ensures that the health establishment grounds are safe for all users and provide an attractive environment</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					7.1.6.1.1 Grounds are maintained and are safe and clean</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="ONvU3bqnUCp-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="ONvU3bqnUCp-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					7.1.6.1.2 Pathways are well maintained</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					D</td>
-				<td class="tdScore" colspan="3">
-					<input id="fTphvJKflMy-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="fTphvJKflMy-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 7 Facilities and Infrastructure: 7.2.4.2 Staff know how to react to the emergency warning</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					7.2.4.2.1 CHECKLIST - Staff members know how to react to an emergency warning</td>
-				<td class="tdType bold">
-					SI<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="IdgohlJmKij-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 7 Facilities and Infrastructure: 7.3.1.2 Building layout and security systems protect vulnerable patients</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					7.3.1.2.1 Security systems are positioned at vulnerable patient areas such as maternity / paediatric / psychiatric and emergency units and access and egress points</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					V</td>
-				<td class="tdScore" colspan="3">
-					<input id="lMmeGOu6I1C-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="lMmeGOu6I1C-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 7 Facilities and Infrastructure: 7.3.1.5 Awareness of safety and security issues is promoted to the staff</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					7.3.1.5.1 Safety and security notices are displayed in all areas</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					D</td>
-				<td class="tdScore" colspan="3">
-					<input id="La6h56jZMSA-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="La6h56jZMSA-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 7 Facilities and Infrastructure: 7.4.1.2 Appropriate cleaning materials and equipment are available and properly used and stored</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					7.4.1.2.1 CHECKLIST - Cleaning materials cloths / dusters / scourers and chemicals and equipment are available and stored in an appropriate safe lockable area / with clear labels for equipment used internally and externally</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					V</td>
-				<td class="tdScore" colspan="3">
-					<input id="U7WDn2k0PIZ-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 7 Facilities and Infrastructure: 7.5.4.1 General waste is stored and transported appropriately and securely and removed timeously</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					7.5.4.1.1 The outside bin/waste storage area is well maintained and poses no health risk</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					V</td>
-				<td class="tdScore" colspan="3">
-					<input id="nks0rgN0h0q-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="nks0rgN0h0q-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 7 Facilities and Infrastructure: 7.6.1.2 Policies and protocols are followed for the handling of all laundry in line with infection control and safety requirements</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					7.6.1.2.2 Areas for receiving soiled linen are separated from areas of clean linen</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					V</td>
-				<td class="tdScore" colspan="3">
-					<input id="UlrAoWfYSqR-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="UlrAoWfYSqR-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 7 Facilities and Infrastructure: 7.6.1.4 Adequate stocks of linen are maintained to ensure that items are always available</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					7.6.1.4.1 Linen rooms or storage cupboards are locked / well organised/ and well stocked proportionate to the requirements of the health establishment</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					D</td>
-				<td class="tdScore" colspan="3">
-					<input id="rNffLx80Uxp-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="rNffLx80Uxp-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+<script type='text/javascript'>
+
+
+var calcFld1 = ['KI5sYxKZBxX-myNhFcjhT6g-val','KI5sYxKZBxX-hPpBaWTkygE-val','KI5sYxKZBxX-MOFvuGLjSQs-val','mOrjhzSQ7AR-myNhFcjhT6g-val','mOrjhzSQ7AR-hPpBaWTkygE-val','mOrjhzSQ7AR-MOFvuGLjSQs-val','jrokUt85qdi-myNhFcjhT6g-val','jrokUt85qdi-hPpBaWTkygE-val','jrokUt85qdi-MOFvuGLjSQs-val','Db2TKGFH41s-myNhFcjhT6g-val','Db2TKGFH41s-hPpBaWTkygE-val','Db2TKGFH41s-MOFvuGLjSQs-val','OUTNWslEpSG-myNhFcjhT6g-val','OUTNWslEpSG-hPpBaWTkygE-val','OUTNWslEpSG-MOFvuGLjSQs-val','VUHoxWH9NMW-myNhFcjhT6g-val','VUHoxWH9NMW-hPpBaWTkygE-val','VUHoxWH9NMW-MOFvuGLjSQs-val','Jt4S0JGXHPZ-myNhFcjhT6g-val','Jt4S0JGXHPZ-hPpBaWTkygE-val','Jt4S0JGXHPZ-MOFvuGLjSQs-val','JOzTXmiQ8Yf-myNhFcjhT6g-val','JOzTXmiQ8Yf-hPpBaWTkygE-val','JOzTXmiQ8Yf-MOFvuGLjSQs-val','CNtZsJ2yTJo-myNhFcjhT6g-val','CNtZsJ2yTJo-hPpBaWTkygE-val','CNtZsJ2yTJo-MOFvuGLjSQs-val','vzifolwvwb6-myNhFcjhT6g-val','vzifolwvwb6-hPpBaWTkygE-val','vzifolwvwb6-MOFvuGLjSQs-val','q6cXG4XOWN9-myNhFcjhT6g-val','q6cXG4XOWN9-hPpBaWTkygE-val','q6cXG4XOWN9-MOFvuGLjSQs-val','n30mhezIqie-myNhFcjhT6g-val','n30mhezIqie-hPpBaWTkygE-val','n30mhezIqie-MOFvuGLjSQs-val','Drr0VyQ87dO-myNhFcjhT6g-val','Drr0VyQ87dO-hPpBaWTkygE-val','Drr0VyQ87dO-MOFvuGLjSQs-val','IITQrHTR0ij-myNhFcjhT6g-val','IITQrHTR0ij-hPpBaWTkygE-val','IITQrHTR0ij-MOFvuGLjSQs-val','NOYEO7rZ45b-myNhFcjhT6g-val','NOYEO7rZ45b-hPpBaWTkygE-val','NOYEO7rZ45b-MOFvuGLjSQs-val','r8umpDlgg7u-myNhFcjhT6g-val','r8umpDlgg7u-hPpBaWTkygE-val','r8umpDlgg7u-MOFvuGLjSQs-val']; //JJvQfPiZfIe-gSfwnIupmqe-val
+
+var calcFld2 = ['LOmUu4tKfn3-myNhFcjhT6g-val','LOmUu4tKfn3-hPpBaWTkygE-val','LOmUu4tKfn3-MOFvuGLjSQs-val','Tp8jXbFlTDu-myNhFcjhT6g-val','Tp8jXbFlTDu-hPpBaWTkygE-val','Tp8jXbFlTDu-MOFvuGLjSQs-val','WIzp2E5yQUQ-myNhFcjhT6g-val','WIzp2E5yQUQ-hPpBaWTkygE-val','WIzp2E5yQUQ-MOFvuGLjSQs-val','nPsTVABkxEn-myNhFcjhT6g-val','nPsTVABkxEn-hPpBaWTkygE-val','nPsTVABkxEn-MOFvuGLjSQs-val','h67fRavs92J-myNhFcjhT6g-val','h67fRavs92J-hPpBaWTkygE-val','h67fRavs92J-MOFvuGLjSQs-val','Nq2yQbYYICP-myNhFcjhT6g-val','Nq2yQbYYICP-hPpBaWTkygE-val','Nq2yQbYYICP-MOFvuGLjSQs-val','MC94VDrCQ9T-myNhFcjhT6g-val','MC94VDrCQ9T-hPpBaWTkygE-val','MC94VDrCQ9T-MOFvuGLjSQs-val','B1dcfOPXE0B-myNhFcjhT6g-val','B1dcfOPXE0B-hPpBaWTkygE-val','B1dcfOPXE0B-MOFvuGLjSQs-val','nY8E4wp9By1-myNhFcjhT6g-val','nY8E4wp9By1-hPpBaWTkygE-val','nY8E4wp9By1-MOFvuGLjSQs-val']; //a6ubAiJSs1S-gSfwnIupmqe-val
+
+addRadioClick(calcFld1, "JJvQfPiZfIe-gSfwnIupmqe-val");
+addRadioClick(calcFld2, "a6ubAiJSs1S-gSfwnIupmqe-val");
+
+setNoValues("#JJvQfPiZfIe-gSfwnIupmqe-button", calcFld1, "JJvQfPiZfIe-gSfwnIupmqe-val");
+setNoValues("#a6ubAiJSs1S-gSfwnIupmqe-button", calcFld2, "a6ubAiJSs1S-gSfwnIupmqe-val");
+
+function setNoValues(buttonId,arr, fld){
+
+    $(buttonId).click(function(){       
+
+    this.innerHTML = "Clear N/A marking";
+
+    for (var i = 0; i < arr.length; i++) {
+        var id = arr[i];
+        //var commentVal = id.replace("val", "comment");
+
+        var de = id.split( '-' )[0]; 
+        var coc = id.split( '-' )[1];  
+        
+        
+        //$( "#" + commentVal ).val('#{10} Not applicable');
+        var comSave = new CommentSaver(de, coc, '#{10} Not applicable');
+        comSave.save();
+        
+        $( "#" + id ).prop("checked", "No Value");
+        saveVal( de, coc, id );
+
+         upCalc(fld, id);
+    };
+
+ });
+}
+
+function addRadioClick(checkListArray, calcFld) {
+    for (var i = 0; i < checkListArray.length; i++) {
+        
+        var str = checkListArray[i];
+        var commentlink = str.replace("val", "comment");
+
+        var radios = document.getElementsByName(checkListArray[i]);
+        for ( var j = 0; j < radios.length; j++) {
+            radios[j].onclick = function() {
+                
+                /*
+                if (this.checked) {
+   
+                    if ( this.value == 'false' ) {   
+                        document.getElementById(commentlink).click(); 
+                    }// if value
+                } // if radios checked
+                */
+                upCalc(calcFld, checkListArray);
+            
+
+        } // onclick function
+    } // for
+    } //for    
+}
+
+function upCalc(calculatedFld, arrayList) {
+
+    var id = calculatedFld;
+    var buttonId = calculatedFld.replace("val", "button"); 
+    var de = id.split( '-' )[0]; 
+    var coc = id.split( '-' )[1];  
+    
+    var yes = parseInt( 0 ); 
+    var count = parseInt( 0 );
+
+for (var i = 0; i < arrayList.length; i++) {
+
+    var radios = document.getElementsByName(arrayList[i]);
+
+    for ( var j = 0; j < radios.length; j++) {
+        if (radios[j].checked) {
+
+        value = radios[j].value;
+        console.log(value);
+        if ( value ) { 
+            if ( value == 'true' || value == 'false' ) { 
+                count++;
+            } 
+            if ( value == 'true'  ) { 
+                yes++; 
+            } 
+        }// if value
+    } // if radios checked
+    } // for radios   
+} // for fld array 
+
+    if ( count > 0 ) { 
+        var average = parseInt( yes ) / parseInt( count ); 
+        var val = Math.round( average * 100 ) / 100; 
+        
+        $( "#" + calculatedFld ).val( val );
+        saveVal( de, coc, id );
+        document.getElementById(buttonId).innerHTML='Mark as N/A';  
+    } else {
+        $( "#" + calculatedFld ).val( null );
+        saveVal( de, coc, id );
+    } // if count
+} //function
+
+function triggerComments(radios, commentlink) {
+
+    for ( var j = 0; j < radios.length; j++) {
+
+        if (radios[j].checked) {
+
+        value = radios[j].value;
+   
+        if ( value == 'false' ) {   
+            document.getElementById(commentlink).click(); 
+        }// if value
+    } // if radios checked
+    } // for radios   
+
+} //function
+
+</script>
+<style type="text/css">.domain {font-family:sans-serif;font-weight:bold;font-size:12px;padding: 20px 0;width:900px;} #contentDiv table {border-collapse:collapse;font-family:sans-serif;font-size:12px;page-break-inside:avoid;} #contentDiv table td {border: 1px solid #ccc;padding:8px;} .tdCrit {width:420px;height:35px;padding-right:20px;} .tdType {width:70px;} .tdScore {width:211px;} .tdScoreCheck {width:59px;} .tdNote {width:290px;} .formHeader {position:relative;padding: 25px 0 20px 0;} .formTitle {font-family:sans-serif;position:absolute;font-size:28px;margin-left:35px;top:75px;} .sectionHeader {margin-top:25px;} .sectionHeader table td {font-family:sans-serif;font-weight:bold;font-size:13px;background-color:#bedef4;} .facilityInput {font-family:sans-serif;font-weight:bold;position:relative;display:inline-block;height:28px;width:450px;border:1px solid #ccc;margin-right:20px;} .periodInput {position:relative;display:inline-block;height:28px;width:281px;border:1px solid #ccc;} .facilityLabel {font-family:sans-serif;position:relative;top:6px;display:inline-block;height:28px;font-size:16px;padding-right:15px;} .noteDiv {font-family:sans-serif;font-style:italic;font-size:11px;margin-top:20px;} .greyRow {background-color:#eee;} .commentCodes {margin:28px 0;border-collapse:collapse;}
+.commentlink
+{
+  padding-left: 15px;
+  padding-bottom: 10px;
+  width: 15px;
+  height: 15px;
+}
+.chkButton
+{
+ padding-left: 15px;  
+}
+</style>
+    <style media="screen" type="text/css">
+        .inputDiv {
+            display: none;
+        }
+
+    </style>
+    <style media="print" type="text/css">
+        .inputDiv {
+            display: block;
+            position: relative;
+        }
+
+    </style>
+    <div class="formHeader">
+        <img src="../dhis-web-commons/flags/south_africa_department_of_health.png"><span class="formTitle bold">Assessment Questionnaire </span></div>
+    <div class="inputDiv">
+        <span class="facilityLabel">Facility: </span><span class="facilityInput">&nbsp;</span><span class="facilityLabel">Period: </span><span class="periodInput">&nbsp;</span></div>
+    <div class="sectionHeader bold">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        PC01 Clinical Services</td>
+                    <td class="tdType">
+                        Type</td>
+                    <td class="tdScore">
+                        Score</td>
+                    <td class="tdNote">
+                        Notes</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 1 Patients Rights: 1.1.1.1 Patients are treated courteously with empathy by health establishment personnel in the context of zero tolerance for abuse</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        1.1.1.1.1 CHECKLIST - Patients /guardians (where condititon requires) are interviewed to assess whether they feel that they have been treated in a respectful an</td>
+                    <td class="tdType bold">
+                        PI<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="KmnsLAmq8VF-gSfwnIupmqe-val" style="text-align:center" title="" value=""></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        1.1.1.1.2 CHECKLIST - 3 Staff members observed by the assessor demonstrate courtesy / patience / empathy / tolerance</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="V8yMJ6arQj9-gSfwnIupmqe-val" style="text-align:center" title="" value=""></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 1 Patients Rights: 1.1.1.2 Care is provided in a way that maximizes patient privacy</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        1.1.1.2.1 Patients can be consulted in a room/cubicle or receive treatment in a ward in a manner which allows for privacy either through closed doors / screens or curtains</td>
+                    <td class="tdType bold">
+                        DOC<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="W4uzi9cGEe6-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="W4uzi9cGEe6-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        1.1.1.2.2 Counselling takes place in an appropriate area which ensures users privacy and confidentiality</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="mYdciUF3gkh-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="mYdciUF3gkh-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 1 Patients Rights: 1.1.3.1 The cleanliness and hygiene of the facility contributes to patient satisfaction</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        1.1.3.1.2 CHECKLIST - 6 Areas are checked for the state of cleanliness</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> V
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="MtGXElbrXN0-gSfwnIupmqe-val" style="text-align:center" title="" value=""></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 1 Patients Rights: 1.1.3.4 Patients have access to clean water in waiting areas in disposable cup</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        1.1.3.4.1 There is clean water and disposable cups for patients in waiting areas/court yards</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="XJKCvq9RvYP-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="XJKCvq9RvYP-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 1 Patients Rights: 1.2.1.1 Patients are informed of their rights and responsibilities</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        1.2.1.1.1 Detainees for forensic ward/Patient rights posters or leaflets are available in the common local languages of the geographic area</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> D
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="biLcT7cuoPt-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="biLcT7cuoPt-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        1.2.1.1.2 CHECKLIST - Patients interviewed know of their rights and responsibilities</td>
+                    <td class="tdType bold">
+                        PI<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="ltIzsA8n7f0-gSfwnIupmqe-val" style="text-align:center" title="" value=""></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 1 Patients Rights: 1.2.1.2 The correct procedure is followed to obtain informed consent</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        1.2.1.2.2 CHECKLIST - Forms used for informed consent are completed correctly by the health professionals</td>
+                    <td class="tdType bold">
+                        PRA<br>
+                        <br> X
+                    </td>
+                    <td class="tdScore">
+                        <input data-calculated="1.2.1.2.2" disabled="disabled" id="a6ubAiJSs1S-gSfwnIupmqe-val" style="text-align:center" title="" value=""></td>
+                    <td class="tdScore" colspan="2"><button type="button" class="chkButton" id="a6ubAiJSs1S-gSfwnIupmqe-button">Mark as N/A</button></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        1.2.1.2.2.1 Patient was legally entitled to give informed consent</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="1.2.1.2.2" id="LOmUu4tKfn3-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="LOmUu4tKfn3-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="1.2.1.2.2" id="LOmUu4tKfn3-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="LOmUu4tKfn3-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="1.2.1.2.2" id="LOmUu4tKfn3-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="LOmUu4tKfn3-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        1.2.1.2.2.2 The doctor/nurse doing the procedure has appropriately completed the informed consent form</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="1.2.1.2.2" id="Tp8jXbFlTDu-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="Tp8jXbFlTDu-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="1.2.1.2.2" id="Tp8jXbFlTDu-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="Tp8jXbFlTDu-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="1.2.1.2.2" id="Tp8jXbFlTDu-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="Tp8jXbFlTDu-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        1.2.1.2.2.3 The exact nature of the operation/procedure/treatment is written on the consent form</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="1.2.1.2.2" id="WIzp2E5yQUQ-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="WIzp2E5yQUQ-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="1.2.1.2.2" id="WIzp2E5yQUQ-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="WIzp2E5yQUQ-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="1.2.1.2.2" id="WIzp2E5yQUQ-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="WIzp2E5yQUQ-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        1.2.1.2.2.4 The patient''s full names are written on the consent form</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="1.2.1.2.2" id="nPsTVABkxEn-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="nPsTVABkxEn-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="1.2.1.2.2" id="nPsTVABkxEn-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="nPsTVABkxEn-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="1.2.1.2.2" id="nPsTVABkxEn-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="nPsTVABkxEn-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        1.2.1.2.2.5 The consent form is signed by the patient or parent/guardian as appropriate for children</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="1.2.1.2.2" id="h67fRavs92J-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="h67fRavs92J-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="1.2.1.2.2" id="h67fRavs92J-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="h67fRavs92J-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="1.2.1.2.2" id="h67fRavs92J-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="h67fRavs92J-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        1.2.1.2.2.6 The consent form is signed by the health care provider performing the procedure</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="1.2.1.2.2" id="Nq2yQbYYICP-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="Nq2yQbYYICP-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="1.2.1.2.2" id="Nq2yQbYYICP-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="Nq2yQbYYICP-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="1.2.1.2.2" id="Nq2yQbYYICP-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="Nq2yQbYYICP-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        1.2.1.2.2.7 The consent form is signed by two witnesses</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="1.2.1.2.2" id="MC94VDrCQ9T-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="MC94VDrCQ9T-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="1.2.1.2.2" id="MC94VDrCQ9T-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="MC94VDrCQ9T-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="1.2.1.2.2" id="MC94VDrCQ9T-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="MC94VDrCQ9T-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        1.2.1.2.2.8 The consent form is dated</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="1.2.1.2.2" id="B1dcfOPXE0B-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="B1dcfOPXE0B-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="1.2.1.2.2" id="B1dcfOPXE0B-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="B1dcfOPXE0B-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="1.2.1.2.2" id="B1dcfOPXE0B-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="B1dcfOPXE0B-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        1.2.1.2.2.9 The information on the consent form is legible</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="1.2.1.2.2" id="nY8E4wp9By1-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="nY8E4wp9By1-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="1.2.1.2.2" id="nY8E4wp9By1-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="nY8E4wp9By1-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="1.2.1.2.2" id="nY8E4wp9By1-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="nY8E4wp9By1-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 1 Patients Rights: 1.2.2.1 The information / Help desk of the health care health establishment provides for the easy access to information on services provided</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        1.2.2.1.1 A help desk is situated in a prominent position in the public area at the entrance to the health establishment</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="L07mmkYxfz7-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="L07mmkYxfz7-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        1.2.2.1.2 Help desk staff demonstrate that they are able to communicate in the common local languages of the area</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> D
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="OFrL2lMpZkn-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="OFrL2lMpZkn-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        1.2.2.1.3 A spot check at a random time during the visit shows that the helpdesk is manned</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> D
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="WXGFhVvP78C-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="WXGFhVvP78C-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 1 Patients Rights: 1.2.2.2 The signage in the health establishment directs patients and visitors to key areas of the health care health establishment</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        1.2.2.2.1 CHECKLIST - There is clear signage to the different service areas in the health establishment</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> D
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="Lif20HTKWVT-gSfwnIupmqe-val" style="text-align:center" title="" value=""></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 1 Patients Rights: 1.2.2.3 A notice indicating the operating times of the health establishment`s services and visiting hours is prominently displayed at the entrance of the health establishment</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        1.2.2.3.1 A signage board at the entrance of the health establishment indicates the times when various services are offered</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> D
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="g7YH2wjiLaZ-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="g7YH2wjiLaZ-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 1 Patients Rights: 1.2.2.4 Patients are attended to by clearly identified health care professionals</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        1.2.2.4.1 5 randomly chosen health professionals/providers are wearing name tags</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> D
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="hu217k9pjmV-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="hu217k9pjmV-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 1 Patients Rights: 1.3.1.1 The entrance to the health establishment offers easy and safe entry to the public</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        1.3.1.1.1 The entrance to the health establishment is clearly signposted</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> D
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="XsfbYGIwXWc-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="XsfbYGIwXWc-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        1.3.1.1.2 Systems are in place to ensure safe entry eg security guards/CCTV</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> V
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="PZI84zUUck9-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="PZI84zUUck9-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        1.3.1.1.3 The entrance is free from any blockages or hazards eg hawkers</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> D
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="TGrF7hmSxFe-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="TGrF7hmSxFe-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 1 Patients Rights: 1.3.1.2 Easy access for persons with disabilities and the aged is facilitated</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        1.3.1.2.1 Ramps with handrails of an acceptable gradient are available at the entrances to the health establishment/unit and/or where needed</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> V
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="XPczr0sAIsG-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="XPczr0sAIsG-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 1 Patients Rights: 1.3.1.3 There are ablution facilities for persons with disabilities</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        1.3.1.3.2 There is at least one toilet for disabled persons in the health establishment/unit</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="aVLi9Ivj39x-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="aVLi9Ivj39x-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 1 Patients Rights: 1.4.1.1 An effective health care referral policy and system exists for the district which takes into consideration the continuity of care / emergency care management / infrastructure / resources required</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        1.4.1.1.4 CHECKLIST - The files of the last patients transferred into the health establishment contain copies of a referral letter from the referral health establishment</td>
+                    <td class="tdType bold">
+                        PRA<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="lzDeJk1CpyS-gSfwnIupmqe-val" style="text-align:center" title="" value=""></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        1.4.1.1.5 CHECKLIST - The files of the last patients transferred out of the health establishment contain copies of a referral letter sent to the receiving health establishment</td>
+                    <td class="tdType bold">
+                        PRA<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="SZ5dYRa5Sdz-gSfwnIupmqe-val" style="text-align:center" title="" value=""></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 1 Patients Rights: 1.4.1.4 Patients are given information about referrals and specialist bookings informed of the process surrounding referrals and specialist bookings and are given feedback</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        1.4.1.4.2 The staff member on duty at the help desk is able to explain the booking system</td>
+                    <td class="tdType bold">
+                        SI<br>
+                        <br> D
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="S5rDPZ4StT2-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="S5rDPZ4StT2-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 1 Patients Rights: 1.5.1.1 Procedures are followed to ensure queues are kept short</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        1.5.1.1.1 There is a person/s responsible for the management of queues and patient flow</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="D9CGaqSZCLm-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="D9CGaqSZCLm-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        1.5.1.1.2 Patients are informed of how long they will wait in the queue</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="O219bGgfYex-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="O219bGgfYex-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 1 Patients Rights: 1.5.1.4 Patients are sorted / classified and attended to according to the severity and nature of their health condition or problem</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        1.5.1.4.1 The health care professional responsible for patient reviewing / triaging or assessing and channelling (sorting) can explain procedure how she/he reviews / triages or assesses and channels patients</td>
+                    <td class="tdType bold">
+                        SI<br>
+                        <br> V
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="q4D50AFHB7L-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="q4D50AFHB7L-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        1.5.1.4.2 The health care professional responsible for patient sorting can clearly explain the procedure for assessing and sorting patients</td>
+                    <td class="tdType bold">
+                        SI<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="tUSld1Ze8BM-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="tUSld1Ze8BM-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        1.5.1.4.3 Observe whether special queues are designated for specific groups of patients</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="bKgXrvVBXcr-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="bKgXrvVBXcr-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 1 Patients Rights: 1.8.1.2 Patients are made aware of the process by which they can lay a complaint</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        1.8.1.2.1 Information on the procedure for complaints is clearly displayed in all service areas</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="HJChsIVFCHw-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="HJChsIVFCHw-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        1.8.1.2.2 The poster or pamphlet on complaints is simple to read and available in the local languages</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="bdSDVnqhGJy-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="bdSDVnqhGJy-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.1.1.1 Procedures are in place to ensure delivery of basic care that contribute to positive health outcomes</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        2.1.1.1.2 CHECKLIST - Ask patients if they have been given information or advice about looking after themselves in relation to improving their health</td>
+                    <td class="tdType bold">
+                        PI<br>
+                        <br> D
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="gX8yjjzpyfh-gSfwnIupmqe-val" style="text-align:center" title="" value=""></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.3.1.2 There is a formal supervision programme for healthcare professionals</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        2.3.1.2.1 Healthcare professionals indicate that they have access to adequate supervision (excluding doctors for private sector)</td>
+                    <td class="tdType bold">
+                        SI<br>
+                        <br> V
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="ypepJmlWUWd-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="ypepJmlWUWd-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.4.3.3 The safety of patients who require resuscitation is assured</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        2.4.3.3.5 CHECKLIST - Emergency trolleys are standardised/ appropriately stocked and regularly checked (Part 2)</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> X
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="aV4ybmmvKCk-gSfwnIupmqe-val" style="text-align:center" title="" value=""></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.4.3.4 The safety of patients receiving medication is assured</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        2.4.3.4.2 CHECKLIST - Observation of patient receiving medication confirms that patients` safety is assured</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> V
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="LqAxueGG3Re-gSfwnIupmqe-val" style="text-align:center" title="" value=""></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.5.1.2 The health establishment actively encourages a culture of effective reporting of adverse events</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        2.5.1.2.1 CHECKLIST - Staff members interviewed confirm the establishment encourages the reporting of adverse events</td>
+                    <td class="tdType bold">
+                        SI<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="HOAXEZemjWg-gSfwnIupmqe-val" style="text-align:center" title="" value=""></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.6.2.1 A programme for the prevention and control of respiratory infections is in place</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        2.6.2.1.2 The health establishment provides appropriate types of masks and FDA approved respirators which are fit tested for all staff who are at risk of contracting TB or for all staff exposed to serious contagious respiratory infections</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> X
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="rQJfIG6YqHS-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="rQJfIG6YqHS-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.6.3.2 Sharps are safely managed and disposed of</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        2.6.3.2.1 CHECKLIST - A random selection of clinical areas show that sharps are safely managed and disposed of</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> V
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="pYOxcGtrV7c-gSfwnIupmqe-val" style="text-align:center" title="" value=""></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 3 Clinical Support Services: 3.1.4.3 Patients are counselled appropriately to ensure adherence to therapy</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        3.1.4.3.1 CHECKLIST - A random selection of 3 patients receiving medicine indicate that they have a clear understanding of how and when to take their medication and any other relevant information - Generic outpatient checklist</td>
+                    <td class="tdType bold">
+                        PI<br>
+                        <br> V
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="kl1o66jVGTc-gSfwnIupmqe-val" style="text-align:center" title="" value=""></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 3 Clinical Support Services: 3.2.1.1 Laboratory services are available and results are provided within agreed-upon turnaround times</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        3.2.1.1.3 CHECKLIST - Laboratory results requested are available in the patients file</td>
+                    <td class="tdType bold">
+                        DOC<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="FNSSevtYfbU-gSfwnIupmqe-val" style="text-align:center" title="" value=""></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 3 Clinical Support Services: 3.2.2.1 Radiology and related services like ultrasonography are available and provided within agreed-upon time frames</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        3.2.2.1.4 Staff are able to explain the protocol for how ultra-sonography services are to be obtained including emergency services</td>
+                    <td class="tdType bold">
+                        SI<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="VVr0aTrbC1A-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="VVr0aTrbC1A-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        3.2.2.1.6 CHECKLIST - Radiology results requested are available in the patient`s file or nursing unit or electronically</td>
+                    <td class="tdType bold">
+                        DOC<br>
+                        <br> V
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="xyRhyNiFPX3-gSfwnIupmqe-val" style="text-align:center" title="" value=""></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 3 Clinical Support Services: 3.3.2.3 Patients with existing or potential disabilities are referred as necessary according to local clinical protocols and receive required assistive devices</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        3.3.2.3.2 CHECKLIST - Patients with disabilities or potential disabilities and ask if they have received their required assistive devices</td>
+                    <td class="tdType bold">
+                        PI<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="EUctjBm2Nof-gSfwnIupmqe-val" style="text-align:center" title="" value=""></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 3 Clinical Support Services: 3.3.2.4 Patients requiring social support are assessed / treated / referred as necessary according to local clinical protocols</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        3.3.2.4.1 Patients have access to a social worker or psychologist at the establishment on a regular basis</td>
+                    <td class="tdType bold">
+                        DOC<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="aKVLwdh8olE-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="aKVLwdh8olE-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        3.3.2.4.2 An up to date list revised within the last 24 months of non-governmental organisations and disabled peoples organisations in the local area of the establishment is available in the patient care units</td>
+                    <td class="tdType bold">
+                        DOC<br>
+                        <br> D
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="AVGYKA9SXPE-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="AVGYKA9SXPE-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 3 Clinical Support Services: 3.4.1.1 Medical equipment available meets minimum requirements for appropriate level of care</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        3.4.1.1.3 CHECKLIST - Functional essential equipment (as listed in the checklist) is available in the general wards/clinics</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> X
+                    </td>
+                    <td class="tdScore">
+                        <input data-calculated="3.4.1.1.3" disabled="disabled" id="JJvQfPiZfIe-gSfwnIupmqe-val" style="text-align:center" title="" value=""></td>
+                    <td class="tdScore" colspan="2"><button type="button" class="chkButton" id="JJvQfPiZfIe-gSfwnIupmqe-button">Mark as N/A</button></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        3.4.1.1.3.1 Diagnostic set</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="KI5sYxKZBxX-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="KI5sYxKZBxX-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="KI5sYxKZBxX-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="KI5sYxKZBxX-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="KI5sYxKZBxX-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="KI5sYxKZBxX-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        3.4.1.1.3.2 Blood pressure monitor, electronic or manual</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="mOrjhzSQ7AR-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="mOrjhzSQ7AR-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="mOrjhzSQ7AR-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="mOrjhzSQ7AR-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="mOrjhzSQ7AR-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="mOrjhzSQ7AR-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        3.4.1.1.3.3 Pulse oximeter (B)</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="jrokUt85qdi-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="jrokUt85qdi-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="jrokUt85qdi-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="jrokUt85qdi-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="jrokUt85qdi-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="jrokUt85qdi-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        3.4.1.1.3.4 Glucometer (B)</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="Db2TKGFH41s-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="Db2TKGFH41s-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="Db2TKGFH41s-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="Db2TKGFH41s-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="Db2TKGFH41s-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="Db2TKGFH41s-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        3.4.1.1.3.5 HB meter</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="OUTNWslEpSG-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="OUTNWslEpSG-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="OUTNWslEpSG-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="OUTNWslEpSG-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="OUTNWslEpSG-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="OUTNWslEpSG-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        3.4.1.1.3.6 Hospital bed (Adult)</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="VUHoxWH9NMW-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="VUHoxWH9NMW-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="VUHoxWH9NMW-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="VUHoxWH9NMW-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="VUHoxWH9NMW-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="VUHoxWH9NMW-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        3.4.1.1.3.7 Intravenous pole with double hook (standard ward)</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="Jt4S0JGXHPZ-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="Jt4S0JGXHPZ-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="Jt4S0JGXHPZ-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="Jt4S0JGXHPZ-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="Jt4S0JGXHPZ-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="Jt4S0JGXHPZ-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        3.4.1.1.3.8 Mattress for hospital bed (Adult)</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="JOzTXmiQ8Yf-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="JOzTXmiQ8Yf-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="JOzTXmiQ8Yf-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="JOzTXmiQ8Yf-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="JOzTXmiQ8Yf-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="JOzTXmiQ8Yf-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        3.4.1.1.3.9 Electrocardiograph, 12 channel</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="CNtZsJ2yTJo-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="CNtZsJ2yTJo-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="CNtZsJ2yTJo-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="CNtZsJ2yTJo-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="CNtZsJ2yTJo-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="CNtZsJ2yTJo-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        3.4.1.1.3.10 Light, surgical, mobile, with battery backup or ceiling lights</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="vzifolwvwb6-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="vzifolwvwb6-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="vzifolwvwb6-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="vzifolwvwb6-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="vzifolwvwb6-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="vzifolwvwb6-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        3.4.1.1.3.11 Oxygen set with humidifier</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="q6cXG4XOWN9-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="q6cXG4XOWN9-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="q6cXG4XOWN9-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="q6cXG4XOWN9-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="q6cXG4XOWN9-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="q6cXG4XOWN9-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        3.4.1.1.3.12 Tracheostomy set</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="n30mhezIqie-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="n30mhezIqie-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="n30mhezIqie-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="n30mhezIqie-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="n30mhezIqie-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="n30mhezIqie-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        3.4.1.1.3.13 Instrument set, dressing</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="Drr0VyQ87dO-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="Drr0VyQ87dO-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="Drr0VyQ87dO-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="Drr0VyQ87dO-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="Drr0VyQ87dO-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="Drr0VyQ87dO-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        3.4.1.1.3.14 Instrument set, IV cut-down/central line</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="IITQrHTR0ij-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="IITQrHTR0ij-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="IITQrHTR0ij-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="IITQrHTR0ij-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="IITQrHTR0ij-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="IITQrHTR0ij-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        3.4.1.1.3.15 Intravenous pole with double hook (treatment room)</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="NOYEO7rZ45b-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="NOYEO7rZ45b-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="NOYEO7rZ45b-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="NOYEO7rZ45b-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="NOYEO7rZ45b-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="NOYEO7rZ45b-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        3.4.1.1.3.16 Examination table with pad</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="r8umpDlgg7u-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="r8umpDlgg7u-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="r8umpDlgg7u-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="r8umpDlgg7u-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="3.4.1.1.3" id="r8umpDlgg7u-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="r8umpDlgg7u-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 4 Public Health: 4.1.1.5 Collaboration with relevant authorities and stakeholders is pursued to ensure the health establishment is readily accessible and clearly signposted</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        4.1.1.5.2 The health establishment is clearly signposted on the access road</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="lKQvrxaLP2Q-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="lKQvrxaLP2Q-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 4 Public Health: 4.2.1.1 The health establishment delivers and monitors primary prevention programmes for at-risk patients to impact on the determinants of health</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        4.2.1.1.1 CHECKLIST - 3 randomly selected patient files for babies / HIV pregnant mothers / Family Planning indicates that primary prevention programmes were delivered</td>
+                    <td class="tdType bold">
+                        PRA<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="SEPe2ZvIBRG-gSfwnIupmqe-val" style="text-align:center" title="" value=""></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 4 Public Health: 4.3.1.3 The health establishment has an annually updated disaster management plan ( including health emergencies)</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        4.3.1.3.1 An annually updated disaster management plan is available and displayed at strategic points</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="DSIHjOT4PUE-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="DSIHjOT4PUE-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 6 Operational Management: 6.7.1.1 Patient records are complete and contain all legal and statutory requirements</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        6.7.1.1.1 CHECKLIST - Patient files comply with legal and statutory requirements for record keeping</td>
+                    <td class="tdType bold">
+                        PRA<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="J0VTsf5eBzy-gSfwnIupmqe-val" style="text-align:center" title="" value=""></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 6 Operational Management: 6.7.1.2 Patient records are managed in such a way to ensure confidentiality</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        6.7.1.2.1 Patient records in the service areas wards / consultation rooms / record rooms are kept in a suitable place that maintains the patient`s confidentiality</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="M2hn9KO6KcD-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="M2hn9KO6KcD-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 6 Operational Management: 6.7.2.1 Dedicated / trained staff and appropriate systems are in place to manage the record archive</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        6.7.2.1.1 Records room staff have received appropriate training in the management of medical archives</td>
+                    <td class="tdType bold">
+                        DOC<br>
+                        <br> D
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="BY1JPmfBCVK-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="BY1JPmfBCVK-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 6 Operational Management: 6.7.2.2 Processes and infrastructure for filing and retrieval of patient files provide an effective and efficient service</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        6.7.2.2.1 Medical records room has space for all records</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="OiesLy2pts5-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="OiesLy2pts5-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        6.7.2.2.2 The medical records room is secure and only accessible to authorised staff</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="ZrUTGUfmEaA-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="ZrUTGUfmEaA-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        6.7.2.2.3 Written standard operating procedures exist for requests / retrieval / filing of patient files</td>
+                    <td class="tdType bold">
+                        DOC<br>
+                        <br> V
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="LzmPxGbnyuR-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="LzmPxGbnyuR-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 7 Facilities and Infrastructure: 7.1.2.2 The layout of the health establishment is planned or adapted to ensure that there is space to meet service and patient needs</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        7.1.2.2.1 The layout of the health establishment allows for efficient and logical flow of patients</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="sLte3mOArhs-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="sLte3mOArhs-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        7.1.2.2.3 Lighting and ventilation is observed to be adequate</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="s38Iw3f0nSc-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="s38Iw3f0nSc-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 7 Facilities and Infrastructure: 7.1.3.1 Waiting areas are appropriately located and adequate for the number of patients using them</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        7.1.3.1.1 The waiting area has adequate space / heating / number of chairs to accommodate all patients in the area</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="f0QIXXapWL2-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="f0QIXXapWL2-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        7.1.3.1.2 Waiting areas are located in the areas where the service takes place</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="kUh5WmLrDeW-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="kUh5WmLrDeW-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 7 Facilities and Infrastructure: 7.1.4.1 The establishment holds regular / documented / comprehensive inspections of its physical facilities</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        7.1.4.1.2 No obvious safety hazards are observed during the visit such as loose electrical wiring / collapsing ceilings / unstable walls</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> V
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="TNP3ESOHIUC-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="TNP3ESOHIUC-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 7 Facilities and Infrastructure: 7.1.5.1 All areas are adequately furnished and provide an acceptable environment for patient care</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        7.1.5.1.1 There is evidence that the procedure for requisition of repairs indicates and measures the timeframes between requisition and finalisation of repairs</td>
+                    <td class="tdType bold">
+                        DOC<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="RYmu9XTfwkh-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="RYmu9XTfwkh-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 7 Facilities and Infrastructure: 7.1.6.1 A regular maintenance programme ensures that the health establishment grounds are safe for all users and provide an attractive environment</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        7.1.6.1.1 Grounds are maintained and are safe and clean</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="ONvU3bqnUCp-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="ONvU3bqnUCp-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        7.1.6.1.2 Pathways are well maintained</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> D
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="fTphvJKflMy-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="fTphvJKflMy-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 7 Facilities and Infrastructure: 7.2.4.2 Staff know how to react to the emergency warning</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        7.2.4.2.1 CHECKLIST - Staff members know how to react to an emergency warning</td>
+                    <td class="tdType bold">
+                        SI<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="IdgohlJmKij-gSfwnIupmqe-val" style="text-align:center" title="" value=""></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 7 Facilities and Infrastructure: 7.3.1.2 Building layout and security systems protect vulnerable patients</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        7.3.1.2.1 Security systems are positioned at vulnerable patient areas such as maternity / paediatric / psychiatric and emergency units and access and egress points</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> V
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="lMmeGOu6I1C-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="lMmeGOu6I1C-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 7 Facilities and Infrastructure: 7.3.1.5 Awareness of safety and security issues is promoted to the staff</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        7.3.1.5.1 Safety and security notices are displayed in all areas</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> D
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="La6h56jZMSA-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="La6h56jZMSA-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 7 Facilities and Infrastructure: 7.4.1.2 Appropriate cleaning materials and equipment are available and properly used and stored</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        7.4.1.2.1 CHECKLIST - Cleaning materials cloths / dusters / scourers and chemicals and equipment are available and stored in an appropriate safe lockable area / with clear labels for equipment used internally and externally</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> V
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="U7WDn2k0PIZ-gSfwnIupmqe-val" style="text-align:center" title="" value=""></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 7 Facilities and Infrastructure: 7.5.4.1 General waste is stored and transported appropriately and securely and removed timeously</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        7.5.4.1.1 The outside bin/waste storage area is well maintained and poses no health risk</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> V
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="nks0rgN0h0q-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="nks0rgN0h0q-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 7 Facilities and Infrastructure: 7.6.1.2 Policies and protocols are followed for the handling of all laundry in line with infection control and safety requirements</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        7.6.1.2.2 Areas for receiving soiled linen are separated from areas of clean linen</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> V
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="UlrAoWfYSqR-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="UlrAoWfYSqR-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 7 Facilities and Infrastructure: 7.6.1.4 Adequate stocks of linen are maintained to ensure that items are always available</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        7.6.1.4.1 Linen rooms or storage cupboards are locked / well organised/ and well stocked proportionate to the requirements of the health establishment</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> D
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="rNffLx80Uxp-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="rNffLx80Uxp-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>

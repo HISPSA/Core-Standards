@@ -1,1 +1,881 @@
-<script type='text/javascript'> function upCalc() { $( "[data-calculated]" ).each( function( index, element ) { var id = $( this ).attr( 'id' ); var de = id.split( '-' )[0]; var coc = id.split( '-' )[1]; var code = $( this ).attr( 'data-calculated' ); var yes = parseInt( 0 ); var count = parseInt( 0 ); $( "[data-checklist='" + code + "']" ).each( function( index, element ) { var value = $( this ).val(); if ( value ) { if ( value == 'true' || value == 'false' ) { count++; } if ( value == 'true'  ) { yes++; } } } ); if ( count > 0 ) { var average = parseInt( yes ) / parseInt( count ); var val = Math.round( average * 100 ) / 100; $( this ).val( val ); saveVal( de, coc, id ); } } ); } </script><style type="text/css">.domain {font-family:sans-serif;font-weight:bold;font-size:12px;padding: 20px 0;width:900px;} #contentDiv table {border-collapse:collapse;font-family:sans-serif;font-size:12px;page-break-inside:avoid;} #contentDiv table td {border: 1px solid #ccc;padding:8px;} .tdCrit {width:420px;height:35px;padding-right:20px;} .tdType {width:70px;} .tdScore {width:211px;} .tdScoreCheck {width:59px;} .tdNote {width:290px;} .formHeader {position:relative;padding: 25px 0 20px 0;} .formTitle {font-family:sans-serif;position:absolute;font-size:28px;margin-left:35px;top:75px;} .sectionHeader {margin-top:25px;} .sectionHeader table td {font-family:sans-serif;font-weight:bold;font-size:13px;background-color:#bedef4;} .facilityInput {font-family:sans-serif;font-weight:bold;position:relative;display:inline-block;height:28px;width:450px;border:1px solid #ccc;margin-right:20px;} .periodInput {position:relative;display:inline-block;height:28px;width:281px;border:1px solid #ccc;} .facilityLabel {font-family:sans-serif;position:relative;top:6px;display:inline-block;height:28px;font-size:16px;padding-right:15px;} .noteDiv {font-family:sans-serif;font-style:italic;font-size:11px;margin-top:20px;} .greyRow {background-color:#eee;} .commentCodes {margin:28px 0;border-collapse:collapse;}</style><style media="screen" type="text/css">.inputDiv {display:none;}</style> <style media="print" type="text/css">.inputDiv {display:block;position:relative;}</style> <div class="formHeader"><img src="../dhis-web-commons/flags/south_africa_department_of_health.png" /><span class="formTitle bold">Assessment Questionnaire </span></div><div class="inputDiv"><span class="facilityLabel">Facility: </span><span class="facilityInput">&nbsp;</span><span class="facilityLabel">Period: </span><span class="periodInput">&nbsp;</span></div><div class="sectionHeader bold"><table><tbody><tr><td class="tdCrit">MX14 Clinical Management Group</td><td class="tdType">Type</td><td class="tdScore">Score</td><td class="tdNote">Notes</td></tr></tbody></table></div><div class="domain bold">Domain 1 Patients Rights: 1.1.1.1 Patients are treated courteously with empathy by health establishment personnel in the context of zero tolerance for abuse</div><div><table><tbody><tr><td class="tdCrit">1.1.1.1.3 Recent records describe action that has been taken in the event of an incident of staff abuse (actual or alleged) on a patient</td><td class="tdType bold">DOC<br /><br />X</td><td class="tdScore" colspan="3"><input id="ps5nNZGCatK-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="ps5nNZGCatK-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 1 Patients Rights: 1.1.2.1 Patient satisfaction surveys are conducted and analysed annually</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">1.1.2.1.1 A report of the annual patient satisfaction survey indicates that a survey was done in the last 12 months</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="qV4uNqYiBg2-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="qV4uNqYiBg2-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 1 Patients Rights: 1.1.2.2 The facility implements quality improvement initiatives based on the findings of the various patient satisfaction surveys</div><div><table><tbody><tr><td class="tdCrit">1.1.2.2.1 Minutes of the forum which considers patient satisfaction surveys (from within the last 12 months) shows that results are regularly discussed/analysed and actions are taken to address concerns</td><td class="tdType bold">DOC<br /><br />D</td><td class="tdScore" colspan="3"><input id="S8YM1SPUNwm-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="S8YM1SPUNwm-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">1.1.2.2.2 The patient satisfaction survey results show that there has been improvement over time in the results</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="JQlxMD2F3n0-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="JQlxMD2F3n0-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 1 Patients Rights: 1.1.3.1 The cleanliness and hygiene of the facility contributes to patient satisfaction</div><div><table><tbody><tr><td class="tdCrit">1.1.3.1.1 Patient satisfaction survey results show that patients are satisfied with cleanliness of health establishment</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="rpNFNFBRNr8-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="rpNFNFBRNr8-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 1 Patients Rights: 1.2.1.2 The correct procedure is followed to obtain informed consent</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">1.2.1.2.1 There are up to date written policies or guidelines relating to informed consent</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="Crpo5QyoP7z-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="Crpo5QyoP7z-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 1 Patients Rights: 1.2.1.4 Where research projects are being conducted / ethical research guidelines which respect the rights of patients are followed</div><div><table><tbody><tr><td class="tdCrit">1.2.1.4.1 There are up to date written policies or guidelines relating to informed consent including consent for HIV and clinical trials</td><td class="tdType bold">DOC<br /><br />D</td><td class="tdScore" colspan="3"><input id="hhhPtYpu2Pb-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="hhhPtYpu2Pb-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 1 Patients Rights: 1.4.1.1 An effective health care referral policy and system exists for the district which takes into consideration the continuity of care / emergency care management / infrastructure / resources required</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">1.4.1.1.1 CHECKLIST - There is an up to date patient referral policy and protocol available in the health establishment/unit which includes all critical aspects</td><td class="tdType bold">DOC<br /><br />V</td><td class="tdScore" colspan="3"><input id="rkXffVeKrwK-gSfwnIupmqe-val" style="text-align:center" value="" title=""/></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 1 Patients Rights: 1.6.1.3 The Health establishment`s closures and ambulance diversions are managed so as to reduce impact on patient care and ambulance services</div><div><table><tbody><tr><td class="tdCrit">1.6.1.3.1 A written policy is available regarding health establishment closures and ambulance diversions</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="rl7E8HHTRm3-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="rl7E8HHTRm3-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 1 Patients Rights: 1.6.1.4 The emergency services of the health establishment produce positive quality outcomes for all patients</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">1.6.1.4.1 There is a procedure governing the handover of patients from EMS to hospital staff</td><td class="tdType bold">DOC<br /><br />V</td><td class="tdScore" colspan="3"><input id="iTa6usVgl2F-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="iTa6usVgl2F-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.1.1.2 There is evidence that the provision of care contributes to positive health outcomes</div><div><table><tbody><tr><td class="tdCrit">2.1.1.2.1 There is evidence that the health establishment participates in monthly maternal/ (and) perinatal morbidity and mortality meetings</td><td class="tdType bold">DOC<br /><br />V</td><td class="tdScore" colspan="3"><input id="Z1Pn7n3hsPg-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="Z1Pn7n3hsPg-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.2.1.1 The establishments has the most up to date guidelines for the implementation of its strategic priority programmes or health initiatives available</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">2.2.1.1.1 CHECKLIST - The most up to date guidelines on the national strategic priority programmes or health initiatives are available</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="BWba2a1Fz0v-gSfwnIupmqe-val" style="text-align:center" value="" title=""/></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.2.1.2 There is evidence that the establishment ensures that the priority programmes or health initiatives are implemented according to the guidelines provided</div><div><table><tbody><tr><td class="tdCrit">2.2.1.2.1 CHECKLIST - The establishment conducts clinical audits of each priority programme/health initiative Review the clinical audit reports - checklist provided If no clinical audits conducted review 3 patient files per priority program</td><td class="tdType bold">DOC<br /><br />V</td><td class="tdScore" colspan="3"><input id="YcJgjIdBrdP-gSfwnIupmqe-val" style="text-align:center" value="" title=""/></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.2.1.3 A mechanism is in place to collate and analyze data to ensure that priority programmes / health initiative outcomes are monitored regularly and actions are undertaken to address short comings</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">2.2.1.3.1 CHECKLIST - Evidence is available that health outcomes of the priority programmes or health initiatives are monitored against the relevant targets</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="L7kIBzZ5mCx-gSfwnIupmqe-val" style="text-align:center" value="" title=""/></td><td class="tdNote"></td></tr><tr><td class="tdCrit">2.2.1.3.2 The report on health initiatives or programmes shows that quality improvement plans have been implemented in order to address shortcomings and improve outcomes</td><td class="tdType bold">DOC<br /><br />V</td><td class="tdScore" colspan="3"><input id="J6WMtqJukI4-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="J6WMtqJukI4-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.3.1.3 Healthcare professionals take the lead in the establishment and functioning of an appropriate quality committee in the health establishment</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">2.3.1.3.1 Minutes of the relevant forum reviewing quality (from within the last quarter) reflect that healthcare professionals / nurses / pharmacists and doctors / participate as active members and/or chair the forum</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="qPBfQ73tugq-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="qPBfQ73tugq-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.3.1.4 The outcomes of relevant quality committee reviews are used by health professionals to identify areas of concern and improve patient care</div><div><table><tbody><tr><td class="tdCrit">2.3.1.4.1 A recent quality improvement plan/programme within the last 6 months shows that healthcare professionals / nurses / pharmacists and doctors / are responsible for implementing relevant improvements to patient care</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="tcOGoPhZegS-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="tcOGoPhZegS-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.4.1.1 A clinical risk policy and protocol is available which highlights the establishments approach to the management of clinical risk</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">2.4.1.1.1 There is an up to date clinical risk policy and protocol which highlights the establishments approach to the management of clinical risk</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="uHPoUGG1aKl-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="uHPoUGG1aKl-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.4.1.2 A formal structure exists within the establishment to monitor all aspects of clinical risk and ensure implementation of control measures</div><div><table><tbody><tr><td class="tdCrit">2.4.1.2.1 Terms of reference of a forum reviewing clinical risk is available which details the interdisciplinary membership / responsibilities / accountability / strategy to manage clinical risks</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="h61lJaqSAnS-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="h61lJaqSAnS-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">2.4.1.2.2 Clinical risk assessments are conducted in each service/department of the establishment according to relevant policy and/or guidelines</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="DcODmroEr9W-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="DcODmroEr9W-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">2.4.1.2.4 There is evidence that health establishments monitor morbidity and mortality statistics regularly and the information is used to develop improvement plans</td><td class="tdType bold">DOC<br /><br />V</td><td class="tdScore" colspan="3"><input id="hqJ6K5n9jRz-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="hqJ6K5n9jRz-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.4.2.1 Procedures are available detailing the care to be rendered to patients with special needs including terminally ill / 72 hour observation patients / patients with reduced mobility / the frail or aged</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">2.4.2.1.1 The establishment has a procedure for the care of the terminally ill which addresses the needs of the patients and their family</td><td class="tdType bold">DOC<br /><br />V</td><td class="tdScore" colspan="3"><input id="k1aW8KKofGC-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="k1aW8KKofGC-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">2.4.2.1.2 The establishment has a procedure for the management of patients detained for 72 hour observations</td><td class="tdType bold">DOC<br /><br />V</td><td class="tdScore" colspan="3"><input id="dy4ag6sJnyG-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="dy4ag6sJnyG-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">2.4.2.1.3 The establishment has a procedure for conducting and acting on risk assessments of frail and aged patients</td><td class="tdType bold">DOC<br /><br />V</td><td class="tdScore" colspan="3"><input id="ZHTVsmL6lk5-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="ZHTVsmL6lk5-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">2.4.2.1.4 The establishment has a procedure for conducting and acting on risk assessments of patients with reduced mobility</td><td class="tdType bold">DOC<br /><br />V</td><td class="tdScore" colspan="3"><input id="h2TWw5lApwE-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="h2TWw5lApwE-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.4.3.3 The safety of patients who require resuscitation is assured</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">2.4.3.3.1 CHECKLIST - The establishment has a formal policy for handling emergency resuscitations</td><td class="tdType bold">DOC<br /><br />X</td><td class="tdScore" colspan="3"><input id="zwr3Qlfi1xp-gSfwnIupmqe-val" style="text-align:center" value="" title=""  data-calculated="2.4.3.3.1" disabled="disabled" /></td><td class="tdNote"></td></tr><tr><td class="tdCrit">2.4.3.3.1.1 The procedure for calling out the resuscitation team is described</td><td class="tdType bold">CHECKLIST<br /><br />X</td><td class="tdScoreCheck"><input id="QboWcCMWaag-myNhFcjhT6g-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"/><img class="commentlink" id="QboWcCMWaag-gSfwnIupmqe-comment"></td><td class="tdScoreCheck"><input id="QboWcCMWaag-hPpBaWTkygE-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"/><img class="commentlink" id="QboWcCMWaag-gSfwnIupmqe-comment"></td><td class="tdScoreCheck"><input id="QboWcCMWaag-MOFvuGLjSQs-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"/><img class="commentlink" id="QboWcCMWaag-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">2.4.3.3.1.2 The composition of the resuscitation team is described</td><td class="tdType bold">CHECKLIST<br /><br />X</td><td class="tdScoreCheck"><input id="aVick9kBF0s-myNhFcjhT6g-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"/><img class="commentlink" id="aVick9kBF0s-gSfwnIupmqe-comment"></td><td class="tdScoreCheck"><input id="aVick9kBF0s-hPpBaWTkygE-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"/><img class="commentlink" id="aVick9kBF0s-gSfwnIupmqe-comment"></td><td class="tdScoreCheck"><input id="aVick9kBF0s-MOFvuGLjSQs-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"/><img class="commentlink" id="aVick9kBF0s-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">2.4.3.3.1.3 The expertise of the team members in the resuscitation team is detailed</td><td class="tdType bold">CHECKLIST<br /><br />X</td><td class="tdScoreCheck"><input id="We5hsbpqARA-myNhFcjhT6g-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"/><img class="commentlink" id="We5hsbpqARA-gSfwnIupmqe-comment"></td><td class="tdScoreCheck"><input id="We5hsbpqARA-hPpBaWTkygE-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"/><img class="commentlink" id="We5hsbpqARA-gSfwnIupmqe-comment"></td><td class="tdScoreCheck"><input id="We5hsbpqARA-MOFvuGLjSQs-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"/><img class="commentlink" id="We5hsbpqARA-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">2.4.3.3.1.4 Documentation for the resuscitation is provided and described</td><td class="tdType bold">CHECKLIST<br /><br />X</td><td class="tdScoreCheck"><input id="uJJHwVg06ur-myNhFcjhT6g-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"/><img class="commentlink" id="uJJHwVg06ur-gSfwnIupmqe-comment"></td><td class="tdScoreCheck"><input id="uJJHwVg06ur-hPpBaWTkygE-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"/><img class="commentlink" id="uJJHwVg06ur-gSfwnIupmqe-comment"></td><td class="tdScoreCheck"><input id="uJJHwVg06ur-MOFvuGLjSQs-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"/><img class="commentlink" id="uJJHwVg06ur-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">2.4.3.3.1.5 Debriefing sessions are part of each resuscitation protocol</td><td class="tdType bold">CHECKLIST<br /><br />X</td><td class="tdScoreCheck"><input id="Aq8e70dTi3h-myNhFcjhT6g-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"/><img class="commentlink" id="Aq8e70dTi3h-gSfwnIupmqe-comment"></td><td class="tdScoreCheck"><input id="Aq8e70dTi3h-hPpBaWTkygE-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"/><img class="commentlink" id="Aq8e70dTi3h-gSfwnIupmqe-comment"></td><td class="tdScoreCheck"><input id="Aq8e70dTi3h-MOFvuGLjSQs-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"/><img class="commentlink" id="Aq8e70dTi3h-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">2.4.3.3.1.6 A referral protocol is described</td><td class="tdType bold">CHECKLIST<br /><br />X</td><td class="tdScoreCheck"><input id="iTYFWsfd5H4-myNhFcjhT6g-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"/><img class="commentlink" id="iTYFWsfd5H4-gSfwnIupmqe-comment"></td><td class="tdScoreCheck"><input id="iTYFWsfd5H4-hPpBaWTkygE-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"/><img class="commentlink" id="iTYFWsfd5H4-gSfwnIupmqe-comment"></td><td class="tdScoreCheck"><input id="iTYFWsfd5H4-MOFvuGLjSQs-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"/><img class="commentlink" id="iTYFWsfd5H4-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">2.4.3.3.1.7 All documentation and resuscitation processes undergo an audit and QIP process</td><td class="tdType bold">CHECKLIST<br /><br />X</td><td class="tdScoreCheck"><input id="g3aNblgkPZ7-myNhFcjhT6g-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"/><img class="commentlink" id="g3aNblgkPZ7-gSfwnIupmqe-comment"></td><td class="tdScoreCheck"><input id="g3aNblgkPZ7-hPpBaWTkygE-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"/><img class="commentlink" id="g3aNblgkPZ7-gSfwnIupmqe-comment"></td><td class="tdScoreCheck"><input id="g3aNblgkPZ7-MOFvuGLjSQs-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"/><img class="commentlink" id="g3aNblgkPZ7-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">2.4.3.3.1.8 Morbidity and Mortality reviews are part of the protocol and the process of these reviews is described</td><td class="tdType bold">CHECKLIST<br /><br />X</td><td class="tdScoreCheck"><input id="rzXSTAOffON-myNhFcjhT6g-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"/><img class="commentlink" id="rzXSTAOffON-gSfwnIupmqe-comment"></td><td class="tdScoreCheck"><input id="rzXSTAOffON-hPpBaWTkygE-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"/><img class="commentlink" id="rzXSTAOffON-gSfwnIupmqe-comment"></td><td class="tdScoreCheck"><input id="rzXSTAOffON-MOFvuGLjSQs-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"/><img class="commentlink" id="rzXSTAOffON-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">2.4.3.3.1.9 How to handle next of kin or visitors during a resuscitation is described</td><td class="tdType bold">CHECKLIST<br /><br />X</td><td class="tdScoreCheck"><input id="sZS2QJMqr0p-myNhFcjhT6g-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"/><img class="commentlink" id="sZS2QJMqr0p-gSfwnIupmqe-comment"></td><td class="tdScoreCheck"><input id="sZS2QJMqr0p-hPpBaWTkygE-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"/><img class="commentlink" id="sZS2QJMqr0p-gSfwnIupmqe-comment"></td><td class="tdScoreCheck"><input id="sZS2QJMqr0p-MOFvuGLjSQs-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"/><img class="commentlink" id="sZS2QJMqr0p-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">2.4.3.3.1.10 Responsibility of management during a resuscitation is described</td><td class="tdType bold">CHECKLIST<br /><br />X</td><td class="tdScoreCheck"><input id="eY7FRI3a6OW-myNhFcjhT6g-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"/><img class="commentlink" id="eY7FRI3a6OW-gSfwnIupmqe-comment"></td><td class="tdScoreCheck"><input id="eY7FRI3a6OW-hPpBaWTkygE-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"/><img class="commentlink" id="eY7FRI3a6OW-gSfwnIupmqe-comment"></td><td class="tdScoreCheck"><input id="eY7FRI3a6OW-MOFvuGLjSQs-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"/><img class="commentlink" id="eY7FRI3a6OW-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr><td class="tdCrit">2.4.3.3.2 An appropriate forum to review all resuscitations is formally constituted with terms of reference and appropriate multidisciplinary membership</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="xnlpVcIwQY5-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="xnlpVcIwQY5-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.4.3.4 The safety of patients receiving medication is assured</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">2.4.3.4.1 A protocol regarding the safe administration of medicines to patients is available including a protocol for the safe administration of medicines to children</td><td class="tdType bold">DOC<br /><br />V</td><td class="tdScore" colspan="3"><input id="bDohihzi6cS-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="bDohihzi6cS-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.5.1.1 An adverse events policy and procedure is available which highlights the establishments approach to the management of adverse events</div><div><table><tbody><tr><td class="tdCrit">2.5.1.1.1 There is an up to date adverse events policy available which details the establishments/units approach to the management of clinical risk including risk identification methods</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="yXHMfMMgseZ-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="yXHMfMMgseZ-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.5.1.2 The health establishment actively encourages a culture of effective reporting of adverse events</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">2.5.1.2.2 There is a procedure in place to support staff affected by adverse events</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="k5wW7NJIuKZ-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="k5wW7NJIuKZ-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.5.2.1 A formal structure exists within the establishment to monitor all aspects of adverse events and ensure implementation of control measures</div><div><table><tbody><tr><td class="tdCrit">2.5.2.1.1 Establishment has a reporting system for adverse events indicating severity / categorisation and actions taken</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="IpRBQmrIO9h-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="IpRBQmrIO9h-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr><tr class="greyRow"><td class="tdCrit">2.5.2.1.2 The forum reviewing clinical risk strategy has clear terms of reference which details the interdisciplinary membership / responsibilities / lines of accountability and strategy to manage clinical risks</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="ZJSmv32fqUf-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="ZJSmv32fqUf-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.5.2.2 Recommendations for preventing recurrences of adverse events are implemented and monitored</div><div><table><tbody><tr><td class="tdCrit">2.5.2.2.1 Minutes of the forum reviewing adverse events (from within the last quarter) indicates that adverse events are regularly discussed / analysed and acti</td><td class="tdType bold">DOC<br /><br />V</td><td class="tdScore" colspan="3"><input id="pKkP5CsZrV3-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="pKkP5CsZrV3-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.5.2.3 Staff members are constantly aware of risks in the environment</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">2.5.2.3.1 The annual in-service training plan includes training on how to carry out safety checks and prevent accidents in the environment</td><td class="tdType bold">DOC<br /><br />D</td><td class="tdScore" colspan="3"><input id="DAmbW79R28A-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="DAmbW79R28A-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.5.2.4 The rate of adverse events for the establishment is in line with acceptable benchmarks</div><div><table><tbody><tr><td class="tdCrit">2.5.2.4.1 There is evidence that adverse events for the health establishment are monitored against relevant targets including falls / pressure sores / injuries </td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="JeCIBVEWk6h-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="JeCIBVEWk6h-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.6.1.1 An infection prevention and control policy is available which outlines the health establishments approach to the management of healthcare associated infections</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">2.6.1.1.1 CHECKLIST - A policy regarding infection control in the health establishment/unit covers all aspects of infection prevention and control</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="W22cERBWIZB-gSfwnIupmqe-val" style="text-align:center" value="" title=""/></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.6.1.2 A healthcare professional with appropriate qualifications or experience oversees infection control in the health establishment</div><div><table><tbody><tr><td class="tdCrit">2.6.1.2.1 There is a qualified and or experienced healthcare professional with designated responsibilities for infection control in the health establishment</td><td class="tdType bold">DOC<br /><br />V</td><td class="tdScore" colspan="3"><input id="EnRYhmObAlH-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="EnRYhmObAlH-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.6.1.3 A formal surveillance and reporting systems is in place</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">2.6.1.3.1 The health establishment has a system for monitoring health acquired infections</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="ltHbyHK61NU-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="ltHbyHK61NU-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 3 Clinical Support Services: 3.1.3.3 Schedule 5 and 6 medicines are controlled and distributed in accordance with the Medicines and Related Substances Act 101 of 1965 and Good Pharmacy Practice guidelines</div><div><table><tbody><tr><td class="tdCrit">3.1.3.3.1 A standard operating procedure is available which indicates how schedule 5 and 6 medicines are stored / controlled / distributed in accordance with the Medicines and Related Substances Act 101 of 1965</td><td class="tdType bold">DOC<br /><br />V</td><td class="tdScore" colspan="3"><input id="iB2iAQNrVen-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="iB2iAQNrVen-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 3 Clinical Support Services: 3.1.4.1 There is a functional Pharmacy and Therapeutics committee in the health establishment (hospital / CHC) or in the district (PHC clinics) that ensures quality use of medicines</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">3.1.4.1.1 A document is available which details the membership and terms of reference of the multidisciplinary Pharmacy and Therapeutics committee (PTC) to optimise quality use of medicine in the health establishment</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="ej4S6YUW4PI-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="ej4S6YUW4PI-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 3 Clinical Support Services: 3.1.5.1 There is a clear system for the management of adverse drug reactions</div><div><table><tbody><tr><td class="tdCrit">3.1.5.1.2 The minutes of the forum which deals with adverse drug reactions demonstrates that actions have been taken to report / analyse and take appropriate action regarding adverse drug reactions</td><td class="tdType bold">DOC<br /><br />V</td><td class="tdScore" colspan="3"><input id="dbRRN6i1AD1-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="dbRRN6i1AD1-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 3 Clinical Support Services: 3.3.1.1 Blood and blood products are available to support the level of care offered in the health establishment</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">3.3.1.1.2 All adverse blood reactions are documented and reported to the forum dealing with adverse events on a monthly basis</td><td class="tdType bold">DOC<br /><br />V</td><td class="tdScore" colspan="3"><input id="Cocv9pnpzq4-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="Cocv9pnpzq4-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 3 Clinical Support Services: 3.6.1.1 Policies and procedures guide all aspects of storage / removal / transportation of bodies</div><div><table><tbody><tr><td class="tdCrit">3.6.1.1.1 There is a policy for control of storage / removal and transportation of corpses</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="psRMkKZvHVO-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="psRMkKZvHVO-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 4 Public Health: 4.1.2.2 Health establishment staff provide direct support and services through outreach to facilities / organisations / patients in their catchment area</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">4.1.2.2.1 There is a structured outreach programme providing services and supporting the community</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="ux2lqnurq5W-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="ux2lqnurq5W-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 4 Public Health: 4.2.2.1 The health establishment supports and/or participates in relevant community health promotion initiatives according to the health calendar and local needs</div><div><table><tbody><tr><td class="tdCrit">4.2.2.1.2 The establishment has evidence indicating that it has participated in health promotion activities with the last 12 months</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="ca9s0DRwxI8-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="ca9s0DRwxI8-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 4 Public Health: 4.3.1.1 Inter-sectoral plans for responding to possible health emergencies and disease outbreak are annually reviewed and updated</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">4.3.1.1.1 An intersectoral plan for management of possible health emergencies and disease outbreaks is available and has been updated in the last 12 months</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="IfhP1vPnc4w-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="IfhP1vPnc4w-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 4 Public Health: 4.3.1.2 The health establishment can demonstrate its capacity to respond promptly and effectively to disease outbreaks</div><div><table><tbody><tr><td class="tdCrit">4.3.1.2.1 CHECKLIST - Staff members in management are aware of the disease outbreak plans and of their roles in this plan (eg for a cholera / diarrheal / influenza outbreak)</td><td class="tdType bold"> SI<br /><br />E</td><td class="tdScore" colspan="3"><input id="yaR4mNmAh5N-gSfwnIupmqe-val" style="text-align:center" value="" title=""/></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 4 Public Health: 4.3.1.3 The health establishment has an annually updated disaster management plan ( including health emergencies)</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">4.3.1.3.1 An annually updated disaster management plan is available and displayed at strategic points</td><td class="tdType bold">OBS<br /><br />E</td><td class="tdScore" colspan="3"><input id="DSIHjOT4PUE-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="DSIHjOT4PUE-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.3.1.2 Procedures ensure that expenditure meets defined service needs for staff and other inputs</div><div><table><tbody><tr><td class="tdCrit">6.3.1.2.3 There is proof that monthly financial statements are reviewed by the health establishment manager and management team</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="AK80t5znAXz-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="AK80t5znAXz-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.6.1.3 Contingency plans for system failure or other challenges are available and known to staff and managers</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">6.6.1.3.1 Management staff indicate that they are aware of a contingency plan in the event of mechanical failure of IT systems which will allow operations to continue in the health establishment</td><td class="tdType bold"> SI<br /><br />E</td><td class="tdScore" colspan="3"><input id="iBYRtWrCVZp-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="iBYRtWrCVZp-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 6 Operational Management: 6.6.2.2 Managerial / clinical / administrative information is used to support decision-making and planning</div><div><table><tbody><tr><td class="tdCrit">6.6.2.2.1 Statistics on occupancy rates / utilisation rates and patient profiles per service area and staffing ratios are available for every quarter of the financial year</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="llrlHiHG314-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="llrlHiHG314-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 7 Facilities and Infrastructure: 7.2.3.2 A functional back-up system ensures communication in the event of telephone system failure The back-up system is always functional</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">7.2.3.2.2 Cell phone numbers of strategic staff are available at the switchboard and/or in the Management offices</td><td class="tdType bold">OBS<br /><br />E</td><td class="tdScore" colspan="3"><input id="OzHn85ilVAD-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="OzHn85ilVAD-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 7 Facilities and Infrastructure: 7.2.4.1 The health establishment has a system for alerting occupants in the event of an emergency</div><div><table><tbody><tr><td class="tdCrit">7.2.4.1.1 There is a functional alerting system in the establishment that sounds throughout staffed areas</td><td class="tdType bold">OBS<br /><br />E</td><td class="tdScore" colspan="3"><input id="av6YgZcTUpe-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="av6YgZcTUpe-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div><div class="domain bold">Domain 7 Facilities and Infrastructure: 7.3.1.7 Emergency plan is available and indicates that patient well-being is at all times protected</div><div><table><tbody><tr class="greyRow"><td class="tdCrit">7.3.1.7.1 There are quarterly emergency drills</td><td class="tdType bold">DOC<br /><br />E</td><td class="tdScore" colspan="3"><input id="AZrB8uNfR8b-gSfwnIupmqe-val" style="text-align:center" value="" title=""/><img class="commentlink" id="AZrB8uNfR8b-gSfwnIupmqe-comment"></td><td class="tdNote"></td></tr></tbody></table></div>
+<script type='text/javascript'>
+
+var calcFld1 = ['QboWcCMWaag-myNhFcjhT6g-val','QboWcCMWaag-hPpBaWTkygE-val','QboWcCMWaag-MOFvuGLjSQs-val','aVick9kBF0s-myNhFcjhT6g-val','aVick9kBF0s-hPpBaWTkygE-val','aVick9kBF0s-MOFvuGLjSQs-val','We5hsbpqARA-myNhFcjhT6g-val','We5hsbpqARA-hPpBaWTkygE-val','We5hsbpqARA-MOFvuGLjSQs-val','uJJHwVg06ur-myNhFcjhT6g-val','uJJHwVg06ur-hPpBaWTkygE-val','uJJHwVg06ur-MOFvuGLjSQs-val','Aq8e70dTi3h-myNhFcjhT6g-val','Aq8e70dTi3h-hPpBaWTkygE-val','Aq8e70dTi3h-MOFvuGLjSQs-val','iTYFWsfd5H4-myNhFcjhT6g-val','iTYFWsfd5H4-hPpBaWTkygE-val','iTYFWsfd5H4-MOFvuGLjSQs-val','g3aNblgkPZ7-myNhFcjhT6g-val','g3aNblgkPZ7-hPpBaWTkygE-val','g3aNblgkPZ7-MOFvuGLjSQs-val','rzXSTAOffON-myNhFcjhT6g-val','rzXSTAOffON-hPpBaWTkygE-val','rzXSTAOffON-MOFvuGLjSQs-val','sZS2QJMqr0p-myNhFcjhT6g-val','sZS2QJMqr0p-hPpBaWTkygE-val','sZS2QJMqr0p-MOFvuGLjSQs-val','eY7FRI3a6OW-myNhFcjhT6g-val','eY7FRI3a6OW-hPpBaWTkygE-val','eY7FRI3a6OW-MOFvuGLjSQs-val']; //zwr3Qlfi1xp-gSfwnIupmqe-val
+
+addRadioClick(calcFld1, "zwr3Qlfi1xp-gSfwnIupmqe-val");
+
+setNoValues("#zwr3Qlfi1xp-gSfwnIupmqe-button", calcFld1, "zwr3Qlfi1xp-gSfwnIupmqe-val");
+
+function setNoValues(buttonId,arr, fld){
+
+    $(buttonId).click(function(){       
+
+    this.innerHTML = "Clear N/A marking";
+
+    for (var i = 0; i < arr.length; i++) {
+        var id = arr[i];
+        //var commentVal = id.replace("val", "comment");
+
+        var de = id.split( '-' )[0]; 
+        var coc = id.split( '-' )[1];  
+        
+        
+        //$( "#" + commentVal ).val('#{10} Not applicable');
+        var comSave = new CommentSaver(de, coc, '#{10} Not applicable');
+        comSave.save();
+        
+        $( "#" + id ).prop("checked", "No Value");
+        saveVal( de, coc, id );
+
+         upCalc(fld, id);
+    };
+
+ });
+}
+
+function addRadioClick(checkListArray, calcFld) {
+    for (var i = 0; i < checkListArray.length; i++) {
+        
+        var str = checkListArray[i];
+        var commentlink = str.replace("val", "comment");
+
+        var radios = document.getElementsByName(checkListArray[i]);
+        for ( var j = 0; j < radios.length; j++) {
+            radios[j].onclick = function() {
+                
+                /*
+                if (this.checked) {
+   
+                    if ( this.value == 'false' ) {   
+                        document.getElementById(commentlink).click(); 
+                    }// if value
+                } // if radios checked
+                */
+                upCalc(calcFld, checkListArray);
+            
+
+        } // onclick function
+    } // for
+    } //for    
+}
+
+function upCalc(calculatedFld, arrayList) {
+
+    var id = calculatedFld;
+    var buttonId = calculatedFld.replace("val", "button"); 
+    var de = id.split( '-' )[0]; 
+    var coc = id.split( '-' )[1];  
+    
+    var yes = parseInt( 0 ); 
+    var count = parseInt( 0 );
+
+for (var i = 0; i < arrayList.length; i++) {
+
+    var radios = document.getElementsByName(arrayList[i]);
+
+    for ( var j = 0; j < radios.length; j++) {
+        if (radios[j].checked) {
+
+        value = radios[j].value;
+        console.log(value);
+        if ( value ) { 
+            if ( value == 'true' || value == 'false' ) { 
+                count++;
+            } 
+            if ( value == 'true'  ) { 
+                yes++; 
+            } 
+        }// if value
+    } // if radios checked
+    } // for radios   
+} // for fld array 
+
+    if ( count > 0 ) { 
+        var average = parseInt( yes ) / parseInt( count ); 
+        var val = Math.round( average * 100 ) / 100; 
+        
+        $( "#" + calculatedFld ).val( val );
+        saveVal( de, coc, id );
+        document.getElementById(buttonId).innerHTML='Mark as N/A';  
+    } else {
+        $( "#" + calculatedFld ).val( null );
+        saveVal( de, coc, id );
+    } // if count
+} //function
+
+function triggerComments(radios, commentlink) {
+
+    for ( var j = 0; j < radios.length; j++) {
+
+        if (radios[j].checked) {
+
+        value = radios[j].value;
+   
+        if ( value == 'false' ) {   
+            document.getElementById(commentlink).click(); 
+        }// if value
+    } // if radios checked
+    } // for radios   
+
+} //function
+
+</script>
+<style type="text/css">.domain {font-family:sans-serif;font-weight:bold;font-size:12px;padding: 20px 0;width:900px;} #contentDiv table {border-collapse:collapse;font-family:sans-serif;font-size:12px;page-break-inside:avoid;} #contentDiv table td {border: 1px solid #ccc;padding:8px;} .tdCrit {width:420px;height:35px;padding-right:20px;} .tdType {width:70px;} .tdScore {width:211px;} .tdScoreCheck {width:59px;} .tdNote {width:290px;} .formHeader {position:relative;padding: 25px 0 20px 0;} .formTitle {font-family:sans-serif;position:absolute;font-size:28px;margin-left:35px;top:75px;} .sectionHeader {margin-top:25px;} .sectionHeader table td {font-family:sans-serif;font-weight:bold;font-size:13px;background-color:#bedef4;} .facilityInput {font-family:sans-serif;font-weight:bold;position:relative;display:inline-block;height:28px;width:450px;border:1px solid #ccc;margin-right:20px;} .periodInput {position:relative;display:inline-block;height:28px;width:281px;border:1px solid #ccc;} .facilityLabel {font-family:sans-serif;position:relative;top:6px;display:inline-block;height:28px;font-size:16px;padding-right:15px;} .noteDiv {font-family:sans-serif;font-style:italic;font-size:11px;margin-top:20px;} .greyRow {background-color:#eee;} .commentCodes {margin:28px 0;border-collapse:collapse;}
+.commentlink
+{
+  padding-left: 15px;
+  padding-bottom: 10px;
+  width: 15px;
+  height: 15px;
+}
+.chkButton
+{
+ padding-left: 15px;  
+}
+</style>
+<style media="screen" type="text/css">
+    .inputDiv {
+        display: none;
+    }
+
+</style>
+<style media="print" type="text/css">
+    .inputDiv {
+        display: block;
+        position: relative;
+    }
+
+</style>
+<div class="formHeader"><img src="../dhis-web-commons/flags/south_africa_department_of_health.png"><span class="formTitle bold">Assessment Questionnaire </span></div>
+<div class="inputDiv"><span class="facilityLabel">Facility: </span><span class="facilityInput">&nbsp;</span><span class="facilityLabel">Period: </span><span class="periodInput">&nbsp;</span></div>
+<div class="sectionHeader bold">
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">MX14 Clinical Management Group</td>
+                <td class="tdType">Type</td>
+                <td class="tdScore">Score</td>
+                <td class="tdNote">Notes</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 1 Patients Rights: 1.1.1.1 Patients are treated courteously with empathy by health establishment personnel in the context of zero tolerance for abuse</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">1.1.1.1.3 Recent records describe action that has been taken in the event of an incident of staff abuse (actual or alleged) on a patient</td>
+                <td class="tdType bold">DOC<br><br>X</td>
+                <td class="tdScore" colspan="3"><input id="ps5nNZGCatK-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="ps5nNZGCatK-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 1 Patients Rights: 1.1.2.1 Patient satisfaction surveys are conducted and analysed annually</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">1.1.2.1.1 A report of the annual patient satisfaction survey indicates that a survey was done in the last 12 months</td>
+                <td class="tdType bold">DOC<br><br>E</td>
+                <td class="tdScore" colspan="3"><input id="qV4uNqYiBg2-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="qV4uNqYiBg2-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 1 Patients Rights: 1.1.2.2 The facility implements quality improvement initiatives based on the findings of the various patient satisfaction surveys</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">1.1.2.2.1 Minutes of the forum which considers patient satisfaction surveys (from within the last 12 months) shows that results are regularly discussed/analysed and actions are taken to address concerns</td>
+                <td class="tdType bold">DOC<br><br>D</td>
+                <td class="tdScore" colspan="3"><input id="S8YM1SPUNwm-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="S8YM1SPUNwm-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">1.1.2.2.2 The patient satisfaction survey results show that there has been improvement over time in the results</td>
+                <td class="tdType bold">DOC<br><br>E</td>
+                <td class="tdScore" colspan="3"><input id="JQlxMD2F3n0-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="JQlxMD2F3n0-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 1 Patients Rights: 1.1.3.1 The cleanliness and hygiene of the facility contributes to patient satisfaction</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">1.1.3.1.1 Patient satisfaction survey results show that patients are satisfied with cleanliness of health establishment</td>
+                <td class="tdType bold">DOC<br><br>E</td>
+                <td class="tdScore" colspan="3"><input id="rpNFNFBRNr8-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="rpNFNFBRNr8-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 1 Patients Rights: 1.2.1.2 The correct procedure is followed to obtain informed consent</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">1.2.1.2.1 There are up to date written policies or guidelines relating to informed consent</td>
+                <td class="tdType bold">DOC<br><br>E</td>
+                <td class="tdScore" colspan="3"><input id="Crpo5QyoP7z-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="Crpo5QyoP7z-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 1 Patients Rights: 1.2.1.4 Where research projects are being conducted / ethical research guidelines which respect the rights of patients are followed</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">1.2.1.4.1 There are up to date written policies or guidelines relating to informed consent including consent for HIV and clinical trials</td>
+                <td class="tdType bold">DOC<br><br>D</td>
+                <td class="tdScore" colspan="3"><input id="hhhPtYpu2Pb-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="hhhPtYpu2Pb-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 1 Patients Rights: 1.4.1.1 An effective health care referral policy and system exists for the district which takes into consideration the continuity of care / emergency care management / infrastructure / resources required</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">1.4.1.1.1 CHECKLIST - There is an up to date patient referral policy and protocol available in the health establishment/unit which includes all critical aspects</td>
+                <td class="tdType bold">DOC<br><br>V</td>
+                <td class="tdScore" colspan="3"><input id="rkXffVeKrwK-gSfwnIupmqe-val" style="text-align:center" value="" title=""></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 1 Patients Rights: 1.6.1.3 The Health establishment`s closures and ambulance diversions are managed so as to reduce impact on patient care and ambulance services</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">1.6.1.3.1 A written policy is available regarding health establishment closures and ambulance diversions</td>
+                <td class="tdType bold">DOC<br><br>E</td>
+                <td class="tdScore" colspan="3"><input id="rl7E8HHTRm3-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="rl7E8HHTRm3-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 1 Patients Rights: 1.6.1.4 The emergency services of the health establishment produce positive quality outcomes for all patients</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">1.6.1.4.1 There is a procedure governing the handover of patients from EMS to hospital staff</td>
+                <td class="tdType bold">DOC<br><br>V</td>
+                <td class="tdScore" colspan="3"><input id="iTa6usVgl2F-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="iTa6usVgl2F-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.1.1.2 There is evidence that the provision of care contributes to positive health outcomes</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">2.1.1.2.1 There is evidence that the health establishment participates in monthly maternal/ (and) perinatal morbidity and mortality meetings</td>
+                <td class="tdType bold">DOC<br><br>V</td>
+                <td class="tdScore" colspan="3"><input id="Z1Pn7n3hsPg-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="Z1Pn7n3hsPg-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.2.1.1 The establishments has the most up to date guidelines for the implementation of its strategic priority programmes or health initiatives available</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">2.2.1.1.1 CHECKLIST - The most up to date guidelines on the national strategic priority programmes or health initiatives are available</td>
+                <td class="tdType bold">DOC<br><br>E</td>
+                <td class="tdScore" colspan="3"><input id="BWba2a1Fz0v-gSfwnIupmqe-val" style="text-align:center" value="" title=""></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.2.1.2 There is evidence that the establishment ensures that the priority programmes or health initiatives are implemented according to the guidelines provided</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">2.2.1.2.1 CHECKLIST - The establishment conducts clinical audits of each priority programme/health initiative Review the clinical audit reports - checklist provided If no clinical audits conducted review 3 patient files per priority program</td>
+                <td class="tdType bold">DOC<br><br>V</td>
+                <td class="tdScore" colspan="3"><input id="YcJgjIdBrdP-gSfwnIupmqe-val" style="text-align:center" value="" title=""></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.2.1.3 A mechanism is in place to collate and analyze data to ensure that priority programmes / health initiative outcomes are monitored regularly and actions are undertaken to address short comings</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">2.2.1.3.1 CHECKLIST - Evidence is available that health outcomes of the priority programmes or health initiatives are monitored against the relevant targets</td>
+                <td class="tdType bold">DOC<br><br>E</td>
+                <td class="tdScore" colspan="3"><input id="L7kIBzZ5mCx-gSfwnIupmqe-val" style="text-align:center" value="" title=""></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">2.2.1.3.2 The report on health initiatives or programmes shows that quality improvement plans have been implemented in order to address shortcomings and improve outcomes</td>
+                <td class="tdType bold">DOC<br><br>V</td>
+                <td class="tdScore" colspan="3"><input id="J6WMtqJukI4-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="J6WMtqJukI4-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.3.1.3 Healthcare professionals take the lead in the establishment and functioning of an appropriate quality committee in the health establishment</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">2.3.1.3.1 Minutes of the relevant forum reviewing quality (from within the last quarter) reflect that healthcare professionals / nurses / pharmacists and doctors / participate as active members and/or chair the forum</td>
+                <td class="tdType bold">DOC<br><br>E</td>
+                <td class="tdScore" colspan="3"><input id="qPBfQ73tugq-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="qPBfQ73tugq-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.3.1.4 The outcomes of relevant quality committee reviews are used by health professionals to identify areas of concern and improve patient care</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">2.3.1.4.1 A recent quality improvement plan/programme within the last 6 months shows that healthcare professionals / nurses / pharmacists and doctors / are responsible for implementing relevant improvements to patient care</td>
+                <td class="tdType bold">DOC<br><br>E</td>
+                <td class="tdScore" colspan="3"><input id="tcOGoPhZegS-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="tcOGoPhZegS-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.4.1.1 A clinical risk policy and protocol is available which highlights the establishments approach to the management of clinical risk</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">2.4.1.1.1 There is an up to date clinical risk policy and protocol which highlights the establishments approach to the management of clinical risk</td>
+                <td class="tdType bold">DOC<br><br>E</td>
+                <td class="tdScore" colspan="3"><input id="uHPoUGG1aKl-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="uHPoUGG1aKl-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.4.1.2 A formal structure exists within the establishment to monitor all aspects of clinical risk and ensure implementation of control measures</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">2.4.1.2.1 Terms of reference of a forum reviewing clinical risk is available which details the interdisciplinary membership / responsibilities / accountability / strategy to manage clinical risks</td>
+                <td class="tdType bold">DOC<br><br>E</td>
+                <td class="tdScore" colspan="3"><input id="h61lJaqSAnS-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="h61lJaqSAnS-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">2.4.1.2.2 Clinical risk assessments are conducted in each service/department of the establishment according to relevant policy and/or guidelines</td>
+                <td class="tdType bold">DOC<br><br>E</td>
+                <td class="tdScore" colspan="3"><input id="DcODmroEr9W-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="DcODmroEr9W-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">2.4.1.2.4 There is evidence that health establishments monitor morbidity and mortality statistics regularly and the information is used to develop improvement plans</td>
+                <td class="tdType bold">DOC<br><br>V</td>
+                <td class="tdScore" colspan="3"><input id="hqJ6K5n9jRz-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="hqJ6K5n9jRz-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.4.2.1 Procedures are available detailing the care to be rendered to patients with special needs including terminally ill / 72 hour observation patients / patients with reduced mobility / the frail or aged</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">2.4.2.1.1 The establishment has a procedure for the care of the terminally ill which addresses the needs of the patients and their family</td>
+                <td class="tdType bold">DOC<br><br>V</td>
+                <td class="tdScore" colspan="3"><input id="k1aW8KKofGC-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="k1aW8KKofGC-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">2.4.2.1.2 The establishment has a procedure for the management of patients detained for 72 hour observations</td>
+                <td class="tdType bold">DOC<br><br>V</td>
+                <td class="tdScore" colspan="3"><input id="dy4ag6sJnyG-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="dy4ag6sJnyG-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">2.4.2.1.3 The establishment has a procedure for conducting and acting on risk assessments of frail and aged patients</td>
+                <td class="tdType bold">DOC<br><br>V</td>
+                <td class="tdScore" colspan="3"><input id="ZHTVsmL6lk5-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="ZHTVsmL6lk5-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">2.4.2.1.4 The establishment has a procedure for conducting and acting on risk assessments of patients with reduced mobility</td>
+                <td class="tdType bold">DOC<br><br>V</td>
+                <td class="tdScore" colspan="3"><input id="h2TWw5lApwE-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="h2TWw5lApwE-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.4.3.3 The safety of patients who require resuscitation is assured</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">2.4.3.3.1 CHECKLIST - The establishment has a formal policy for handling emergency resuscitations</td>
+                <td class="tdType bold">DOC<br><br>X</td>
+                <td class="tdScore"><input id="zwr3Qlfi1xp-gSfwnIupmqe-val" style="text-align:center" value="" title="" data-calculated="2.4.3.3.1" disabled="disabled"></td>
+                <td class="tdScore" colspan="2"><button type="button" class="chkButton" id="zwr3Qlfi1xp-gSfwnIupmqe-button">Mark as N/A</button></td><td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">2.4.3.3.1.1 The procedure for calling out the resuscitation team is described</td>
+                <td class="tdType bold">CHECKLIST<br><br>X</td>
+                <td class="tdScoreCheck"><input id="QboWcCMWaag-myNhFcjhT6g-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"><img class="commentlink" id="QboWcCMWaag-myNhFcjhT6g-comment"></td>
+                <td class="tdScoreCheck"><input id="QboWcCMWaag-hPpBaWTkygE-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"><img class="commentlink" id="QboWcCMWaag-hPpBaWTkygE-comment"></td>
+                <td class="tdScoreCheck"><input id="QboWcCMWaag-MOFvuGLjSQs-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"><img class="commentlink" id="QboWcCMWaag-MOFvuGLjSQs-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">2.4.3.3.1.2 The composition of the resuscitation team is described</td>
+                <td class="tdType bold">CHECKLIST<br><br>X</td>
+                <td class="tdScoreCheck"><input id="aVick9kBF0s-myNhFcjhT6g-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"><img class="commentlink" id="aVick9kBF0s-myNhFcjhT6g-comment"></td>
+                <td class="tdScoreCheck"><input id="aVick9kBF0s-hPpBaWTkygE-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"><img class="commentlink" id="aVick9kBF0s-hPpBaWTkygE-comment"></td>
+                <td class="tdScoreCheck"><input id="aVick9kBF0s-MOFvuGLjSQs-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"><img class="commentlink" id="aVick9kBF0s-MOFvuGLjSQs-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">2.4.3.3.1.3 The expertise of the team members in the resuscitation team is detailed</td>
+                <td class="tdType bold">CHECKLIST<br><br>X</td>
+                <td class="tdScoreCheck"><input id="We5hsbpqARA-myNhFcjhT6g-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"><img class="commentlink" id="We5hsbpqARA-myNhFcjhT6g-comment"></td>
+                <td class="tdScoreCheck"><input id="We5hsbpqARA-hPpBaWTkygE-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"><img class="commentlink" id="We5hsbpqARA-hPpBaWTkygE-comment"></td>
+                <td class="tdScoreCheck"><input id="We5hsbpqARA-MOFvuGLjSQs-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"><img class="commentlink" id="We5hsbpqARA-MOFvuGLjSQs-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">2.4.3.3.1.4 Documentation for the resuscitation is provided and described</td>
+                <td class="tdType bold">CHECKLIST<br><br>X</td>
+                <td class="tdScoreCheck"><input id="uJJHwVg06ur-myNhFcjhT6g-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"><img class="commentlink" id="uJJHwVg06ur-myNhFcjhT6g-comment"></td>
+                <td class="tdScoreCheck"><input id="uJJHwVg06ur-hPpBaWTkygE-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"><img class="commentlink" id="uJJHwVg06ur-hPpBaWTkygE-comment"></td>
+                <td class="tdScoreCheck"><input id="uJJHwVg06ur-MOFvuGLjSQs-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"><img class="commentlink" id="uJJHwVg06ur-MOFvuGLjSQs-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">2.4.3.3.1.5 Debriefing sessions are part of each resuscitation protocol</td>
+                <td class="tdType bold">CHECKLIST<br><br>X</td>
+                <td class="tdScoreCheck"><input id="Aq8e70dTi3h-myNhFcjhT6g-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"><img class="commentlink" id="Aq8e70dTi3h-myNhFcjhT6g-comment"></td>
+                <td class="tdScoreCheck"><input id="Aq8e70dTi3h-hPpBaWTkygE-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"><img class="commentlink" id="Aq8e70dTi3h-hPpBaWTkygE-comment"></td>
+                <td class="tdScoreCheck"><input id="Aq8e70dTi3h-MOFvuGLjSQs-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"><img class="commentlink" id="Aq8e70dTi3h-MOFvuGLjSQs-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">2.4.3.3.1.6 A referral protocol is described</td>
+                <td class="tdType bold">CHECKLIST<br><br>X</td>
+                <td class="tdScoreCheck"><input id="iTYFWsfd5H4-myNhFcjhT6g-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"><img class="commentlink" id="iTYFWsfd5H4-myNhFcjhT6g-comment"></td>
+                <td class="tdScoreCheck"><input id="iTYFWsfd5H4-hPpBaWTkygE-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"><img class="commentlink" id="iTYFWsfd5H4-hPpBaWTkygE-comment"></td>
+                <td class="tdScoreCheck"><input id="iTYFWsfd5H4-MOFvuGLjSQs-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"><img class="commentlink" id="iTYFWsfd5H4-MOFvuGLjSQs-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">2.4.3.3.1.7 All documentation and resuscitation processes undergo an audit and QIP process</td>
+                <td class="tdType bold">CHECKLIST<br><br>X</td>
+                <td class="tdScoreCheck"><input id="g3aNblgkPZ7-myNhFcjhT6g-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"><img class="commentlink" id="g3aNblgkPZ7-myNhFcjhT6g-comment"></td>
+                <td class="tdScoreCheck"><input id="g3aNblgkPZ7-hPpBaWTkygE-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"><img class="commentlink" id="g3aNblgkPZ7-hPpBaWTkygE-comment"></td>
+                <td class="tdScoreCheck"><input id="g3aNblgkPZ7-MOFvuGLjSQs-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"><img class="commentlink" id="g3aNblgkPZ7-MOFvuGLjSQs-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">2.4.3.3.1.8 Morbidity and Mortality reviews are part of the protocol and the process of these reviews is described</td>
+                <td class="tdType bold">CHECKLIST<br><br>X</td>
+                <td class="tdScoreCheck"><input id="rzXSTAOffON-myNhFcjhT6g-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"><img class="commentlink" id="rzXSTAOffON-myNhFcjhT6g-comment"></td>
+                <td class="tdScoreCheck"><input id="rzXSTAOffON-hPpBaWTkygE-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"><img class="commentlink" id="rzXSTAOffON-hPpBaWTkygE-comment"></td>
+                <td class="tdScoreCheck"><input id="rzXSTAOffON-MOFvuGLjSQs-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"><img class="commentlink" id="rzXSTAOffON-MOFvuGLjSQs-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">2.4.3.3.1.9 How to handle next of kin or visitors during a resuscitation is described</td>
+                <td class="tdType bold">CHECKLIST<br><br>X</td>
+                <td class="tdScoreCheck"><input id="sZS2QJMqr0p-myNhFcjhT6g-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"><img class="commentlink" id="sZS2QJMqr0p-myNhFcjhT6g-comment"></td>
+                <td class="tdScoreCheck"><input id="sZS2QJMqr0p-hPpBaWTkygE-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"><img class="commentlink" id="sZS2QJMqr0p-hPpBaWTkygE-comment"></td>
+                <td class="tdScoreCheck"><input id="sZS2QJMqr0p-MOFvuGLjSQs-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"><img class="commentlink" id="sZS2QJMqr0p-MOFvuGLjSQs-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">2.4.3.3.1.10 Responsibility of management during a resuscitation is described</td>
+                <td class="tdType bold">CHECKLIST<br><br>X</td>
+                <td class="tdScoreCheck"><input id="eY7FRI3a6OW-myNhFcjhT6g-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"><img class="commentlink" id="eY7FRI3a6OW-myNhFcjhT6g-comment"></td>
+                <td class="tdScoreCheck"><input id="eY7FRI3a6OW-hPpBaWTkygE-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"><img class="commentlink" id="eY7FRI3a6OW-hPpBaWTkygE-comment"></td>
+                <td class="tdScoreCheck"><input id="eY7FRI3a6OW-MOFvuGLjSQs-val" style="text-align:center" value="" title="" data-checklist="2.4.3.3.1" onchange="upCalc()"><img class="commentlink" id="eY7FRI3a6OW-MOFvuGLjSQs-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr>
+                <td class="tdCrit">2.4.3.3.2 An appropriate forum to review all resuscitations is formally constituted with terms of reference and appropriate multidisciplinary membership</td>
+                <td class="tdType bold">DOC<br><br>E</td>
+                <td class="tdScore" colspan="3"><input id="xnlpVcIwQY5-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="xnlpVcIwQY5-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.4.3.4 The safety of patients receiving medication is assured</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">2.4.3.4.1 A protocol regarding the safe administration of medicines to patients is available including a protocol for the safe administration of medicines to children</td>
+                <td class="tdType bold">DOC<br><br>V</td>
+                <td class="tdScore" colspan="3"><input id="bDohihzi6cS-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="bDohihzi6cS-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.5.1.1 An adverse events policy and procedure is available which highlights the establishments approach to the management of adverse events</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">2.5.1.1.1 There is an up to date adverse events policy available which details the establishments/units approach to the management of clinical risk including risk identification methods</td>
+                <td class="tdType bold">DOC<br><br>E</td>
+                <td class="tdScore" colspan="3"><input id="yXHMfMMgseZ-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="yXHMfMMgseZ-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.5.1.2 The health establishment actively encourages a culture of effective reporting of adverse events</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">2.5.1.2.2 There is a procedure in place to support staff affected by adverse events</td>
+                <td class="tdType bold">DOC<br><br>E</td>
+                <td class="tdScore" colspan="3"><input id="k5wW7NJIuKZ-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="k5wW7NJIuKZ-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.5.2.1 A formal structure exists within the establishment to monitor all aspects of adverse events and ensure implementation of control measures</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">2.5.2.1.1 Establishment has a reporting system for adverse events indicating severity / categorisation and actions taken</td>
+                <td class="tdType bold">DOC<br><br>E</td>
+                <td class="tdScore" colspan="3"><input id="IpRBQmrIO9h-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="IpRBQmrIO9h-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+            <tr class="greyRow">
+                <td class="tdCrit">2.5.2.1.2 The forum reviewing clinical risk strategy has clear terms of reference which details the interdisciplinary membership / responsibilities / lines of accountability and strategy to manage clinical risks</td>
+                <td class="tdType bold">DOC<br><br>E</td>
+                <td class="tdScore" colspan="3"><input id="ZJSmv32fqUf-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="ZJSmv32fqUf-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.5.2.2 Recommendations for preventing recurrences of adverse events are implemented and monitored</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">2.5.2.2.1 Minutes of the forum reviewing adverse events (from within the last quarter) indicates that adverse events are regularly discussed / analysed and acti</td>
+                <td class="tdType bold">DOC<br><br>V</td>
+                <td class="tdScore" colspan="3"><input id="pKkP5CsZrV3-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="pKkP5CsZrV3-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.5.2.3 Staff members are constantly aware of risks in the environment</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">2.5.2.3.1 The annual in-service training plan includes training on how to carry out safety checks and prevent accidents in the environment</td>
+                <td class="tdType bold">DOC<br><br>D</td>
+                <td class="tdScore" colspan="3"><input id="DAmbW79R28A-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="DAmbW79R28A-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.5.2.4 The rate of adverse events for the establishment is in line with acceptable benchmarks</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">2.5.2.4.1 There is evidence that adverse events for the health establishment are monitored against relevant targets including falls / pressure sores / injuries </td>
+                <td class="tdType bold">DOC<br><br>E</td>
+                <td class="tdScore" colspan="3"><input id="JeCIBVEWk6h-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="JeCIBVEWk6h-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.6.1.1 An infection prevention and control policy is available which outlines the health establishments approach to the management of healthcare associated infections</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">2.6.1.1.1 CHECKLIST - A policy regarding infection control in the health establishment/unit covers all aspects of infection prevention and control</td>
+                <td class="tdType bold">DOC<br><br>E</td>
+                <td class="tdScore" colspan="3"><input id="W22cERBWIZB-gSfwnIupmqe-val" style="text-align:center" value="" title=""></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.6.1.2 A healthcare professional with appropriate qualifications or experience oversees infection control in the health establishment</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">2.6.1.2.1 There is a qualified and or experienced healthcare professional with designated responsibilities for infection control in the health establishment</td>
+                <td class="tdType bold">DOC<br><br>V</td>
+                <td class="tdScore" colspan="3"><input id="EnRYhmObAlH-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="EnRYhmObAlH-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.6.1.3 A formal surveillance and reporting systems is in place</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">2.6.1.3.1 The health establishment has a system for monitoring health acquired infections</td>
+                <td class="tdType bold">DOC<br><br>E</td>
+                <td class="tdScore" colspan="3"><input id="ltHbyHK61NU-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="ltHbyHK61NU-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 3 Clinical Support Services: 3.1.3.3 Schedule 5 and 6 medicines are controlled and distributed in accordance with the Medicines and Related Substances Act 101 of 1965 and Good Pharmacy Practice guidelines</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">3.1.3.3.1 A standard operating procedure is available which indicates how schedule 5 and 6 medicines are stored / controlled / distributed in accordance with the Medicines and Related Substances Act 101 of 1965</td>
+                <td class="tdType bold">DOC<br><br>V</td>
+                <td class="tdScore" colspan="3"><input id="iB2iAQNrVen-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="iB2iAQNrVen-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 3 Clinical Support Services: 3.1.4.1 There is a functional Pharmacy and Therapeutics committee in the health establishment (hospital / CHC) or in the district (PHC clinics) that ensures quality use of medicines</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">3.1.4.1.1 A document is available which details the membership and terms of reference of the multidisciplinary Pharmacy and Therapeutics committee (PTC) to optimise quality use of medicine in the health establishment</td>
+                <td class="tdType bold">DOC<br><br>E</td>
+                <td class="tdScore" colspan="3"><input id="ej4S6YUW4PI-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="ej4S6YUW4PI-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 3 Clinical Support Services: 3.1.5.1 There is a clear system for the management of adverse drug reactions</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">3.1.5.1.2 The minutes of the forum which deals with adverse drug reactions demonstrates that actions have been taken to report / analyse and take appropriate action regarding adverse drug reactions</td>
+                <td class="tdType bold">DOC<br><br>V</td>
+                <td class="tdScore" colspan="3"><input id="dbRRN6i1AD1-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="dbRRN6i1AD1-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 3 Clinical Support Services: 3.3.1.1 Blood and blood products are available to support the level of care offered in the health establishment</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">3.3.1.1.2 All adverse blood reactions are documented and reported to the forum dealing with adverse events on a monthly basis</td>
+                <td class="tdType bold">DOC<br><br>V</td>
+                <td class="tdScore" colspan="3"><input id="Cocv9pnpzq4-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="Cocv9pnpzq4-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 3 Clinical Support Services: 3.6.1.1 Policies and procedures guide all aspects of storage / removal / transportation of bodies</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">3.6.1.1.1 There is a policy for control of storage / removal and transportation of corpses</td>
+                <td class="tdType bold">DOC<br><br>E</td>
+                <td class="tdScore" colspan="3"><input id="psRMkKZvHVO-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="psRMkKZvHVO-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 4 Public Health: 4.1.2.2 Health establishment staff provide direct support and services through outreach to facilities / organisations / patients in their catchment area</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">4.1.2.2.1 There is a structured outreach programme providing services and supporting the community</td>
+                <td class="tdType bold">DOC<br><br>E</td>
+                <td class="tdScore" colspan="3"><input id="ux2lqnurq5W-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="ux2lqnurq5W-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 4 Public Health: 4.2.2.1 The health establishment supports and/or participates in relevant community health promotion initiatives according to the health calendar and local needs</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">4.2.2.1.2 The establishment has evidence indicating that it has participated in health promotion activities with the last 12 months</td>
+                <td class="tdType bold">DOC<br><br>E</td>
+                <td class="tdScore" colspan="3"><input id="ca9s0DRwxI8-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="ca9s0DRwxI8-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 4 Public Health: 4.3.1.1 Inter-sectoral plans for responding to possible health emergencies and disease outbreak are annually reviewed and updated</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">4.3.1.1.1 An intersectoral plan for management of possible health emergencies and disease outbreaks is available and has been updated in the last 12 months</td>
+                <td class="tdType bold">DOC<br><br>E</td>
+                <td class="tdScore" colspan="3"><input id="IfhP1vPnc4w-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="IfhP1vPnc4w-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 4 Public Health: 4.3.1.2 The health establishment can demonstrate its capacity to respond promptly and effectively to disease outbreaks</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">4.3.1.2.1 CHECKLIST - Staff members in management are aware of the disease outbreak plans and of their roles in this plan (eg for a cholera / diarrheal / influenza outbreak)</td>
+                <td class="tdType bold"> SI<br><br>E</td>
+                <td class="tdScore" colspan="3"><input id="yaR4mNmAh5N-gSfwnIupmqe-val" style="text-align:center" value="" title=""></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 4 Public Health: 4.3.1.3 The health establishment has an annually updated disaster management plan ( including health emergencies)</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">4.3.1.3.1 An annually updated disaster management plan is available and displayed at strategic points</td>
+                <td class="tdType bold">OBS<br><br>E</td>
+                <td class="tdScore" colspan="3"><input id="DSIHjOT4PUE-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="DSIHjOT4PUE-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.3.1.2 Procedures ensure that expenditure meets defined service needs for staff and other inputs</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">6.3.1.2.3 There is proof that monthly financial statements are reviewed by the health establishment manager and management team</td>
+                <td class="tdType bold">DOC<br><br>E</td>
+                <td class="tdScore" colspan="3"><input id="AK80t5znAXz-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="AK80t5znAXz-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.6.1.3 Contingency plans for system failure or other challenges are available and known to staff and managers</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">6.6.1.3.1 Management staff indicate that they are aware of a contingency plan in the event of mechanical failure of IT systems which will allow operations to continue in the health establishment</td>
+                <td class="tdType bold"> SI<br><br>E</td>
+                <td class="tdScore" colspan="3"><input id="iBYRtWrCVZp-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="iBYRtWrCVZp-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 6 Operational Management: 6.6.2.2 Managerial / clinical / administrative information is used to support decision-making and planning</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">6.6.2.2.1 Statistics on occupancy rates / utilisation rates and patient profiles per service area and staffing ratios are available for every quarter of the financial year</td>
+                <td class="tdType bold">DOC<br><br>E</td>
+                <td class="tdScore" colspan="3"><input id="llrlHiHG314-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="llrlHiHG314-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 7 Facilities and Infrastructure: 7.2.3.2 A functional back-up system ensures communication in the event of telephone system failure The back-up system is always functional</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">7.2.3.2.2 Cell phone numbers of strategic staff are available at the switchboard and/or in the Management offices</td>
+                <td class="tdType bold">OBS<br><br>E</td>
+                <td class="tdScore" colspan="3"><input id="OzHn85ilVAD-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="OzHn85ilVAD-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 7 Facilities and Infrastructure: 7.2.4.1 The health establishment has a system for alerting occupants in the event of an emergency</div>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td class="tdCrit">7.2.4.1.1 There is a functional alerting system in the establishment that sounds throughout staffed areas</td>
+                <td class="tdType bold">OBS<br><br>E</td>
+                <td class="tdScore" colspan="3"><input id="av6YgZcTUpe-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="av6YgZcTUpe-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="domain bold">Domain 7 Facilities and Infrastructure: 7.3.1.7 Emergency plan is available and indicates that patient well-being is at all times protected</div>
+<div>
+    <table>
+        <tbody>
+            <tr class="greyRow">
+                <td class="tdCrit">7.3.1.7.1 There are quarterly emergency drills</td>
+                <td class="tdType bold">DOC<br><br>E</td>
+                <td class="tdScore" colspan="3"><input id="AZrB8uNfR8b-gSfwnIupmqe-val" style="text-align:center" value="" title=""><img class="commentlink" id="AZrB8uNfR8b-gSfwnIupmqe-comment"></td>
+                <td class="tdNote"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
