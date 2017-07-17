@@ -1,1156 +1,1308 @@
-<p>
-	<script type='text/javascript'> function upCalc() { $( "[data-calculated]" ).each( function( index, element ) { var id = $( this ).attr( 'id' ); var de = id.split( '-' )[0]; var coc = id.split( '-' )[1]; var code = $( this ).attr( 'data-calculated' ); var yes = parseInt( 0 ); var count = parseInt( 0 ); $( "[data-checklist='" + code + "']" ).each( function( index, element ) { var value = $( this ).val(); if ( value ) { if ( value == 'true' || value == 'false' ) { count++; } if ( value == 'true'  ) { yes++; } } } ); if ( count > 0 ) { var average = parseInt( yes ) / parseInt( count ); var val = Math.round( average * 100 ) / 100; $( this ).val( val ); saveVal( de, coc, id ); } } ); } </script>
-	<style type="text/css">
-.domain {font-family:sans-serif;font-weight:bold;font-size:12px;padding: 20px 0;width:900px;} #contentDiv table {border-collapse:collapse;font-family:sans-serif;font-size:12px;page-break-inside:avoid;} #contentDiv table td {border: 1px solid #ccc;padding:8px;} .tdCrit {width:420px;height:35px;padding-right:20px;} .tdType {width:70px;} .tdScore {width:211px;} .tdScoreCheck {width:59px;} .tdNote {width:290px;} .formHeader {position:relative;padding: 25px 0 20px 0;} .formTitle {font-family:sans-serif;position:absolute;font-size:28px;margin-left:35px;top:75px;} .sectionHeader {margin-top:25px;} .sectionHeader table td {font-family:sans-serif;font-weight:bold;font-size:13px;background-color:#bedef4;} .facilityInput {font-family:sans-serif;font-weight:bold;position:relative;display:inline-block;height:28px;width:450px;border:1px solid #ccc;margin-right:20px;} .periodInput {position:relative;display:inline-block;height:28px;width:281px;border:1px solid #ccc;} .facilityLabel {font-family:sans-serif;position:relative;top:6px;display:inline-block;height:28px;font-size:16px;padding-right:15px;} .noteDiv {font-family:sans-serif;font-style:italic;font-size:11px;margin-top:20px;} .greyRow {background-color:#eee;} .commentCodes {margin:28px 0;border-collapse:collapse;}	</style>
-	<style media="screen" type="text/css">
-.inputDiv {display:none;}	</style>
-	<style media="print" type="text/css">
-.inputDiv {display:block;position:relative;}	</style>
-</p>
-<div class="formHeader">
-	<img src="../dhis-web-commons/flags/south_africa_department_of_health.png" /><span class="formTitle bold">Assessment Questionnaire </span></div>
-<div class="inputDiv">
-	<span class="facilityLabel">Facility: </span><span class="facilityInput">&nbsp;</span><span class="facilityLabel">Period: </span><span class="periodInput">&nbsp;</span></div>
-<div class="sectionHeader bold">
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					ICU General</td>
-				<td class="tdType">
-					Type</td>
-				<td class="tdScore">
-					Score</td>
-				<td class="tdNote">
-					Notes</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 1 Patients Rights: 1.2.2.3 A notice indicating the operating times of the health establishment`s services and visiting hours is prominently displayed at the entrance of the health establishment</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					1.2.2.3.2 A signage board at the entrance of the unit indicates the visiting/service hours specifically for the unit</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					D</td>
-				<td class="tdScore" colspan="3">
-					<input id="v0HxiyGNJPw-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="v0HxiyGNJPw-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.4.3.3 The safety of patients who require resuscitation is assured</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					2.4.3.3.4 CHECKLIST - Emergency trolleys are standardised/ appropriately stocked and regularly checked (Part 1)</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					X</td>
-				<td class="tdScore" colspan="3">
-					<input data-calculated="2.4.3.3.4" disabled="disabled" id="OKSrZz66hK4-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					2.4.3.3.4.1 AED machine/ECG monitor/defibrillator, pads, paddles and electrodes</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="v306zYbwM25-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="v306zYbwM25-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="v306zYbwM25-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="v306zYbwM25-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="v306zYbwM25-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="v306zYbwM25-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					2.4.3.3.4.2 Laryngoscope with blades (Adult + Paeds)</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="SUhoGbntjbB-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="SUhoGbntjbB-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="SUhoGbntjbB-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="SUhoGbntjbB-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="SUhoGbntjbB-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="SUhoGbntjbB-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					2.4.3.3.4.3 Tracheal tubes adult as appropriate</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="mJ5io2sODWb-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="mJ5io2sODWb-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="mJ5io2sODWb-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="mJ5io2sODWb-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="mJ5io2sODWb-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="mJ5io2sODWb-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					2.4.3.3.4.4 Tracheal tubes paediatric as appropriate</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="WcLwcYx64UI-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="WcLwcYx64UI-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="WcLwcYx64UI-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="WcLwcYx64UI-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="WcLwcYx64UI-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="WcLwcYx64UI-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					2.4.3.3.4.5 Manual resuscitator device/ambu bag (Adult)</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="Bx270tJc8NI-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="Bx270tJc8NI-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="Bx270tJc8NI-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="Bx270tJc8NI-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="Bx270tJc8NI-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="Bx270tJc8NI-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					2.4.3.3.4.6 Manual resuscitator device/ambu bag (Paeds)</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="nbIpMyU7Ixb-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="nbIpMyU7Ixb-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="nbIpMyU7Ixb-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="nbIpMyU7Ixb-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="nbIpMyU7Ixb-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="nbIpMyU7Ixb-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					2.4.3.3.4.7 Oxygen masks and/or nasal cannula (Adult + Paeds)</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="kgndzGwcKjJ-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="kgndzGwcKjJ-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="kgndzGwcKjJ-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="kgndzGwcKjJ-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="kgndzGwcKjJ-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="kgndzGwcKjJ-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					2.4.3.3.4.8 Emergency medications according to local protocol is available and have not expired</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="h574Y1wEVAU-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="h574Y1wEVAU-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="h574Y1wEVAU-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="h574Y1wEVAU-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="h574Y1wEVAU-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="h574Y1wEVAU-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					2.4.3.3.4.9 AED and emergency trolley are checked on a daily basis</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="pn82OoIJlfd-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="pn82OoIJlfd-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="pn82OoIJlfd-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="pn82OoIJlfd-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="pn82OoIJlfd-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="pn82OoIJlfd-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					2.4.3.3.4.10 Universal precautions equipment (gloves, eye protection, face mask)</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="s8KS59r6Gwv-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="s8KS59r6Gwv-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="s8KS59r6Gwv-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="s8KS59r6Gwv-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="s8KS59r6Gwv-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="s8KS59r6Gwv-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					2.4.3.3.4.11 Blood pressure cuffs</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="c1bUa6PO3SE-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="c1bUa6PO3SE-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="c1bUa6PO3SE-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="c1bUa6PO3SE-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="c1bUa6PO3SE-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="c1bUa6PO3SE-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					2.4.3.3.4.12 Glucometer</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="I06SSXmpYnj-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="I06SSXmpYnj-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="I06SSXmpYnj-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="I06SSXmpYnj-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="I06SSXmpYnj-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="I06SSXmpYnj-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					2.4.3.3.4.13 Thermometer</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="C3CckFwjGCk-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="C3CckFwjGCk-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="C3CckFwjGCk-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="C3CckFwjGCk-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="C3CckFwjGCk-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="C3CckFwjGCk-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					2.4.3.3.4.14 Pulse oximeter</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="fcx44Hg5CwC-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="fcx44Hg5CwC-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="fcx44Hg5CwC-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="fcx44Hg5CwC-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="fcx44Hg5CwC-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="fcx44Hg5CwC-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					2.4.3.3.4.15 Scissors</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="NiPwqWu9Qiw-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="NiPwqWu9Qiw-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="NiPwqWu9Qiw-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="NiPwqWu9Qiw-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="NiPwqWu9Qiw-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="NiPwqWu9Qiw-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					2.4.3.3.4.16 Oropharyngeal airways/Nasopharyngeal airways</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="k6Rjy4IpZ3I-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="k6Rjy4IpZ3I-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="k6Rjy4IpZ3I-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="k6Rjy4IpZ3I-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="k6Rjy4IpZ3I-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="k6Rjy4IpZ3I-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					2.4.3.3.4.17 Laryngeal mask airways</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="juOeZhNvX8L-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="juOeZhNvX8L-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="juOeZhNvX8L-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="juOeZhNvX8L-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="juOeZhNvX8L-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="juOeZhNvX8L-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					2.4.3.3.4.18 Xylocaine spray</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="C5vLAcvRGBB-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="C5vLAcvRGBB-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="C5vLAcvRGBB-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="C5vLAcvRGBB-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="C5vLAcvRGBB-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="C5vLAcvRGBB-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					2.4.3.3.4.19 KY jelly/Remicaine gel</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="zys6MJMvMWR-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="zys6MJMvMWR-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="zys6MJMvMWR-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="zys6MJMvMWR-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="zys6MJMvMWR-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="zys6MJMvMWR-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					2.4.3.3.4.20 ET tubes - plaster/tie to secure (Adult + Paeds)</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="TlogQ1JXwaA-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="TlogQ1JXwaA-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="TlogQ1JXwaA-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="TlogQ1JXwaA-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="TlogQ1JXwaA-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="TlogQ1JXwaA-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					2.4.3.3.4.21 Magill forceps (Adult + Paeds)</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="pIjSmDg11f7-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="pIjSmDg11f7-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="pIjSmDg11f7-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="pIjSmDg11f7-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="pIjSmDg11f7-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="pIjSmDg11f7-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					2.4.3.3.4.22 Nasogastric tubes (Adult + Paeds)</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="ce5py02Slkn-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="ce5py02Slkn-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="ce5py02Slkn-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="ce5py02Slkn-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="ce5py02Slkn-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="ce5py02Slkn-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					2.4.3.3.4.23 Oxygen supply - Ready for use (portable and fixed unit)</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="fNJgKIO6KCE-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="fNJgKIO6KCE-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="fNJgKIO6KCE-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="fNJgKIO6KCE-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="fNJgKIO6KCE-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="fNJgKIO6KCE-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					2.4.3.3.4.24 Suction catheters (6F to 14F)</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="uDwAM7qQdqv-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="uDwAM7qQdqv-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="uDwAM7qQdqv-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="uDwAM7qQdqv-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="uDwAM7qQdqv-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="uDwAM7qQdqv-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					2.4.3.3.4.25 Suction devices (portable or fixed power)</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="VbwRkuUOLeQ-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="VbwRkuUOLeQ-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="VbwRkuUOLeQ-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="VbwRkuUOLeQ-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.4.3.3.4" id="VbwRkuUOLeQ-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="VbwRkuUOLeQ-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					2.4.3.3.5 CHECKLIST - Emergency trolleys are standardised/ appropriately stocked and regularly checked (Part 2)</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					X</td>
-				<td class="tdScore" colspan="3">
-					<input id="aV4ybmmvKCk-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.4.3.5 Blood and blood products are administered so as to protect patients from harm</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					2.4.3.5.2 Emergency blood is available in a designated appropriate area on-site or within a maximum of 30 minutes</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					X</td>
-				<td class="tdScore" colspan="3">
-					<input id="Y6dITemFVMD-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="Y6dITemFVMD-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.4.3.6 Appropriate safety measures are implemented for acutely ill patients in intensive care units</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					2.4.3.6.2 The health establishment has procedures in place to reduce the risk of hospital associated infections in intensive care patients such as Best Care Always campaign/barrier nursing and isolation</td>
-				<td class="tdType bold">
-					DOC<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="KkYYXxMGu2M-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="KkYYXxMGu2M-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.6.3.2 Sharps are safely managed and disposed of</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					2.6.3.2.1 CHECKLIST - A random selection of clinical areas show that sharps are safely managed and disposed of</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					V</td>
-				<td class="tdScore" colspan="3">
-					<input id="pYOxcGtrV7c-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.6.3.4 Appropriate facilities for patients with hazardous infections reduces the risk of transmission of infections</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					2.6.3.4.1 A policy and procedure is available that details how infectious patients are isolated / which isolation facilities are used and the manner in which these facilities and equipment are disinfected</td>
-				<td class="tdType bold">
-					DOC<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="qbcyQdUTKDL-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="qbcyQdUTKDL-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					2.6.3.4.2 CHECKLIST - Appropriate isolation accommodation exists for patients with communicable diseases - as a minimum for hazardous diarrheal diseases</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					X</td>
-				<td class="tdScore" colspan="3">
-					<input data-calculated="2.6.3.4.2" disabled="disabled" id="ZI9fItbWMaz-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					2.6.3.4.2.1 Patients with communicable diseases (e.g. airborne, droplet, contact) should be accommodated in single rooms or placed in separate consulting room temporarily at clinic/PHC</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.2" id="WkQe5J9eN4l-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="WkQe5J9eN4l-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.2" id="WkQe5J9eN4l-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="WkQe5J9eN4l-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.2" id="WkQe5J9eN4l-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="WkQe5J9eN4l-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					2.6.3.4.2.2 The room should have a hand wash basin and a bin with fitting lid</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.2" id="D4UPdeeLdVT-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="D4UPdeeLdVT-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.2" id="D4UPdeeLdVT-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="D4UPdeeLdVT-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.2" id="D4UPdeeLdVT-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="D4UPdeeLdVT-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					2.6.3.4.2.3 The room should have separate toilet facilities/dedicated commode/urinal/bedpan</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.2" id="axSq6BHTX6w-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="axSq6BHTX6w-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.2" id="axSq6BHTX6w-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="axSq6BHTX6w-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.2" id="axSq6BHTX6w-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="axSq6BHTX6w-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					2.6.3.4.2.4 Staff are required to wear surgical masks/respirators</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.2" id="JhOTSf403LF-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="JhOTSf403LF-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.2" id="JhOTSf403LF-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="JhOTSf403LF-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.2" id="JhOTSf403LF-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="JhOTSf403LF-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					2.6.3.4.2.5 Staff are required to wear disposable gloves</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.2" id="b4DN50Ea3cE-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="b4DN50Ea3cE-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.2" id="b4DN50Ea3cE-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="b4DN50Ea3cE-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.2" id="b4DN50Ea3cE-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="b4DN50Ea3cE-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					2.6.3.4.2.6 Staff should wear either a plastic disposable apron or a disposable gown</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.2" id="qc5nb5RWKQn-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="qc5nb5RWKQn-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.2" id="qc5nb5RWKQn-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="qc5nb5RWKQn-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.2" id="qc5nb5RWKQn-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="qc5nb5RWKQn-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					2.6.3.4.2.7 Hand rub/disinfectant should be available for staff prior to entering the room</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.2" id="jYWdXH9MatX-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="jYWdXH9MatX-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.2" id="jYWdXH9MatX-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="jYWdXH9MatX-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.2" id="jYWdXH9MatX-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="jYWdXH9MatX-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					2.6.3.4.2.8 People traffic in and out of the room must be controlled (e.g. limited visitors and staff members)</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.2" id="YO1GlC3mMb5-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="YO1GlC3mMb5-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.2" id="YO1GlC3mMb5-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="YO1GlC3mMb5-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.2" id="YO1GlC3mMb5-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="YO1GlC3mMb5-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					2.6.3.4.2.9 The room should have appropriate measures for disposal and destruction of infected linen and disinfection of equipment</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.2" id="ODMvPXQJTlZ-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="ODMvPXQJTlZ-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.2" id="ODMvPXQJTlZ-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="ODMvPXQJTlZ-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.2" id="ODMvPXQJTlZ-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="ODMvPXQJTlZ-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					2.6.3.4.3 CHECKLIST - Appropriate isolation accommodation exists for patients with communicable diseases - as a minimum for viral haemorrhagic disease</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					X</td>
-				<td class="tdScore" colspan="3">
-					<input data-calculated="2.6.3.4.3" disabled="disabled" id="QHqbUQAIsYY-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					2.6.3.4.3.1 Patients with FED should be accommodated in separate single rooms or temporarily inside room at clinic/PHC (strict isolation measures)</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.3" id="rXZUx4C14Da-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="rXZUx4C14Da-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.3" id="rXZUx4C14Da-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="rXZUx4C14Da-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.3" id="rXZUx4C14Da-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="rXZUx4C14Da-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					2.6.3.4.3.2 All staff attending to patient to use FED pack (with disposable gloves, gown, goggles, masks, permeable suit etc) to ensure non-direct contact with patient body</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.3" id="ZjXanu2CYt2-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="ZjXanu2CYt2-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.3" id="ZjXanu2CYt2-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="ZjXanu2CYt2-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.3" id="ZjXanu2CYt2-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="ZjXanu2CYt2-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					2.6.3.4.3.3 The room should have a hand wash basin and disposable bin/plastic for waste</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.3" id="obfj7eYHzz1-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="obfj7eYHzz1-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.3" id="obfj7eYHzz1-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="obfj7eYHzz1-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.3" id="obfj7eYHzz1-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="obfj7eYHzz1-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					2.6.3.4.3.4 The room should have separate toilet facilities/dedicated commode/urinal/bedpan (B)</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.3" id="H3o7Q0VoOEh-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="H3o7Q0VoOEh-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.3" id="H3o7Q0VoOEh-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="H3o7Q0VoOEh-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.3" id="H3o7Q0VoOEh-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="H3o7Q0VoOEh-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					2.6.3.4.3.5 Hand rub/disinfectant should be available for staff prior to entering the room (B)</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.3" id="cJXzIWWXiB5-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="cJXzIWWXiB5-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.3" id="cJXzIWWXiB5-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="cJXzIWWXiB5-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.3" id="cJXzIWWXiB5-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="cJXzIWWXiB5-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					2.6.3.4.3.6 Proper transportation of specimens labelled with bio-hazardous tape</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.3" id="YxQEndWEwGW-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="YxQEndWEwGW-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.3" id="YxQEndWEwGW-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="YxQEndWEwGW-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.3" id="YxQEndWEwGW-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="YxQEndWEwGW-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					2.6.3.4.3.7 Signage to inform community/family about no visitors - highly infectious principle</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.3" id="bnaXOwWH86T-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="bnaXOwWH86T-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.3" id="bnaXOwWH86T-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="bnaXOwWH86T-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.3" id="bnaXOwWH86T-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="bnaXOwWH86T-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					2.6.3.4.3.8 The room should have appropriate measures for disposal and destruction of infected linen and disinfection of equipment (B)</td>
-				<td class="tdType bold">
-					CHECKLIST<br />
-					<br />
-					X</td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.3" id="axHnWzpDofX-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="axHnWzpDofX-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.3" id="axHnWzpDofX-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="axHnWzpDofX-gSfwnIupmqe-comment" /></td>
-				<td class="tdScoreCheck">
-					<input data-checklist="2.6.3.4.3" id="axHnWzpDofX-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value="" /><img class="commentlink" id="axHnWzpDofX-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.6.3.5 Equipment used by infected patients is correctly and safely disinfected</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					2.6.3.5.1 Staff are able to explain how they carry out terminal cleaning or disinfection of the room and equipment used by infected patients</td>
-				<td class="tdType bold">
-					SI<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="e4IsvZtVCbW-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="e4IsvZtVCbW-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 3 Clinical Support Services: 3.1.2.6 Health care professionals have access to medicines required urgently by patients after hours</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					3.1.2.6.1 A standard operating procedure is available which indicates how health care professionals can access medicines when the pharmacy / medicine room is closed</td>
-				<td class="tdType bold">
-					DOC<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="MMEYmRMranU-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="MMEYmRMranU-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					3.1.2.6.2 The name and contact details of the pharmacist on duty for the provision of services after hours is available</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="M7Ud07KxbC1-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="M7Ud07KxbC1-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					3.1.2.6.3 There is a locked emergency cupboard for the supply of medicines</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="IvOKEt6CZdr-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="IvOKEt6CZdr-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 3 Clinical Support Services: 3.1.3.1 Medicines are stored and managed in compliance with the Pharmacy Act 53 of 1974 / Medicines and Related Substances Act 101 of 1965 / relevant rules and regulations</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					3.1.3.1.3 CHECKLIST - Medicines in the wards or consultation rooms are appropriately stored and managed</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="W3sQ4njO6Je-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 3 Clinical Support Services: 3.1.3.3 Schedule 5 and 6 medicines are controlled and distributed in accordance with the Medicines and Related Substances Act 101 of 1965 and Good Pharmacy Practice guidelines</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					3.1.3.3.2 The entries in the schedule 5 and/or 6 drug register are complete and correct and include date/ name of person who administered it and balance in stock</td>
-				<td class="tdType bold">
-					DOC<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="TdywWHLnxv9-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="TdywWHLnxv9-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 3 Clinical Support Services: 3.2.1.1 Laboratory services are available and results are provided within agreed-upon turnaround times</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					3.2.1.1.3 CHECKLIST - Laboratory results requested are available in the patients file</td>
-				<td class="tdType bold">
-					DOC<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="FNSSevtYfbU-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 3 Clinical Support Services: 3.3.1.1 Blood and blood products are available to support the level of care offered in the health establishment</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					3.3.1.1.1 CHECKLIST - 2 staff members interviewed are able to explain how the cold chain is ensured for all blood products including ordering / storage / issuing</td>
-				<td class="tdType bold">
-					SI<br />
-					<br />
-					V</td>
-				<td class="tdScore" colspan="3">
-					<input id="wC1Y4lMDktH-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 3 Clinical Support Services: 3.4.1.1 Medical equipment available meets minimum requirements for appropriate level of care</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					3.4.1.1.8 CHECKLIST - Functional essential equipment as listed in the checklist is available in the ICU neonatal or paediatrics</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="fo51Avd2W8l-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 3 Clinical Support Services: 3.4.3.1 Critical devices are maintained to manufacturer requirements</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					3.4.3.1.1 CHECKLIST - Up to date records within the last 12 months show that the equipment listed has been maintained according to a planned schedule or manufacturers instruction</td>
-				<td class="tdType bold">
-					DOC<br />
-					<br />
-					V</td>
-				<td class="tdScore" colspan="3">
-					<input id="yrVjAH7CcsJ-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 6 Operational Management: 6.7.1.1 Patient records are complete and contain all legal and statutory requirements</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					6.7.1.1.1 CHECKLIST - Patient files comply with legal and statutory requirements for record keeping</td>
-				<td class="tdType bold">
-					PRA<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="J0VTsf5eBzy-gSfwnIupmqe-val" style="text-align:center" title="" value="" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 7 Facilities and Infrastructure: 7.1.2.2 The layout of the health establishment is planned or adapted to ensure that there is space to meet service and patient needs</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					7.1.2.2.3 Lighting and ventilation is observed to be adequate</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="s38Iw3f0nSc-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="s38Iw3f0nSc-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 7 Facilities and Infrastructure: 7.1.3.1 Waiting areas are appropriately located and adequate for the number of patients using them</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					7.1.3.1.1 The waiting area has adequate space / heating / number of chairs to accommodate all patients in the area</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					E</td>
-				<td class="tdScore" colspan="3">
-					<input id="f0QIXXapWL2-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="f0QIXXapWL2-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 7 Facilities and Infrastructure: 7.2.1.2 Routine and emergency electrical power services are functional and meet the needs of the health establishment</div>
-<div>
-	<table>
-		<tbody>
-			<tr>
-				<td class="tdCrit">
-					7.2.1.2.2 There is documented evidence that in the event of a power disruption emergency power supply is available in critical clinical areas such as ICU / Theatre / Accident and Emergency</td>
-				<td class="tdType bold">
-					DOC<br />
-					<br />
-					X</td>
-				<td class="tdScore" colspan="3">
-					<input id="EkWFwSdMs1T-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="EkWFwSdMs1T-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="domain bold">
-	Domain 7 Facilities and Infrastructure: 7.2.1.7 Routine and emergency medical gas and vacuum systems meet the needs of the health establishment</div>
-<div>
-	<table>
-		<tbody>
-			<tr class="greyRow">
-				<td class="tdCrit">
-					7.2.1.7.11 There is a functional system to supply piped medical gas to all clinical areas</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					X</td>
-				<td class="tdScore" colspan="3">
-					<input id="WofEHlnpRG5-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="WofEHlnpRG5-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td class="tdCrit">
-					7.2.1.7.12 There is a functional system to supply piped suction/vacuum to all clinical areas</td>
-				<td class="tdType bold">
-					OBS<br />
-					<br />
-					X</td>
-				<td class="tdScore" colspan="3">
-					<input id="gqvE4icnO8v-gSfwnIupmqe-val" style="text-align:center" title="" value="" /><img class="commentlink" id="gqvE4icnO8v-gSfwnIupmqe-comment" /></td>
-				<td class="tdNote">
-					&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<p>
-	&nbsp;</p>
+<script type='text/javascript'>
+
+
+var calcFld1 = ['rXZUx4C14Da-myNhFcjhT6g-val','rXZUx4C14Da-hPpBaWTkygE-val','rXZUx4C14Da-MOFvuGLjSQs-val','ZjXanu2CYt2-myNhFcjhT6g-val','ZjXanu2CYt2-hPpBaWTkygE-val','ZjXanu2CYt2-MOFvuGLjSQs-val','obfj7eYHzz1-myNhFcjhT6g-val','obfj7eYHzz1-hPpBaWTkygE-val','obfj7eYHzz1-MOFvuGLjSQs-val','H3o7Q0VoOEh-myNhFcjhT6g-val','H3o7Q0VoOEh-hPpBaWTkygE-val','H3o7Q0VoOEh-MOFvuGLjSQs-val','cJXzIWWXiB5-myNhFcjhT6g-val','cJXzIWWXiB5-hPpBaWTkygE-val','cJXzIWWXiB5-MOFvuGLjSQs-val','YxQEndWEwGW-myNhFcjhT6g-val','YxQEndWEwGW-hPpBaWTkygE-val','YxQEndWEwGW-MOFvuGLjSQs-val','bnaXOwWH86T-myNhFcjhT6g-val','bnaXOwWH86T-hPpBaWTkygE-val','bnaXOwWH86T-MOFvuGLjSQs-val','axHnWzpDofX-myNhFcjhT6g-val','axHnWzpDofX-hPpBaWTkygE-val','axHnWzpDofX-MOFvuGLjSQs-val']; //QHqbUQAIsYY-gSfwnIupmqe-val
+
+var calcFld2 = ['WkQe5J9eN4l-myNhFcjhT6g-val','WkQe5J9eN4l-hPpBaWTkygE-val','WkQe5J9eN4l-MOFvuGLjSQs-val','D4UPdeeLdVT-myNhFcjhT6g-val','D4UPdeeLdVT-hPpBaWTkygE-val','D4UPdeeLdVT-MOFvuGLjSQs-val','axSq6BHTX6w-myNhFcjhT6g-val','axSq6BHTX6w-hPpBaWTkygE-val','axSq6BHTX6w-MOFvuGLjSQs-val','JhOTSf403LF-myNhFcjhT6g-val','JhOTSf403LF-hPpBaWTkygE-val','JhOTSf403LF-MOFvuGLjSQs-val','b4DN50Ea3cE-myNhFcjhT6g-val','b4DN50Ea3cE-hPpBaWTkygE-val','b4DN50Ea3cE-MOFvuGLjSQs-val','qc5nb5RWKQn-myNhFcjhT6g-val','qc5nb5RWKQn-hPpBaWTkygE-val','qc5nb5RWKQn-MOFvuGLjSQs-val','jYWdXH9MatX-myNhFcjhT6g-val','jYWdXH9MatX-hPpBaWTkygE-val','jYWdXH9MatX-MOFvuGLjSQs-val','YO1GlC3mMb5-myNhFcjhT6g-val','YO1GlC3mMb5-hPpBaWTkygE-val','YO1GlC3mMb5-MOFvuGLjSQs-val','ODMvPXQJTlZ-myNhFcjhT6g-val','ODMvPXQJTlZ-hPpBaWTkygE-val','ODMvPXQJTlZ-MOFvuGLjSQs-val']; //ZI9fItbWMaz-gSfwnIupmqe-val
+    
+    var calcFld3 = ['v306zYbwM25-myNhFcjhT6g-val','v306zYbwM25-hPpBaWTkygE-val','v306zYbwM25-MOFvuGLjSQs-val','SUhoGbntjbB-myNhFcjhT6g-val','SUhoGbntjbB-hPpBaWTkygE-val','SUhoGbntjbB-MOFvuGLjSQs-val','mJ5io2sODWb-myNhFcjhT6g-val','mJ5io2sODWb-hPpBaWTkygE-val','mJ5io2sODWb-MOFvuGLjSQs-val','WcLwcYx64UI-myNhFcjhT6g-val','WcLwcYx64UI-hPpBaWTkygE-val','WcLwcYx64UI-MOFvuGLjSQs-val','Bx270tJc8NI-myNhFcjhT6g-val','Bx270tJc8NI-hPpBaWTkygE-val','Bx270tJc8NI-MOFvuGLjSQs-val','nbIpMyU7Ixb-myNhFcjhT6g-val','nbIpMyU7Ixb-hPpBaWTkygE-val','nbIpMyU7Ixb-MOFvuGLjSQs-val','kgndzGwcKjJ-myNhFcjhT6g-val','kgndzGwcKjJ-hPpBaWTkygE-val','kgndzGwcKjJ-MOFvuGLjSQs-val','h574Y1wEVAU-myNhFcjhT6g-val','h574Y1wEVAU-hPpBaWTkygE-val','h574Y1wEVAU-MOFvuGLjSQs-val','pn82OoIJlfd-myNhFcjhT6g-val','pn82OoIJlfd-hPpBaWTkygE-val','pn82OoIJlfd-MOFvuGLjSQs-val','s8KS59r6Gwv-myNhFcjhT6g-val','s8KS59r6Gwv-hPpBaWTkygE-val','s8KS59r6Gwv-MOFvuGLjSQs-val','c1bUa6PO3SE-myNhFcjhT6g-val','c1bUa6PO3SE-hPpBaWTkygE-val','c1bUa6PO3SE-MOFvuGLjSQs-val','I06SSXmpYnj-myNhFcjhT6g-val','I06SSXmpYnj-hPpBaWTkygE-val','I06SSXmpYnj-MOFvuGLjSQs-val','C3CckFwjGCk-myNhFcjhT6g-val','C3CckFwjGCk-hPpBaWTkygE-val','C3CckFwjGCk-MOFvuGLjSQs-val','fcx44Hg5CwC-myNhFcjhT6g-val','fcx44Hg5CwC-hPpBaWTkygE-val','fcx44Hg5CwC-MOFvuGLjSQs-val','NiPwqWu9Qiw-myNhFcjhT6g-val','NiPwqWu9Qiw-hPpBaWTkygE-val','NiPwqWu9Qiw-MOFvuGLjSQs-val','k6Rjy4IpZ3I-myNhFcjhT6g-val','k6Rjy4IpZ3I-hPpBaWTkygE-val','k6Rjy4IpZ3I-MOFvuGLjSQs-val','juOeZhNvX8L-myNhFcjhT6g-val','juOeZhNvX8L-hPpBaWTkygE-val','juOeZhNvX8L-MOFvuGLjSQs-val','C5vLAcvRGBB-myNhFcjhT6g-val','C5vLAcvRGBB-hPpBaWTkygE-val','C5vLAcvRGBB-MOFvuGLjSQs-val','zys6MJMvMWR-myNhFcjhT6g-val','zys6MJMvMWR-hPpBaWTkygE-val','zys6MJMvMWR-MOFvuGLjSQs-val','TlogQ1JXwaA-myNhFcjhT6g-val','TlogQ1JXwaA-hPpBaWTkygE-val','TlogQ1JXwaA-MOFvuGLjSQs-val','pIjSmDg11f7-myNhFcjhT6g-val','pIjSmDg11f7-hPpBaWTkygE-val','pIjSmDg11f7-MOFvuGLjSQs-val','ce5py02Slkn-myNhFcjhT6g-val','ce5py02Slkn-hPpBaWTkygE-val','ce5py02Slkn-MOFvuGLjSQs-val','fNJgKIO6KCE-myNhFcjhT6g-val','fNJgKIO6KCE-hPpBaWTkygE-val','fNJgKIO6KCE-MOFvuGLjSQs-val','uDwAM7qQdqv-myNhFcjhT6g-val','uDwAM7qQdqv-hPpBaWTkygE-val','uDwAM7qQdqv-MOFvuGLjSQs-val','VbwRkuUOLeQ-myNhFcjhT6g-val','VbwRkuUOLeQ-hPpBaWTkygE-val','VbwRkuUOLeQ-MOFvuGLjSQs-val']; //OKSrZz66hK4-gSfwnIupmqe-val
+
+addRadioClick(calcFld1, "QHqbUQAIsYY-gSfwnIupmqe-val");
+addRadioClick(calcFld2, "ZI9fItbWMaz-gSfwnIupmqe-val");
+addRadioClick(calcFld3, "OKSrZz66hK4-gSfwnIupmqe-val");
+
+setNoValues("#QHqbUQAIsYY-gSfwnIupmqe-button", calcFld1, "QHqbUQAIsYY-gSfwnIupmqe-val");
+setNoValues("#ZI9fItbWMaz-gSfwnIupmqe-button", calcFld2, "ZI9fItbWMaz-gSfwnIupmqe-val");
+setNoValues("#OKSrZz66hK4-gSfwnIupmqe-button", calcFld3, "OKSrZz66hK4-gSfwnIupmqe-val");
+
+function setNoValues(buttonId,arr, fld){
+
+    $(buttonId).click(function(){       
+
+    this.innerHTML = "Clear N/A marking";
+
+    for (var i = 0; i < arr.length; i++) {
+        var id = arr[i];
+        //var commentVal = id.replace("val", "comment");
+
+        var de = id.split( '-' )[0]; 
+        var coc = id.split( '-' )[1];  
+        
+        
+        //$( "#" + commentVal ).val('#{10} Not applicable');
+        var comSave = new CommentSaver(de, coc, '#{10} Not applicable');
+        comSave.save();
+        
+        $( "#" + id ).prop("checked", "No Value");
+        saveVal( de, coc, id );
+
+         upCalc(fld, id);
+    };
+
+ });
+}
+
+function addRadioClick(checkListArray, calcFld) {
+    for (var i = 0; i < checkListArray.length; i++) {
+        
+        var str = checkListArray[i];
+        var commentlink = str.replace("val", "comment");
+
+        var radios = document.getElementsByName(checkListArray[i]);
+        for ( var j = 0; j < radios.length; j++) {
+            radios[j].onclick = function() {
+                
+                /*
+                if (this.checked) {
+   
+                    if ( this.value == 'false' ) {   
+                        document.getElementById(commentlink).click(); 
+                    }// if value
+                } // if radios checked
+                */
+                upCalc(calcFld, checkListArray);
+            
+
+        } // onclick function
+    } // for
+    } //for    
+}
+
+function upCalc(calculatedFld, arrayList) {
+
+    var id = calculatedFld;
+    var buttonId = calculatedFld.replace("val", "button"); 
+    var de = id.split( '-' )[0]; 
+    var coc = id.split( '-' )[1];  
+    
+    var yes = parseInt( 0 ); 
+    var count = parseInt( 0 );
+
+for (var i = 0; i < arrayList.length; i++) {
+
+    var radios = document.getElementsByName(arrayList[i]);
+
+    for ( var j = 0; j < radios.length; j++) {
+        if (radios[j].checked) {
+
+        value = radios[j].value;
+        console.log(value);
+        if ( value ) { 
+            if ( value == 'true' || value == 'false' ) { 
+                count++;
+            } 
+            if ( value == 'true'  ) { 
+                yes++; 
+            } 
+        }// if value
+    } // if radios checked
+    } // for radios   
+} // for fld array 
+
+    if ( count > 0 ) { 
+        var average = parseInt( yes ) / parseInt( count ); 
+        var val = Math.round( average * 100 ) / 100; 
+        
+        $( "#" + calculatedFld ).val( val );
+        saveVal( de, coc, id );
+        document.getElementById(buttonId).innerHTML='Mark as N/A';  
+    } else {
+        $( "#" + calculatedFld ).val( null );
+        saveVal( de, coc, id );
+    } // if count
+} //function
+
+function triggerComments(radios, commentlink) {
+
+    for ( var j = 0; j < radios.length; j++) {
+
+        if (radios[j].checked) {
+
+        value = radios[j].value;
+   
+        if ( value == 'false' ) {   
+            document.getElementById(commentlink).click(); 
+        }// if value
+    } // if radios checked
+    } // for radios   
+
+} //function
+
+</script>
+<style type="text/css">.domain {font-family:sans-serif;font-weight:bold;font-size:12px;padding: 20px 0;width:900px;} #contentDiv table {border-collapse:collapse;font-family:sans-serif;font-size:12px;page-break-inside:avoid;} #contentDiv table td {border: 1px solid #ccc;padding:8px;} .tdCrit {width:420px;height:35px;padding-right:20px;} .tdType {width:70px;} .tdScore {width:211px;} .tdScoreCheck {width:59px;} .tdNote {width:290px;} .formHeader {position:relative;padding: 25px 0 20px 0;} .formTitle {font-family:sans-serif;position:absolute;font-size:28px;margin-left:35px;top:75px;} .sectionHeader {margin-top:25px;} .sectionHeader table td {font-family:sans-serif;font-weight:bold;font-size:13px;background-color:#bedef4;} .facilityInput {font-family:sans-serif;font-weight:bold;position:relative;display:inline-block;height:28px;width:450px;border:1px solid #ccc;margin-right:20px;} .periodInput {position:relative;display:inline-block;height:28px;width:281px;border:1px solid #ccc;} .facilityLabel {font-family:sans-serif;position:relative;top:6px;display:inline-block;height:28px;font-size:16px;padding-right:15px;} .noteDiv {font-family:sans-serif;font-style:italic;font-size:11px;margin-top:20px;} .greyRow {background-color:#eee;} .commentCodes {margin:28px 0;border-collapse:collapse;}
+.commentlink
+{
+  padding-left: 15px;
+  padding-bottom: 10px;
+  width: 15px;
+  height: 15px;
+}
+.chkButton
+{
+ padding-left: 15px;  
+}
+</style>
+        <style media="screen" type="text/css">
+            .inputDiv {
+                display: none;
+            }
+
+        </style>
+        <style media="print" type="text/css">
+            .inputDiv {
+                display: block;
+                position: relative;
+            }
+
+        </style>
+    <div class="formHeader">
+        <img src="../dhis-web-commons/flags/south_africa_department_of_health.png"><span class="formTitle bold">Assessment Questionnaire </span></div>
+    <div class="inputDiv">
+        <span class="facilityLabel">Facility: </span><span class="facilityInput">&nbsp;</span><span class="facilityLabel">Period: </span><span class="periodInput">&nbsp;</span></div>
+    <div class="sectionHeader bold">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        ICU General</td>
+                    <td class="tdType">
+                        Type</td>
+                    <td class="tdScore">
+                        Score</td>
+                    <td class="tdNote">
+                        Notes</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 1 Patients Rights: 1.2.2.3 A notice indicating the operating times of the health establishment`s services and visiting hours is prominently displayed at the entrance of the health establishment</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        1.2.2.3.2 A signage board at the entrance of the unit indicates the visiting/service hours specifically for the unit</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> D
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="v0HxiyGNJPw-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="v0HxiyGNJPw-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.4.3.3 The safety of patients who require resuscitation is assured</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        2.4.3.3.4 CHECKLIST - Emergency trolleys are standardised/ appropriately stocked and regularly checked (Part 1)</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> X
+                    </td>
+                    <td class="tdScore">
+                        <input data-calculated="2.4.3.3.4" disabled="disabled" id="OKSrZz66hK4-gSfwnIupmqe-val" style="text-align:center" title="" value=""></td>
+                    <td class="tdScore" colspan="2"><button type="button" class="chkButton" id="OKSrZz66hK4-gSfwnIupmqe-button">Mark as N/A</button></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        2.4.3.3.4.1 AED machine/ECG monitor/defibrillator, pads, paddles and electrodes</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="v306zYbwM25-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="v306zYbwM25-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="v306zYbwM25-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="v306zYbwM25-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="v306zYbwM25-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="v306zYbwM25-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        2.4.3.3.4.2 Laryngoscope with blades (Adult + Paeds)</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="SUhoGbntjbB-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="SUhoGbntjbB-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="SUhoGbntjbB-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="SUhoGbntjbB-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="SUhoGbntjbB-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="SUhoGbntjbB-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        2.4.3.3.4.3 Tracheal tubes adult as appropriate</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="mJ5io2sODWb-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="mJ5io2sODWb-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="mJ5io2sODWb-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="mJ5io2sODWb-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="mJ5io2sODWb-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="mJ5io2sODWb-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        2.4.3.3.4.4 Tracheal tubes paediatric as appropriate</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="WcLwcYx64UI-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="WcLwcYx64UI-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="WcLwcYx64UI-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="WcLwcYx64UI-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="WcLwcYx64UI-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="WcLwcYx64UI-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        2.4.3.3.4.5 Manual resuscitator device/ambu bag (Adult)</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="Bx270tJc8NI-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="Bx270tJc8NI-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="Bx270tJc8NI-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="Bx270tJc8NI-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="Bx270tJc8NI-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="Bx270tJc8NI-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        2.4.3.3.4.6 Manual resuscitator device/ambu bag (Paeds)</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="nbIpMyU7Ixb-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="nbIpMyU7Ixb-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="nbIpMyU7Ixb-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="nbIpMyU7Ixb-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="nbIpMyU7Ixb-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="nbIpMyU7Ixb-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        2.4.3.3.4.7 Oxygen masks and/or nasal cannula (Adult + Paeds)</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="kgndzGwcKjJ-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="kgndzGwcKjJ-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="kgndzGwcKjJ-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="kgndzGwcKjJ-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="kgndzGwcKjJ-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="kgndzGwcKjJ-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        2.4.3.3.4.8 Emergency medications according to local protocol is available and have not expired</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="h574Y1wEVAU-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="h574Y1wEVAU-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="h574Y1wEVAU-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="h574Y1wEVAU-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="h574Y1wEVAU-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="h574Y1wEVAU-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        2.4.3.3.4.9 AED and emergency trolley are checked on a daily basis</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="pn82OoIJlfd-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="pn82OoIJlfd-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="pn82OoIJlfd-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="pn82OoIJlfd-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="pn82OoIJlfd-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="pn82OoIJlfd-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        2.4.3.3.4.10 Universal precautions equipment (gloves, eye protection, face mask)</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="s8KS59r6Gwv-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="s8KS59r6Gwv-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="s8KS59r6Gwv-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="s8KS59r6Gwv-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="s8KS59r6Gwv-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="s8KS59r6Gwv-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        2.4.3.3.4.11 Blood pressure cuffs</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="c1bUa6PO3SE-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="c1bUa6PO3SE-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="c1bUa6PO3SE-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="c1bUa6PO3SE-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="c1bUa6PO3SE-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="c1bUa6PO3SE-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        2.4.3.3.4.12 Glucometer</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="I06SSXmpYnj-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="I06SSXmpYnj-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="I06SSXmpYnj-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="I06SSXmpYnj-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="I06SSXmpYnj-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="I06SSXmpYnj-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        2.4.3.3.4.13 Thermometer</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="C3CckFwjGCk-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="C3CckFwjGCk-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="C3CckFwjGCk-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="C3CckFwjGCk-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="C3CckFwjGCk-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="C3CckFwjGCk-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        2.4.3.3.4.14 Pulse oximeter</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="fcx44Hg5CwC-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="fcx44Hg5CwC-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="fcx44Hg5CwC-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="fcx44Hg5CwC-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="fcx44Hg5CwC-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="fcx44Hg5CwC-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        2.4.3.3.4.15 Scissors</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="NiPwqWu9Qiw-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="NiPwqWu9Qiw-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="NiPwqWu9Qiw-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="NiPwqWu9Qiw-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="NiPwqWu9Qiw-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="NiPwqWu9Qiw-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        2.4.3.3.4.16 Oropharyngeal airways/Nasopharyngeal airways</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="k6Rjy4IpZ3I-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="k6Rjy4IpZ3I-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="k6Rjy4IpZ3I-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="k6Rjy4IpZ3I-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="k6Rjy4IpZ3I-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="k6Rjy4IpZ3I-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        2.4.3.3.4.17 Laryngeal mask airways</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="juOeZhNvX8L-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="juOeZhNvX8L-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="juOeZhNvX8L-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="juOeZhNvX8L-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="juOeZhNvX8L-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="juOeZhNvX8L-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        2.4.3.3.4.18 Xylocaine spray</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="C5vLAcvRGBB-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="C5vLAcvRGBB-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="C5vLAcvRGBB-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="C5vLAcvRGBB-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="C5vLAcvRGBB-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="C5vLAcvRGBB-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        2.4.3.3.4.19 KY jelly/Remicaine gel</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="zys6MJMvMWR-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="zys6MJMvMWR-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="zys6MJMvMWR-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="zys6MJMvMWR-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="zys6MJMvMWR-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="zys6MJMvMWR-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        2.4.3.3.4.20 ET tubes - plaster/tie to secure (Adult + Paeds)</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="TlogQ1JXwaA-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="TlogQ1JXwaA-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="TlogQ1JXwaA-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="TlogQ1JXwaA-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="TlogQ1JXwaA-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="TlogQ1JXwaA-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        2.4.3.3.4.21 Magill forceps (Adult + Paeds)</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="pIjSmDg11f7-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="pIjSmDg11f7-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="pIjSmDg11f7-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="pIjSmDg11f7-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="pIjSmDg11f7-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="pIjSmDg11f7-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        2.4.3.3.4.22 Nasogastric tubes (Adult + Paeds)</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="ce5py02Slkn-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="ce5py02Slkn-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="ce5py02Slkn-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="ce5py02Slkn-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="ce5py02Slkn-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="ce5py02Slkn-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        2.4.3.3.4.23 Oxygen supply - Ready for use (portable and fixed unit)</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="fNJgKIO6KCE-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="fNJgKIO6KCE-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="fNJgKIO6KCE-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="fNJgKIO6KCE-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="fNJgKIO6KCE-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="fNJgKIO6KCE-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        2.4.3.3.4.24 Suction catheters (6F to 14F)</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="uDwAM7qQdqv-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="uDwAM7qQdqv-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="uDwAM7qQdqv-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="uDwAM7qQdqv-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="uDwAM7qQdqv-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="uDwAM7qQdqv-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        2.4.3.3.4.25 Suction devices (portable or fixed power)</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="VbwRkuUOLeQ-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="VbwRkuUOLeQ-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="VbwRkuUOLeQ-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="VbwRkuUOLeQ-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.4.3.3.4" id="VbwRkuUOLeQ-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="VbwRkuUOLeQ-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        2.4.3.3.5 CHECKLIST - Emergency trolleys are standardised/ appropriately stocked and regularly checked (Part 2)</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> X
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="aV4ybmmvKCk-gSfwnIupmqe-val" style="text-align:center" title="" value=""></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.4.3.5 Blood and blood products are administered so as to protect patients from harm</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        2.4.3.5.2 Emergency blood is available in a designated appropriate area on-site or within a maximum of 30 minutes</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> X
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="Y6dITemFVMD-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="Y6dITemFVMD-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.4.3.6 Appropriate safety measures are implemented for acutely ill patients in intensive care units</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        2.4.3.6.2 The health establishment has procedures in place to reduce the risk of hospital associated infections in intensive care patients such as Best Care Always campaign/barrier nursing and isolation</td>
+                    <td class="tdType bold">
+                        DOC<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="KkYYXxMGu2M-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="KkYYXxMGu2M-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.6.3.2 Sharps are safely managed and disposed of</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        2.6.3.2.1 CHECKLIST - A random selection of clinical areas show that sharps are safely managed and disposed of</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> V
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="pYOxcGtrV7c-gSfwnIupmqe-val" style="text-align:center" title="" value=""></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.6.3.4 Appropriate facilities for patients with hazardous infections reduces the risk of transmission of infections</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        2.6.3.4.1 A policy and procedure is available that details how infectious patients are isolated / which isolation facilities are used and the manner in which these facilities and equipment are disinfected</td>
+                    <td class="tdType bold">
+                        DOC<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="qbcyQdUTKDL-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="qbcyQdUTKDL-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        2.6.3.4.2 CHECKLIST - Appropriate isolation accommodation exists for patients with communicable diseases - as a minimum for hazardous diarrheal diseases</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> X
+                    </td>
+                    <td class="tdScore">
+                        <input data-calculated="2.6.3.4.2" disabled="disabled" id="ZI9fItbWMaz-gSfwnIupmqe-val" style="text-align:center" title="" value=""></td>
+                    <td class="tdScore" colspan="2"><button type="button" class="chkButton" id="ZI9fItbWMaz-gSfwnIupmqe-button">Mark as N/A</button></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        2.6.3.4.2.1 Patients with communicable diseases (e.g. airborne, droplet, contact) should be accommodated in single rooms or placed in separate consulting room temporarily at clinic/PHC</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.2" id="WkQe5J9eN4l-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="WkQe5J9eN4l-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.2" id="WkQe5J9eN4l-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="WkQe5J9eN4l-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.2" id="WkQe5J9eN4l-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="WkQe5J9eN4l-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        2.6.3.4.2.2 The room should have a hand wash basin and a bin with fitting lid</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.2" id="D4UPdeeLdVT-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="D4UPdeeLdVT-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.2" id="D4UPdeeLdVT-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="D4UPdeeLdVT-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.2" id="D4UPdeeLdVT-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="D4UPdeeLdVT-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        2.6.3.4.2.3 The room should have separate toilet facilities/dedicated commode/urinal/bedpan</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.2" id="axSq6BHTX6w-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="axSq6BHTX6w-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.2" id="axSq6BHTX6w-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="axSq6BHTX6w-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.2" id="axSq6BHTX6w-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="axSq6BHTX6w-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        2.6.3.4.2.4 Staff are required to wear surgical masks/respirators</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.2" id="JhOTSf403LF-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="JhOTSf403LF-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.2" id="JhOTSf403LF-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="JhOTSf403LF-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.2" id="JhOTSf403LF-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="JhOTSf403LF-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        2.6.3.4.2.5 Staff are required to wear disposable gloves</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.2" id="b4DN50Ea3cE-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="b4DN50Ea3cE-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.2" id="b4DN50Ea3cE-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="b4DN50Ea3cE-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.2" id="b4DN50Ea3cE-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="b4DN50Ea3cE-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        2.6.3.4.2.6 Staff should wear either a plastic disposable apron or a disposable gown</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.2" id="qc5nb5RWKQn-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="qc5nb5RWKQn-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.2" id="qc5nb5RWKQn-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="qc5nb5RWKQn-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.2" id="qc5nb5RWKQn-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="qc5nb5RWKQn-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        2.6.3.4.2.7 Hand rub/disinfectant should be available for staff prior to entering the room</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.2" id="jYWdXH9MatX-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="jYWdXH9MatX-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.2" id="jYWdXH9MatX-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="jYWdXH9MatX-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.2" id="jYWdXH9MatX-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="jYWdXH9MatX-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        2.6.3.4.2.8 People traffic in and out of the room must be controlled (e.g. limited visitors and staff members)</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.2" id="YO1GlC3mMb5-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="YO1GlC3mMb5-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.2" id="YO1GlC3mMb5-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="YO1GlC3mMb5-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.2" id="YO1GlC3mMb5-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="YO1GlC3mMb5-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        2.6.3.4.2.9 The room should have appropriate measures for disposal and destruction of infected linen and disinfection of equipment</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.2" id="ODMvPXQJTlZ-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="ODMvPXQJTlZ-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.2" id="ODMvPXQJTlZ-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="ODMvPXQJTlZ-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.2" id="ODMvPXQJTlZ-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="ODMvPXQJTlZ-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        2.6.3.4.3 CHECKLIST - Appropriate isolation accommodation exists for patients with communicable diseases - as a minimum for viral haemorrhagic disease</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> X
+                    </td>
+                    <td class="tdScore">
+                        <input data-calculated="2.6.3.4.3" disabled="disabled" id="QHqbUQAIsYY-gSfwnIupmqe-val" style="text-align:center" title="" value=""></td>
+                    <td class="tdScore" colspan="2"><button type="button" class="chkButton" id="QHqbUQAIsYY-gSfwnIupmqe-button">Mark as N/A</button></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        2.6.3.4.3.1 Patients with FED should be accommodated in separate single rooms or temporarily inside room at clinic/PHC (strict isolation measures)</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.3" id="rXZUx4C14Da-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="rXZUx4C14Da-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.3" id="rXZUx4C14Da-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="rXZUx4C14Da-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.3" id="rXZUx4C14Da-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="rXZUx4C14Da-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        2.6.3.4.3.2 All staff attending to patient to use FED pack (with disposable gloves, gown, goggles, masks, permeable suit etc) to ensure non-direct contact with patient body</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.3" id="ZjXanu2CYt2-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="ZjXanu2CYt2-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.3" id="ZjXanu2CYt2-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="ZjXanu2CYt2-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.3" id="ZjXanu2CYt2-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="ZjXanu2CYt2-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        2.6.3.4.3.3 The room should have a hand wash basin and disposable bin/plastic for waste</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.3" id="obfj7eYHzz1-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="obfj7eYHzz1-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.3" id="obfj7eYHzz1-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="obfj7eYHzz1-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.3" id="obfj7eYHzz1-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="obfj7eYHzz1-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        2.6.3.4.3.4 The room should have separate toilet facilities/dedicated commode/urinal/bedpan (B)</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.3" id="H3o7Q0VoOEh-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="H3o7Q0VoOEh-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.3" id="H3o7Q0VoOEh-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="H3o7Q0VoOEh-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.3" id="H3o7Q0VoOEh-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="H3o7Q0VoOEh-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        2.6.3.4.3.5 Hand rub/disinfectant should be available for staff prior to entering the room (B)</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.3" id="cJXzIWWXiB5-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="cJXzIWWXiB5-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.3" id="cJXzIWWXiB5-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="cJXzIWWXiB5-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.3" id="cJXzIWWXiB5-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="cJXzIWWXiB5-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        2.6.3.4.3.6 Proper transportation of specimens labelled with bio-hazardous tape</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.3" id="YxQEndWEwGW-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="YxQEndWEwGW-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.3" id="YxQEndWEwGW-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="YxQEndWEwGW-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.3" id="YxQEndWEwGW-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="YxQEndWEwGW-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        2.6.3.4.3.7 Signage to inform community/family about no visitors - highly infectious principle</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.3" id="bnaXOwWH86T-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="bnaXOwWH86T-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.3" id="bnaXOwWH86T-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="bnaXOwWH86T-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.3" id="bnaXOwWH86T-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="bnaXOwWH86T-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        2.6.3.4.3.8 The room should have appropriate measures for disposal and destruction of infected linen and disinfection of equipment (B)</td>
+                    <td class="tdType bold">
+                        CHECKLIST<br>
+                        <br> X
+                    </td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.3" id="axHnWzpDofX-myNhFcjhT6g-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="axHnWzpDofX-myNhFcjhT6g-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.3" id="axHnWzpDofX-hPpBaWTkygE-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="axHnWzpDofX-hPpBaWTkygE-comment"></td>
+                    <td class="tdScoreCheck">
+                        <input data-checklist="2.6.3.4.3" id="axHnWzpDofX-MOFvuGLjSQs-val" onchange="upCalc()" style="text-align:center" title="" value=""><img class="commentlink" id="axHnWzpDofX-MOFvuGLjSQs-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 2 Patient Safety / Clinical Governance / Clinical Care: 2.6.3.5 Equipment used by infected patients is correctly and safely disinfected</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        2.6.3.5.1 Staff are able to explain how they carry out terminal cleaning or disinfection of the room and equipment used by infected patients</td>
+                    <td class="tdType bold">
+                        SI<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="e4IsvZtVCbW-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="e4IsvZtVCbW-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 3 Clinical Support Services: 3.1.2.6 Health care professionals have access to medicines required urgently by patients after hours</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        3.1.2.6.1 A standard operating procedure is available which indicates how health care professionals can access medicines when the pharmacy / medicine room is closed</td>
+                    <td class="tdType bold">
+                        DOC<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="MMEYmRMranU-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="MMEYmRMranU-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        3.1.2.6.2 The name and contact details of the pharmacist on duty for the provision of services after hours is available</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="M7Ud07KxbC1-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="M7Ud07KxbC1-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        3.1.2.6.3 There is a locked emergency cupboard for the supply of medicines</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="IvOKEt6CZdr-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="IvOKEt6CZdr-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 3 Clinical Support Services: 3.1.3.1 Medicines are stored and managed in compliance with the Pharmacy Act 53 of 1974 / Medicines and Related Substances Act 101 of 1965 / relevant rules and regulations</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        3.1.3.1.3 CHECKLIST - Medicines in the wards or consultation rooms are appropriately stored and managed</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="W3sQ4njO6Je-gSfwnIupmqe-val" style="text-align:center" title="" value=""></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 3 Clinical Support Services: 3.1.3.3 Schedule 5 and 6 medicines are controlled and distributed in accordance with the Medicines and Related Substances Act 101 of 1965 and Good Pharmacy Practice guidelines</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        3.1.3.3.2 The entries in the schedule 5 and/or 6 drug register are complete and correct and include date/ name of person who administered it and balance in stock</td>
+                    <td class="tdType bold">
+                        DOC<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="TdywWHLnxv9-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="TdywWHLnxv9-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 3 Clinical Support Services: 3.2.1.1 Laboratory services are available and results are provided within agreed-upon turnaround times</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        3.2.1.1.3 CHECKLIST - Laboratory results requested are available in the patients file</td>
+                    <td class="tdType bold">
+                        DOC<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="FNSSevtYfbU-gSfwnIupmqe-val" style="text-align:center" title="" value=""></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 3 Clinical Support Services: 3.3.1.1 Blood and blood products are available to support the level of care offered in the health establishment</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        3.3.1.1.1 CHECKLIST - 2 staff members interviewed are able to explain how the cold chain is ensured for all blood products including ordering / storage / issuing</td>
+                    <td class="tdType bold">
+                        SI<br>
+                        <br> V
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="wC1Y4lMDktH-gSfwnIupmqe-val" style="text-align:center" title="" value=""></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 3 Clinical Support Services: 3.4.1.1 Medical equipment available meets minimum requirements for appropriate level of care</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        3.4.1.1.8 CHECKLIST - Functional essential equipment as listed in the checklist is available in the ICU neonatal or paediatrics</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="fo51Avd2W8l-gSfwnIupmqe-val" style="text-align:center" title="" value=""></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 3 Clinical Support Services: 3.4.3.1 Critical devices are maintained to manufacturer requirements</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        3.4.3.1.1 CHECKLIST - Up to date records within the last 12 months show that the equipment listed has been maintained according to a planned schedule or manufacturers instruction</td>
+                    <td class="tdType bold">
+                        DOC<br>
+                        <br> V
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="yrVjAH7CcsJ-gSfwnIupmqe-val" style="text-align:center" title="" value=""></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 6 Operational Management: 6.7.1.1 Patient records are complete and contain all legal and statutory requirements</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        6.7.1.1.1 CHECKLIST - Patient files comply with legal and statutory requirements for record keeping</td>
+                    <td class="tdType bold">
+                        PRA<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="J0VTsf5eBzy-gSfwnIupmqe-val" style="text-align:center" title="" value=""></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 7 Facilities and Infrastructure: 7.1.2.2 The layout of the health establishment is planned or adapted to ensure that there is space to meet service and patient needs</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        7.1.2.2.3 Lighting and ventilation is observed to be adequate</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="s38Iw3f0nSc-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="s38Iw3f0nSc-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 7 Facilities and Infrastructure: 7.1.3.1 Waiting areas are appropriately located and adequate for the number of patients using them</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        7.1.3.1.1 The waiting area has adequate space / heating / number of chairs to accommodate all patients in the area</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> E
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="f0QIXXapWL2-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="f0QIXXapWL2-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 7 Facilities and Infrastructure: 7.2.1.2 Routine and emergency electrical power services are functional and meet the needs of the health establishment</div>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="tdCrit">
+                        7.2.1.2.2 There is documented evidence that in the event of a power disruption emergency power supply is available in critical clinical areas such as ICU / Theatre / Accident and Emergency</td>
+                    <td class="tdType bold">
+                        DOC<br>
+                        <br> X
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="EkWFwSdMs1T-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="EkWFwSdMs1T-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="domain bold">
+        Domain 7 Facilities and Infrastructure: 7.2.1.7 Routine and emergency medical gas and vacuum systems meet the needs of the health establishment</div>
+    <div>
+        <table>
+            <tbody>
+                <tr class="greyRow">
+                    <td class="tdCrit">
+                        7.2.1.7.11 There is a functional system to supply piped medical gas to all clinical areas</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> X
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="WofEHlnpRG5-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="WofEHlnpRG5-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tdCrit">
+                        7.2.1.7.12 There is a functional system to supply piped suction/vacuum to all clinical areas</td>
+                    <td class="tdType bold">
+                        OBS<br>
+                        <br> X
+                    </td>
+                    <td class="tdScore" colspan="3">
+                        <input id="gqvE4icnO8v-gSfwnIupmqe-val" style="text-align:center" title="" value=""><img class="commentlink" id="gqvE4icnO8v-gSfwnIupmqe-comment"></td>
+                    <td class="tdNote">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p>
+        &nbsp;</p>
