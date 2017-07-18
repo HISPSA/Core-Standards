@@ -1,33 +1,3 @@
-<script type='text/javascript'>
-    function upCalc() {
-        $("[data-calculated]").each(function(index, element) {
-            var id = $(this).attr('id');
-            var de = id.split('-')[0];
-            var coc = id.split('-')[1];
-            var code = $(this).attr('data-calculated');
-            var yes = parseInt(0);
-            var count = parseInt(0);
-            $("[data-checklist='" + code + "']").each(function(index, element) {
-                var value = $(this).val();
-                if (value) {
-                    if (value == 'true' || value == 'false') {
-                        count++;
-                    }
-                    if (value == 'true') {
-                        yes++;
-                    }
-                }
-            });
-            if (count > 0) {
-                var average = parseInt(yes) / parseInt(count);
-                var val = Math.round(average * 100) / 100;
-                $(this).val(val);
-                saveVal(de, coc, id);
-            }
-        });
-    }
-
-</script>
 <style type="text/css">
     .domain {
         font-family: sans-serif;
